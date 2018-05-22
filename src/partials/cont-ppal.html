@@ -1,0 +1,68 @@
+  <!-- ********** CONTENIDO PÁGINA -->
+  <section id="cont-ppal" class="">
+    <header id="cont-ppal-header">
+      <div class="contenedor">
+        <h1 id="cont-ppal-header-h1"><i class="fa fa-terminal fa-lg" aria-hidden="true"></i> Aprendiendo JavaScrip</h1>      
+      </div>      
+    </header>
+    <div class="contenedor">
+      <p>JavaScript es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla.</p>
+      <cite>Fuente: <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Fundamentos de JavaScript</a></cite>
+
+      <!-- /////// Tabs para el contenido de cada tema -->
+      <div class="row collapse mt-4">
+        <div class="small-3 columns" data-sticky-container>
+          <div class="sticky" data-sticky data-top-anchor="1top">
+            <ul class="vertical tabs sticky" data-tabs id="cont-ppal-tabs">
+              <!-- Conceptos fundamentales -->
+              <li class="tabs-title is-active"><a href="#cont-ppal-tabs-panel1" aria-selected="true"><i class="fa fa-book fa-lg" aria-hidden="true"></i>&nbsp; Conceptos fundamentales</a></li>
+              <!-- Variables -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel2"><i class="fa fa-cube fa-lg" aria-hidden="true"></i>&nbsp; Variables</a></li>
+              <!-- Definiendo filas -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel3"><i class="fa fa-bars fa-lg" aria-hidden="true"></i>&nbsp; Filas</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel4"><i class="fa fa-th fa-lg" aria-hidden="true"></i>&nbsp; Grids y displays</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel5">&nbsp; Espaciado</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel6">&nbsp; Repetidores</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel7">&nbsp; Áreas de contenido</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel8">&nbsp; Tamaño columnas</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel9">&nbsp; Tamaño filas</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel10">&nbsp; Tamaño de filas en un grid</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel11">&nbsp; Nombre de líneas</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel12">&nbsp; Grid implicito</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel12">&nbsp; Alineación de contenido</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel14">&nbsp; Alineación de filas y columnas</a></li>
+            </ul>
+            <div class="mt-1" id="abside">
+              Enrique Valerio              
+            </div>
+          </div>
+        </div><!-- /.columns -->
+
+        <div class="columns" id="1top">
+          <div class="tabs-content" data-tabs-content="cont-ppal-tabs">
+            <!-- Conceptos fundamentales -->
+            <div class="tabs-panel is-active" id="cont-ppal-tabs-panel1">
+              @include('./partials/conceptos-fundamentales.html')
+            </div>
+            <!-- Variables -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel2">
+              @include('./partials/variable.html')              
+            </div>
+            <!-- Definiendo filas -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel3">
+              @include('./partials/definiendo-filas.html')
+            </div>
+            <div class="tabs-panel" id="cont-ppal-tabs-panel4">
+              <p>Cuatro</p>
+              <img class="thumbnail" src="assets/img/nave-1.jpg" width="100%">
+            </div>
+            <div class="tabs-panel" id="cont-ppal-tabs-panel5">
+              <p>Cinco</p>
+              <p class="lead">Si el conocimiento puede crear problemas, no es con la ignorancia con lo que podremos resolverlos</p>
+            </div>
+          </div><!-- /.tabs-content -->
+        </div><!-- /.columns -->
+      </div><!-- /.row collapse -->
+    </div><!-- /.contenedor -->
+  </section>
+  <!-- /. CONTENIDO PÁGINA -->

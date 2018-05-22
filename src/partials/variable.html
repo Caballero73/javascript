@@ -1,0 +1,229 @@
+  <!-- ********** Variables -->
+  <section id="variable" class="">
+    <h2>Variables</h2>    
+    <div class="contenedor">
+      <p>Una variable es un elemento que se emplea para almacenar y hacer referencia a otro valor. Gracias a las variables es posible crear <em>"programas genéricos"</em>, es decir, programas que funcionan siempre igual independientemente de los valores concretos utilizados.</p>
+      <p>Si no existieran variables, un programa que suma dos números podría escribirse como:</p>
+      <pre>
+      resultado = 3 + 1
+      </pre>
+      <p>El <em>programa</em> anterior es tan poco útil que sólo sirve para el caso en el que el primer número de la suma sea el 3 y el segundo número sea el 1. En cualquier otro caso, el <em>programa</em> obtiene un resultado incorrecto.</p>
+      <p>Sin embargo, el programa se puede rehacer de la siguiente manera utilizando variables para almacenar y referirse a cada número:</p>
+      <pre>
+      numero_1 = 3 
+      numero_2  = 1
+      resultado = numero_1 + numero_2
+      </pre>
+      <p>Los elementos <code>numero_1</code> y <code>numero_2</code> son <strong>variables</strong> que almacenan los valores que utiliza el programa. El resultado se calcula siempre en función del valor almacenado por las variables, por lo que este programa funciona correctamente para cualquier par de números indicado. Si se modifica el valor de las variables <code>numero_1</code> y <code>numero_2</code>, el programa sigue funcionando correctamente.</p>
+      <p><p><b>• Sintaxis</b>... las variables en JavaScript se crean mediante la palabra reservada <b>var</b>.</p>
+      <center class="mt-1 mb-2"><img src="assets/img/variable_sintaxis.png" alt="Definir variable"></center>
+      <p>La palabra reservada <code>var</code> solamente es necesaria al definir por primera vez la variable, lo que se denomina <strong>declarar</strong> una variable. Cuando se utilizan las variables en el resto de instrucciones del script, solamente es necesario indicar su nombre.</p>
+      <p>Por ejemplo sería un error escribir lo siguiente:</p>
+      <pre>
+        <span class="kw1">var</span> numero_1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+        <span class="kw1">var</span> numero_2 <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+        <span class="kw1">var</span> resultado <span class="sy0">=</span> <span class="kw1">var</span> numero_1 <span class="sy0">+</span> <span class="kw1">var</span> numero_2<span class="sy0">;</span>
+      </pre>
+      <p><b>Esta es la forma Correcta</b>:</p>
+      <pre>
+        <span class="kw1">var</span> numero_1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+        <span class="kw1">var</span> numero_2 <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+        <span class="kw1">var</span> resultado <span class="sy0">=</span> numero_1 <span class="sy0">+</span> numero_2<span class="sy0">;</span>
+      </pre>
+      <br>
+      <p>En todo caso, se recomienda declarar todas las variables que se vayan a utilizar.</p>
+      <br>
+      <p><b>• Nombre</b>... el nombre de una variable también se conoce como <strong>identificador</strong> y debe cumplir las siguientes normas:</p>
+      <ul>
+        <li>Sólo puede estar formado por letras, números y los símbolos <code>$</code> (dólar) y <code>_</code> (guión bajo).</li>
+        <li>El primer carácter no puede ser un número.</li>
+      </ul>
+      <p><b>Por tanto, las siguientes variables tienen nombres correctos:</b></p>
+      <pre>
+        <span class="kw1">var</span> $numero1<span class="sy0">;</span>
+        <span class="kw1">var</span> _$letra<span class="sy0">;</span>
+        <span class="kw1">var</span> $$$otroNumero<span class="sy0">;</span>
+        <span class="kw1">var</span> otroNumero<span class="sy0">;</span>
+        <span class="kw1">var</span> $_a__$4<span class="sy0">;</span>
+      </pre>
+
+      <p>Sin embargo, las siguientes variables tienen identificadores incorrectos:</p>
+
+      <pre>
+        <span class="kw1">var</span> 1numero<span class="sy0">;</span>  <span class="co1">// Empieza por un número</span>
+        <span class="kw1">var</span> numero<span class="sy0">;</span><span class="nu0">1</span>_123<span class="sy0">;</span>  <span class="co1">// Contiene un carácter ";"</span>
+      </pre>
+      <br>
+      <h3>Tipos de variables</h3>
+      <p>Aunque todas las variables de JavaScript se crean de la misma forma (mediante la palabra reservada <code>var</code>), la forma en la que se les asigna un valor depende del tipo de valor que se quiere almacenar (números, textos, etc.)</p>
+      <table>
+       <thead>
+        <tr>
+         <th scope="row">Variable</th>
+         <th scope="col">Explicación</th>
+         <th scope="col">Ejemplo</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row"><a href="#String">String</a></th>
+         <td>Una cadena de texto. Para indicar que la variable es una cadena, debes&nbsp; escribirlo entre comillas.</td>
+         <td><code>var miVariable = 'Bob';</code></td>
+        </tr>
+        <tr>
+         <th scope="row"><a href="#Number">Number</a></th>
+         <td>
+          <p>Un número. Los números no tienen comillas.</p>
+         </td>
+         <td><code>var miVariable = 10;</code></td>
+        </tr>
+        <tr>
+         <th scope="row"><a href="#Boolean">Boolean</a></th>
+         <td>Tienen valor verdadero/falso. <code>true</code>/<code>false</code> son palabras especiales en JS, y no necesitan comillas.</td>
+         <td><code>var miVariable = true;</code></td>
+        </tr>
+        <tr>
+         <th scope="row"><a href="#Arrays">Array</a></th>
+         <td>Una estructura que te permite almacenar varios valores en una sola referencia.</td>
+         <td><code>var miVariable = [1,'Bob','Steve',10];</code><br>
+          Llama a cada miembro del array así: <code>miVariable[0]</code>, <code>miVariable[1]</code>, etc.</td>
+        </tr>
+        <tr>
+         <th scope="row">Object</th>
+         <td>
+          <p>Básicamente&nbsp;cualquier cosa. Todo en JavaScript es un objeto&nbsp;y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes.</p>
+         </td>
+         <td><code>var miVariable = document.querySelector('h1');</code><br>
+          Todos los ejemplos anteriores también.</td>
+        </tr>
+       </tbody>
+      </table>
+      <br>
+      
+      <p id="String"><b>• Cadenas de texto (String)</b> para almacenar caracteres, palabras y/o frases de texto. Para asignar el valor a la variable, se encierra entre comillas dobles o simples, para delimitar su comienzo y su final:</p>
+
+      <pre>
+        <span class="kw1">var</span> mensaje <span class="sy0">=</span> <span class="st0">"Bienvenido a nuestro sitio web"</span><span class="sy0">;</span>
+        <span class="kw1">var</span> nombreProducto <span class="sy0">=</span> <span class="st0">'Producto ABC'</span><span class="sy0">;</span>
+        <span class="kw1">var</span> letraSeleccionada <span class="sy0">=</span> <span class="st0">'c'</span><span class="sy0">;</span>
+      </pre>
+
+      <p>En ocasiones, el texto que se almacena en las variables no es tan sencillo. Si por ejemplo el propio texto contiene comillas simples o dobles, la estrategia que se sigue es la de encerrar el texto con las comillas (simples o dobles) que no utilice el texto:</p>
+
+      <pre>
+        <span class="coMULTI">/* El contenido de texto1 tiene comillas simples, por lo que
+          se encierra con comillas dobles */</span>
+        <span class="kw1">var</span> texto1 <span class="sy0">=</span> <span class="st0">"Una frase con 'comillas simples' dentro"</span><span class="sy0">;</span>
+        &nbsp;
+        <span class="coMULTI">/* El contenido de texto2 tiene comillas dobles, por lo que
+          se encierra con comillas simples */</span>
+        <span class="kw1">var</span> texto2 <span class="sy0">=</span> <span class="st0">'Una frase con "comillas dobles" dentro'</span><span class="sy0">;</span>
+      </pre>
+
+      <p>No obstante, a veces las cadenas de texto contienen tanto comillas simples como dobles. Además, existen otros caracteres que son difíciles de incluir en una variable de texto (tabulador, <code>ENTER</code>, etc.) Para resolver estos problemas, JavaScript define un mecanismo para incluir de forma sencilla caracteres especiales y problemáticos dentro de una cadena de texto.</p>
+
+      <p>El mecanismo consiste en sustituir el carácter problemático por una combinación simple de caracteres. A continuación se muestra la tabla de conversión que se debe utilizar:</p>
+
+      <table style="max-width: 40rem">
+        <thead>
+          <tr>
+            <th>Si se quiere incluir...</th>
+            <th>Se debe escribir...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Una nueva línea</td>
+            <td><code>\n</code></td>
+          </tr>
+          <tr>
+            <td>Un tabulador</td>
+            <td><code>\t</code></td>
+          </tr>
+          <tr>
+            <td>Una comilla simple</td>
+            <td><code>\'</code></td>
+          </tr>
+          <tr>
+            <td>Una comilla doble</td>
+            <td><code>\"</code></td>
+          </tr>
+          <tr>
+            <td>Una barra inclinada</td>
+            <td><code>\\</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p>De esta forma, el ejemplo anterior que contenía comillas simples y dobles dentro del texto se puede rehacer de la siguiente forma:</p>
+
+      <pre>
+        <span class="kw1">var</span> texto1 <span class="sy0">=</span> <span class="st0">'Una frase con <span class="es0">\'</span>comillas simples<span class="es0">\'</span> dentro'</span><span class="sy0">;</span>
+        &nbsp;
+        <span class="kw1">var</span> texto2 <span class="sy0">=</span> <span class="st0">"Una frase con <span class="es0">\"</span>comillas dobles<span class="es0">\"</span> dentro"</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Este mecanismo de JavaScript se denomina <em>"mecanismo de escape"</em> de los caracteres problemáticos, y es habitual referirse a que los caracteres han sido <em>"escapados"</em>.</p>
+      <br>
+
+      <p id="Number"><b>• Numéricas (Number)</b> para almacenar valores numéricos enteros (llamados <em>integer</em> en inglés) o decimales (llamados <em>float</em> en inglés). En este caso, el valor se asigna indicando directamente el número entero o decimal. Los números decimales utilizan el carácter <code>.</code> (punto) en vez de <code>,</code> (coma) para separar la parte entera y la parte decimal:</p>
+
+      <pre>
+        <span class="kw1">var</span> iva <span class="sy0">=</span> <span class="nu0">16</span><span class="sy0">;</span>   <span class="co1">// variable tipo entero</span>
+        <span class="kw1">var</span> total <span class="sy0">=</span> <span class="nu0">234.65</span><span class="sy0">;</span>  <span class="co1">// variable tipo decimal</span>
+      </pre>
+      <br>
+
+      <p id="Boolean"><b>• Booleanos</b>... las variables de tipo <em>boolean</em> o <em>booleano</em> también se conocen con el nombre de variables de tipo lógico. Aunque para entender realmente su utilidad se debe estudiar la programación con JavaScript, su funcionamiento básico es muy sencillo.</p>
+
+      <p>Una variable de tipo <em>boolean</em> almacena un tipo especial de valor que solamente puede tomar dos valores: <code>true</code> (verdadero)  o <code>false</code> (falso). No se puede utilizar para almacenar números y tampoco permite guardar cadenas de texto.</p>
+
+      <p>Los únicos valores que pueden almacenar estas variables son <code>true</code> y <code>false</code>, por lo que no pueden utilizarse los valores <code>verdadero</code> y <code>falso</code>. A continuación se muestra un par de variables de tipo <em>booleano</em>:</p>
+
+      <pre>
+        <span class="kw1">var</span> clienteRegistrado <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+        <span class="kw1">var</span> ivaIncluido <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+      </pre>
+
+
+      <p id="Arrays"><b>• Arrays</b> en ocasiones, a los arrays se les llama vectores, matrices e incluso <em>arreglos</em>. No obstante, el término array es el más utilizado y es una palabra comúnmente aceptada en el entorno de la programación.</p>
+
+      <p>Un array es una colección de variables, que pueden ser todas del mismo tipo o cada una de un tipo diferente. Su utilidad se comprende mejor con un ejemplo sencillo: si un scrip necesita manejar los días de la semana, se podrían crear siete variables de tipo texto:</p>
+
+      <pre>
+        <span class="kw1">var</span> dia1 <span class="sy0">=</span> <span class="st0">"Lunes"</span><span class="sy0">;</span>
+        <span class="kw1">var</span> dia2 <span class="sy0">=</span> <span class="st0">"Martes"</span><span class="sy0">;</span>
+        ...
+        <span class="kw1">var</span> dia7 <span class="sy0">=</span> <span class="st0">"Domingo"</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Aunque el código anterior <b>no es incorrecto</b>, sí que es poco eficiente y complica en exceso la programación. Si en vez de los días de la semana se tuviera que guardar el nombre de los meses del año, el nombre de todos los países del mundo o las mediciones diarias de temperatura de los últimos 100 años, se tendrían que crear decenas o cientos de variables.</p>
+
+      <p>En este tipo de casos, se pueden agrupar todas las variables relacionadas en una colección de variables o array. El ejemplo anterior se puede rehacer de la siguiente forma:</p>
+
+      <pre>
+        <span class="kw1">var</span> dias <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Lunes"</span><span class="sy0">,</span> <span class="st0">"Martes"</span><span class="sy0">,</span> <span class="st0">"Miércoles"</span><span class="sy0">,</span> <span class="st0">"Jueves"</span><span class="sy0">,</span> <span class="st0">"Viernes"</span><span class="sy0">,</span> <span class="st0">"Sábado"</span><span class="sy0">,</span> <span class="st0">"Domingo"</span><span class="br0">]</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Ahora, una única variable llamada <code>dias</code> almacena todos los valores relacionados entre sí, en este caso los días de la semana. Para definir un array, se utilizan los caracteres <code>[</code> y <code>]</code> para delimitar su comienzo y su final y se utiliza el carácter <code>,</code> (coma) para separar sus elementos:</p>
+
+      <pre>
+        <span class="kw1">var</span> nombre_array <span class="sy0">=</span> <span class="br0">[</span>valor1<span class="sy0">,</span> valor2<span class="sy0">,</span> ...<span class="sy0">,</span> valorN<span class="br0">]</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Una vez definido un array, es muy sencillo acceder a cada uno de sus elementos. Cada elemento se accede indicando su posición dentro del array. La única complicación, que es responsable de muchos errores cuando se empieza a programar, es que las posiciones de los elementos empiezan a contarse en el <code>0</code> y no en el <code>1</code>:</p>
+
+      <pre>
+        <span class="kw1">var</span> diaSeleccionado <span class="sy0">=</span> dias<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">;</span>    <span class="co1">// diaSeleccionado = "Lunes"</span>
+        <span class="kw1">var</span> otroDia <span class="sy0">=</span> dias<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span><span class="sy0">;</span>            <span class="co1">// otroDia = "Sábado"</span>
+      </pre>
+
+      <p>En el ejemplo anterior, la primera instrucción quiere obtener el primer elemento del array. Para ello, se indica el nombre del array y entre corchetes la posición del elemento dentro del array. Como se ha comentado, las posiciones se empiezan a contar en el <code>0</code>, por lo que el primer elemento ocupa la posición <code>0</code> y se accede a el mediante <code>dias[0]</code>.</p>
+
+      <p>El valor <code>dias[5]</code> hace referencia al elemento que ocupa la sexta posición dentro del array <code>dias</code>. Como las posiciones empiezan a contarse en <code>0</code>, la posición <code>5</code> hace referencia al sexto elemento, en este caso, el valor <code>Sábado</code>.</p>
+      <br>
+  
+    </div><!-- /.contenedor -->
+  </section>
+  <!-- /. Variables -->

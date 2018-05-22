@@ -1,0 +1,98 @@
+  <!-- ********** Conceptos fundamentales -->
+  <section id="conceptos-fundamentales" class="">
+    <h2>Conceptos fundamentales</h2>    
+    <div class="contenedor">
+      <p class="mt-2">JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu Sitio Web, (por ejemplo juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más). </p>
+      <p class="lead">Vamos a explicar algunos de los aspectos básicos del lenguaje JavaScript, para que puedas comprender mejor cómo funciona todo.</p>
+      <br>
+
+      <p><strong>• Script</strong> son cada uno de los programas, aplicaciones o trozos de código creados con el lenguaje de programación JavaScript. Unas pocas líneas de código forman un script y un archivo de miles de líneas de JavaScript también se considera un script. A veces se traduce al español directamente como <em>"guión"</em>, aunque script es una palabra más adecuada y comúnmente aceptada.</p>
+      <br>
+
+      <p><strong>• Sentencia</strong> son cada una de las instrucciones que forman un script.</p>
+      <br>
+
+      <p><strong>• Palabras reservadas</strong> son las palabras (en inglés) que se utilizan para construir las sentencias de JavaScript y que por tanto no pueden ser utilizadas libremente. Las palabras actualmente reservadas por JavaScript son: <code>break</code>, <code>case</code>, <code>catch</code>, <code>continue</code>, <code>default</code>, <code>delete</code>, <code>do</code>, <code>else</code>, <code>finally</code>, <code>for</code>, <code>function</code>, <code>if</code>, <code>in</code>, <code>instanceof</code>, <code>new</code>, <code>return</code>, <code>switch</code>, <code>this</code>, <code>throw</code>, <code>try</code>, <code>typeof</code>, <code>var</code>, <code>void</code>, <code>while</code>, <code>with</code>.</p>
+      <br>
+
+      <p><b>• Sintaxis de JavaScript</b> es muy similar a la de otros lenguajes de programación como Java y C. Las normas básicas que definen la sintaxis de JavaScript son las siguientes:</p>
+      <ul style="list-style: none">
+        <li><i><strong>No se tienen en cuenta los espacios en blanco y las nuevas líneas</strong></i>: como sucede con XHTML, el intérprete de JavaScript ignora cualquier espacio en blanco sobrante, por lo que el código se puede ordenar de forma adecuada para entenderlo mejor (tabulando las líneas, añadiendo espacios, creando nuevas líneas, etc.)</li>
+        <li><i><strong>Se distinguen las mayúsculas y minúsculas</strong></i>: al igual que sucede con la sintaxis de las etiquetas y elementos XHTML. Sin embargo, si en una página XHTML se utilizan indistintamente mayúsculas y minúsculas, la página se visualiza correctamente, siendo el único problema la no validación de la página. En cambio, si en JavaScript se intercambian mayúsculas y minúsculas el script no funciona.</li>
+        <li><i><strong>No se define el tipo de las variables</strong></i>: al crear una variable, no es necesario indicar el tipo de dato que almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución del script.</li>
+        <li><i><strong>No es necesario terminar cada sentencia con el carácter de punto y coma (<code>;</code>)</strong></i>: en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con el carácter <code>;</code>. Aunque JavaScript no obliga a hacerlo, es conveniente seguir la tradición de terminar cada sentencia con el carácter del punto y coma (<code>;</code>).</li>
+        <li><i><strong>Se pueden incluir comentarios</strong></i>: los comentarios se utilizan para añadir información en el código fuente del programa. Aunque el contenido de los comentarios no se visualiza por pantalla, si que se envía al navegador del usuario junto con el resto del script, por lo que es necesario extremar las precauciones sobre la información incluida en los comentarios. <br><br>
+          <i>Ejemplo de comentario de una sola línea:</i> <pre>// a continuación se muestra un mensaje.</pre>
+          <br>
+          <i>Ejemplo de comentario de varias líneas:</i><br>
+          <pre>/* Los comentarios de varias líneas son muy útiles<br>cuando se necesita incluir bastante información<br>en los comentarios */</pre>
+        </li>
+      </ul>
+      <br>
+
+      <p><b>• La Consola</b> para el aprendizaje de JS es muy útil utilizar la consola que trae incorporado nuestro navegador web, y la cual podemos acceder mediente el inspector de elementos (generalmente lo encontramos haciendo click con el botón derecho del muse). En el caso de Firefox tiene este aspecto:</p>
+      <center><img src="assets/img/consola-firefox.png" alt="Imagen de la consola de Firefox"></center>
+      <br>
+
+      <p><b>• Que datos podemos usar en JS</b>... Básicamente todos los datos que desemos usar debemos manejarlo a través de variables, las cuales son contenedores en los que puedes almacenar valores. Primero debes declarar la variable con la palabra clave <code>var</code>, seguida del nombre que le quieras dar:</p>
+      <table>
+       <thead>
+        <tr>
+         <th scope="row"><font><font>Variable</font></font></th>
+         <th scope="col">Explicación</th>
+         <th scope="col">Ejemplo</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">String</th>
+         <td>Una cadena de texto. Para indicar que la variable es una cadena, debes&nbsp; escribirlo entre comillas.</td>
+         <td><code>var miVariable = 'Bob';</code></td>
+        </tr>
+        <tr>
+         <th scope="row">Number</th>
+         <td>
+          <p>Un número. Los números no tienen comillas.</p>
+         </td>
+         <td><code>var miVariable = 10;</code></td>
+        </tr>
+        <tr>
+         <th scope="row">Boolean</th>
+         <td>Tienen valor verdadero/falso. <code>true</code>/<code>false</code> son palabras especiales en JS, y no necesitan comillas.</td>
+         <td><code>var miVariable = true;</code></td>
+        </tr>
+        <tr>
+         <th scope="row">Array</th>
+         <td>Una estructura que te permite almacenar varios valores en una sola referencia.</td>
+         <td><code>var miVariable = [1,'Bob','Steve',10];</code><br>
+          Llama a cada miembro del array así: <code>miVariable[0]</code>, <code>miVariable[1]</code>, etc.</td>
+        </tr>
+        <tr>
+         <th scope="row">Object</th>
+         <td>
+          <p>Básicamente&nbsp;cualquier cosa. Todo en JavaScript es un objeto&nbsp;y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes.</p>
+         </td>
+         <td><code>var miVariable = document.querySelector('h1');</code><br>
+          Todos los ejemplos anteriores también.</td>
+        </tr>
+       </tbody>
+      </table>
+      <br>
+
+      <p class="mt-2"><b>• Number (Números)</b> estos se usan básicamente para operaciones matemáticas.</p>
+      <p>Si colocamos en la consola dos numeros y entre ellos un operador matemático (+,-,*,/) para luego pulsar enter, obtendremos un resultado de dicha operación.</p>
+      <center><img src="assets/img/consola-numeros1.png" alt="Imagen operación matemática"></center>
+      <p>Es importante que en las operaciones matemáticas respetemos las <a href="https://es.wikipedia.org/wiki/Orden_de_evaluaci%C3%B3n">precedencias u orden de evaluación</a>.</p>
+      <center><img src="assets/img/consola-numeros2.png" alt="Imagen operación matemática"></center>
+      <br>
+
+      <p class="mt-2"><b>• Comparadores</b> también son muy usados en JavaScript, y devuelven un valor booleano, verdadero (true) o falso (false) según sea el caso.</p>
+      <center><img src="assets/img/consola-comparadores1.png" alt="Imagen comparadores"></center>
+      <br>
+
+      <p class="mt-2"><b>• String (Cadenas de texto)</b> estas se manejan colocándolas entre comillas "", es importante que si comenzamos con comillas simples <code>'</code>, terminemos con comillas simples o si comenzamos con comillas dobles <code>"</code> terminemos con comillas dobles.</p>
+      <p>También podemos concatenar estas cadenas usando el operador "+", lo cual permite unir varias cadenas de texto.</p>
+      <center><img src="assets/img/consola-cadena1.png" alt="Imagen de cadena de texto"></center>
+    </div><!-- /.contenedor -->
+  </section>
+  <!-- /. Conceptos fundamentales -->

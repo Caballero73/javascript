@@ -1,0 +1,476 @@
+<!doctype html>
+<html class="no-js" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aprendiendo JavaScrip</title>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/foundation-icons.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/foundation.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/app.min.css" />
+</head>
+
+<body>
+	<!-- /////// Botón para ir al principio -->
+	<a class="hide-for-small-only" href="#inicio">
+	  <i class="fa fa-chevron-circle-up fa-2x ir-arriba"></i>
+	</a>
+	<!-- */Botón para ir al principio -->
+  <!-- ********** CONTENIDO PÁGINA -->
+  <section id="cont-ppal" class="">
+    <header id="cont-ppal-header">
+      <div class="contenedor">
+        <h1 id="cont-ppal-header-h1"><i class="fa fa-terminal fa-lg" aria-hidden="true"></i> Aprendiendo JavaScrip</h1>      
+      </div>      
+    </header>
+    <div class="contenedor">
+      <p>JavaScript es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla.</p>
+      <cite>Fuente: <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Fundamentos de JavaScript</a></cite>
+
+      <!-- /////// Tabs para el contenido de cada tema -->
+      <div class="row collapse mt-4">
+        <div class="small-3 columns" data-sticky-container>
+          <div class="sticky" data-sticky data-top-anchor="1top">
+            <ul class="vertical tabs sticky" data-tabs id="cont-ppal-tabs">
+              <!-- Conceptos fundamentales -->
+              <li class="tabs-title is-active"><a href="#cont-ppal-tabs-panel1" aria-selected="true"><i class="fa fa-book fa-lg" aria-hidden="true"></i>&nbsp; Conceptos fundamentales</a></li>
+              <!-- Variables -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel2"><i class="fa fa-cube fa-lg" aria-hidden="true"></i>&nbsp; Variables</a></li>
+              <!-- Definiendo filas -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel3"><i class="fa fa-bars fa-lg" aria-hidden="true"></i>&nbsp; Filas</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel4"><i class="fa fa-th fa-lg" aria-hidden="true"></i>&nbsp; Grids y displays</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel5">&nbsp; Espaciado</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel6">&nbsp; Repetidores</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel7">&nbsp; Áreas de contenido</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel8">&nbsp; Tamaño columnas</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel9">&nbsp; Tamaño filas</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel10">&nbsp; Tamaño de filas en un grid</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel11">&nbsp; Nombre de líneas</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel12">&nbsp; Grid implicito</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel12">&nbsp; Alineación de contenido</a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel14">&nbsp; Alineación de filas y columnas</a></li>
+            </ul>
+            <div class="mt-1" id="abside">
+              Enrique Valerio              
+            </div>
+          </div>
+        </div><!-- /.columns -->
+
+        <div class="columns" id="1top">
+          <div class="tabs-content" data-tabs-content="cont-ppal-tabs">
+            <!-- Conceptos fundamentales -->
+            <div class="tabs-panel is-active" id="cont-ppal-tabs-panel1">
+                <!-- ********** Conceptos fundamentales -->
+  <section id="conceptos-fundamentales" class="">
+    <h2>Conceptos fundamentales</h2>    
+    <div class="contenedor">
+      <p class="mt-2">JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu Sitio Web, (por ejemplo juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más). </p>
+      <p class="lead">Vamos a explicar algunos de los aspectos básicos del lenguaje JavaScript, para que puedas comprender mejor cómo funciona todo.</p>
+      <br>
+
+      <p><strong>• Script</strong> son cada uno de los programas, aplicaciones o trozos de código creados con el lenguaje de programación JavaScript. Unas pocas líneas de código forman un script y un archivo de miles de líneas de JavaScript también se considera un script. A veces se traduce al español directamente como <em>"guión"</em>, aunque script es una palabra más adecuada y comúnmente aceptada.</p>
+      <br>
+
+      <p><strong>• Sentencia</strong> son cada una de las instrucciones que forman un script.</p>
+      <br>
+
+      <p><strong>• Palabras reservadas</strong> son las palabras (en inglés) que se utilizan para construir las sentencias de JavaScript y que por tanto no pueden ser utilizadas libremente. Las palabras actualmente reservadas por JavaScript son: <code>break</code>, <code>case</code>, <code>catch</code>, <code>continue</code>, <code>default</code>, <code>delete</code>, <code>do</code>, <code>else</code>, <code>finally</code>, <code>for</code>, <code>function</code>, <code>if</code>, <code>in</code>, <code>instanceof</code>, <code>new</code>, <code>return</code>, <code>switch</code>, <code>this</code>, <code>throw</code>, <code>try</code>, <code>typeof</code>, <code>var</code>, <code>void</code>, <code>while</code>, <code>with</code>.</p>
+      <br>
+
+      <p><b>• Sintaxis de JavaScript</b> es muy similar a la de otros lenguajes de programación como Java y C. Las normas básicas que definen la sintaxis de JavaScript son las siguientes:</p>
+      <ul style="list-style: none">
+        <li><i><strong>No se tienen en cuenta los espacios en blanco y las nuevas líneas</strong></i>: como sucede con XHTML, el intérprete de JavaScript ignora cualquier espacio en blanco sobrante, por lo que el código se puede ordenar de forma adecuada para entenderlo mejor (tabulando las líneas, añadiendo espacios, creando nuevas líneas, etc.)</li>
+        <li><i><strong>Se distinguen las mayúsculas y minúsculas</strong></i>: al igual que sucede con la sintaxis de las etiquetas y elementos XHTML. Sin embargo, si en una página XHTML se utilizan indistintamente mayúsculas y minúsculas, la página se visualiza correctamente, siendo el único problema la no validación de la página. En cambio, si en JavaScript se intercambian mayúsculas y minúsculas el script no funciona.</li>
+        <li><i><strong>No se define el tipo de las variables</strong></i>: al crear una variable, no es necesario indicar el tipo de dato que almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución del script.</li>
+        <li><i><strong>No es necesario terminar cada sentencia con el carácter de punto y coma (<code>;</code>)</strong></i>: en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con el carácter <code>;</code>. Aunque JavaScript no obliga a hacerlo, es conveniente seguir la tradición de terminar cada sentencia con el carácter del punto y coma (<code>;</code>).</li>
+        <li><i><strong>Se pueden incluir comentarios</strong></i>: los comentarios se utilizan para añadir información en el código fuente del programa. Aunque el contenido de los comentarios no se visualiza por pantalla, si que se envía al navegador del usuario junto con el resto del script, por lo que es necesario extremar las precauciones sobre la información incluida en los comentarios. <br><br>
+          <i>Ejemplo de comentario de una sola línea:</i> <pre>// a continuación se muestra un mensaje.</pre>
+          <br>
+          <i>Ejemplo de comentario de varias líneas:</i><br>
+          <pre>/* Los comentarios de varias líneas son muy útiles<br>cuando se necesita incluir bastante información<br>en los comentarios */</pre>
+        </li>
+      </ul>
+      <br>
+
+      <p><b>• La Consola</b> para el aprendizaje de JS es muy útil utilizar la consola que trae incorporado nuestro navegador web, y la cual podemos acceder mediente el inspector de elementos (generalmente lo encontramos haciendo click con el botón derecho del muse). En el caso de Firefox tiene este aspecto:</p>
+      <center><img src="assets/img/consola-firefox.png" alt="Imagen de la consola de Firefox"></center>
+      <br>
+
+      <p><b>• Que datos podemos usar en JS</b>... Básicamente todos los datos que desemos usar debemos manejarlo a través de variables, las cuales son contenedores en los que puedes almacenar valores. Primero debes declarar la variable con la palabra clave <code>var</code>, seguida del nombre que le quieras dar:</p>
+      <table>
+       <thead>
+        <tr>
+         <th scope="row"><font><font>Variable</font></font></th>
+         <th scope="col">Explicación</th>
+         <th scope="col">Ejemplo</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">String</th>
+         <td>Una cadena de texto. Para indicar que la variable es una cadena, debes&nbsp; escribirlo entre comillas.</td>
+         <td><code>var miVariable = 'Bob';</code></td>
+        </tr>
+        <tr>
+         <th scope="row">Number</th>
+         <td>
+          <p>Un número. Los números no tienen comillas.</p>
+         </td>
+         <td><code>var miVariable = 10;</code></td>
+        </tr>
+        <tr>
+         <th scope="row">Boolean</th>
+         <td>Tienen valor verdadero/falso. <code>true</code>/<code>false</code> son palabras especiales en JS, y no necesitan comillas.</td>
+         <td><code>var miVariable = true;</code></td>
+        </tr>
+        <tr>
+         <th scope="row">Array</th>
+         <td>Una estructura que te permite almacenar varios valores en una sola referencia.</td>
+         <td><code>var miVariable = [1,'Bob','Steve',10];</code><br>
+          Llama a cada miembro del array así: <code>miVariable[0]</code>, <code>miVariable[1]</code>, etc.</td>
+        </tr>
+        <tr>
+         <th scope="row">Object</th>
+         <td>
+          <p>Básicamente&nbsp;cualquier cosa. Todo en JavaScript es un objeto&nbsp;y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes.</p>
+         </td>
+         <td><code>var miVariable = document.querySelector('h1');</code><br>
+          Todos los ejemplos anteriores también.</td>
+        </tr>
+       </tbody>
+      </table>
+      <br>
+
+      <p class="mt-2"><b>• Number (Números)</b> estos se usan básicamente para operaciones matemáticas.</p>
+      <p>Si colocamos en la consola dos numeros y entre ellos un operador matemático (+,-,*,/) para luego pulsar enter, obtendremos un resultado de dicha operación.</p>
+      <center><img src="assets/img/consola-numeros1.png" alt="Imagen operación matemática"></center>
+      <p>Es importante que en las operaciones matemáticas respetemos las <a href="https://es.wikipedia.org/wiki/Orden_de_evaluaci%C3%B3n">precedencias u orden de evaluación</a>.</p>
+      <center><img src="assets/img/consola-numeros2.png" alt="Imagen operación matemática"></center>
+      <br>
+
+      <p class="mt-2"><b>• Comparadores</b> también son muy usados en JavaScript, y devuelven un valor booleano, verdadero (true) o falso (false) según sea el caso.</p>
+      <center><img src="assets/img/consola-comparadores1.png" alt="Imagen comparadores"></center>
+      <br>
+
+      <p class="mt-2"><b>• String (Cadenas de texto)</b> estas se manejan colocándolas entre comillas "", es importante que si comenzamos con comillas simples <code>'</code>, terminemos con comillas simples o si comenzamos con comillas dobles <code>"</code> terminemos con comillas dobles.</p>
+      <p>También podemos concatenar estas cadenas usando el operador "+", lo cual permite unir varias cadenas de texto.</p>
+      <center><img src="assets/img/consola-cadena1.png" alt="Imagen de cadena de texto"></center>
+    </div><!-- /.contenedor -->
+  </section>
+  <!-- /. Conceptos fundamentales -->
+            </div>
+            <!-- Variables -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel2">
+                <!-- ********** Variables -->
+  <section id="variable" class="">
+    <h2>Variables</h2>    
+    <div class="contenedor">
+      <p>Una variable es un elemento que se emplea para almacenar y hacer referencia a otro valor. Gracias a las variables es posible crear <em>"programas genéricos"</em>, es decir, programas que funcionan siempre igual independientemente de los valores concretos utilizados.</p>
+      <p>Si no existieran variables, un programa que suma dos números podría escribirse como:</p>
+      <pre>
+      resultado = 3 + 1
+      </pre>
+      <p>El <em>programa</em> anterior es tan poco útil que sólo sirve para el caso en el que el primer número de la suma sea el 3 y el segundo número sea el 1. En cualquier otro caso, el <em>programa</em> obtiene un resultado incorrecto.</p>
+      <p>Sin embargo, el programa se puede rehacer de la siguiente manera utilizando variables para almacenar y referirse a cada número:</p>
+      <pre>
+      numero_1 = 3 
+      numero_2  = 1
+      resultado = numero_1 + numero_2
+      </pre>
+      <p>Los elementos <code>numero_1</code> y <code>numero_2</code> son <strong>variables</strong> que almacenan los valores que utiliza el programa. El resultado se calcula siempre en función del valor almacenado por las variables, por lo que este programa funciona correctamente para cualquier par de números indicado. Si se modifica el valor de las variables <code>numero_1</code> y <code>numero_2</code>, el programa sigue funcionando correctamente.</p>
+      <p><p><b>• Sintaxis</b>... las variables en JavaScript se crean mediante la palabra reservada <b>var</b>.</p>
+      <center class="mt-1 mb-2"><img src="assets/img/variable_sintaxis.png" alt="Definir variable"></center>
+      <p>La palabra reservada <code>var</code> solamente es necesaria al definir por primera vez la variable, lo que se denomina <strong>declarar</strong> una variable. Cuando se utilizan las variables en el resto de instrucciones del script, solamente es necesario indicar su nombre.</p>
+      <p>Por ejemplo sería un error escribir lo siguiente:</p>
+      <pre>
+        <span class="kw1">var</span> numero_1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+        <span class="kw1">var</span> numero_2 <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+        <span class="kw1">var</span> resultado <span class="sy0">=</span> <span class="kw1">var</span> numero_1 <span class="sy0">+</span> <span class="kw1">var</span> numero_2<span class="sy0">;</span>
+      </pre>
+      <p><b>Esta es la forma Correcta</b>:</p>
+      <pre>
+        <span class="kw1">var</span> numero_1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+        <span class="kw1">var</span> numero_2 <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+        <span class="kw1">var</span> resultado <span class="sy0">=</span> numero_1 <span class="sy0">+</span> numero_2<span class="sy0">;</span>
+      </pre>
+      <br>
+      <p>En todo caso, se recomienda declarar todas las variables que se vayan a utilizar.</p>
+      <br>
+      <p><b>• Nombre</b>... el nombre de una variable también se conoce como <strong>identificador</strong> y debe cumplir las siguientes normas:</p>
+      <ul>
+        <li>Sólo puede estar formado por letras, números y los símbolos <code>$</code> (dólar) y <code>_</code> (guión bajo).</li>
+        <li>El primer carácter no puede ser un número.</li>
+      </ul>
+      <p><b>Por tanto, las siguientes variables tienen nombres correctos:</b></p>
+      <pre>
+        <span class="kw1">var</span> $numero1<span class="sy0">;</span>
+        <span class="kw1">var</span> _$letra<span class="sy0">;</span>
+        <span class="kw1">var</span> $$$otroNumero<span class="sy0">;</span>
+        <span class="kw1">var</span> otroNumero<span class="sy0">;</span>
+        <span class="kw1">var</span> $_a__$4<span class="sy0">;</span>
+      </pre>
+
+      <p>Sin embargo, las siguientes variables tienen identificadores incorrectos:</p>
+
+      <pre>
+        <span class="kw1">var</span> 1numero<span class="sy0">;</span>  <span class="co1">// Empieza por un número</span>
+        <span class="kw1">var</span> numero<span class="sy0">;</span><span class="nu0">1</span>_123<span class="sy0">;</span>  <span class="co1">// Contiene un carácter ";"</span>
+      </pre>
+      <br>
+      <h3>Tipos de variables</h3>
+      <p>Aunque todas las variables de JavaScript se crean de la misma forma (mediante la palabra reservada <code>var</code>), la forma en la que se les asigna un valor depende del tipo de valor que se quiere almacenar (números, textos, etc.)</p>
+      <table>
+       <thead>
+        <tr>
+         <th scope="row">Variable</th>
+         <th scope="col">Explicación</th>
+         <th scope="col">Ejemplo</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row"><a href="#String">String</a></th>
+         <td>Una cadena de texto. Para indicar que la variable es una cadena, debes&nbsp; escribirlo entre comillas.</td>
+         <td><code>var miVariable = 'Bob';</code></td>
+        </tr>
+        <tr>
+         <th scope="row"><a href="#Number">Number</a></th>
+         <td>
+          <p>Un número. Los números no tienen comillas.</p>
+         </td>
+         <td><code>var miVariable = 10;</code></td>
+        </tr>
+        <tr>
+         <th scope="row"><a href="#Boolean">Boolean</a></th>
+         <td>Tienen valor verdadero/falso. <code>true</code>/<code>false</code> son palabras especiales en JS, y no necesitan comillas.</td>
+         <td><code>var miVariable = true;</code></td>
+        </tr>
+        <tr>
+         <th scope="row"><a href="#Arrays">Array</a></th>
+         <td>Una estructura que te permite almacenar varios valores en una sola referencia.</td>
+         <td><code>var miVariable = [1,'Bob','Steve',10];</code><br>
+          Llama a cada miembro del array así: <code>miVariable[0]</code>, <code>miVariable[1]</code>, etc.</td>
+        </tr>
+        <tr>
+         <th scope="row">Object</th>
+         <td>
+          <p>Básicamente&nbsp;cualquier cosa. Todo en JavaScript es un objeto&nbsp;y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes.</p>
+         </td>
+         <td><code>var miVariable = document.querySelector('h1');</code><br>
+          Todos los ejemplos anteriores también.</td>
+        </tr>
+       </tbody>
+      </table>
+      <br>
+      
+      <p id="String"><b>• Cadenas de texto (String)</b> para almacenar caracteres, palabras y/o frases de texto. Para asignar el valor a la variable, se encierra entre comillas dobles o simples, para delimitar su comienzo y su final:</p>
+
+      <pre>
+        <span class="kw1">var</span> mensaje <span class="sy0">=</span> <span class="st0">"Bienvenido a nuestro sitio web"</span><span class="sy0">;</span>
+        <span class="kw1">var</span> nombreProducto <span class="sy0">=</span> <span class="st0">'Producto ABC'</span><span class="sy0">;</span>
+        <span class="kw1">var</span> letraSeleccionada <span class="sy0">=</span> <span class="st0">'c'</span><span class="sy0">;</span>
+      </pre>
+
+      <p>En ocasiones, el texto que se almacena en las variables no es tan sencillo. Si por ejemplo el propio texto contiene comillas simples o dobles, la estrategia que se sigue es la de encerrar el texto con las comillas (simples o dobles) que no utilice el texto:</p>
+
+      <pre>
+        <span class="coMULTI">/* El contenido de texto1 tiene comillas simples, por lo que
+          se encierra con comillas dobles */</span>
+        <span class="kw1">var</span> texto1 <span class="sy0">=</span> <span class="st0">"Una frase con 'comillas simples' dentro"</span><span class="sy0">;</span>
+        &nbsp;
+        <span class="coMULTI">/* El contenido de texto2 tiene comillas dobles, por lo que
+          se encierra con comillas simples */</span>
+        <span class="kw1">var</span> texto2 <span class="sy0">=</span> <span class="st0">'Una frase con "comillas dobles" dentro'</span><span class="sy0">;</span>
+      </pre>
+
+      <p>No obstante, a veces las cadenas de texto contienen tanto comillas simples como dobles. Además, existen otros caracteres que son difíciles de incluir en una variable de texto (tabulador, <code>ENTER</code>, etc.) Para resolver estos problemas, JavaScript define un mecanismo para incluir de forma sencilla caracteres especiales y problemáticos dentro de una cadena de texto.</p>
+
+      <p>El mecanismo consiste en sustituir el carácter problemático por una combinación simple de caracteres. A continuación se muestra la tabla de conversión que se debe utilizar:</p>
+
+      <table style="max-width: 40rem">
+        <thead>
+          <tr>
+            <th>Si se quiere incluir...</th>
+            <th>Se debe escribir...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Una nueva línea</td>
+            <td><code>\n</code></td>
+          </tr>
+          <tr>
+            <td>Un tabulador</td>
+            <td><code>\t</code></td>
+          </tr>
+          <tr>
+            <td>Una comilla simple</td>
+            <td><code>\'</code></td>
+          </tr>
+          <tr>
+            <td>Una comilla doble</td>
+            <td><code>\"</code></td>
+          </tr>
+          <tr>
+            <td>Una barra inclinada</td>
+            <td><code>\\</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p>De esta forma, el ejemplo anterior que contenía comillas simples y dobles dentro del texto se puede rehacer de la siguiente forma:</p>
+
+      <pre>
+        <span class="kw1">var</span> texto1 <span class="sy0">=</span> <span class="st0">'Una frase con <span class="es0">\'</span>comillas simples<span class="es0">\'</span> dentro'</span><span class="sy0">;</span>
+        &nbsp;
+        <span class="kw1">var</span> texto2 <span class="sy0">=</span> <span class="st0">"Una frase con <span class="es0">\"</span>comillas dobles<span class="es0">\"</span> dentro"</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Este mecanismo de JavaScript se denomina <em>"mecanismo de escape"</em> de los caracteres problemáticos, y es habitual referirse a que los caracteres han sido <em>"escapados"</em>.</p>
+      <br>
+
+      <p id="Number"><b>• Numéricas (Number)</b> para almacenar valores numéricos enteros (llamados <em>integer</em> en inglés) o decimales (llamados <em>float</em> en inglés). En este caso, el valor se asigna indicando directamente el número entero o decimal. Los números decimales utilizan el carácter <code>.</code> (punto) en vez de <code>,</code> (coma) para separar la parte entera y la parte decimal:</p>
+
+      <pre>
+        <span class="kw1">var</span> iva <span class="sy0">=</span> <span class="nu0">16</span><span class="sy0">;</span>   <span class="co1">// variable tipo entero</span>
+        <span class="kw1">var</span> total <span class="sy0">=</span> <span class="nu0">234.65</span><span class="sy0">;</span>  <span class="co1">// variable tipo decimal</span>
+      </pre>
+      <br>
+
+      <p id="Boolean"><b>• Booleanos</b>... las variables de tipo <em>boolean</em> o <em>booleano</em> también se conocen con el nombre de variables de tipo lógico. Aunque para entender realmente su utilidad se debe estudiar la programación con JavaScript, su funcionamiento básico es muy sencillo.</p>
+
+      <p>Una variable de tipo <em>boolean</em> almacena un tipo especial de valor que solamente puede tomar dos valores: <code>true</code> (verdadero)  o <code>false</code> (falso). No se puede utilizar para almacenar números y tampoco permite guardar cadenas de texto.</p>
+
+      <p>Los únicos valores que pueden almacenar estas variables son <code>true</code> y <code>false</code>, por lo que no pueden utilizarse los valores <code>verdadero</code> y <code>falso</code>. A continuación se muestra un par de variables de tipo <em>booleano</em>:</p>
+
+      <pre>
+        <span class="kw1">var</span> clienteRegistrado <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+        <span class="kw1">var</span> ivaIncluido <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+      </pre>
+
+
+      <p id="Arrays"><b>• Arrays</b> en ocasiones, a los arrays se les llama vectores, matrices e incluso <em>arreglos</em>. No obstante, el término array es el más utilizado y es una palabra comúnmente aceptada en el entorno de la programación.</p>
+
+      <p>Un array es una colección de variables, que pueden ser todas del mismo tipo o cada una de un tipo diferente. Su utilidad se comprende mejor con un ejemplo sencillo: si un scrip necesita manejar los días de la semana, se podrían crear siete variables de tipo texto:</p>
+
+      <pre>
+        <span class="kw1">var</span> dia1 <span class="sy0">=</span> <span class="st0">"Lunes"</span><span class="sy0">;</span>
+        <span class="kw1">var</span> dia2 <span class="sy0">=</span> <span class="st0">"Martes"</span><span class="sy0">;</span>
+        ...
+        <span class="kw1">var</span> dia7 <span class="sy0">=</span> <span class="st0">"Domingo"</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Aunque el código anterior <b>no es incorrecto</b>, sí que es poco eficiente y complica en exceso la programación. Si en vez de los días de la semana se tuviera que guardar el nombre de los meses del año, el nombre de todos los países del mundo o las mediciones diarias de temperatura de los últimos 100 años, se tendrían que crear decenas o cientos de variables.</p>
+
+      <p>En este tipo de casos, se pueden agrupar todas las variables relacionadas en una colección de variables o array. El ejemplo anterior se puede rehacer de la siguiente forma:</p>
+
+      <pre>
+        <span class="kw1">var</span> dias <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Lunes"</span><span class="sy0">,</span> <span class="st0">"Martes"</span><span class="sy0">,</span> <span class="st0">"Miércoles"</span><span class="sy0">,</span> <span class="st0">"Jueves"</span><span class="sy0">,</span> <span class="st0">"Viernes"</span><span class="sy0">,</span> <span class="st0">"Sábado"</span><span class="sy0">,</span> <span class="st0">"Domingo"</span><span class="br0">]</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Ahora, una única variable llamada <code>dias</code> almacena todos los valores relacionados entre sí, en este caso los días de la semana. Para definir un array, se utilizan los caracteres <code>[</code> y <code>]</code> para delimitar su comienzo y su final y se utiliza el carácter <code>,</code> (coma) para separar sus elementos:</p>
+
+      <pre>
+        <span class="kw1">var</span> nombre_array <span class="sy0">=</span> <span class="br0">[</span>valor1<span class="sy0">,</span> valor2<span class="sy0">,</span> ...<span class="sy0">,</span> valorN<span class="br0">]</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Una vez definido un array, es muy sencillo acceder a cada uno de sus elementos. Cada elemento se accede indicando su posición dentro del array. La única complicación, que es responsable de muchos errores cuando se empieza a programar, es que las posiciones de los elementos empiezan a contarse en el <code>0</code> y no en el <code>1</code>:</p>
+
+      <pre>
+        <span class="kw1">var</span> diaSeleccionado <span class="sy0">=</span> dias<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">;</span>    <span class="co1">// diaSeleccionado = "Lunes"</span>
+        <span class="kw1">var</span> otroDia <span class="sy0">=</span> dias<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span><span class="sy0">;</span>            <span class="co1">// otroDia = "Sábado"</span>
+      </pre>
+
+      <p>En el ejemplo anterior, la primera instrucción quiere obtener el primer elemento del array. Para ello, se indica el nombre del array y entre corchetes la posición del elemento dentro del array. Como se ha comentado, las posiciones se empiezan a contar en el <code>0</code>, por lo que el primer elemento ocupa la posición <code>0</code> y se accede a el mediante <code>dias[0]</code>.</p>
+
+      <p>El valor <code>dias[5]</code> hace referencia al elemento que ocupa la sexta posición dentro del array <code>dias</code>. Como las posiciones empiezan a contarse en <code>0</code>, la posición <code>5</code> hace referencia al sexto elemento, en este caso, el valor <code>Sábado</code>.</p>
+      <br>
+  
+    </div><!-- /.contenedor -->
+  </section>
+  <!-- /. Variables -->              
+            </div>
+            <!-- Definiendo filas -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel3">
+                <!-- ********** Definiendo filas -->
+  <section id="definiendo-filas" class="">
+    <h2>Definiendo filas</h2>    
+    <div class="contenedor">
+      <p>Una vez definidos el tipo de <code>display</code> y las columnas, debemos completar la estructura básica de la grilla con las filas (eje vertical).</p>
+      <br>
+      <p><b>• grid-template-rows</b> establece el tamaño de las filas (eje vertical). </p>
+      <p>Combinado las columnas y las filas en el siguiente ejemplo tenemos una cuadricula con 3 columnas (la primera con 20% de ancho, la segunda con 50% de ancho y la tercera con 30% de ancho) y con 3 filas (la primera con 15rem de alto, la segunda con 5rem de alto y la tercera con 10rem). Ahora, de acuerdo al número de ítems (elementos hijos) que tiene el contenedor grid, tenemos <b>una cuadrícula de 3x3 elementos</b>. Como el número de ítems es par, la última celda de la cuadrícula se queda vacía.</p>
+      
+      <pre>
+      <b>HTML</b>
+      &lt;div class="padre">
+        &lt;div class="hijo">Contenido... #1&lt;/div>
+        &lt;div class="hijo">Contenido... #2&lt;/div>
+        &lt;div class="hijo">Contenido... #3&lt;/div>
+        &lt;div class="hijo">Contenido... #4&lt;/div>
+        &lt;div class="hijo">Contenido... #5&lt;/div>
+        &lt;div class="hijo">Contenido... #6&lt;/div>
+        &lt;div class="hijo">Contenido... #7&lt;/div>
+        &lt;div class="hijo">Contenido... #8&lt;/div>
+      &lt;/div>
+
+      <b>CSS</b>
+      .padre {
+        display: grid;
+        grid-template-columns: 20% 50% 30%;
+        grid-template-rows: 15rem 5rem 10rem; <b class="color-verde"><big>◀</big> Esto define las filas</b>
+      }
+
+      .hijo {
+        background-color: rgb(255, 243, 204);
+        border: 1px solid #777;
+        padding: 10px;
+        text-align: center;
+      }
+
+      </pre>
+      <div class="padre mt-2">
+        <div class="hijo">Contenido... #1</div>
+        <div class="hijo">Contenido... #2</div>
+        <div class="hijo">Contenido... #3</div>
+        <div class="hijo">Contenido... #4</div>
+        <div class="hijo">Contenido... #5</div>
+        <div class="hijo">Contenido... #6</div>
+        <div class="hijo">Contenido... #7</div>
+        <div class="hijo">Contenido... #8</div>
+      </div>
+    </div><!-- /.contenedor -->
+  </section>
+  <!-- /. Definiendo columnas -->
+            </div>
+            <div class="tabs-panel" id="cont-ppal-tabs-panel4">
+              <p>Cuatro</p>
+              <img class="thumbnail" src="assets/img/nave-1.jpg" width="100%">
+            </div>
+            <div class="tabs-panel" id="cont-ppal-tabs-panel5">
+              <p>Cinco</p>
+              <p class="lead">Si el conocimiento puede crear problemas, no es con la ignorancia con lo que podremos resolverlos</p>
+            </div>
+          </div><!-- /.tabs-content -->
+        </div><!-- /.columns -->
+      </div><!-- /.row collapse -->
+    </div><!-- /.contenedor -->
+  </section>
+  <!-- /. CONTENIDO PÁGINA -->
+    <!-- ************* CORE JS -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/sweetalert2.all.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/what-input.js"></script>
+    <script src="assets/js/foundation.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>
+
+  
