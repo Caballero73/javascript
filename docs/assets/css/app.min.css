@@ -29,13 +29,17 @@ Tipografia usada en el proyecto: tipografia.css
 /******************************
 ESTILOS CONTENIDO PPAL: cont-ppal.css;
 *******************************/
+#cont-ppal #abside-cont {
+		display: grid;
+		grid-template-rows: auto 1fr;
+		height: 98vh;
+	}
 #cont-ppal #abside {
 		background: #09458d;
 		border-radius: .7rem 0 0 .7rem;
 		color: #F8F8FF;
 		padding: 15px;
 		padding: 1.5rem;
-		height: 27vh;
 		width: 100%;
 	}
 #cont-ppal .tabs > li {
@@ -45,7 +49,7 @@ ESTILOS CONTENIDO PPAL: cont-ppal.css;
 	}
 #cont-ppal .tabs > li a {
 			color: #F8F8FF;
-			font-size: calc(1.50233rem + 0.23256vw);
+			font-size: calc(1.50233rem + 0.37209vw);
 			
 		}
 #cont-ppal .tabs-title > a:focus, #cont-ppal .tabs-title > a[aria-selected="true"] {
@@ -134,25 +138,14 @@ ESTILOS CONTENIDO DEFINIENDO VARIABLES: variable.css;
 }
 /**/
 /******************************
-ESTILOS CONTENIDO DEFINIENDO FILAS: definiendo-filas.css;
+ESTILOS CONTENIDO JS y HTML: javascript-y-html.css;
 *******************************/
-#definiendo-filas {
+#javascript-y-html {
 	padding: 20px;
-	padding: 2rem;	
-}
-#definiendo-filas .padre {
-		display: grid;
-		grid-template-columns: 20% 50% 30%;
-		grid-template-rows: 15rem 5rem 10rem; 
+	padding: 2rem;
+	
 
-	}
-#definiendo-filas .hijo {
-	  background-color: rgb(255, 231, 153);
-	  border: 1px solid #777;
-	  padding:  10px;
-	  padding:  1rem;
-	  text-align: center;
-	}
+}
 /**/
 /******************************
 ESTILOS DEL TEMA: custom.css;
