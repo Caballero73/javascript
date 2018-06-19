@@ -1,0 +1,13 @@
+/******************************
+ESTILOS CONTENIDO BUCLE DO WHILE: bucle-do-while.css;
+*******************************/
+#bucle-do-while {
+	padding: 2rem;
+
+	& pre.lead {
+		font-weight: bold;
+	}
+	
+
+}
+/**/

@@ -1,0 +1,43 @@
+  <!-- ********** Bucle while -->
+  <section id="bucle-while" class="">
+    <div class="contenedor">
+      <h2>Bucle While</h2>    
+      <p>La estructura <code>while</code> permite crear bucles que se ejecutan ninguna o más veces, dependiendo de la condición indicada. Su definición formal es:</p>
+
+      <pre>
+      while(condicion) {
+        ...
+      }
+      </pre>
+
+      <p>El funcionamiento del bucle <code>while</code> se resume en: <em>"mientras se cumpla la condición indicada, repite indefinidamente las instrucciones incluidas dentro del bucle, es decir entre las llaves {}"</em>.</p>
+
+      <p>Si la condición no se cumple ni siquiera la primera vez, el bucle no se ejecuta. Si la condición se cumple, se ejecutan las instrucciones una vez y se vuelve a comprobar la condición. Si se sigue cumpliendo la condición, se vuelve a ejecutar el bucle y así se continúa hasta que la condición no se cumpla.</p>
+
+      <p>Evidentemente, las variables que controlan la condición deben modificarse dentro del propio bucle, ya que de otra forma, la condición se cumpliría siempre y el bucle <code>while</code> se repetiría indefinidamente.</p>
+
+      <p>El siguiente ejemplo utiliza el bucle <code>while</code> para sumar todos los números menores o iguales que otro número:</p>
+
+      <pre>
+      <span class="kw1">var</span> resultado <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>   <span class="co1">//variable acumuladora</span>
+      <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">100</span><span class="sy0">;</span>    <span class="co1">//variable condicional</span>
+      <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>           <span class="co1">//variable de control</span>
+      &nbsp;
+      <span class="fu0">while</span><span class="br0">(</span>i <span class="sy0">&lt;=</span> numero<span class="br0">)</span> <span class="br0">{</span>
+        resultado <span class="sy0">=</span> resultado <span class="sy0">+</span> i<span class="sy0">;</span>
+        i <span class="sy0">=</span> i <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="kw1">console.log</span><span class="br0">(</span><span class="st0">'Resultado del ejercicio '</span> <span class="sy0">+</span> resultado<span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      
+      <p>El programa debe sumar todos los números menores o igual que otro dado. Por ejemplo si el número es <code>5</code>, se debe calcular: <code>1 + 2 + 3 + 4 + 5 = 15</code></p>
+
+      <p>Este tipo de condiciones  <em>"suma números mientras sean menores o iguales que otro número dado"</em>) se resuelven muy fácilmente con los bucles tipo <code>while</code>.</p>
+
+      <p>En el ejemplo anterior, mientras se cumpla la condición, es decir, mientras que la variable <code>i</code> sea menor o igual que la variable <code>numero</code>, se ejecutan las instrucciones del bucle.</p>
+
+      <p>Dentro del bucle se suma el valor de la variable <code>i</code> al resultado total (variable <code>resultado</code>) y se actualiza el valor de la variable <code>i</code>, que es la que controla la condición del bucle. Si no se actualiza el valor de la variable <code>i</code>, la ejecución del bucle continua infinitamente o hasta que el navegador permita al usuario detener el script.</p>
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>

@@ -1,19 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aprendiendo JavaScrip</title>
   <meta name="description" content="JavaScript es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla.">
   <link rel="shortcut icon" href="assets/img/favicon.ico">
-  <style>
-    @charset "UTF-8";@font-face{font-family:FontAwesome;src:url(../docs/assets/fonts/fontawesome-webfont.eot?v=4.7.0);src:url(../docs/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'),url(../docs/assets/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'),url(../docs/assets/fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'),url(../docs/assets/fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),url(../docs/assets/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg')}blockquote,div,h1,li,p,ul{margin:0;padding:0}i{font-style:italic;line-height:inherit}h1{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}@font-face{font-family:Raleway-Bold;src:url(../docs/assets/fonts/Raleway-Bold.eot);src:local('☺'),url(../docs/assets/fonts/Raleway-Bold.woff) format('woff'),url(../docs/assets/fonts/Raleway-Bold.ttf) format('truetype'),url(../docs/assets/fonts/Raleway-Bold.svg) format('svg')}@font-face{font-family:Lato;src:local('☺'),url(../docs/assets/fonts/Lato-Regular.ttf) format('truetype')}h1{color:#6b00a1;font-family:Raleway-Bold,serif}blockquote,div,h1,h2,li,p,ul{margin:0;padding:0}@media screen and (max-width:420px){#cont-ppal #cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}}.fa{display:inline-block;font:14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.pull-right{float:right}.fa-repeat:before{content:"\f01e"}.fa-list-alt:before{content:"\f022"}.fa-book:before{content:"\f02d"}.fa-github:before{content:"\f09b"}.fa-hand-o-up:before{content:"\f0a6"}.fa-linkedin:before{content:"\f0e1"}.fa-undo:before{content:"\f0e2"}.fa-terminal:before{content:"\f120"}.fa-rocket:before{content:"\f135"}.fa-chevron-circle-up:before{content:"\f139"}.fa-html5:before{content:"\f13b"}.fa-dot-circle-o:before{content:"\f192"}.fa-cube:before{content:"\f1b2"}.fa-toggle-on:before{content:"\f205"}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code{font-family:monospace,monospace;font-size:1em}small{font-size:80%}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:100%}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}body{margin:0;padding:0;background:#fefefe;font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-weight:400;line-height:1.5;color:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}pre{overflow:auto}blockquote,div,h1,h2,li,p,pre,ul{margin:0;padding:0}p{margin-bottom:10px;margin-bottom:1rem;font-size:inherit;line-height:1.6;text-rendering:optimizeLegibility}em,i{font-style:italic;line-height:inherit}b,strong{font-weight:700;line-height:inherit}small{font-size:80%;line-height:inherit}h1,h2{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}h1{font-size:15px;font-size:1.5rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}h2{font-size:12.5px;font-size:1.25rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}a{line-height:inherit;color:#09458d;text-decoration:none}ul{margin-bottom:10px;margin-bottom:1rem;list-style-position:outside;line-height:1.6}li{font-size:inherit}ul{margin-left:12.5px;margin-left:1.25rem;list-style-type:disc}blockquote{margin:0 0 10px;margin:0 0 1rem;padding:5.625px 12.5px 0 11.875px;padding:.5625rem 1.25rem 0 1.1875rem;border-left:1px solid #cacaca}blockquote{line-height:1.6;color:#8a8a8a}cite{display:block;font-size:8.125px;font-size:.8125rem;color:#8a8a8a}cite:before{content:"— "}code{padding:1.25px 3.125px .625px;padding:.125rem .3125rem .0625rem;border:1px solid #cacaca;background-color:#e6e6e6;font-family:Consolas,Liberation Mono,Courier,monospace;font-weight:400;color:#0a0a0a}.lead{font-size:125%;line-height:1.6}.text-center{text-align:center}.tabs{margin:0;border:1px solid #e6e6e6;background:#fefefe;list-style-type:none}.tabs:after,.tabs:before{display:table;content:' ';-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-order:1;-webkit-box-ordinal-group:2;order:1}.tabs:after{clear:both}.tabs.vertical>li{display:block;float:none;width:auto}.tabs-title{float:left}.tabs-title>a{display:block;padding:12.5px 15px;padding:1.25rem 1.5rem;font-size:7.5px;font-size:.75rem;line-height:1;color:#09458d}.tabs-title>a[aria-selected=true]{background:#e6e6e6;color:#09458d}.tabs-content{border:1px solid #e6e6e6;border-top:0;background:#fefefe;color:#0a0a0a}.tabs-panel{display:none;padding:10px;padding:1rem}.tabs-panel.is-active{display:block}.sticky{position:relative;z-index:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.row{max-width:625px;max-width:62.5rem;margin-right:auto;margin-left:auto;display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap}.row.collapse>.columns{padding-right:0;padding-left:0}.columns{-ms-flex:1 1 0px;-webkit-box-flex:1;flex:1 1 0px;padding-right:9.375px;padding-right:.9375rem;padding-left:9.375px;padding-left:.9375rem;min-width:0}.small-3{-ms-flex:0 0 25%;-webkit-box-flex:0;flex:0 0 25%;max-width:25%}#cont-ppal #abside-cont{display:grid;grid-template-rows:auto 1fr;height:98vh}#cont-ppal #abside{background:#4e0079;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;padding:15px;padding:1.5rem;width:100%}#cont-ppal #cont-ppal-tabs li a{font-size:calc(.85581rem + .93023vw)}#cont-ppal #cont-ppal-header{background:#6b00a1;padding:10px;padding:1rem;text-shadow:0 .5px #ccc,0 1px #bfbfbf,0 1.5px #b3b3b3,0 2px #a6a6a6,0 1.5px #8c8c8c}#cont-ppal #cont-ppal-header h1{color:#fff!important}#cont-ppal #iconos{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}#cont-ppal .tabs>li{background-color:#3b005d;border-radius:.7rem 0 0 .7rem;margin-bottom:1px}#cont-ppal .tabs>li a{color:#f8f8ff;font-size:calc(1.50233rem + .37209vw)}#cont-ppal .tabs-title>a[aria-selected=true]{background:#7400b3;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;outline:0}#conceptos-fundamentales{padding:20px;padding:2rem}html{font-size:10px;font-family:Lato,sans-serif;color:#444}body{color:#444;background-color:#ededed;font-size:calc(1.20465rem + .46512vw);font-family:Lato,sans-serif}a{text-decoration:none}#abside a{color:#f8f8ff;text-decoration:none}cite{font-size:calc(.75581rem + .5814vw)}.contenedor{margin-left:auto;margin-right:auto}.contenedor,.row{max-width:80vw!important}h1,h2{color:#6b00a1;font-family:Raleway-Bold,serif}h1{font-size:calc(1.6186rem + 1.86047vw)}h2{font-size:calc(1.51163rem + 1.16279vw)}.ir-arriba{border-radius:.4rem;display:none;padding:7px;padding:.7rem;background:#6b00a1;color:#fff;position:fixed;bottom:20px;bottom:2rem;right:10px;right:1rem;z-index:100}.mt-1{margin-top:10px;margin-top:1rem}.mt-2{margin-top:20px;margin-top:2rem}.mb-3{margin-bottom:30px;margin-bottom:3rem}.mt-4{margin-top:40px;margin-top:4rem}pre{color:#333}.tabs-content{color:#444}@media print,screen and (min-width:40em){h1{font-size:30px;font-size:3rem}h2{font-size:25px;font-size:2.5rem}}@media screen and (max-width:39.9375em){.hide-for-small-only{display:none!important}}@media screen and (min-width:1280px){#cont-ppal #cont-ppal-tabs li a{font-size:16px;font-size:1.6rem}#cont-ppal .tabs>li a{font-size:18px;font-size:1.8rem}body{font-size:18px;font-size:1.8rem}cite{font-size:15px;font-size:1.5rem}h1{font-size:40px;font-size:4rem}h2{font-size:30px;font-size:3rem}}@media screen and (max-width:420px){#cont-ppal #cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}h2{font-size:20px;font-size:2rem}}@media (min-width:0px) and (max-width:544px){#cont-ppal #cont-ppal-tabs i{display:none}}@media (min-width:545px) and (max-width:768px){#cont-ppal #cont-ppal-tabs i{display:none}.contenedor,.row{max-width:98vw!important}}@media (min-width:1291px) and (max-width:1420px){.contenedor,.row{max-width:90vw!important}}@media (min-width:1025px) and (max-width:1290px){.contenedor,.row{max-width:95vw!important}}@media (min-width:769px) and (max-width:1024px){.contenedor,.row{max-width:97vw!important}}@media (min-width:331px) and (max-width:544px){.contenedor,.row{max-width:100vw!important}}@media (min-width:0px) and (max-width:330px){.contenedor,.row{max-width:100vw!important}}
-  </style>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="preload" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css"></noscript>
-  <link rel="preload" type="text/css" href="assets/css/app.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" type="text/css" href="assets/css/app.min.css"></noscript>
-  <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" type="text/css" href="assets/css/app.min.css" />
 </head>
 
 <body>
@@ -39,9 +33,9 @@
       </blockquote>
       <!-- /////// Tabs para el contenido de cada tema -->
       <div class="row collapse mt-4">
-        <div class="small-3 columns" data-sticky-container="">
-          <div class="sticky" data-sticky="" data-top-anchor="1top" id="abside-cont">
-            <ul class="vertical tabs sticky" data-tabs="" id="cont-ppal-tabs">
+        <div class="small-3 columns" data-sticky-container>
+          <div class="sticky" data-sticky data-top-anchor="1top" id="abside-cont">
+            <ul class="vertical tabs sticky" data-tabs id="cont-ppal-tabs">
               <!-- Conceptos fundamentales -->
               <li class="tabs-title is-active"><a href="#cont-ppal-tabs-panel1" aria-selected="true"><i class="fa fa-book fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Conceptos fundamentales</span></a></li>
               <!-- Variables -->
@@ -55,11 +49,13 @@
               <!-- Bucle do while -->
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel6"><i class="fa fa-hand-o-up fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Bucle do...while</span></a></li>
               <!-- Estructura if...else -->
-              <li class="tabs-title"><a href="#cont-ppal-tabs-panel7"><i class="fa fa-dot-circle-o fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Estructura if...else</span></a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel7"><i class="fa fa-dot-circle-o fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Estructura if...else</span></a></li>
               <!-- Estructura switch -->
-              <li class="tabs-title"><a href="#cont-ppal-tabs-panel8"><i class="fa fa-toggle-on fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Estructura switch</span></a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel8"><i class="fa fa-toggle-on fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Estructura switch</span></a></li>
               <!-- Operadores -->
-              <li class="tabs-title"><a href="#cont-ppal-tabs-panel9"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Operadores</span></a></li>
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel9"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Operadores</span></a></li>
+              <!-- Operadores -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel10"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Operadores</span></a></li>
             </ul>
             <div class="mt-1" id="abside">
               <div class="text-center mb-3" id="iconos">
@@ -194,7 +190,7 @@
       resultado = numero_1 + numero_2
       </pre>
       <p>Los elementos <code>numero_1</code> y <code>numero_2</code> son <strong>variables</strong> que almacenan los valores que utiliza el programa. El resultado se calcula siempre en función del valor almacenado por las variables, por lo que este programa funciona correctamente para cualquier par de números indicado. Si se modifica el valor de las variables <code>numero_1</code> y <code>numero_2</code>, el programa sigue funcionando correctamente.</p>
-      <p></p><p><b>• Sintaxis</b>... las variables en JavaScript se crean mediante la palabra reservada <b>var</b>.</p>
+      <p><p><b>• Sintaxis</b>... las variables en JavaScript se crean mediante la palabra reservada <b>var</b>.</p>
       <center class="mt-1 mb-2"><img src="assets/img/variable_sintaxis.png" alt="Definir variable"></center>
       <p>La palabra reservada <code>var</code> solamente es necesaria al definir por primera vez la variable, lo que se denomina <strong>declarar</strong> una variable. Cuando se utilizan las variables en el resto de instrucciones del script, solamente es necesario indicar su nombre.</p>
       <p>Por ejemplo sería un error escribir lo siguiente:</p>
@@ -571,7 +567,7 @@
   <section id="bucle-do-while" class="">
     <div class="contenedor">
       <h2>Bucle do while</h2>    
-      El bucle de tipo <code>do...while</code> es muy similar al bucle <code>while</code>, salvo que en este caso <strong>siempre</strong> se ejecutan las instrucciones del bucle al menos por una vez.  Su definición formal es:<p></p>
+      El bucle de tipo <code>do...while</code> es muy similar al bucle <code>while</code>, salvo que en este caso <strong>siempre</strong> se ejecutan las instrucciones del bucle al menos por una vez.  Su definición formal es:</p>
       <pre>
       <span class="kw1">do</span> <span class="br0">{</span>
         ...
@@ -1038,8 +1034,323 @@
       <p>Para determinar si una letra es mayor o menor que otra</p>
       <ul>
         <li>Las mayúsculas se consideran menores que las minúsculas (<code>A</code> es menor que <code>a</code>).</li>
-        <li>Las primeras letras del alfabeto son menores que las últimas (<code>a</code> es menor que <code>b</code>, <code>b</code> es menor que <code>c</code>, etc.).<p></p>        
-      </li></ul>
+        <li>Las primeras letras del alfabeto son menores que las últimas (<code>a</code> es menor que <code>b</code>, <code>b</code> es menor que <code>c</code>, etc.).</p>        
+      </ul>
+      <br>
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Operadores -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel10">
+                <!-- ********** Operadores -->
+  <section id="operadores" class="">
+    <div class="contenedor">
+      <h2>Operadores</h2>
+      <p>Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.</p>
+      <p>Estos son los tipos de operadores que usaremos:</p>
+      <br>
+      <div class="stacked-for-small button-group">
+        <a class="button hollow primary" href="#asignacion"><big>=</big><br>Asignación</a>
+        <a class="button hollow primary" href="#incremento_y_decremento"><big>++  --</big><br>Incremento y decremento</a>
+        <a class="button hollow primary" href="#negacion"><big>!</big><br>Negación</a>
+        <a class="button hollow primary" href="#and"><big>&amp;&amp;</big><br>AND</a>
+        <a class="button hollow primary" href="#or"><big>||</big><br>OR</a>
+        <a class="button hollow primary" href="#matematicos"><big>+ - / *</big><br>Matemáticos</a>
+        <a class="button hollow primary" href="#relacionales"><big>&lt;/&gt;</big><br>Relacionales</a>
+      </div>
+      <br>
+
+      <h3 id="asignacion">Asignación</h3>
+      <p>El operador de asignación es el más utilizado y el más sencillo. Se utiliza para guardar un valor específico en una variable. El símbolo es <code>=</code> (no confundir con el operador <code>==</code> que se verá más adelante):</p>
+      <pre class="lead">
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+      </pre>
+      <p>A la izquierda del operador, siempre debe indicarse el nombre de una variable. A la derecha del operador, se indican variables, valores, condiciones lógicas, etc:</p>
+      <pre class="lead">
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+      <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">4</span><span class="sy0">;</span>
+      </pre>      
+      <p>A continuación vemos un <b>Error</b>, la asignación siempre se realiza a una variable, por lo que en la izquierda no se puede indicar un número.</p>
+      <pre class="lead">
+      <span class="nu0">5</span> <span class="sy0">=</span> numero1<span class="sy0">;</span>
+      &nbsp;
+      <span class="co1">// Ahora, la variable numero1 vale 5</span>
+      numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="co1">// Ahora, la variable numero1 vale 4</span>
+      <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">4</span><span class="sy0">;</span>
+      &nbsp;
+      numero1 <span class="sy0">=</span> numero2<span class="sy0">;</span></pre>
+      <br>
+
+      <h3 id="incremento_y_decremento">Incremento y decremento</h3>
+      <p>Estos 2 operadores son válidos únicamente para las variables numéricas y se utilizan para incrementar o decrementar en 1 unidad el valor de la misma.</p>
+      <p><b>Ejemplo:</b></p>
+      <pre class="lead">
+      <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      <span class="sy0">++</span>numero<span class="sy0">;</span>
+      <span class="co1">// numero = 6</span>
+      </pre>
+      <p>El operador de incremento se indica mediante el prefijo <code>++</code> en el nombre de la variable. El resultado es que el valor de esa variable se incrementa en una unidad.</p>
+      <p>Por tanto, el anterior ejemplo es equivalente a:</p>
+      <pre><b>
+      <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      numero <span class="sy0">=</span> numero <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span>
+      <span class="co1">// numero = 6</span>
+      </b></pre>
+      <p>De forma equivalente, el operador decremento (indicado como un prefijo <code>--</code> en el nombre de la variable) se utiliza para decrementar el valor de la variable:</p>
+      <pre class="lead">
+      <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      <span class="sy0">--</span>numero<span class="sy0">;</span>
+      alert<span class="br0">(</span>numero<span class="br0">)</span><span class="sy0">;</span>  <span class="co1">// numero = 4</span>
+      </pre>
+      <p>El anterior ejemplo es equivalente a:</p>
+      <pre><b>
+      <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      numero <span class="sy0">=</span> numero <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span>
+      alert<span class="br0">(</span>numero<span class="br0">)</span><span class="sy0">;</span>  <span class="co1">// numero = 4</span>
+      </b></pre>
+      <p>Los operadores de incremento y decremento no solamente se pueden indicar como prefijo del nombre de la variable, sino que también es posible utilizarlos como sufijo. En este caso, su comportamiento es similar en apariencia; pero muy diferente en el fondo.</p>
+      <pre class=""><b>
+      <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      numero<span class="sy0">++;</span>
+      <span class="co1">// numero = 6</span>
+      </b></pre>
+      <p>El resultado de ejecutar el script anterior es el mismo que cuando se utiliza el operador <code>++numero</code>, por lo que puede parecer que es equivalente indicar el operador <code>++</code> delante o detrás del identificador de la variable. Sin embargo, el siguiente ejemplo muestra sus diferencias:</p>
+      <pre class="lead">
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>
+      numero3 <span class="sy0">=</span> numero1<span class="sy0">++</span> <span class="sy0">+</span> numero2<span class="sy0">;</span>
+      <span class="co1">// numero3 = 7, numero1 = 6</span>
+      &nbsp;
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>
+      numero3 <span class="sy0">=</span> <span class="sy0">++</span>numero1 <span class="sy0">+</span> numero2<span class="sy0">;</span>
+      <span class="co1">// numero3 = 8, numero1 = 6</span>
+      </pre>
+      <p class="callout">Si el operador <code>++</code> se indica como prefijo de la variable, su valor se incrementa <strong>antes</strong> de realizar cualquier otra operación. Si el operador <code>++</code> se indica como sufijo del identificador de la variable, su valor se incrementa <strong>después</strong> de ejecutar la sentencia en la que aparece.</p>
+      <p>Por tanto en <code>numero3 = numero1++ + numero2;</code>, el valor de <code>numero1</code> se incrementa después de realizar la operación (primero se suma y <code>numero3</code> vale <code>7</code>, después se incrementa el valor de <code>numero1</code> y vale <code>6</code>).</p>
+      <p>Mientras, en la instrucción <code>numero3 = ++numero1 + numero2;</code>, en primer lugar se incrementa el valor de <code>numero1</code> y después se realiza la suma (primero se incrementa <code>numero1</code> y vale <code>6</code>, después se realiza la suma y <code>numero3</code> vale <code>8</code>).</p>
+      <br>
+
+      <h3 id="negacion">Negación</h3>
+      <p>Uno de los operadores lógicos (booleanos) más utilizados. Obtiene el valor contrario al valor de la variable:</p>
+      <pre class="lead">
+      <span class="kw1">var</span> visible <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+      <span class="kw1">var</span> !visible <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+      <span class="co1">// Muestra "false" y no "true"</span>
+      </pre>
+      <p>La negación lógica se obtiene prefijando el símbolo <code>!</code> a la variable. El funcionamiento de este operador se resume en la siguiente tabla:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>variable</th>
+            <th>!variable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>true</code></td>
+            <td><code>false</code></td>
+          </tr>
+          <tr>
+            <td><code>false</code></td>
+            <td><code>true</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Si la variable es de tipo <em>booleano</em>, es muy sencillo obtener su negación. Sin embargo, ¿qué sucede cuando la variable es un número o una cadena de texto? Para obtener la negación en este tipo de variables, se realiza en primer lugar su conversión a un valor <em>booleano</em>:</p>
+      <ul>
+      <li>Si la variable contiene un número: <em>Se transforma en <code>false</code> si vale <code>0</code> y en <code>true</code> para cualquier otro número (positivo o negativo, decimal o entero).</em></li>
+        <li>Si la variable contiene una cadena de texto: <em>Se transforma en <code>false</code> si la cadena es vacía (<code>""</code>) y en <code>true</code> en cualquier otro caso.</em></li>
+      </ul>
+      <pre class=""><b>
+      <span class="kw1">var</span> cantidad <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+      vacio <span class="sy0">=</span> <span class="sy0">!</span>cantidad<span class="sy0">;</span>  <span class="co1">// vacio = true</span>
+      &nbsp;
+      cantidad <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>
+      vacio <span class="sy0">=</span> <span class="sy0">!</span>cantidad<span class="sy0">;</span>  <span class="co1">// vacio = false</span>
+      &nbsp;
+      <span class="kw1">var</span> mensaje <span class="sy0">=</span> <span class="st0">""</span><span class="sy0">;</span>
+      mensajeVacio <span class="sy0">=</span> <span class="sy0">!</span>mensaje<span class="sy0">;</span>  <span class="co1">// mensajeVacio = true</span>
+      &nbsp;
+      mensaje <span class="sy0">=</span> <span class="st0">"Bienvenido"</span><span class="sy0">;</span>
+      mensajeVacio <span class="sy0">=</span> <span class="sy0">!</span>mensaje<span class="sy0">;</span>  <span class="co1">// mensajeVacio = false</span>
+      </b></pre>
+      <br>
+
+      <h3 id="and">AND</h3>
+
+      <p>La operación lógica <code>AND</code> obtiene su resultado <b>combinando dos valores booleanos</b>. El operador se indica mediante el símbolo <code>&amp;&amp;</code> y su resultado solamente es <code>true</code> si los dos operandos son <code>true</code>:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>variable1</th>
+            <th>variable2</th>
+            <th>variable1 &amp;&amp; variable2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+          </tr>
+          <tr>
+            <td><code>true</code></td>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
+          </tr>
+          <tr>
+            <td><code>false</code></td>
+            <td><code>true</code></td>
+            <td><code>false</code></td>
+          </tr>
+          <tr>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <pre class="lead">
+      <span class="kw1">var</span> valor1 <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+      <span class="kw1">var</span> valor2 <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+      resultado <span class="sy0">=</span> valor1 <span class="sy0">&amp;&amp;</span> valor2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
+      &nbsp;
+      valor1 <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+      valor2 <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+      resultado <span class="sy0">=</span> valor1 <span class="sy0">&amp;&amp;</span> valor2<span class="sy0">;</span> <span class="co1">// resultado = true</span></pre>
+      <br>
+
+      <h3 id="or">OR</h3>
+      <p>La operación lógica <code>OR</code> también <b>combina dos valores booleanos</b>. El operador se indica mediante el símbolo <code>||</code> y su resultado es <code>true</code> si alguno de los dos operandos es <code>true</code>:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>variable1</th>
+            <th>variable2</th>
+            <th><code>variable1 || variable2</code></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+          </tr>
+          <tr>
+            <td><code>true</code></td>
+            <td><code>false</code></td>
+            <td><code>true</code></td>
+          </tr>
+          <tr>
+            <td><code>false</code></td>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+          </tr>
+          <tr>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <pre class="lead">
+      <span class="kw1">var</span> valor1 <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+      <span class="kw1">var</span> valor2 <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+      resultado <span class="sy0">=</span> valor1 <span class="sy0">||</span> valor2<span class="sy0">;</span> <span class="co1">// resultado = true</span>
+      &nbsp;
+      valor1 <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+      valor2 <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+      resultado <span class="sy0">=</span> valor1 <span class="sy0">||</span> valor2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
+      </pre>
+      <br>
+
+      <h3 id="matematicos">Matemáticos</h3>
+      <p>JavaScript permite realizar operaciones matemáticas sobre el valor de las variables numéricas. Los operadores definidos son: suma (<code>+</code>), resta (<code>-</code>), multiplicación (<code>*</code>) y división (<code>/</code>).</p>
+      <p><b>Ejemplo:</b></p>
+      <pre class=""><b>
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+      <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      &nbsp;
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">/</span> numero2<span class="sy0">;</span>  <span class="co1">// resultado = 2</span>
+      resultado <span class="sy0">=</span> <span class="nu0">3</span> <span class="sy0">+</span> numero1<span class="sy0">;</span>        <span class="co1">// resultado = 13</span>
+      resultado <span class="sy0">=</span> numero2 – <span class="nu0">4</span><span class="sy0">;</span>        <span class="co1">// resultado = 1</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">*</span> numero <span class="nu0">2</span><span class="sy0">;</span> <span class="co1">// resultado = 50</span>
+      </b>
+      </pre>
+      <p>Además de los cuatro operadores básicos, JavaScript define otro operador matemático que no es sencillo de entender cuando se estudia por primera vez, pero que es muy útil en algunas ocasiones.</p>
+      <p>Se trata del operador <em>"módulo"</em>, que calcula el resto de la división entera de dos números. Si se divide por ejemplo <code>10</code> y <code>5</code>, la división es exacta y da un resultado de <code>2</code>. El resto de esa división es <code>0</code>, por lo que <code>módulo de 10 y 5</code> es igual a <code>0</code>.</p>
+      <p>Sin embargo, si se divide <code>9</code> y <code>5</code>, la división no es exacta, el resultado es <code>1</code> y el resto <code>4</code>, por lo que <code>módulo de 9 y 5</code> es igual a <code>4</code>.</p>
+      <p>El operador módulo en JavaScript se indica mediante el símbolo <code>%</code>, que no debe confundirse con el cálculo del porcentaje:</p>
+      <pre class=""><b>
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+      <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">%</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = 0</span>
+      &nbsp;
+      numero1 <span class="sy0">=</span> <span class="nu0">9</span><span class="sy0">;</span>
+      numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">%</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = 4</span>
+      </b></pre>
+      <p>Los operadores matemáticos también se pueden combinar con el operador de asignación para abreviar su notación:</p>
+      <pre class=""><b>
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      numero1 <span class="sy0">+=</span> <span class="nu0">3</span><span class="sy0">;</span>  <span class="co1">// numero1 = numero1 + 3 = 8</span>
+      numero1 <span class="sy0">-=</span> <span class="nu0">1</span><span class="sy0">;</span>  <span class="co1">// numero1 = numero1 - 1 = 4</span>
+      numero1 <span class="sy0">*=</span> <span class="nu0">2</span><span class="sy0">;</span>   <span class="co1">// numero1 = numero1 * 2 = 10</span>
+      numero1 <span class="sy0">/=</span> <span class="nu0">5</span><span class="sy0">;</span>   <span class="co1">// numero1 = numero1 / 5 = 1</span>
+      numero1 <span class="sy0">%=</span> <span class="nu0">4</span><span class="sy0">;</span>   <span class="co1">// numero1 = numero1 % 4 = 1</span>
+      </b>
+      </pre>
+      <br>
+
+      <h3 id="relacionales">Relacionales</h3>
+      <p>Los operadores relacionales de JavaScript son iguales a los que definen las matemáticas: mayor que (<code>&gt;</code>), menor que (<code>&lt;</code>), mayor o igual (<code>&gt;=</code>), menor o igual (<code>&lt;=</code>), igual que (<code>==</code>) y distinto de (<code>!=</code>).</p>
+      <p class="callout warning">Los operadores que relacionan variables son imprescindibles para realizar cualquier aplicación compleja. El resultado de todos estos operadores siempre es un valor booleano:</p>
+      <pre class=""><strong>
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+      <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">&gt;</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">&lt;</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = true</span>
+      &nbsp;
+      numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">&gt;=</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = true</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">&lt;=</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = true</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">==</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = true</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">!=</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
+      </strong></pre>
+      <br>
+      <p>Se debe tener especial cuidado con el operador de igualdad (<code>==</code>), ya que es el origen de la mayoría de errores de programación, incluso para los usuarios que ya tienen cierta experiencia desarrollando scripts. El operador <code>==</code> se utiliza para comparar el valor de dos variables, por lo que es muy diferente del operador <code>=</code>, que se utiliza para asignar un valor a una variable:</p>
+      <pre class=""><b>
+      <span class="co1">// El operador "=" asigna valores</span>
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>  <span class="co1">// numero1 = 3 y resultado = 3</span>
+      &nbsp;
+      <span class="co1">// El operador "==" compara variables</span>
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      resultado <span class="sy0">=</span> numero1 <span class="sy0">==</span> <span class="nu0">3</span><span class="sy0">;</span> <span class="co1">// numero1 = 5 y resultado = false</span>
+      </b></pre>
+      <br>
+      <p><b>Los operadores relacionales también se pueden utilizar con variables de tipo cadena de texto:</b></p>
+      <pre class=""><b>
+      <span class="kw1">var</span> texto1 <span class="sy0">=</span> <span class="st0">"hola"</span><span class="sy0">;</span>
+      <span class="kw1">var</span> texto2 <span class="sy0">=</span> <span class="st0">"hola"</span><span class="sy0">;</span>
+      <span class="kw1">var</span> texto3 <span class="sy0">=</span> <span class="st0">"adios"</span><span class="sy0">;</span>
+      &nbsp;
+      resultado <span class="sy0">=</span> texto1 <span class="sy0">==</span> texto3<span class="sy0">;</span> <span class="co1">// resultado = false</span>
+      resultado <span class="sy0">=</span> texto1 <span class="sy0">!=</span> texto2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
+      resultado <span class="sy0">=</span> texto3 <span class="sy0">&gt;=</span> texto2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
+      </b></pre>
+      <p>Cuando se utilizan cadenas de texto, los operadores "mayor que" (<code>&gt;</code>) y "menor que" (<code>&lt;</code>) siguen un razonamiento no intuitivo: se compara letra a letra comenzando desde la izquierda hasta que se encuentre una diferencia entre las dos cadenas de texto.</p>
+      <p>Para determinar si una letra es mayor o menor que otra</p>
+      <ul>
+        <li>Las mayúsculas se consideran menores que las minúsculas (<code>A</code> es menor que <code>a</code>).</li>
+        <li>Las primeras letras del alfabeto son menores que las últimas (<code>a</code> es menor que <code>b</code>, <code>b</code> es menor que <code>c</code>, etc.).</p>        
+      </ul>
       <br>
     </div><!-- /.contenedor -->
   </section>

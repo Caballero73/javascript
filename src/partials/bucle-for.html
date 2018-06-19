@@ -1,0 +1,72 @@
+  <!-- ********** Bucle for -->
+  <section id="bucle-for" class="">
+    <div class="contenedor">
+      <h2>Bucle For</h2>    
+      <p>La estructura <code>for</code> permite realizar repeticiones (bucles) de una forma muy sencilla. Su definición formal es:</p>
+      <pre>
+      <span class="kw1">for</span><span class="br0">(</span>inicializacion<span class="sy0">;</span> condicion<span class="sy0">;</span> actualizacion<span class="br0">)</span> <span class="br0">{</span>
+        ...
+      <span class="br0">}</span></pre>
+
+      <p>La idea del funcionamiento de un bucle <code>for</code> es la siguiente: <em>"mientras la condición indicada se siga cumpliendo, repite la ejecución de las instrucciones definidas dentro del for. Además, después de cada repetición, actualiza el valor de las variables que se utilizan en la condición"</em>.</p>
+
+      <ul>
+        <li>La <strong>inicialización</strong> es la zona en la que se establece los valores iniciales de las variables que controlan la repetición.</li>
+        <li>La <strong>condición</strong> es el único elemento que decide si continua o se detiene la repetición.</li>
+        <li>La <strong>actualización</strong> es el nuevo valor que se asigna después de cada repetición a las variables que controlan la repetición.</li>
+      </ul>
+
+      <pre>
+      <span class="kw1">var</span> mensaje <span class="sy0">=</span> <span class="st0">"Hola, estoy dentro de un bucle... "</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="kw1">for</span><span class="br0">(</span><span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="nu0">5</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>       
+      <span class="br0">}</span>
+
+      <span class="kw1">console.log</span><span class="br0">(</span><span class="st0">'Resultado del ejercicio 1 '</span> <span class="sy0">+</span> mensaje <span class="sy0">+</span> i <span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+
+      <p>La parte de la <strong>inicialización</strong> del bucle consiste en:</p>
+
+      <pre class="lead">
+      <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Primero se crea la variable <code>i</code> y se le asigna el valor de <code>0</code>. Esto solamente se toma  antes de comenzar a ejecutar el bucle. Las siguientes repeticiones no tienen en cuenta esta parte de inicialización.</p>
+
+      <p>La zona de <strong>condición</strong> del bucle es:</p>
+
+      <pre class="lead">
+      i <span class="sy0">&lt;</span> <span class="nu0">5</span>
+      </pre>
+
+      <p>Los bucles se siguen ejecutando mientras se cumplan las condiciones y se dejan de ejecutar después de comprobar que la condición no se cumple. <b>En este caso, mientras la variable <code>i</code> valga menos de <code>5</code> el bucle se ejecuta.</b></p>
+
+      <p>Como la variable <code>i</code> se ha inicializado a un valor de <code>0</code> y la condición para salir del bucle es que <code>i</code> sea <b>mayor</b> que <code>5</code>, si no se modifica el valor de <code>i</code> de alguna forma, el bucle se repetiría indefinidamente.</p>
+
+      <p>Por ese motivo, es imprescindible indicar la zona de actualización, en la que se modifica el valor de las variables que controlan el bucle:</p>
+
+      <pre class="lead">
+      i<span class="sy0">++</span>
+      </pre>
+
+      <p><b>En este caso, el valor de la variable <code>i</code> se incrementa en una unidad después de cada repetición... </b> La zona de actualización se ejecuta después de la ejecución de las instrucciones que incluye el <code>for</code>.</p>
+
+      <p>Así, durante la ejecución de la quinta repetición el valor de <code>i</code> será <code>4</code>. Después de la quinta ejecución, se actualiza el valor de <code>i</code>, <b>que ahora valdrá <code>5</code></b>. Como la condición es que <code>i</code> sea menor que <code>5</code>, la condición ya no se cumple y las instrucciones del <code>for</code> no se ejecutan una sexta vez.</p>
+
+      <div class="callout">
+        <p>Normalmente, la variable que controla los bucles <code>for</code> se llama <code>i</code>, ya que recuerda a la palabra índice y su nombre tan corto ahorra mucho tiempo y espacio.</p>
+      </div>
+
+      <p>En el siguiente ejemplo se muestran los días de la semana contenidos en un array de forma muy sencilla utilizando la estructura <code>for</code>:</p>
+
+      <pre>
+      <span class="kw1">var</span> dias <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Lunes"</span><span class="sy0">,</span> <span class="st0">"Martes"</span><span class="sy0">,</span> <span class="st0">"Miércoles"</span><span class="sy0">,</span> <span class="st0">"Jueves"</span><span class="sy0">,</span> <span class="st0">"Viernes"</span><span class="sy0">,</span> 
+      <span class="st0">"Sábado"</span><span class="sy0">,</span> <span class="st0">"Domingo"</span><span class="br0">]</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="kw1">for</span><span class="br0">(</span><span class="kw1">var</span> i<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> i<span class="sy0">&lt;</span><span class="nu0">7</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">console.log</span><span class="br0">(</span>dias<span class="br0">[</span>i<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span></pre>
+
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>

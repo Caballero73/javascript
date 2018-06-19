@@ -9,9 +9,29 @@
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel2"><i class="fa fa-cube fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Variables</span></a></li>
               <!-- JavaScrip y HTML -->
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel3"><i class="fa fa-html5 fa-lg" aria-hidden="true"></i>&nbsp; <span class="">JavaScrip y HTML</span></a></li>
+              <!-- Bucle While -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel4"><i class="fa fa-repeat fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Bucle while</span></a></li>
+              <!-- Bucle For -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel5"><i class="fa fa-undo fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Bucle for</span></a></li>
+              <!-- Bucle do while -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel6"><i class="fa fa-hand-o-up fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Bucle do...while</span></a></li>
+              <!-- Estructura if...else -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel7"><i class="fa fa-dot-circle-o fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Estructura if...else</span></a></li>
+              <!-- Estructura switch -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel8"><i class="fa fa-toggle-on fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Estructura switch</span></a></li>
+              <!-- Operadores -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel9"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Operadores</span></a></li>
+              <!-- Operadores -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel10"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Operadores</span></a></li>
             </ul>
             <div class="mt-1" id="abside">
-              Enrique Valerio              
+              <div class="text-center mb-3" id="iconos">
+                <a href="https://slicegroup.xyz/" target="_blank"><i class="fa fa-rocket fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/enrique-valerio-6b347b126/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com/Caballero73/XXXXXXXX" target="_blank"><i class="fa fa-github fa-2x"></i></a>            
+              </div>
+              <p class="text-center">Enrique Valerio <br>
+              <small>Junio 2018</small></p>
             </div>
           </div>
         </div><!-- /.columns -->
@@ -30,13 +50,33 @@
             <div class="tabs-panel" id="cont-ppal-tabs-panel3">
               @include('./partials/javascript-y-html.html')
             </div>
+            <!-- Bucle While -->
             <div class="tabs-panel" id="cont-ppal-tabs-panel4">
-              <p>Cuatro</p>
-              <img class="thumbnail" src="assets/img/nave-1.jpg" width="100%">
+              @include('./partials/bucle-while.html')
             </div>
-            <div class="tabs-panel" id="cont-ppal-tabs-panelXXX">
-              <p>Cinco</p>
-              <p class="lead">Si el conocimiento puede crear problemas, no es con la ignorancia con lo que podremos resolverlos</p>
+            <!-- Bucle For -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel5">
+              @include('./partials/bucle-for.html')
+            </div>
+            <!-- Bucle do while -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel6">
+              @include('./partials/bucle-do-while.html')
+            </div>
+            <!-- Estructura if...else -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel7">
+              @include('./partials/if-else.html')
+            </div>
+            <!-- Estructura switch -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel8">
+              @include('./partials/switch.html')
+            </div>
+            <!-- Operadores -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel9">
+              @include('./partials/operadores.html')
+            </div>
+            <!-- Operadores -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel10">
+              @include('./partials/operadores.html')
             </div>
           </div><!-- /.tabs-content -->
         </div><!-- /.columns -->

@@ -3,6 +3,12 @@
 * Por: Enrique Valerio
 * Mayo 2018
 */
+/* CSS Externos */
+@import './font-awesome.css';
+@import './foundation-icons.css';
+@import './foundation.min.css';
+@import './select2.min.css';
+/* CSS del tema */
 @import './partials/variables.css';
 @import './partials/mediaquery.css';
 @import './partials/tipografia.css';
@@ -10,6 +16,12 @@
 @import './partials/conceptos-fundamentales.css';
 @import './partials/variable.css';
 @import './partials/javascript-y-html.css';
+@import './partials/bucle-while.css';
+@import './partials/bucle-for.css';
+@import './partials/bucle-do-while.css';
+@import './partials/if-else.css';
+@import './partials/switch.css';
+@import './partials/operadores.css';
 @import './partials/custom.css';
 
 /******************************

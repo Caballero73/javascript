@@ -1,0 +1,13 @@
+/******************************
+ESTILOS CONTENIDO BUCLE FOR: bucle-for.css;
+*******************************/
+#bucle-for {
+	padding: 2rem;
+
+	& pre.lead {
+		font-weight: bold;
+	}
+	
+
+}
+/**/

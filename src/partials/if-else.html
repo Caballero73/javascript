@@ -1,0 +1,64 @@
+  <!-- ********** Estructura if...else -->
+  <section id="if-else" class="">
+    <div class="contenedor">
+      <h2>Estructura if...else</h2>
+      <p>Hay ocasiones, en que las decisiones no son del tipo <em>"si se cumple la condición, hazlo; si no se cumple, no hagas nada"</em>,  sino del tipo <em><b>"si se cumple esta condición, hazlo; si no se cumple, haz esto otro"</b></em>.</p>
+      <p>Para este 2º tipo de decisiones, existe una variante de la estructura <code>if</code> llamada <code>if...else</code>. Su definición formal es la siguiente:</p>
+      <pre>
+      <span class="kw1">if</span><span class="br0">(</span>condicion<span class="br0">)</span> <span class="br0">{</span>
+        ...Se ejecuta esto si se cumple...
+      <span class="br0">}</span>
+      <span class="kw1">else</span> <span class="br0">{</span>
+        ...Sino se ejecuta esto otro...
+      <span class="br0">}</span>
+      </pre>
+      <p>Si la condición se cumple (es decir, si su valor es <code>true</code>) se ejecutan todas las instrucciones que se encuentran dentro del <code>if()</code>. Si la condición no se cumple (es decir, si su valor es <code>false</code>) se ejecutan todas las instrucciones contenidas en <code>else { }</code>.</p>
+      <p>Ejemplo:</p>
+      <pre>
+      <span class="kw1">var</span> edad <span class="sy0">=</span> <span class="nu0">18</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="kw1">if</span><span class="br0">(</span>edad <span class="sy0">&gt;=</span> <span class="nu0">18</span><span class="br0">)</span> <span class="br0">{</span>
+        alert<span class="br0">(</span><span class="st0">"Eres mayor de edad"</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      <span class="kw1">else</span> <span class="br0">{</span>
+        alert<span class="br0">(</span><span class="st0">"Todavía eres menor de edad"</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      </pre>
+      <p>Si el valor de la variable <code>edad</code> es mayor o igual que el valor numérico <code>18</code>, <code>if()</code> se cumple, se ejecutan sus instrucciones y se muestra el mensaje <code>"Eres mayor de edad"</code>.</p>
+      <p>Por el contrario, cuando el valor de la variable <code>edad</code> no es igual o mayor a <code>18</code>, la condición <code>if()</code> no se cumple, por lo que automáticamente se ejecutan todas las instrucciones del bloque <code>else { }</code>. En este caso, se mostraría el mensaje <code>"Todavía eres menor de edad"</code>.</p>
+      <br>
+      <p><b>El siguiente ejemplo compara variables de tipo cadena de texto:</b></p>
+      <pre>
+      <span class="kw1">var</span> nombre <span class="sy0">=</span> <span class="st0">""</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="kw1">if</span><span class="br0">(</span>nombre <span class="sy0">==</span> <span class="st0">""</span><span class="br0">)</span> <span class="br0">{</span>
+        alert<span class="br0">(</span><span class="st0">"Aún no nos has dicho tu nombre"</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      <span class="kw1">else</span> <span class="br0">{</span>
+        alert<span class="br0">(</span><span class="st0">"Hemos guardado tu nombre"</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      </pre>
+      <p>La condición <code>if()</code> anterior se construye mediante el operador <code>==</code>, que es el que se emplea para comparar dos valores (no confundir con el operador <code>=</code> que se utiliza para asignar valores).</p>
+      <p>En el ejemplo anterior, si la cadena de texto almacenada en la variable <code>nombre</code> es vacía (es decir, es igual a <code>""</code>) se muestra el mensaje definido en el <code>if()</code>. En otro caso, se muestra el mensaje definido en el bloque <code>else { }</code>.</p>
+      <br>
+      <p><b>La estructura <code>if...else</code> se puede encadenar para realizar varias comprobaciones seguidas:</b></p>
+      <pre>
+      <span class="kw1">if</span><span class="br0">(</span>edad <span class="sy0">&lt;</span> <span class="nu0">12</span><span class="br0">)</span> <span class="br0">{</span>
+        alert<span class="br0">(</span><span class="st0">"Todavía eres muy pequeño"</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      <span class="kw1">else</span> <span class="kw1">if</span><span class="br0">(</span>edad <span class="sy0">&lt;</span> <span class="nu0">19</span><span class="br0">)</span> <span class="br0">{</span>
+        alert<span class="br0">(</span><span class="st0">"Eres un adolescente"</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      <span class="kw1">else</span> <span class="kw1">if</span><span class="br0">(</span>edad <span class="sy0">&lt;</span> <span class="nu0">35</span><span class="br0">)</span> <span class="br0">{</span>
+        alert<span class="br0">(</span><span class="st0">"Aun sigues siendo joven"</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      <span class="kw1">else</span> <span class="br0">{</span>
+        alert<span class="br0">(</span><span class="st0">"Piensa en cuidarte un poco más"</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      </pre>
+      <div class="callout">
+        <p>No es obligatorio que la combinación de estructuras <code>if...else</code> acabe con la instrucción <code>else</code>, ya que puede terminar con una instrucción de tipo <code>else if()</code>.</p>
+      </div>
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>

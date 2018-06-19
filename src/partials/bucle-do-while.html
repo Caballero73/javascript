@@ -1,0 +1,29 @@
+  <!-- ********** Bucle do while -->
+  <section id="bucle-do-while" class="">
+    <div class="contenedor">
+      <h2>Bucle do while</h2>    
+      El bucle de tipo <code>do...while</code> es muy similar al bucle <code>while</code>, salvo que en este caso <strong>siempre</strong> se ejecutan las instrucciones del bucle al menos por una vez.  Su definición formal es:</p>
+      <pre>
+      <span class="kw1">do</span> <span class="br0">{</span>
+        ...
+      <span class="br0">}</span> while<span class="br0">(</span>condicion<span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p><b>¿Por qué ocurre esto?</b>... la condición se comprueba después de cada repetición, la primera vez siempre se ejecutan las instrucciones del bucle. Es importante no olvidar que después del <code>while()</code> se debe añadir el carácter <code>;</code> (al contrario de lo que sucede con el bucle <code>while</code> simple).</p>
+      <p>Utilizando este bucle se puede calcular fácilmente el factorial de un número:</p>
+      <pre>
+      <span class="kw1">var</span> resultado <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+      <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="kw1">do</span> <span class="br0">{</span>
+        resultado <span class="sy0">*=</span> numero<span class="sy0">;</span>  <span class="co1">// resultado = resultado * numero</span>
+        numero<span class="sy0">--;</span>
+      <span class="br0">}</span> while<span class="br0">(</span>numero <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+      &nbsp;
+      alert<span class="br0">(</span>resultado<span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p>En el código anterior, el <code>resultado</code> se multiplica en cada repetición por el valor de la variable <code>numero</code>.</p>
+      <p>Además, en cada repetición se decrementa el valor de la variable <code>numero</code>. La condición del bucle <code>do...while</code> es que el valor de <code>numero</code> sea mayor que <code>0</code>, ya que el factorial de un número multiplica todos los números menores o iguales que él mismo, pero hasta el número 1 (el factorial de 5 por ejemplo es <code>5 x 4 x 3 x 2 x 1 = 120</code>).</p>
+      <p>Como en cada repetición se decrementa el valor de la variable <code>numero</code> y la condición es que <code>numero</code> sea mayor que cero, en la repetición en la que <code>numero</code> valga <code>0</code>, la condición ya no se cumple y el programa se sale del bucle <code>do...while</code>.</p>
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>

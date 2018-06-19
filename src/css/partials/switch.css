@@ -1,0 +1,12 @@
+/******************************
+ESTILOS CONTENIDO SWITCH: switch.css;
+*******************************/
+#switch {
+	padding: 2rem;
+
+	& pre.lead {
+		font-weight: bold;
+	}
+
+}
+/**/

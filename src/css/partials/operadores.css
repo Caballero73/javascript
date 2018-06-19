@@ -1,0 +1,16 @@
+/******************************
+ESTILOS CONTENIDO OPERADORES: operadores.css;
+*******************************/
+#operadores {
+	padding: 2rem;
+
+	& .button {
+		font-size: responsive 1.1rem 1.4rem;
+	}
+
+	& pre.lead {
+		font-weight: bold;
+	}
+
+}
+/**/

@@ -1,17 +1,35 @@
-  <!-- ********** Definiendo filas -->
+  <!-- ********** JavaScrip y HTML -->
   <section id="javascript-y-html" class="">
-    <h2>JavaScrip y HTML</h2>    
     <div class="contenedor">
+      <h2>JavaScrip y HTML</h2>    
       <p>Para poder continuar en el aprendizaje de JavaScrip, es necesario que dejemos a un lado la consola de nuestro navegador y pasemos a usar un editor de código tal como Sublime Text, Atom, Braquet, etc... (el que mas nos guste).</p>
+      <p>Entonces debemos crear un <b>directorio</b> dentro del cual vamos a desarrollar nuestro proyecto, a este le podemos poner cualquier nombre, podría ser algo relacionado con el término JavaScrip, para que de una vez identifiquemos de que se trata. </p>
+      <p>Luego creamos un <b>archivo HTML</b> dentro de este <b>directorio</b>, para efectos de seguir cierto orden es prudente que este archivo se llame "index.html", ya que así al hacer doble click sobre él se abrirá de forma automática en nuestro navegador web.</p>
+      
+      <div class="callout warning">
+        <p><b class="color-primario">• Muy importante:</b> el código Javascript lo <em>interpreta nuestro navegador web</em>, por lo tanto necesitamos incluirlo en el HTML. Por que cuando en un navegador se escribe la URL de un <b>sitio web</b>, se hace una petición al servidor que aloja dicho <b>sitio web</b>, para que devuelva la información que debe mostrarse en el navegador web.</p>
+        <p><em>Esta información se devuelve, normalmente, en forma de un código HTML</em> que el navegador interpreta y muestra. Esto significa que si yo quiero que el navegador interprete un determinado código Javascript debo indicarle al navegador de alguna forma que existe un código Javascript que quiero que se ejecute y como el navegador lo que recibe es un código HTML… esta indicación tendrá que ir en el HTML.</p>
+      </div>
+      <p>Realmente no existe una norma de obligatorio cumplimiento a la hora de colocar nuestro código Javascript dentro del HTML; pero para efectos de este ejercio vamos a usar una de las más difundidas</p>
+      <p><b>• El JavaScript fuera del HTML</b>... El desarrollo de la programación web hizo necesario reutilizar el código javascript de forma sencilla, ya que este puede llegar a ser realmente enorme… además los programadores crean “librerías” para poder compartirlas con los compañeros, amigo o con el mundo en general.</p>
+      <p>Además, es preferible que <em>un documento HTML sólo tenga código HTML</em> y no mezclar Javascript, CSS, etc…</p>
+      <p>Así que, creamos un <b>archivo JavaScrip o .js</b> (a este también le podemos colocar el nombre que mejor nos convenga), y lo invocamos dentro del HTML usando la etiqueta <code>script</code>, incluyendo a esta etiqueta el atributo <code>src</code> (source) y dándole como valor una URL relativa al documento, para que cargue su contenido.</p>
+      <p><strong>Ejemplo:</strong></p>
+      <pre>
+      &lt;<span class="kw1">script</span> <span class="st0">type</span>="text/javascript" <span class="st0">src</span>="assets/js/app.js">&lt;/<span class="kw1">script</span>>
+      </pre>
       <br>
-      <p><b>• grid-template-rows</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
-      
-      
+      <p>Luego dentro de este archivo <code>.js</code> podemos escrbir algunas líneas de código para evidenciar la interacción entre HTML y JavaScrip.</p>
+      <pre class="consola mt-2 mb-2">
+
+      <span class="nota">// Esto muestra un mensaje en la pantalla</span>
+      <span class="funcion">alert</span>(<span class="cadena">'Bienvenidos a mi página'</span>);
+
+      <span class="nota">// Esto muestra un mensaje en la consola</span>
+      <span class="funcion">console.log</span>(<span class="cadena">'Este mensaje es solo para que se muestre en la "consola"'</span>)      
+      </pre>
+      <br>
+      <p class="callout primary">Existen otras formas válidas de uar JavaScrip en conjunto con nuestro HTML, un buen material donde puedes ver esto es el siguiente <a href="https://rolandocaldas.com/html5/como-incluir-javascript-en-html5" target="_blank">Cómo incluir Javascript en HTML5</a></p> 
+      <br>      
     </div><!-- /.contenedor -->
   </section>
-  <!-- /. Definiendo columnas -->

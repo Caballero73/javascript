@@ -1,0 +1,12 @@
+/******************************
+ESTILOS CONTENIDO IF-ELSE: if-else.css;
+*******************************/
+#if-else {
+	padding: 2rem;
+
+	& pre.lead {
+		font-weight: bold;
+	}
+
+}
+/**/

@@ -1,0 +1,62 @@
+  <!-- ********** Estructura switch -->
+  <section id="switch" class="">
+    <div class="contenedor">
+      <h2>Estructura switch</h2>
+      <p>Cómo ya sabemos la estructura <code>if...else</code> se puede usar para realizar comprobaciones múltiples y tomar decisiones complejas. Sin embargo, si todas las condiciones dependen siempre de la misma variable, el código JavaScript resultante es demasiado redundante:</p>
+      <pre>
+      <span class="kw1">if</span><span class="br0">(</span>numero <span class="sy0">==</span> <span class="nu0">5</span><span class="br0">)</span> <span class="br0">{</span>
+          ...
+        <span class="br0">}</span>
+        <span class="kw1">else</span> <span class="kw1">if</span><span class="br0">(</span>numero <span class="sy0">==</span> <span class="nu0">8</span><span class="br0">)</span> <span class="br0">{</span>
+          ...
+        <span class="br0">}</span>
+        <span class="kw1">else</span> <span class="kw1">if</span><span class="br0">(</span>numero <span class="sy0">==</span> <span class="nu0">20</span><span class="br0">)</span> <span class="br0">{</span>
+          ...
+        <span class="br0">}</span>
+        <span class="kw1">else</span> <span class="br0">{</span>
+          ...
+      <span class="br0">}</span>
+      </pre>
+      <p>Para estos casos, la estructura <code>switch</code> es más eficiente, ya que está especialmente diseñada para manejar de forma sencilla múltiples condiciones sobre la misma variable. Su definición formal puede parecer compleja, aunque su uso es muy sencillo.</p>
+      <p>La estructura <code>switch</code> se define mediante la palabra reservada <code>switch</code> seguida, entre paréntesis, del nombre de la variable que se va a utilizar en las comparaciones. Como es habitual, las instrucciones que forman parte del <code>switch</code> se encierran entre las llaves <code>{</code> y <code>}</code>.</p>
+      <p>Dentro del <code>switch</code> se definen todas las comparaciones que se quieren realizar sobre el valor de la variable. Cada comparación se indica mediante la palabra reservada <code>case</code> seguida del valor con el que se realiza la comparación. Si el valor de la variable utilizada por <code>switch</code> coincide con el valor indicado por <code>case</code>, se ejecutan las instrucciones definidas dentro de ese <code>case</code>.</p>
+      <p>Normalmente, después de las instrucciones de cada <code>case</code> se incluye la sentencia <code>break</code> para terminar la ejecución del <code>switch</code>, aunque no es obligatorio. Las comparaciones se realizan por orden, desde el primer <code>case</code> hasta el último, por lo que es muy importante el orden en el que se definen los <code>case</code>.</p>         
+      <pre>
+      <span class="kw1">switch</span><span class="br0">(</span>variable<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">case</span> valor_1<span class="sy0">:</span>
+          ...
+        <span class="kw1">break</span><span class="sy0">;</span>
+        <span class="kw1">case</span> valor_2<span class="sy0">:</span>
+          ...
+        <span class="kw1">break</span><span class="sy0">;</span>
+          ...
+        <span class="kw1">case</span> valor_n<span class="sy0">:</span>
+          ...
+        <span class="kw1">break</span><span class="sy0">;</span>
+        <span class="kw1">default</span><span class="sy0">:</span>
+          ...
+        <span class="kw1">break</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      </pre>
+      <p>El anterior ejemplo realizado con <code>if...else</code> se puede rehacer mediante <code>switch</code>:</p>
+      <pre>
+      <span class="kw1">switch</span><span class="br0">(</span>numero<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">case</span> <span class="nu0">5</span><span class="sy0">:</span>
+          ...
+        <span class="kw1">break</span><span class="sy0">;</span>
+        <span class="kw1">case</span> <span class="nu0">8</span><span class="sy0">:</span>
+          ...
+        <span class="kw1">break</span><span class="sy0">;</span>
+        <span class="kw1">case</span> <span class="nu0">20</span><span class="sy0">:</span>
+          ...
+        <span class="kw1">break</span><span class="sy0">;</span>
+        <span class="kw1">default</span><span class="sy0">:</span>
+          ...
+        <span class="kw1">break</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      </pre>
+      <p>¿Qué sucede si ningún valor de la variable del <code>switch</code> coincide con los valores definidos en los <code>case</code>? En este caso, se utiliza el valor <code>default</code> para indicar las instrucciones que se ejecutan en el caso en el que ningún <code>case</code> se cumpla para la variable indicada.</p>
+      <p>Aunque <code>default</code> es opcional, las estructuras <code>switch</code> suelen incluirlo para definir al menos un valor por defecto para alguna variable o para mostrar algún mensaje por pantalla.</p>      
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>
