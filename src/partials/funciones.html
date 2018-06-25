@@ -10,8 +10,14 @@
       </ul>
       <p>Las <b>funciones</b> son la solución a estos problemas, en JavaScript así como en el resto de lenguajes de programación.</p>
       <p>En conclusión: Una función es un conjunto de instrucciones que se agrupan para realizar una tarea concreta y que se pueden reutilizar fácilmente.</p>
+      <br>
+      <div class="stacked-for-small button-group">
+        <a class="button hollow primary" href="#retorno"><big> Argumentos y valores de retorno</big></a>
+        <a class="button hollow primary" href="#return"><big>Importancia de return</big></a>
+      </div>
+      <br>
 
-      <h3 id="ejemplo1">Ejemplo 1</h3>
+      <h4 id="ejemplo1">Ejemplo 1</h4>
       <p>Veamos una función bastante simple.</p>      
       <pre class="consola">
         
@@ -28,7 +34,7 @@
       <br>
       <br>
 
-      <h3 id="ejemplo2">Ejemplo 2</h3>
+      <h4 id="ejemplo2">Ejemplo 2</h4>
       <p>Ahora una función que dice que año es bisiesto o no.</p>      
       <pre class="consola">
         
@@ -47,6 +53,136 @@
       </pre>
       <br>
       <button id="ejemploFuncion2" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+      <hr>
+      <h3 id="retorno">Argumentos y valores de retorno</h3>
+      <p>Las funciones sencillas por lo general no necesitan información externa para producir sus resultados. Ahora bien, por el contrario, <b>la mayoría de funciones de las aplicaciones reales</b> deben acceder al valor de algunas variables.</p>
+      <p>Las variables que necesitan las funciones se llaman <em>argumentos</em>. Antes de que pueda utilizarlos, la función debe indicar cuántos argumentos necesita y cuál es el nombre de cada argumento.</p>
+      <p class="callout warning">Además, al invocar la función, se deben incluir los valores que se le van a pasar a la misma. Los argumentos se indican dentro de los paréntesis que van detrás del nombre de la función y se separan con una coma (<code>,</code>).</p>
+
+      <h4 id="ejemplo3">Ejemplo 3</h4>
+      <p>La función debe indicar que necesita dos argumentos, correspondientes a los dos números que tiene que sumar:</p>
+      <pre class="">
+      <span class="kw1">function</span> suma_y_muestra<span class="br0">(</span>primeraCantidad<span class="sy0">,</span> segundaCantidad<span class="br0">)</span> <span class="br0">{</span> ... <span class="br0">}</span>
+      </pre>
+      <p>A continuación, para utilizar el valor de los argumentos dentro de la función, se debe emplear <b>el mismo nombre</b> con el que se definieron los argumentos:</p>
+      <pre class="">
+      <span class="kw1">function</span> suma_y_muestra<span class="br0">(</span>primeraCantidad<span class="sy0">,</span> segundaCantidad<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> resultado <span class="sy0">=</span> primeraCantidad <span class="sy0">+</span> segundaCantidad<span class="sy0">;</span>
+        alert<span class="br0">(</span><span class="st0">"El resultado es "</span> <span class="sy0">+</span> resultado<span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      </pre>
+      <p>Dentro de la función, el valor de la variable <code>primeraCantidad</code> será igual al primer valor que se le pase a la función y el valor de la variable <code>segundaCantidad</code> será igual al segundo valor que se le pasa.</p>
+      <p><strong>Para pasar valores a la función, se incluyen dentro de los paréntesis utilizados al llamar a la función:</strong></p>
+      <pre class="">
+      <span class="co1">// Definición de la función</span>
+      <span class="kw1">function</span> suma_y_muestra<span class="br0">(</span>primeraCantidad<span class="sy0">,</span> segundaCantidad<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> resultado <span class="sy0">=</span> primeraCantidad <span class="sy0">+</span> segundaCantidad<span class="sy0">;</span>
+        alert<span class="br0">(</span><span class="st0">"El resultado es "</span> <span class="sy0">+</span> resultado<span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="co1">// Declaración de las variables</span>
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+      <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="co1">// Llamada a la función</span>
+      suma_y_muestra<span class="br0">(</span>numero1<span class="sy0">,</span> numero2<span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p>En el código anterior, se debe tener en cuenta que:</p>
+      <ul>
+      <li>Aunque casi siempre se utilizan variables para pasar los datos a la función, se puede usar directamente el valor de esas variables: <code>suma_y_muestra(3, 5);</code></li>
+      <li>El número de argumentos que se pasa a una función debe ser el mismo que el número de argumentos que ha indicado la función. No obstante, <b>JavaScript no muestra ningún error</b> si se pasan más o menos argumentos de los necesarios.</li>
+      <li>El orden de los argumentos es fundamental, ya que el primer dato será el primer valor que espera la función; el segundo dato es el segundo valor que espera la función y así sucesivamente.</li>
+      <li>Se puede utilizar un número ilimitado de argumentos, aunque si su número es muy grande, se complica en exceso la llamada a la función.</li>
+      <li>No hace falta que coincida el nombre de los argumentos que utiliza la función y el nombre de los argumentos que se le pasan. En el ejemplo anterior, los argumentos que se pasan son <code>numero1</code> y <code>numero2</code> y los argumentos que utiliza la función son <code>primeraCantidad</code> y <code>segundaCantidad</code>. </li>
+      </ul>
+      <br>
+
+      <h4 id="ejemplo4">Ejemplo 4</h4>
+      <p>A continuación se muestra otro ejemplo de una función que calcula el precio total de un producto a partir de su precio básico:</p>
+      <pre class="">
+      <span class="co1">// Definición de la función</span>
+      <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> impuestos <span class="sy0">=</span> <span class="nu0">1.16</span><span class="sy0">;</span>
+        <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+        <span class="kw1">var</span> precioTotal <span class="sy0">=</span> <span class="br0">(</span> precio <span class="sy0">*</span> impuestos <span class="br0">)</span> <span class="sy0">+</span> flete<span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="co1">// Llamada a la función</span>
+      calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p>La función anterior toma como argumento una variable llamada <code>precio</code> y le suma los impuestos y los gastos de envío para obtener el precio total. Al llamar a la función, se pasa directamente el valor del precio básico mediante el número <code>23.34</code>.</p>
+      <p>No obstante, el código anterior no es demasiado útil, ya que lo ideal sería que la función pudiera devolver el resultado obtenido para guardarlo en otra variable y poder seguir trabajando con este precio total:</p>
+      <pre class="">
+      <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> impuestos <span class="sy0">=</span> <span class="nu0">1.16</span><span class="sy0">;</span>
+        <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+        <span class="kw1">var</span> precioTotal <span class="sy0">=</span> <span class="br0">(</span> precio <span class="sy0">*</span> impuestos <span class="br0">)</span> <span class="sy0">+</span> flete<span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="co1">// El valor devuelto por la función, se guarda en una variable</span>
+      <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="co1">// Seguir trabajando con la variable "precioTotal"</span>
+      </pre>
+      <br>
+      <h3 id="return">Importancia de return</h3>
+      <p>Mejor aún, las funciones no sólo puede recibir variables y datos, sino que también pueden <b>devolver</b> los valores que han calculado. Para devolver valores dentro de una función, se utiliza la palabra reservada <code>return</code>.</p>
+      <p class="callout warning">Aunque las funciones pueden devolver valores de cualquier tipo, solamente pueden devolver un valor cada vez que se ejecutan.</p>
+      <pre class="">
+      <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> impuestos <span class="sy0">=</span> <span class="nu0">1.16</span><span class="sy0">;</span>
+        <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+        <span class="kw1">var</span> precioTotal <span class="sy0">=</span> <span class="br0">(</span> precio <span class="sy0">*</span> impuestos <span class="br0">)</span> <span class="sy0">+</span> flete<span class="sy0">;</span>
+        <span class="kw1">return</span> precioTotal<span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="co1">// Seguir trabajando con la variable "precioTotal"</span>
+      </pre>
+      <p>Para que la función devuelva un valor, solamente es necesario escribir la palabra reservada <code>return</code> junto con el nombre de la variable que se quiere devolver.</p>
+      <p>En el ejemplo anterior, la ejecución de la función llega a la instrucción <code>return precioTotal;</code> y en ese momento, devuelve el valor que contenga la variable <code>precioTotal</code>.</p>
+      <p>Como la función devuelve un valor, en el punto en el que se realiza la llamada, debe indicarse el nombre de una variable en el que se guarda el valor devuelto:</p>
+      <pre class="">
+      <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p class="callout warning"><b>Si no se indica el nombre de ninguna variable, JavaScript no muestra ningún error</b> y el valor devuelto por la función simplemente se pierde y por tanto, no se utilizará en el resto del programa. En este caso, tampoco es obligatorio que el nombre de la variable devuelta por la función coincida con el nombre de la variable en la que se va a almacenar ese valor.</p>
+      <p>Si la función llega a una instrucción de tipo <code>return</code>, se devuelve el valor indicado y finaliza la ejecución de la función. Por tanto, todas las instrucciones que se incluyen después de un <code>return</code> se ignoran y por ese motivo la instrucción <code>return</code> suele ser la última de la mayoría de funciones.</p>
+      <p>Para que el ejemplo anterior sea más completo, se puede añadir otro argumento a la función que indique el porcentaje de impuestos que se debe añadir al precio del producto. Evidentemente, el nuevo argumento se debe añadir tanto a la definición de la función como a su llamada:</p>
+      <pre class="">
+      <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="sy0">,</span> porcentajeImpuestos<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+        <span class="kw1">var</span> precioConImpuestos <span class="sy0">=</span> <span class="br0">(</span><span class="nu0">1</span> <span class="sy0">+</span> porcentajeImpuestos<span class="sy0">/</span><span class="nu0">100</span><span class="br0">)</span> <span class="sy0">*</span> precio<span class="sy0">;</span>
+        <span class="kw1">var</span> precioTotal <span class="sy0">=</span> precioConImpuestos <span class="sy0">+</span> flete<span class="sy0">;</span>
+        <span class="kw1">return</span> precioTotal<span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="sy0">,</span> <span class="nu0">16</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="kw1">var</span> otroPrecioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">15.20</span><span class="sy0">,</span> <span class="nu0">4</span><span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Para terminar de completar el ejercicio anterior, se puede recibir los datos del usuario y rendondear a dos decimales el precio total devuelto por la función:</p>
+      <pre class="consola">
+
+      <span class="funcion">var</span> precioNeto <span class="condicion">=</span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese el monto sin impuestos: '</span>);
+      precioNeto <span class="condicion">=</span> <span class="funcion">parseFloat</span>(precioNeto);
+      <span class="funcion">var</span> impuestos <span class="condicion">=</span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese el % de impuestos:'</span>);
+      impuestos <span class="condicion">=</span> <span class="funcion">parseFloat</span>(impuestos);
+      <span class="funcion">var</span> flete <span class="condicion">=</span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese monto del flete:'</span>);
+      flete <span class="condicion">=</span> <span class="funcion">parseFloat</span>(flete);
+
+      <span class="funcion">function</span> <span class="verde">calculaPrecioTotal</span>(<span class="dorado">precio</span>, <span class="dorado">porcentajeImpuestos</span>) {
+          <span class="funcion">var</span> precioConImpuestos <span class="condicion">=</span> (<span class="violeta">1</span> <span class="condicion">+</span> porcentajeImpuestos<span class="condicion">/</span><span class="violeta">100</span>) <span class="condicion">*</span> precio;
+          <span class="funcion">var</span> precioTotal <span class="condicion">=</span> precioConImpuestos <span class="condicion">+</span> flete;
+
+          <span class="condicion">return</span> precioTotal.<span class="funcion">toFixed</span>(<span class="violeta">2</span>);
+      }    
+        <span class="funcion">var</span> resultadoFinal <span class="condicion">=</span> <span class="funcion">calculaPrecioTotal</span>(precioNeto, impuestos);
+        <span class="funcion">alert</span>(<span class="cadena">"El resultado es "</span> <span class="condicion">+</span> resultadoFinal);
+      </pre>
+      <br>
+      <button id="ejemploFuncion4" class="button primary">Ver resultado del ejemplo</button>
       <br>
     </div><!-- /.contenedor -->
   </section>

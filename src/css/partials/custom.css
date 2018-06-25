@@ -206,6 +206,7 @@ pre.consola {
   & .funcion {color: cyan;}
   & .nota {color: var(--colorGris);}
   & .verde {color: var(--colorVerde);}
+  & .violeta {color: #AA17FE;}
 }
 .p-1 {padding: 1rem}
 .p-2 {padding: 2rem}

@@ -125,3 +125,23 @@ $('#ejemploFuncion2').click(function(){
 	bisiesto(anyo);
 });
 
+// Ejemplo funcion 4
+$('#ejemploFuncion4').click(function(){
+
+	var precioNeto  =  prompt('Ingrese el monto sin impuestos:');
+	precioNeto  =  parseFloat(precioNeto);
+	var impuestos  =  prompt('Ingrese el % de impuestos:');
+	impuestos  =  parseFloat(impuestos);
+	var flete  =  prompt('Ingrese monto del flete:');
+	flete  =  parseFloat(flete);
+
+	function calculaPrecioTotal(precio, porcentajeImpuestos) {
+	    var precioConImpuestos = (1 + porcentajeImpuestos/100) * precio;
+	    var precioTotal = precioConImpuestos + flete;
+
+	    return precioTotal.toFixed(2);
+	}	   
+	var resultadoFinal = calculaPrecioTotal(precioNeto, impuestos);
+	alert("El resultado es " + resultadoFinal);
+});
+

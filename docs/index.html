@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aprendiendo JavaScrip</title>
+  <title>Aprendiendo JavaScript</title>
   <meta name="description" content="JavaScript es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla.">
   <link rel="shortcut icon" href="assets/img/favicon.ico">
   <style>
-    @charset "UTF-8";@font-face{font-family:FontAwesome;src:url(../docs/assets/fonts/fontawesome-webfont.eot?v=4.7.0);src:url(../docs/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'),url(../docs/assets/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'),url(../docs/assets/fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'),url(../docs/assets/fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),url(../docs/assets/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg')}blockquote,div,h1,li,p,ul{margin:0;padding:0}i{font-style:italic;line-height:inherit}h1{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}@font-face{font-family:Raleway-Bold;src:url(../docs/assets/fonts/Raleway-Bold.eot);src:local('☺'),url(../docs/assets/fonts/Raleway-Bold.woff) format('woff'),url(../docs/assets/fonts/Raleway-Bold.ttf) format('truetype'),url(../docs/assets/fonts/Raleway-Bold.svg) format('svg')}@font-face{font-family:Lato;src:local('☺'),url(../docs/assets/fonts/Lato-Regular.ttf) format('truetype')}h1{color:#6b00a1;font-family:Raleway-Bold,serif}@media screen and (max-width:420px){#cont-ppal #cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}}.fa{display:inline-block;font:14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.pull-right{float:right}.fa-repeat:before{content:"\f01e"}.fa-list-alt:before{content:"\f022"}.fa-book:before{content:"\f02d"}.fa-github:before{content:"\f09b"}.fa-hand-o-up:before{content:"\f0a6"}.fa-linkedin:before{content:"\f0e1"}.fa-undo:before{content:"\f0e2"}.fa-terminal:before{content:"\f120"}.fa-code:before{content:"\f121"}.fa-puzzle-piece:before{content:"\f12e"}.fa-rocket:before{content:"\f135"}.fa-chevron-circle-up:before{content:"\f139"}.fa-html5:before{content:"\f13b"}.fa-dot-circle-o:before{content:"\f192"}.fa-cube:before{content:"\f1b2"}.fa-toggle-on:before{content:"\f205"}.fa-window-restore:before{content:"\f2d2"}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}a{background-color:transparent;-webkit-text-decoration-skip:objects}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code{font-family:monospace,monospace;font-size:1em}small{font-size:80%}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:100%}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}body{margin:0;padding:0;background:#fefefe;font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-weight:400;line-height:1.5;color:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}blockquote,div,h1,h2,li,p,ul{margin:0;padding:0}p{margin-bottom:10px;margin-bottom:1rem;font-size:inherit;line-height:1.6;text-rendering:optimizeLegibility}em,i{font-style:italic;line-height:inherit}b,strong{font-weight:700;line-height:inherit}small{font-size:80%;line-height:inherit}h1,h2{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}h1{font-size:15px;font-size:1.5rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}h2{font-size:12.5px;font-size:1.25rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}a{line-height:inherit;color:#09458d;text-decoration:none}ul{margin-bottom:10px;margin-bottom:1rem;list-style-position:outside;line-height:1.6}li{font-size:inherit}ul{margin-left:12.5px;margin-left:1.25rem;list-style-type:disc}blockquote{margin:0 0 10px;margin:0 0 1rem;padding:5.625px 12.5px 0 11.875px;padding:.5625rem 1.25rem 0 1.1875rem;border-left:1px solid #cacaca}blockquote{line-height:1.6;color:#8a8a8a}cite{display:block;font-size:8.125px;font-size:.8125rem;color:#8a8a8a}cite:before{content:"— "}code{padding:1.25px 3.125px .625px;padding:.125rem .3125rem .0625rem;border:1px solid #cacaca;background-color:#e6e6e6;font-family:Consolas,Liberation Mono,Courier,monospace;font-weight:400;color:#0a0a0a}.lead{font-size:125%;line-height:1.6}.text-center{text-align:center}.tabs{margin:0;border:1px solid #e6e6e6;background:#fefefe;list-style-type:none}.tabs:after,.tabs:before{display:table;content:' ';-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-order:1;-webkit-box-ordinal-group:2;order:1}.tabs:after{clear:both}.tabs.vertical>li{display:block;float:none;width:auto}.tabs-title{float:left}.tabs-title>a{display:block;padding:12.5px 15px;padding:1.25rem 1.5rem;font-size:7.5px;font-size:.75rem;line-height:1;color:#09458d}.tabs-title>a[aria-selected=true]{background:#e6e6e6;color:#09458d}.tabs-content{border:1px solid #e6e6e6;border-top:0;background:#fefefe;color:#0a0a0a}.tabs-panel{display:none;padding:10px;padding:1rem}.tabs-panel.is-active{display:block}.sticky{position:relative;z-index:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.row{max-width:625px;max-width:62.5rem;margin-right:auto;margin-left:auto;display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap}.row.collapse>.columns{padding-right:0;padding-left:0}.columns{-ms-flex:1 1 0px;-webkit-box-flex:1;flex:1 1 0px;padding-right:9.375px;padding-right:.9375rem;padding-left:9.375px;padding-left:.9375rem;min-width:0}.small-3{-ms-flex:0 0 25%;-webkit-box-flex:0;flex:0 0 25%;max-width:25%}#cont-ppal #abside-cont{display:grid;grid-template-rows:auto 1fr;height:98vh}#cont-ppal #abside{background:#4e0079;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;padding:15px;padding:1.5rem;width:100%}#cont-ppal #cont-ppal-tabs li a{font-size:calc(.85581rem + .5814vw)}#cont-ppal #cont-ppal-header{background:#6b00a1;padding:10px;padding:1rem;text-shadow:0 .5px #ccc,0 1px #bfbfbf,0 1.5px #b3b3b3,0 2px #a6a6a6,0 1.5px #8c8c8c}#cont-ppal #cont-ppal-header h1{color:#fff!important}#cont-ppal #iconos{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}#cont-ppal .tabs>li{background-color:#3b005d;border-radius:.7rem 0 0 .7rem;margin-bottom:1px}#cont-ppal .tabs>li a{color:#f8f8ff;font-size:calc(1.50233rem + .23256vw)}#cont-ppal .tabs-title>a[aria-selected=true]{background:#7400b3;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;outline:0}#conceptos-fundamentales{padding:20px;padding:2rem}html{font-size:10px;font-family:Lato,sans-serif;color:#444}body{color:#444;background-color:#ededed;font-size:calc(1.20465rem + .46512vw);font-family:Lato,sans-serif}a{text-decoration:none}#abside a{color:#f8f8ff;text-decoration:none}cite{font-size:calc(.75581rem + .5814vw)}.contenedor{margin-left:auto;margin-right:auto}.contenedor,.row{max-width:87vw!important}h1,h2{color:#6b00a1;font-family:Raleway-Bold,serif}h1{font-size:calc(1.6186rem + 1.86047vw)}h2{font-size:calc(1.51163rem + 1.16279vw)}.ir-arriba{border-radius:.4rem;display:none;padding:7px;padding:.7rem;background:#6b00a1;color:#fff;position:fixed;bottom:20px;bottom:2rem;right:10px;right:1rem;z-index:100}.mt-1{margin-top:10px;margin-top:1rem}.mt-2{margin-top:20px;margin-top:2rem}.mb-3{margin-bottom:30px;margin-bottom:3rem}.mt-4{margin-top:40px;margin-top:4rem}.tabs-content{color:#444}@media print,screen and (min-width:40em){h1{font-size:30px;font-size:3rem}h2{font-size:25px;font-size:2.5rem}}@media screen and (max-width:39.9375em){.hide-for-small-only{display:none!important}}@media screen and (min-width:1280px){#cont-ppal #cont-ppal-tabs li a{font-size:16px;font-size:1.6rem}#cont-ppal .tabs>li a{font-size:18px;font-size:1.8rem}body{font-size:18px;font-size:1.8rem}cite{font-size:15px;font-size:1.5rem}h1{font-size:40px;font-size:4rem}h2{font-size:30px;font-size:3rem}}@media screen and (max-width:420px){#cont-ppal #cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}h2{font-size:20px;font-size:2rem}}@media (min-width:0px) and (max-width:544px){#cont-ppal #cont-ppal-tabs i{display:none}}@media (min-width:545px) and (max-width:768px){#cont-ppal #cont-ppal-tabs i{display:none}.contenedor,.row{max-width:98vw!important}}@media (min-width:1291px) and (max-width:1420px){.contenedor,.row{max-width:94vw!important}}@media (min-width:1025px) and (max-width:1290px){.contenedor,.row{max-width:95vw!important}}@media (min-width:769px) and (max-width:1024px){.contenedor,.row{max-width:97vw!important}}@media (min-width:331px) and (max-width:544px){.contenedor,.row{max-width:100vw!important}}@media (min-width:0px) and (max-width:330px){.contenedor,.row{max-width:100vw!important}}
+    @charset "UTF-8";@font-face{font-family:FontAwesome;src:url(../docs/assets/fonts/fontawesome-webfont.eot?v=4.7.0);src:url(../docs/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'),url(../docs/assets/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'),url(../docs/assets/fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'),url(../docs/assets/fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),url(../docs/assets/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg')}blockquote,div,h1,li,p,ul{margin:0;padding:0}i{font-style:italic;line-height:inherit}h1{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}@font-face{font-family:Raleway-Bold;src:url(../docs/assets/fonts/Raleway-Bold.eot);src:local('☺'),url(../docs/assets/fonts/Raleway-Bold.woff) format('woff'),url(../docs/assets/fonts/Raleway-Bold.ttf) format('truetype'),url(../docs/assets/fonts/Raleway-Bold.svg) format('svg')}@font-face{font-family:Lato;src:local('☺'),url(../docs/assets/fonts/Lato-Regular.ttf) format('truetype')}h1{color:#6b00a1;font-family:Raleway-Bold,serif}strong{font-weight:inherit}strong{font-weight:bolder}strong{font-weight:700;line-height:inherit}@media screen and (max-width:420px){#cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}}.fa{display:inline-block;font:14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.pull-right{float:right}.fa-repeat:before{content:"\f01e"}.fa-list-alt:before{content:"\f022"}.fa-book:before{content:"\f02d"}.fa-github:before{content:"\f09b"}.fa-hand-o-up:before{content:"\f0a6"}.fa-linkedin:before{content:"\f0e1"}.fa-undo:before{content:"\f0e2"}.fa-terminal:before{content:"\f120"}.fa-code:before{content:"\f121"}.fa-puzzle-piece:before{content:"\f12e"}.fa-rocket:before{content:"\f135"}.fa-chevron-circle-up:before{content:"\f139"}.fa-html5:before{content:"\f13b"}.fa-dot-circle-o:before{content:"\f192"}.fa-cube:before{content:"\f1b2"}.fa-toggle-on:before{content:"\f205"}.fa-window-restore:before{content:"\f2d2"}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}a{background-color:transparent;-webkit-text-decoration-skip:objects}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code{font-family:monospace,monospace;font-size:1em}small{font-size:80%}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:100%}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}body{margin:0;padding:0;background:#fefefe;font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-weight:400;line-height:1.5;color:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}blockquote,div,h1,h2,li,p,ul{margin:0;padding:0}p{margin-bottom:10px;margin-bottom:1rem;font-size:inherit;line-height:1.6;text-rendering:optimizeLegibility}em,i{font-style:italic;line-height:inherit}b,strong{font-weight:700;line-height:inherit}small{font-size:80%;line-height:inherit}h1,h2{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}h1{font-size:15px;font-size:1.5rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}h2{font-size:12.5px;font-size:1.25rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}a{line-height:inherit;color:#09458d;text-decoration:none}ul{margin-bottom:10px;margin-bottom:1rem;list-style-position:outside;line-height:1.6}li{font-size:inherit}ul{margin-left:12.5px;margin-left:1.25rem;list-style-type:disc}blockquote{margin:0 0 10px;margin:0 0 1rem;padding:5.625px 12.5px 0 11.875px;padding:.5625rem 1.25rem 0 1.1875rem;border-left:1px solid #cacaca}blockquote{line-height:1.6;color:#8a8a8a}cite{display:block;font-size:8.125px;font-size:.8125rem;color:#8a8a8a}cite:before{content:"— "}code{padding:1.25px 3.125px .625px;padding:.125rem .3125rem .0625rem;border:1px solid #cacaca;background-color:#e6e6e6;font-family:Consolas,Liberation Mono,Courier,monospace;font-weight:400;color:#0a0a0a}.lead{font-size:125%;line-height:1.6}.text-center{text-align:center}.button{display:inline-block;vertical-align:middle;margin:0 0 10px;margin:0 0 1rem;font-family:inherit;padding:.85em 1em;-webkit-appearance:none;border:1px solid transparent;border-radius:3px;font-size:9px;font-size:.9rem;line-height:1;text-align:center;background-color:#09458d;color:#fefefe}.button.warning{background-color:#ffc300;color:#0a0a0a}.button.hollow{border:1px solid #09458d;color:#09458d}.button.hollow{background-color:transparent}.button.hollow.warning{border:1px solid #ffc300;color:#ffc300}.tabs{margin:0;border:1px solid #e6e6e6;background:#fefefe;list-style-type:none}.tabs:after,.tabs:before{display:table;content:' ';-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-order:1;-webkit-box-ordinal-group:2;order:1}.tabs:after{clear:both}.tabs.vertical>li{display:block;float:none;width:auto}.tabs-title{float:left}.tabs-title>a{display:block;padding:12.5px 15px;padding:1.25rem 1.5rem;font-size:7.5px;font-size:.75rem;line-height:1;color:#09458d}.tabs-title>a[aria-selected=true]{background:#e6e6e6;color:#09458d}.tabs-content{border:1px solid #e6e6e6;border-top:0;background:#fefefe;color:#0a0a0a}.tabs-panel{display:none;padding:10px;padding:1rem}.tabs-panel.is-active{display:block}.sticky{position:relative;z-index:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.row{max-width:625px;max-width:62.5rem;margin-right:auto;margin-left:auto;display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap}.row.collapse>.columns{padding-right:0;padding-left:0}.columns{-ms-flex:1 1 0px;-webkit-box-flex:1;flex:1 1 0px;padding-right:9.375px;padding-right:.9375rem;padding-left:9.375px;padding-left:.9375rem;min-width:0}.small-3{-ms-flex:0 0 25%;-webkit-box-flex:0;flex:0 0 25%;max-width:25%}.shrink{-ms-flex:0 0 auto;-webkit-box-flex:0;flex:0 0 auto;max-width:100%}.align-self-middle{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}#cont-ppal-header{background:#6b00a1}#cont-ppal #abside-cont{display:grid;grid-template-rows:auto 1fr;height:98vh}#cont-ppal #abside{background:#4e0079;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;padding:15px;padding:1.5rem;width:100%}#cont-ppal-tabs li a{font-size:calc(.85581rem + .5814vw)}#cont-ppal-header-h1{color:#fff!important;padding:10px;padding:1rem;text-shadow:0 .5px #ccc,0 1px #bfbfbf,0 1.5px #b3b3b3,0 2px #a6a6a6,0 1.5px #8c8c8c}#cont-ppal #iconos{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}#cont-ppal .tabs>li{background-color:#3b005d;border-radius:.7rem 0 0 .7rem;margin-bottom:1px}#cont-ppal .tabs>li a{color:#f8f8ff;font-size:calc(1.50233rem + .23256vw)}#cont-ppal .tabs-title>a[aria-selected=true]{background:#7400b3;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;outline:0}#conceptos-fundamentales{padding:20px;padding:2rem}html{font-size:10px;font-family:Lato,sans-serif;color:#444}body{color:#444;background-color:#ededed;font-size:calc(1.20465rem + .46512vw);font-family:Lato,sans-serif}a{text-decoration:none}#abside a{color:#f8f8ff;text-decoration:none}.button{font-size:14px;font-size:1.4rem}cite{font-size:calc(.75581rem + .5814vw)}.contenedor{margin-left:auto;margin-right:auto}.contenedor,.row{max-width:87vw!important}h1,h2{color:#6b00a1;font-family:Raleway-Bold,serif}h1{font-size:calc(1.6186rem + 1.86047vw)}h2{font-size:calc(1.51163rem + 1.16279vw)}.ir-arriba{border-radius:.4rem;display:none;padding:7px;padding:.7rem;background:#6b00a1;color:#fff;position:fixed;bottom:20px;bottom:2rem;right:10px;right:1rem;z-index:100}.mt-1{margin-top:10px;margin-top:1rem}.mt-2{margin-top:20px;margin-top:2rem}.mb-3{margin-bottom:30px;margin-bottom:3rem}.mt-4{margin-top:40px;margin-top:4rem}.tabs-content{color:#444}@media print,screen and (min-width:40em){h1{font-size:30px;font-size:3rem}h2{font-size:25px;font-size:2.5rem}}@media screen and (max-width:39.9375em){.hide-for-small-only{display:none!important}}@media screen and (min-width:1280px){#cont-ppal-tabs li a{font-size:16px;font-size:1.6rem}#cont-ppal .tabs>li a{font-size:18px;font-size:1.8rem}body{font-size:18px;font-size:1.8rem}cite{font-size:15px;font-size:1.5rem}h1{font-size:40px;font-size:4rem}h2{font-size:30px;font-size:3rem}}@media screen and (max-width:420px){#cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}h2{font-size:20px;font-size:2rem}}@media (min-width:0px) and (max-width:544px){#cont-ppal-tabs i{display:none}}@media (min-width:545px) and (max-width:768px){#cont-ppal-tabs i{display:none}.contenedor,.row{max-width:98vw!important}}@media (min-width:1291px) and (max-width:1420px){.contenedor,.row{max-width:94vw!important}}@media (min-width:1025px) and (max-width:1290px){.contenedor,.row{max-width:95vw!important}}@media (min-width:769px) and (max-width:1024px){.contenedor,.row{max-width:97vw!important}}@media (min-width:331px) and (max-width:544px){.contenedor,.row{max-width:100vw!important}}@media (min-width:0px) and (max-width:330px){.contenedor,.row{max-width:100vw!important}}
   </style>
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="preload" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css"></noscript>
@@ -27,7 +27,13 @@
   <section id="cont-ppal" class="">
     <header id="cont-ppal-header">
       <nav class="contenedor">
-        <h1 id="cont-ppal-header-h1"><i class="fa fa-terminal fa-lg" aria-hidden="true"></i> Aprendiendo JavaScrip</h1>      
+        <div class="row">
+          <div class="columns"><h1 id="cont-ppal-header-h1"><i class="fa fa-terminal fa-lg" aria-hidden="true"></i> Aprendiendo JavaScript</h1></div>
+          <div class="shrink align-self-middle columns"><a class="button hollow warning" href="index.html">Pág. 1</a></div>
+          <div class="shrink align-self-middle columns"><a class="button hollow warning" href="page2.html">Pág. 2</a></div>
+          <div class="shrink align-self-middle columns"><a class="button hollow warning" href="page3.html">Pág. 3</a></div>          
+        </div>
+              
       </nav>      
     </header>
     <div class="contenedor">
@@ -67,15 +73,15 @@
               <!-- Creación de funciones -->
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel12"><i class="fa fa-code fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Creación de funciones</span></a></li>
             </ul>
-            <div class="mt-1" id="abside">
-              <div class="text-center mb-3" id="iconos">
-                <a href="https://slicegroup.xyz/" target="_blank"><i class="fa fa-rocket fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/enrique-valerio-6b347b126/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/Caballero73/XXXXXXXX" target="_blank"><i class="fa fa-github fa-2x"></i></a>            
-              </div>
-              <p class="text-center">Enrique Valerio <br>
-              <small>Junio 2018</small></p>
-            </div>
+            						<div class="mt-1" id="abside">
+						  <div class="text-center mb-3" id="iconos">
+						    <a href="https://slicegroup.xyz/" target="_blank"><i class="fa fa-rocket fa-2x"></i></a>
+						    <a href="https://www.linkedin.com/in/enrique-valerio-6b347b126/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+						    <a href="https://github.com/Caballero73/XXXXXXXX" target="_blank"><i class="fa fa-github fa-2x"></i></a>            
+						  </div>
+						  <p class="text-center">Enrique Valerio <br>
+						  <small>Junio 2018</small></p>
+						</div>            
           </div>
         </div><!-- /.columns -->
 
@@ -1209,8 +1215,14 @@
       </ul>
       <p>Las <b>funciones</b> son la solución a estos problemas, en JavaScript así como en el resto de lenguajes de programación.</p>
       <p>En conclusión: Una función es un conjunto de instrucciones que se agrupan para realizar una tarea concreta y que se pueden reutilizar fácilmente.</p>
+      <br>
+      <div class="stacked-for-small button-group">
+        <a class="button hollow primary" href="#retorno"><big> Argumentos y valores de retorno</big></a>
+        <a class="button hollow primary" href="#return"><big>Importancia de return</big></a>
+      </div>
+      <br>
 
-      <h3 id="ejemplo1">Ejemplo 1</h3>
+      <h4 id="ejemplo1">Ejemplo 1</h4>
       <p>Veamos una función bastante simple.</p>      
       <pre class="consola">
         
@@ -1227,7 +1239,7 @@
       <br>
       <br>
 
-      <h3 id="ejemplo2">Ejemplo 2</h3>
+      <h4 id="ejemplo2">Ejemplo 2</h4>
       <p>Ahora una función que dice que año es bisiesto o no.</p>      
       <pre class="consola">
         
@@ -1246,6 +1258,136 @@
       </pre>
       <br>
       <button id="ejemploFuncion2" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+      <hr>
+      <h3 id="retorno">Argumentos y valores de retorno</h3>
+      <p>Las funciones sencillas por lo general no necesitan información externa para producir sus resultados. Ahora bien, por el contrario, <b>la mayoría de funciones de las aplicaciones reales</b> deben acceder al valor de algunas variables.</p>
+      <p>Las variables que necesitan las funciones se llaman <em>argumentos</em>. Antes de que pueda utilizarlos, la función debe indicar cuántos argumentos necesita y cuál es el nombre de cada argumento.</p>
+      <p class="callout warning">Además, al invocar la función, se deben incluir los valores que se le van a pasar a la misma. Los argumentos se indican dentro de los paréntesis que van detrás del nombre de la función y se separan con una coma (<code>,</code>).</p>
+
+      <h4 id="ejemplo3">Ejemplo 3</h4>
+      <p>La función debe indicar que necesita dos argumentos, correspondientes a los dos números que tiene que sumar:</p>
+      <pre class="">
+      <span class="kw1">function</span> suma_y_muestra<span class="br0">(</span>primeraCantidad<span class="sy0">,</span> segundaCantidad<span class="br0">)</span> <span class="br0">{</span> ... <span class="br0">}</span>
+      </pre>
+      <p>A continuación, para utilizar el valor de los argumentos dentro de la función, se debe emplear <b>el mismo nombre</b> con el que se definieron los argumentos:</p>
+      <pre class="">
+      <span class="kw1">function</span> suma_y_muestra<span class="br0">(</span>primeraCantidad<span class="sy0">,</span> segundaCantidad<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> resultado <span class="sy0">=</span> primeraCantidad <span class="sy0">+</span> segundaCantidad<span class="sy0">;</span>
+        alert<span class="br0">(</span><span class="st0">"El resultado es "</span> <span class="sy0">+</span> resultado<span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      </pre>
+      <p>Dentro de la función, el valor de la variable <code>primeraCantidad</code> será igual al primer valor que se le pase a la función y el valor de la variable <code>segundaCantidad</code> será igual al segundo valor que se le pasa.</p>
+      <p><strong>Para pasar valores a la función, se incluyen dentro de los paréntesis utilizados al llamar a la función:</strong></p>
+      <pre class="">
+      <span class="co1">// Definición de la función</span>
+      <span class="kw1">function</span> suma_y_muestra<span class="br0">(</span>primeraCantidad<span class="sy0">,</span> segundaCantidad<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> resultado <span class="sy0">=</span> primeraCantidad <span class="sy0">+</span> segundaCantidad<span class="sy0">;</span>
+        alert<span class="br0">(</span><span class="st0">"El resultado es "</span> <span class="sy0">+</span> resultado<span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="co1">// Declaración de las variables</span>
+      <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+      <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="co1">// Llamada a la función</span>
+      suma_y_muestra<span class="br0">(</span>numero1<span class="sy0">,</span> numero2<span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p>En el código anterior, se debe tener en cuenta que:</p>
+      <ul>
+      <li>Aunque casi siempre se utilizan variables para pasar los datos a la función, se puede usar directamente el valor de esas variables: <code>suma_y_muestra(3, 5);</code></li>
+      <li>El número de argumentos que se pasa a una función debe ser el mismo que el número de argumentos que ha indicado la función. No obstante, <b>JavaScript no muestra ningún error</b> si se pasan más o menos argumentos de los necesarios.</li>
+      <li>El orden de los argumentos es fundamental, ya que el primer dato será el primer valor que espera la función; el segundo dato es el segundo valor que espera la función y así sucesivamente.</li>
+      <li>Se puede utilizar un número ilimitado de argumentos, aunque si su número es muy grande, se complica en exceso la llamada a la función.</li>
+      <li>No hace falta que coincida el nombre de los argumentos que utiliza la función y el nombre de los argumentos que se le pasan. En el ejemplo anterior, los argumentos que se pasan son <code>numero1</code> y <code>numero2</code> y los argumentos que utiliza la función son <code>primeraCantidad</code> y <code>segundaCantidad</code>. </li>
+      </ul>
+      <br>
+
+      <h4 id="ejemplo4">Ejemplo 4</h4>
+      <p>A continuación se muestra otro ejemplo de una función que calcula el precio total de un producto a partir de su precio básico:</p>
+      <pre class="">
+      <span class="co1">// Definición de la función</span>
+      <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> impuestos <span class="sy0">=</span> <span class="nu0">1.16</span><span class="sy0">;</span>
+        <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+        <span class="kw1">var</span> precioTotal <span class="sy0">=</span> <span class="br0">(</span> precio <span class="sy0">*</span> impuestos <span class="br0">)</span> <span class="sy0">+</span> flete<span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="co1">// Llamada a la función</span>
+      calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p>La función anterior toma como argumento una variable llamada <code>precio</code> y le suma los impuestos y los gastos de envío para obtener el precio total. Al llamar a la función, se pasa directamente el valor del precio básico mediante el número <code>23.34</code>.</p>
+      <p>No obstante, el código anterior no es demasiado útil, ya que lo ideal sería que la función pudiera devolver el resultado obtenido para guardarlo en otra variable y poder seguir trabajando con este precio total:</p>
+      <pre class="">
+      <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> impuestos <span class="sy0">=</span> <span class="nu0">1.16</span><span class="sy0">;</span>
+        <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+        <span class="kw1">var</span> precioTotal <span class="sy0">=</span> <span class="br0">(</span> precio <span class="sy0">*</span> impuestos <span class="br0">)</span> <span class="sy0">+</span> flete<span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="co1">// El valor devuelto por la función, se guarda en una variable</span>
+      <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="co1">// Seguir trabajando con la variable "precioTotal"</span>
+      </pre>
+      <br>
+      <h3 id="return">Importancia de return</h3>
+      <p>Mejor aún, las funciones no sólo puede recibir variables y datos, sino que también pueden <b>devolver</b> los valores que han calculado. Para devolver valores dentro de una función, se utiliza la palabra reservada <code>return</code>.</p>
+      <p class="callout warning">Aunque las funciones pueden devolver valores de cualquier tipo, solamente pueden devolver un valor cada vez que se ejecutan.</p>
+      <pre class="">
+      <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> impuestos <span class="sy0">=</span> <span class="nu0">1.16</span><span class="sy0">;</span>
+        <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+        <span class="kw1">var</span> precioTotal <span class="sy0">=</span> <span class="br0">(</span> precio <span class="sy0">*</span> impuestos <span class="br0">)</span> <span class="sy0">+</span> flete<span class="sy0">;</span>
+        <span class="kw1">return</span> precioTotal<span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
+      &nbsp;
+      <span class="co1">// Seguir trabajando con la variable "precioTotal"</span>
+      </pre>
+      <p>Para que la función devuelva un valor, solamente es necesario escribir la palabra reservada <code>return</code> junto con el nombre de la variable que se quiere devolver.</p>
+      <p>En el ejemplo anterior, la ejecución de la función llega a la instrucción <code>return precioTotal;</code> y en ese momento, devuelve el valor que contenga la variable <code>precioTotal</code>.</p>
+      <p>Como la función devuelve un valor, en el punto en el que se realiza la llamada, debe indicarse el nombre de una variable en el que se guarda el valor devuelto:</p>
+      <pre class="">
+      <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p class="callout warning"><b>Si no se indica el nombre de ninguna variable, JavaScript no muestra ningún error</b> y el valor devuelto por la función simplemente se pierde y por tanto, no se utilizará en el resto del programa. En este caso, tampoco es obligatorio que el nombre de la variable devuelta por la función coincida con el nombre de la variable en la que se va a almacenar ese valor.</p>
+      <p>Si la función llega a una instrucción de tipo <code>return</code>, se devuelve el valor indicado y finaliza la ejecución de la función. Por tanto, todas las instrucciones que se incluyen después de un <code>return</code> se ignoran y por ese motivo la instrucción <code>return</code> suele ser la última de la mayoría de funciones.</p>
+      <p>Para que el ejemplo anterior sea más completo, se puede añadir otro argumento a la función que indique el porcentaje de impuestos que se debe añadir al precio del producto. Evidentemente, el nuevo argumento se debe añadir tanto a la definición de la función como a su llamada:</p>
+      <pre class="">
+      <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="sy0">,</span> porcentajeImpuestos<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
+        <span class="kw1">var</span> precioConImpuestos <span class="sy0">=</span> <span class="br0">(</span><span class="nu0">1</span> <span class="sy0">+</span> porcentajeImpuestos<span class="sy0">/</span><span class="nu0">100</span><span class="br0">)</span> <span class="sy0">*</span> precio<span class="sy0">;</span>
+        <span class="kw1">var</span> precioTotal <span class="sy0">=</span> precioConImpuestos <span class="sy0">+</span> flete<span class="sy0">;</span>
+        <span class="kw1">return</span> precioTotal<span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="sy0">,</span> <span class="nu0">16</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="kw1">var</span> otroPrecioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">15.20</span><span class="sy0">,</span> <span class="nu0">4</span><span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+
+      <p>Para terminar de completar el ejercicio anterior, se puede recibir los datos del usuario y rendondear a dos decimales el precio total devuelto por la función:</p>
+      <pre class="consola">
+
+      <span class="funcion">var</span> precioNeto <span class="condicion">=</span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese el monto sin impuestos: '</span>);
+      precioNeto <span class="condicion">=</span> <span class="funcion">parseFloat</span>(precioNeto);
+      <span class="funcion">var</span> impuestos <span class="condicion">=</span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese el % de impuestos:'</span>);
+      impuestos <span class="condicion">=</span> <span class="funcion">parseFloat</span>(impuestos);
+      <span class="funcion">var</span> flete <span class="condicion">=</span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese monto del flete:'</span>);
+      flete <span class="condicion">=</span> <span class="funcion">parseFloat</span>(flete);
+
+      <span class="funcion">function</span> <span class="verde">calculaPrecioTotal</span>(<span class="dorado">precio</span>, <span class="dorado">porcentajeImpuestos</span>) {
+          <span class="funcion">var</span> precioConImpuestos <span class="condicion">=</span> (<span class="violeta">1</span> <span class="condicion">+</span> porcentajeImpuestos<span class="condicion">/</span><span class="violeta">100</span>) <span class="condicion">*</span> precio;
+          <span class="funcion">var</span> precioTotal <span class="condicion">=</span> precioConImpuestos <span class="condicion">+</span> flete;
+
+          <span class="condicion">return</span> precioTotal.<span class="funcion">toFixed</span>(<span class="violeta">2</span>);
+      }    
+        <span class="funcion">var</span> resultadoFinal <span class="condicion">=</span> <span class="funcion">calculaPrecioTotal</span>(precioNeto, impuestos);
+        <span class="funcion">alert</span>(<span class="cadena">"El resultado es "</span> <span class="condicion">+</span> resultadoFinal);
+      </pre>
+      <br>
+      <button id="ejemploFuncion4" class="button primary">Ver resultado del ejemplo</button>
       <br>
     </div><!-- /.contenedor -->
   </section>
