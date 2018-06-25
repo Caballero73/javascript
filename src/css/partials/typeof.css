@@ -1,7 +1,7 @@
 /******************************
-ESTILOS CONTENIDO OPERADORES: operadores.css;
+ESTILOS CONTENIDO TYPEOF: typeof.css;
 *******************************/
-#operadores {
+#typeof {
 	padding: 2rem;
 
 	& .button {
@@ -16,6 +16,7 @@ ESTILOS CONTENIDO OPERADORES: operadores.css;
 	}
 
 	& pre.lead {
+		font-size: responsive 1.1rem 1.4rem;
 		font-weight: bold;
 	}
 

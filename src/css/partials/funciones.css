@@ -1,7 +1,7 @@
 /******************************
-ESTILOS CONTENIDO OPERADORES: operadores.css;
+ESTILOS CONTENIDO CREACIÓN DE FUNCIONES: funciones.css;
 *******************************/
-#operadores {
+#funciones {
 	padding: 2rem;
 
 	& .button {
@@ -17,7 +17,12 @@ ESTILOS CONTENIDO OPERADORES: operadores.css;
 
 	& pre.lead {
 		font-weight: bold;
+		
 	}
+	& pre.consola {
+
+		font-size: responsive 1.6rem 1.8rem;
+	} 
 
 }
 /**/

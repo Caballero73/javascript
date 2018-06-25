@@ -1,7 +1,7 @@
 /******************************
-ESTILOS CONTENIDO OPERADORES: operadores.css;
+ESTILOS CONTENIDO FUNCIONES NATIVAS: func-nativas.css;
 *******************************/
-#operadores {
+#func-nativas {
 	padding: 2rem;
 
 	& .button {

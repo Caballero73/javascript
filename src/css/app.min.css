@@ -22,6 +22,9 @@
 @import './partials/if-else.css';
 @import './partials/switch.css';
 @import './partials/operadores.css';
+@import './partials/func-nativas.css';
+@import './partials/typeof.css';
+@import './partials/funciones.css';
 @import './partials/custom.css';
 
 /******************************

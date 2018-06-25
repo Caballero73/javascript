@@ -57,10 +57,71 @@ if(edad >= 18) {
     console.log("Todavía eres menor de edad");
 }
 // Ejercicio 2 de If...Else
-console.log('***************************\n Aquí se ve el resultado del ejercicio 2 para If...Else');
-var nombre = "";
-if(nombre == "") {
-console.log("Aún no nos has dicho tu nombre");
-}else {
-console.log("Hemos guardado tu nombre");
-}
+$('#ejemplo-if2').click(function(){
+	var nombre = prompt('Por favor indica tu nombre: ');
+	if(nombre == "") {
+	alert("Aún no nos has dicho tu nombre");
+	}else {
+	alert("Hemos guardado tu nombre");
+	}
+});
+
+// Ejercicio de funciones nativas
+$('#ejemplo-nativas').click(function(){
+	var usuario = prompt('Por favor, ingresa tu nombre de usuario:');
+
+	if (usuario && usuario.trim()) {
+		var confirmar = ('¿Es ' + usuario + ' correcto?');
+
+		if (confirmar) {
+			alert('Usuario correcto')
+		}else {
+			alert('Usuario incorrecto')
+		}
+	}else{
+		alert('No has introducido un usuario válido');
+	}
+});
+
+// Ejercicio de typeof
+$('#ejemplo-typeof').click(function(){
+	var respuesta = prompt('Ingrese un string:');
+
+	if (typeof respuesta === 'string') {
+		alert('Correcto')
+	}else{
+		alert('Error, el tipo de valor es ' + typeof respuesta);
+	}
+});
+
+// Ejemplo funcion 1
+$('#ejemploFuncion1').click(function(){
+	
+	var nombreUsuario = prompt('Ingresa tu nombre:');
+
+	function mostrarNombre(nombre) {
+		alert(nombre);
+	}
+
+	mostrarNombre(nombreUsuario);
+});
+
+// Ejemplo funcion 2
+$('#ejemploFuncion2').click(function(){
+
+	var anyo;
+
+	anyo = prompt('Ingrese el Año:','');
+	anyo = parseInt(anyo)
+
+	function bisiesto(anyoAnalizar) {
+		if ((((anyoAnalizar%100)!=0) && ((anyoAnalizar%4)==0)) || ((anyoAnalizar%400)==0)){
+			alert('El año es bisiesto: ');
+		}else{
+			alert('El año no es bisiesto: ');
+		}
+	}
+
+	bisiesto(anyo);
+});
+

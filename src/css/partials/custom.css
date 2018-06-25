@@ -82,8 +82,8 @@ cite {font-size: responsive 1rem 1.5rem;}
   margin-right: auto;
 }
 .contenedor,.row {
-  max-width: 80vw !important;
-  @media (--laptop-x) {max-width: 90vw !important;}
+  max-width: 87vw !important;
+  @media (--laptop-x) {max-width: 94vw !important;}
   @media (--laptop-s) {max-width: 95vw !important;}
   @media (--tablet-h) {max-width: 97vw !important;}
   @media (--tablet-v) {max-width: 98vw !important;}
@@ -201,8 +201,11 @@ pre.consola {
   background-color: var(--colorFuente);
   color: var(--colorBlanco);
   & .cadena {color: var(--colorAmarillo);}
+  & .condicion {color: var(--colorAlert);}
+  & .dorado {color: var(--colorDorado);}
   & .funcion {color: cyan;}
   & .nota {color: var(--colorGris);}
+  & .verde {color: var(--colorVerde);}
 }
 .p-1 {padding: 1rem}
 .p-2 {padding: 2rem}

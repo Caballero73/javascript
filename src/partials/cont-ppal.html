@@ -21,18 +21,14 @@
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel8"><i class="fa fa-toggle-on fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Estructura switch</span></a></li>
               <!-- Operadores -->
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel9"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Operadores</span></a></li>
-              <!-- Operadores -->
-              <li class="tabs-title"><a href="#cont-ppal-tabs-panel10"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Operadores</span></a></li>
+              <!-- Funciones nativas -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel10"><i class="fa fa-window-restore fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Funciones nativas</span></a></li>
+              <!-- Operador typeof -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel11"><i class="fa fa-puzzle-piece fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Operador typeof</span></a></li>
+              <!-- Creación de funciones -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel12"><i class="fa fa-code fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="">Creación de funciones</span></a></li>
             </ul>
-            <div class="mt-1" id="abside">
-              <div class="text-center mb-3" id="iconos">
-                <a href="https://slicegroup.xyz/" target="_blank"><i class="fa fa-rocket fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/enrique-valerio-6b347b126/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/Caballero73/XXXXXXXX" target="_blank"><i class="fa fa-github fa-2x"></i></a>            
-              </div>
-              <p class="text-center">Enrique Valerio <br>
-              <small>Junio 2018</small></p>
-            </div>
+            @include('./partials/abside.html')            
           </div>
         </div><!-- /.columns -->
 
@@ -74,9 +70,18 @@
             <div class="tabs-panel" id="cont-ppal-tabs-panel9">
               @include('./partials/operadores.html')
             </div>
-            <!-- Operadores -->
+            <!-- Funciones nativas -->
             <div class="tabs-panel" id="cont-ppal-tabs-panel10">
-              @include('./partials/operadores.html')
+              @include('./partials/func-nativas.html')
+            </div>
+            <!-- Operador typeof -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel11">
+              @include('./partials/typeof.html')
+            </div>
+            <!-- Creación de funciones -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel12">
+              @include('./partials/funciones.html')
+              
             </div>
           </div><!-- /.tabs-content -->
         </div><!-- /.columns -->

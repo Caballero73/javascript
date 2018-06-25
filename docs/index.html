@@ -7,7 +7,7 @@
   <meta name="description" content="JavaScript es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla.">
   <link rel="shortcut icon" href="assets/img/favicon.ico">
   <style>
-    @charset "UTF-8";@font-face{font-family:FontAwesome;src:url(../docs/assets/fonts/fontawesome-webfont.eot?v=4.7.0);src:url(../docs/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'),url(../docs/assets/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'),url(../docs/assets/fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'),url(../docs/assets/fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),url(../docs/assets/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg')}blockquote,div,h1,li,p,ul{margin:0;padding:0}i{font-style:italic;line-height:inherit}h1{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}@font-face{font-family:Raleway-Bold;src:url(../docs/assets/fonts/Raleway-Bold.eot);src:local('☺'),url(../docs/assets/fonts/Raleway-Bold.woff) format('woff'),url(../docs/assets/fonts/Raleway-Bold.ttf) format('truetype'),url(../docs/assets/fonts/Raleway-Bold.svg) format('svg')}@font-face{font-family:Lato;src:local('☺'),url(../docs/assets/fonts/Lato-Regular.ttf) format('truetype')}h1{color:#6b00a1;font-family:Raleway-Bold,serif}blockquote,div,h1,h2,li,p,ul{margin:0;padding:0}@media screen and (max-width:420px){#cont-ppal #cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}}.fa{display:inline-block;font:14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.pull-right{float:right}.fa-repeat:before{content:"\f01e"}.fa-list-alt:before{content:"\f022"}.fa-book:before{content:"\f02d"}.fa-github:before{content:"\f09b"}.fa-hand-o-up:before{content:"\f0a6"}.fa-linkedin:before{content:"\f0e1"}.fa-undo:before{content:"\f0e2"}.fa-terminal:before{content:"\f120"}.fa-rocket:before{content:"\f135"}.fa-chevron-circle-up:before{content:"\f139"}.fa-html5:before{content:"\f13b"}.fa-dot-circle-o:before{content:"\f192"}.fa-cube:before{content:"\f1b2"}.fa-toggle-on:before{content:"\f205"}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code{font-family:monospace,monospace;font-size:1em}small{font-size:80%}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:100%}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}body{margin:0;padding:0;background:#fefefe;font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-weight:400;line-height:1.5;color:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}pre{overflow:auto}blockquote,div,h1,h2,li,p,pre,ul{margin:0;padding:0}p{margin-bottom:10px;margin-bottom:1rem;font-size:inherit;line-height:1.6;text-rendering:optimizeLegibility}em,i{font-style:italic;line-height:inherit}b,strong{font-weight:700;line-height:inherit}small{font-size:80%;line-height:inherit}h1,h2{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}h1{font-size:15px;font-size:1.5rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}h2{font-size:12.5px;font-size:1.25rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}a{line-height:inherit;color:#09458d;text-decoration:none}ul{margin-bottom:10px;margin-bottom:1rem;list-style-position:outside;line-height:1.6}li{font-size:inherit}ul{margin-left:12.5px;margin-left:1.25rem;list-style-type:disc}blockquote{margin:0 0 10px;margin:0 0 1rem;padding:5.625px 12.5px 0 11.875px;padding:.5625rem 1.25rem 0 1.1875rem;border-left:1px solid #cacaca}blockquote{line-height:1.6;color:#8a8a8a}cite{display:block;font-size:8.125px;font-size:.8125rem;color:#8a8a8a}cite:before{content:"— "}code{padding:1.25px 3.125px .625px;padding:.125rem .3125rem .0625rem;border:1px solid #cacaca;background-color:#e6e6e6;font-family:Consolas,Liberation Mono,Courier,monospace;font-weight:400;color:#0a0a0a}.lead{font-size:125%;line-height:1.6}.text-center{text-align:center}.tabs{margin:0;border:1px solid #e6e6e6;background:#fefefe;list-style-type:none}.tabs:after,.tabs:before{display:table;content:' ';-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-order:1;-webkit-box-ordinal-group:2;order:1}.tabs:after{clear:both}.tabs.vertical>li{display:block;float:none;width:auto}.tabs-title{float:left}.tabs-title>a{display:block;padding:12.5px 15px;padding:1.25rem 1.5rem;font-size:7.5px;font-size:.75rem;line-height:1;color:#09458d}.tabs-title>a[aria-selected=true]{background:#e6e6e6;color:#09458d}.tabs-content{border:1px solid #e6e6e6;border-top:0;background:#fefefe;color:#0a0a0a}.tabs-panel{display:none;padding:10px;padding:1rem}.tabs-panel.is-active{display:block}.sticky{position:relative;z-index:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.row{max-width:625px;max-width:62.5rem;margin-right:auto;margin-left:auto;display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap}.row.collapse>.columns{padding-right:0;padding-left:0}.columns{-ms-flex:1 1 0px;-webkit-box-flex:1;flex:1 1 0px;padding-right:9.375px;padding-right:.9375rem;padding-left:9.375px;padding-left:.9375rem;min-width:0}.small-3{-ms-flex:0 0 25%;-webkit-box-flex:0;flex:0 0 25%;max-width:25%}#cont-ppal #abside-cont{display:grid;grid-template-rows:auto 1fr;height:98vh}#cont-ppal #abside{background:#4e0079;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;padding:15px;padding:1.5rem;width:100%}#cont-ppal #cont-ppal-tabs li a{font-size:calc(.85581rem + .93023vw)}#cont-ppal #cont-ppal-header{background:#6b00a1;padding:10px;padding:1rem;text-shadow:0 .5px #ccc,0 1px #bfbfbf,0 1.5px #b3b3b3,0 2px #a6a6a6,0 1.5px #8c8c8c}#cont-ppal #cont-ppal-header h1{color:#fff!important}#cont-ppal #iconos{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}#cont-ppal .tabs>li{background-color:#3b005d;border-radius:.7rem 0 0 .7rem;margin-bottom:1px}#cont-ppal .tabs>li a{color:#f8f8ff;font-size:calc(1.50233rem + .37209vw)}#cont-ppal .tabs-title>a[aria-selected=true]{background:#7400b3;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;outline:0}#conceptos-fundamentales{padding:20px;padding:2rem}html{font-size:10px;font-family:Lato,sans-serif;color:#444}body{color:#444;background-color:#ededed;font-size:calc(1.20465rem + .46512vw);font-family:Lato,sans-serif}a{text-decoration:none}#abside a{color:#f8f8ff;text-decoration:none}cite{font-size:calc(.75581rem + .5814vw)}.contenedor{margin-left:auto;margin-right:auto}.contenedor,.row{max-width:80vw!important}h1,h2{color:#6b00a1;font-family:Raleway-Bold,serif}h1{font-size:calc(1.6186rem + 1.86047vw)}h2{font-size:calc(1.51163rem + 1.16279vw)}.ir-arriba{border-radius:.4rem;display:none;padding:7px;padding:.7rem;background:#6b00a1;color:#fff;position:fixed;bottom:20px;bottom:2rem;right:10px;right:1rem;z-index:100}.mt-1{margin-top:10px;margin-top:1rem}.mt-2{margin-top:20px;margin-top:2rem}.mb-3{margin-bottom:30px;margin-bottom:3rem}.mt-4{margin-top:40px;margin-top:4rem}pre{color:#333}.tabs-content{color:#444}@media print,screen and (min-width:40em){h1{font-size:30px;font-size:3rem}h2{font-size:25px;font-size:2.5rem}}@media screen and (max-width:39.9375em){.hide-for-small-only{display:none!important}}@media screen and (min-width:1280px){#cont-ppal #cont-ppal-tabs li a{font-size:16px;font-size:1.6rem}#cont-ppal .tabs>li a{font-size:18px;font-size:1.8rem}body{font-size:18px;font-size:1.8rem}cite{font-size:15px;font-size:1.5rem}h1{font-size:40px;font-size:4rem}h2{font-size:30px;font-size:3rem}}@media screen and (max-width:420px){#cont-ppal #cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}h2{font-size:20px;font-size:2rem}}@media (min-width:0px) and (max-width:544px){#cont-ppal #cont-ppal-tabs i{display:none}}@media (min-width:545px) and (max-width:768px){#cont-ppal #cont-ppal-tabs i{display:none}.contenedor,.row{max-width:98vw!important}}@media (min-width:1291px) and (max-width:1420px){.contenedor,.row{max-width:90vw!important}}@media (min-width:1025px) and (max-width:1290px){.contenedor,.row{max-width:95vw!important}}@media (min-width:769px) and (max-width:1024px){.contenedor,.row{max-width:97vw!important}}@media (min-width:331px) and (max-width:544px){.contenedor,.row{max-width:100vw!important}}@media (min-width:0px) and (max-width:330px){.contenedor,.row{max-width:100vw!important}}
+    @charset "UTF-8";@font-face{font-family:FontAwesome;src:url(../docs/assets/fonts/fontawesome-webfont.eot?v=4.7.0);src:url(../docs/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'),url(../docs/assets/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'),url(../docs/assets/fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'),url(../docs/assets/fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),url(../docs/assets/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg')}blockquote,div,h1,li,p,ul{margin:0;padding:0}i{font-style:italic;line-height:inherit}h1{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}@font-face{font-family:Raleway-Bold;src:url(../docs/assets/fonts/Raleway-Bold.eot);src:local('☺'),url(../docs/assets/fonts/Raleway-Bold.woff) format('woff'),url(../docs/assets/fonts/Raleway-Bold.ttf) format('truetype'),url(../docs/assets/fonts/Raleway-Bold.svg) format('svg')}@font-face{font-family:Lato;src:local('☺'),url(../docs/assets/fonts/Lato-Regular.ttf) format('truetype')}h1{color:#6b00a1;font-family:Raleway-Bold,serif}@media screen and (max-width:420px){#cont-ppal #cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}}.fa{display:inline-block;font:14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.pull-right{float:right}.fa-repeat:before{content:"\f01e"}.fa-list-alt:before{content:"\f022"}.fa-book:before{content:"\f02d"}.fa-github:before{content:"\f09b"}.fa-hand-o-up:before{content:"\f0a6"}.fa-linkedin:before{content:"\f0e1"}.fa-undo:before{content:"\f0e2"}.fa-terminal:before{content:"\f120"}.fa-code:before{content:"\f121"}.fa-puzzle-piece:before{content:"\f12e"}.fa-rocket:before{content:"\f135"}.fa-chevron-circle-up:before{content:"\f139"}.fa-html5:before{content:"\f13b"}.fa-dot-circle-o:before{content:"\f192"}.fa-cube:before{content:"\f1b2"}.fa-toggle-on:before{content:"\f205"}.fa-window-restore:before{content:"\f2d2"}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}a{background-color:transparent;-webkit-text-decoration-skip:objects}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code{font-family:monospace,monospace;font-size:1em}small{font-size:80%}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:100%}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}body{margin:0;padding:0;background:#fefefe;font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-weight:400;line-height:1.5;color:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}blockquote,div,h1,h2,li,p,ul{margin:0;padding:0}p{margin-bottom:10px;margin-bottom:1rem;font-size:inherit;line-height:1.6;text-rendering:optimizeLegibility}em,i{font-style:italic;line-height:inherit}b,strong{font-weight:700;line-height:inherit}small{font-size:80%;line-height:inherit}h1,h2{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}h1{font-size:15px;font-size:1.5rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}h2{font-size:12.5px;font-size:1.25rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}a{line-height:inherit;color:#09458d;text-decoration:none}ul{margin-bottom:10px;margin-bottom:1rem;list-style-position:outside;line-height:1.6}li{font-size:inherit}ul{margin-left:12.5px;margin-left:1.25rem;list-style-type:disc}blockquote{margin:0 0 10px;margin:0 0 1rem;padding:5.625px 12.5px 0 11.875px;padding:.5625rem 1.25rem 0 1.1875rem;border-left:1px solid #cacaca}blockquote{line-height:1.6;color:#8a8a8a}cite{display:block;font-size:8.125px;font-size:.8125rem;color:#8a8a8a}cite:before{content:"— "}code{padding:1.25px 3.125px .625px;padding:.125rem .3125rem .0625rem;border:1px solid #cacaca;background-color:#e6e6e6;font-family:Consolas,Liberation Mono,Courier,monospace;font-weight:400;color:#0a0a0a}.lead{font-size:125%;line-height:1.6}.text-center{text-align:center}.tabs{margin:0;border:1px solid #e6e6e6;background:#fefefe;list-style-type:none}.tabs:after,.tabs:before{display:table;content:' ';-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-order:1;-webkit-box-ordinal-group:2;order:1}.tabs:after{clear:both}.tabs.vertical>li{display:block;float:none;width:auto}.tabs-title{float:left}.tabs-title>a{display:block;padding:12.5px 15px;padding:1.25rem 1.5rem;font-size:7.5px;font-size:.75rem;line-height:1;color:#09458d}.tabs-title>a[aria-selected=true]{background:#e6e6e6;color:#09458d}.tabs-content{border:1px solid #e6e6e6;border-top:0;background:#fefefe;color:#0a0a0a}.tabs-panel{display:none;padding:10px;padding:1rem}.tabs-panel.is-active{display:block}.sticky{position:relative;z-index:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.row{max-width:625px;max-width:62.5rem;margin-right:auto;margin-left:auto;display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap}.row.collapse>.columns{padding-right:0;padding-left:0}.columns{-ms-flex:1 1 0px;-webkit-box-flex:1;flex:1 1 0px;padding-right:9.375px;padding-right:.9375rem;padding-left:9.375px;padding-left:.9375rem;min-width:0}.small-3{-ms-flex:0 0 25%;-webkit-box-flex:0;flex:0 0 25%;max-width:25%}#cont-ppal #abside-cont{display:grid;grid-template-rows:auto 1fr;height:98vh}#cont-ppal #abside{background:#4e0079;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;padding:15px;padding:1.5rem;width:100%}#cont-ppal #cont-ppal-tabs li a{font-size:calc(.85581rem + .5814vw)}#cont-ppal #cont-ppal-header{background:#6b00a1;padding:10px;padding:1rem;text-shadow:0 .5px #ccc,0 1px #bfbfbf,0 1.5px #b3b3b3,0 2px #a6a6a6,0 1.5px #8c8c8c}#cont-ppal #cont-ppal-header h1{color:#fff!important}#cont-ppal #iconos{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}#cont-ppal .tabs>li{background-color:#3b005d;border-radius:.7rem 0 0 .7rem;margin-bottom:1px}#cont-ppal .tabs>li a{color:#f8f8ff;font-size:calc(1.50233rem + .23256vw)}#cont-ppal .tabs-title>a[aria-selected=true]{background:#7400b3;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;outline:0}#conceptos-fundamentales{padding:20px;padding:2rem}html{font-size:10px;font-family:Lato,sans-serif;color:#444}body{color:#444;background-color:#ededed;font-size:calc(1.20465rem + .46512vw);font-family:Lato,sans-serif}a{text-decoration:none}#abside a{color:#f8f8ff;text-decoration:none}cite{font-size:calc(.75581rem + .5814vw)}.contenedor{margin-left:auto;margin-right:auto}.contenedor,.row{max-width:87vw!important}h1,h2{color:#6b00a1;font-family:Raleway-Bold,serif}h1{font-size:calc(1.6186rem + 1.86047vw)}h2{font-size:calc(1.51163rem + 1.16279vw)}.ir-arriba{border-radius:.4rem;display:none;padding:7px;padding:.7rem;background:#6b00a1;color:#fff;position:fixed;bottom:20px;bottom:2rem;right:10px;right:1rem;z-index:100}.mt-1{margin-top:10px;margin-top:1rem}.mt-2{margin-top:20px;margin-top:2rem}.mb-3{margin-bottom:30px;margin-bottom:3rem}.mt-4{margin-top:40px;margin-top:4rem}.tabs-content{color:#444}@media print,screen and (min-width:40em){h1{font-size:30px;font-size:3rem}h2{font-size:25px;font-size:2.5rem}}@media screen and (max-width:39.9375em){.hide-for-small-only{display:none!important}}@media screen and (min-width:1280px){#cont-ppal #cont-ppal-tabs li a{font-size:16px;font-size:1.6rem}#cont-ppal .tabs>li a{font-size:18px;font-size:1.8rem}body{font-size:18px;font-size:1.8rem}cite{font-size:15px;font-size:1.5rem}h1{font-size:40px;font-size:4rem}h2{font-size:30px;font-size:3rem}}@media screen and (max-width:420px){#cont-ppal #cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}h2{font-size:20px;font-size:2rem}}@media (min-width:0px) and (max-width:544px){#cont-ppal #cont-ppal-tabs i{display:none}}@media (min-width:545px) and (max-width:768px){#cont-ppal #cont-ppal-tabs i{display:none}.contenedor,.row{max-width:98vw!important}}@media (min-width:1291px) and (max-width:1420px){.contenedor,.row{max-width:94vw!important}}@media (min-width:1025px) and (max-width:1290px){.contenedor,.row{max-width:95vw!important}}@media (min-width:769px) and (max-width:1024px){.contenedor,.row{max-width:97vw!important}}@media (min-width:331px) and (max-width:544px){.contenedor,.row{max-width:100vw!important}}@media (min-width:0px) and (max-width:330px){.contenedor,.row{max-width:100vw!important}}
   </style>
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="preload" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css"></noscript>
@@ -60,6 +60,12 @@
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel8"><i class="fa fa-toggle-on fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Estructura switch</span></a></li>
               <!-- Operadores -->
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel9"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Operadores</span></a></li>
+              <!-- Funciones nativas -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel10"><i class="fa fa-window-restore fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Funciones nativas</span></a></li>
+              <!-- Operador typeof -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel11"><i class="fa fa-puzzle-piece fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Operador typeof</span></a></li>
+              <!-- Creación de funciones -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel12"><i class="fa fa-code fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Creación de funciones</span></a></li>
             </ul>
             <div class="mt-1" id="abside">
               <div class="text-center mb-3" id="iconos">
@@ -639,7 +645,9 @@
         alert<span class="br0">(</span><span class="st0">"Hemos guardado tu nombre"</span><span class="br0">)</span><span class="sy0">;</span>
       <span class="br0">}</span>
       </pre>
-      <p>La condición <code>if()</code> anterior se construye mediante el operador <code>==</code>, que es el que se emplea para comparar dos valores (no confundir con el operador <code>=</code> que se utiliza para asignar valores).</p>
+      <button id="ejemplo-if2" class="button primary">Ver resultado del ejemplo</button>
+      <br>
+      <p class="mt-4">La condición <code>if()</code> anterior se construye mediante el operador <code>==</code>, que es el que se emplea para comparar dos valores (no confundir con el operador <code>=</code> que se utiliza para asignar valores).</p>
       <p>En el ejemplo anterior, si la cadena de texto almacenada en la variable <code>nombre</code> es vacía (es decir, es igual a <code>""</code>) se muestra el mensaje definido en el <code>if()</code>. En otro caso, se muestra el mensaje definido en el bloque <code>else { }</code>.</p>
       <br>
       <p><b>La estructura <code>if...else</code> se puede encadenar para realizar varias comprobaciones seguidas:</b></p>
@@ -1043,6 +1051,205 @@
       <br>
     </div><!-- /.contenedor -->
   </section>
+            </div>
+            <!-- Funciones nativas -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel10">
+                <!-- ********** Funciones nativas -->
+  <section id="func-nativas" class="">
+    <div class="contenedor">
+      <h2>Funciones nativas</h2>
+      <p>Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.</p>
+      <p>Estos son los tipos de operadores que usaremos:</p>
+      <br>
+      <div class="stacked-for-small button-group">
+        <a class="button hollow primary" href="#alert"><big>alert</big></a>
+        <a class="button hollow primary" href="#confirm"><big>confirm</big></a>
+        <a class="button hollow primary" href="#prompt"><big>prompt</big></a>
+        <a class="button hollow primary" href="#ejemplo"><big>Ejemplo</big></a>
+      </div>
+      <br>
+
+      <h3 id="alert">alert</h3>
+      <p>La instrucción <code>alert()</code> es una de las utilidades que incluye JavaScript y permite mostrar un mensaje en la pantalla del usuario.</p>
+      <pre class="lead">
+      <span class="kw1">var</span> mensaje <span class="sy0">=</span> <span class="st0">"¡Hola Mundo!"</span><span class="sy0">;</span>
+      alert(<span class="st0">mensaje</span>)
+      </pre>
+      <p>Si se visualiza en una página web de este script en cualquier navegador, automáticamente se mostrará una ventana con el mensaje <code>"Hola Mundo!"</code>.</p>
+      <p>El funcionamiento de la utilidad <code>alert()</code> en los distintos navegadores es idéntico. Sin embargo, existen grandes diferencias visuales en la forma en la que se presentan los mensajes.</p>      
+      <br>
+
+      <h3 id="confirm">confirm</h3>
+      <p>El método  <code>confirm()</code> muestra una ventana de diálogo con un mensaje opcional y dos botones "Aceptar" y "Cancelar".</p>
+      <pre class="lead">
+      <span class="kw1">var</span> pregunta <span class="sy0">=</span> <span class="st0">"¿Está seguro de que desea continuar?"</span><span class="sy0">;</span>
+      confirm(<span class="st0">pregunta</span>)
+      </pre>
+      <p>Al visualizar este script en una página web en cualquier navegador, se mostrará una ventana con el mensaje <code>"¿Está seguro de que desea continuar?"</code> acompañado de los botones "Aceptar" y "Cancelar", si se selecciona la opción <b>"Aceptar"</b> arrojará <code>true</code> en el caso contrario será <code>false</code>.</p>
+      <p>Al igual que con el método anterior, el funcionamiento de <code>confirm()</code> en los distintos navegadores es idéntico. Sin embargo, existen grandes diferencias visuales en la forma en la que se presentan los mensajes.</p>
+      <br>
+
+      <h3 id="prompt">prompt</h3>
+      <p>El método <code>prompt()</code> muestra un diálogo con mensaje opcional, que solicita al usuario que introduzca un texto.</p>
+      <pre class="lead">
+        prompt("Mensaje", "Por defecto");
+      </pre>
+      <ul>
+        <li><code>Mensaje</code>&nbsp;es una cadena de texto que se mostrará al usuario a manera de información. Este parámetro es opcional y puede ser omitido si no se necesita mostrar nada en la ventana.</li>
+        <li><code>Por defecto</code>&nbsp;es una cadena de texto que contiene el valor <b>predeterminado</b> para el texto de entrada. Es un parámetro opcional.</li>
+      </ul>
+      <img class="float-center mt-3 mb-3" src="assets/img/prompt.png" alt="Imagen prompt">
+      <p class="mb-3">Cuando el usuario hace clic en el botón <b>ACEPTAR</b>, el valor introducido en el campo de texto es devuelto por el método como una cadena de texto. Si el usuario da clic al botón <b>ACEPTAR</b> sin introducir algun texto, se devuelve una cadena vacía. Si el usuario presiona el botón <b>CANCELAR</b>, la función devuelve&nbsp;<code>null</code>.</p>
+      <pre class="lead">
+      <span class="kw1">var</span> pregunta <span class="sy0">=</span> <span class="st0">"¿Está seguro de que desea continuar?"</span><span class="sy0">;</span>
+      confirm(<span class="st0">pregunta</span>)
+      </pre>
+      <p>Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. <br>
+      <pre class="lead">var aNumber = Number(prompt("Tipear un número", ""));</pre></p>
+      <br>
+      <p class="callout warning">Las cajas de diálogo son ventanas modales - ello impide al usuario continuar accediendo al resto del interfaz del programa hasta que la ventana modal haya sido cerrada. Por esta razón no se debería usar en exceso funciones que creen cajas de diálogo (o ventanas modales). </p>
+      <br>
+      <h3 id="ejemplo">Ejemplo</h3>
+      <p>En este sencillo ejemplo se pone en práctica lo aprendido con respecto a las funciones nativas.</p>
+      <pre class="consola">
+        
+      <span class="funcion">var</span> usuario <span class="condicion">=</span> <span class="funcion">prompt</span>(<span class="cadena">'Por favor, ingresa tu nombre de usuario:'</span>);
+
+      <span class="condicion">if</span> (usuario <span class="condicion">&&</span> usuario.<span class="funcion">trim</span>()) {
+        <span class="funcion">var</span> confirmar <span class="condicion">=</span> (<span class="cadena">'¿Es '</span> <span class="condicion">+</span> usuario <span class="condicion">+</span> <span class="cadena">' correcto?'</span>);
+
+        <span class="condicion">if</span> (confirmar) {
+          <span class="funcion">alert</span>(<span class="cadena">'Usuario correcto'</span>)
+        }<span class="condicion">else</span> {
+          <span class="funcion">alert</span>(<span class="cadena">'Usuario incorrecto'</span>)
+        }
+      }<span class="condicion">else</span>{
+        <span class="funcion">alert</span>(<span class="cadena">'No has introducido un usuario válido'</span>);
+      }        
+      </pre>
+      <br>
+      <button id="ejemplo-nativas" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Operador typeof -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel11">
+                <!-- ********** Operador typeof -->
+  <section id="func-nativas" class="">
+    <div class="contenedor">
+      <h2>Operador typeof</h2>
+      <p>El operador <code>typeof</code> se usa en cualquiera de los siguientes modos:</p>
+      <ol>
+        <li><code>typeof <i>operando</i></code></li>
+        <li><code>typeof (<i>operando</i>)</code></li>
+      </ol>
+      <p>El operador <code>typeof</code> devuelve una cadena que indica el tipo del operando sin evaluarlo. <code>operando</code> es la cadena, variable, palabra clave u objeto para el que se devolverá su tipo. Los paréntesis son opcionales.</p>
+      <p>Suponga que define las siguientes variables:</p>
+      <pre class="lead">
+      <span class="kw1">var</span> miFuncion <span class="sy0"> = </span> <span class="kw1">new</span> <span class="token class-name">Function</span><span>(</span><span class="st0">"5+2"</span><span>)</span>
+      <span class="kw1">var</span> forma<span class="sy0"> = </span><span class="st0">"redonda"</span>
+      <span class="kw1">var</span> tamano<span class="sy0"> = </span><span class="token number">1</span>
+      <span class="kw1">var</span> hoy<span class="sy0"> = </span><span class="kw1">new</span> <span class="token class-name">Date</span><span>(</span><span>)</span>
+      </pre>
+      <p>El operador <code>typeof</code> devuelve los siguientes resultados para estas variables</p>
+      <pre class="lead">
+      <span class="kw1">typeof</span> miFuncion <span class="sy0">==</span> <span class="st0">'function'</span>   
+      <span class="kw1">typeof</span> forma <span class="sy0">==</span> <span class="st0">'string'</span>
+      <span class="kw1">typeof</span> tamano <span class="sy0">==</span> <span class="st0">'number'</span>
+      <span class="kw1">typeof</span> hoy <span class="sy0">==</span> <span class="st0">'object'</span>
+      <span class="kw1">typeof</span> noExiste <span class="sy0">==</span> <span class="st0">'undefined'</span>
+      </pre>
+      <p>Para las palabras clave <code>true</code> y <code>null</code>, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
+      <pre class="lead">
+      <span class="kw1">typeof</span> <span class="kw1">true</span> <span class="sy0">==</span> <span class="st0">'boolean'</span>
+      <span class="kw1">typeof</span> <span class="kw1">null</span> <span class="sy0">==</span> <span class="st0">'object'</span>
+      </pre>
+      <p>Para un número o una cadena, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
+      <pre class="lead">
+      <span class="kw1">typeof</span> <span class="token number">62</span> <span class="sy0">==</span> <span class="st0">'number'</span>
+      <span class="kw1">typeof</span> <span class="st0">'Hola mundo'</span> <span class="sy0">==</span> <span class="st0">'string'</span>
+      </pre>
+      <p>Para valores de propiedades, el operador <code>typeof</code> devuelve el tipo del valor que contiene la propiedad:</p>
+      <pre class="lead">
+      <span class="kw1">typeof</span> document<span>.</span>lastModified <span class="sy0">==</span> <span class="st0">'string'</span>
+      <span class="kw1">typeof</span> window<span>.</span>length <span class="sy0">==</span> <span class="st0">'number'</span>
+      <span class="kw1">typeof</span> Math<span>.</span>LN2 <span class="sy0">==</span> <span class="st0">'number'</span>
+      </pre>
+      <br>
+      <h3 id="ejemplo">Ejemplo</h3>
+      <p>En este sencillo ejemplo se pone de manifiesto una utilidad práctica para el operador typeof.</p>      
+      <pre class="consola">
+        
+      <span class="funcion">var</span> respuesta <span class="condicion"> = </span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese un string:'</span>);
+
+      <span class="condicion">if</span> (<span class="condicion">typeof</span> respuesta <span class="condicion"> === </span> <span class="cadena">'string'</span>) {
+        <span class="funcion">alert</span>(<span class="cadena">'Correcto'</span>)
+      }<span class="condicion">else</span>{
+        <span class="funcion">alert</span>(<span class="cadena">'Error, el tipo de valor es '</span> <span class="condicion"> + typeof</span> respuesta);
+      }
+      </pre>
+      <br>
+      <button id="ejemplo-typeof" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Creación de funciones -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel12">
+                <!-- ********** Creación de funciones -->
+  <section id="funciones" class="">
+    <div class="contenedor">
+      <h2>Creación de funciones</h2>
+      <p>Cuando se desarrolla una aplicación, es casi inevitable utilizar una y otra vez las mismas instrucciones. Poe ejemplo: <em>Un script para una tienda de comercio electrónico, tiene que calcular el precio total de los productos varias veces, para añadir los impuestos y los gastos de envío.</em></p>
+      <p>Cuando una serie de instrucciones se repiten una y otra vez, se tienede a complicar demasiado el código fuente de la aplicación, ya que:</p>
+      <ul>
+        <li>Es mucho más largo porque muchas instrucciones están repetidas.</li>
+        <li>Si se quiere modificar alguna de las instrucciones repetidas, se deben hacer tantas modificaciones como veces se haya escrito esa instrucción, lo que se convierte en un trabajo muy pesado y donde es muy fácil cometer errores.</li>
+      </ul>
+      <p>Las <b>funciones</b> son la solución a estos problemas, en JavaScript así como en el resto de lenguajes de programación.</p>
+      <p>En conclusión: Una función es un conjunto de instrucciones que se agrupan para realizar una tarea concreta y que se pueden reutilizar fácilmente.</p>
+
+      <h3 id="ejemplo1">Ejemplo 1</h3>
+      <p>Veamos una función bastante simple.</p>      
+      <pre class="consola">
+        
+      <span class="funcion">var</span> nombreUsuario <span class="condicion"> = </span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese su nombre:'</span>);
+
+      <span class="funcion">function</span> <span class="verde">mostrarNombre</span>(<span class="dorado">nombre</span>) {
+        <span class="funcion">alert</span>(nombre);
+      }
+
+      <span class="funcion">mostrarNombre</span>(nombreUsuario);      
+      </pre>
+      <br>
+      <button id="ejemploFuncion1" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+      <br>
+
+      <h3 id="ejemplo2">Ejemplo 2</h3>
+      <p>Ahora una función que dice que año es bisiesto o no.</p>      
+      <pre class="consola">
+        
+        <span class="funcion">var</span> anyo;
+        anyo <span class="condicion"> = </span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese el Año:'</span>,<span class="cadena">''</span>);
+        anyo <span class="condicion"> = </span> <span class="funcion">parseInt</span>(anyo)
+
+        <span class="funcion">function</span> <span class="verde">bisiesto</span>(<span class="dorado">anyoAnalizar</span>) {
+          <span class="condicion">if</span> ((((anyoAnalizar<span class="condicion">%</span>100)<span class="condicion">!=</span>0) <span class="condicion">&&</span> ((anyoAnalizar<span class="condicion">%</span>4)<span class="condicion">==</span>0)) <span class="condicion">||</span> ((anyoAnalizar<span class="condicion">%</span>400)<span class="condicion">==</span>0)){
+            <span class="funcion">alert</span>(<span class="cadena">'El año es bisiesto: '</span>);
+          }else{  
+          <span class="funcion">alert</span>(<span class="cadena">'El año no es bisiesto: '</span>);
+          }
+        }
+        <span class="funcion">bisiesto</span>(anyo);     
+      </pre>
+      <br>
+      <button id="ejemploFuncion2" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+    </div><!-- /.contenedor -->
+  </section>
+              
             </div>
           </div><!-- /.tabs-content -->
         </div><!-- /.columns -->

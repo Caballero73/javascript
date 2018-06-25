@@ -1,0 +1,52 @@
+  <!-- ********** Creación de funciones -->
+  <section id="funciones" class="">
+    <div class="contenedor">
+      <h2>Creación de funciones</h2>
+      <p>Cuando se desarrolla una aplicación, es casi inevitable utilizar una y otra vez las mismas instrucciones. Poe ejemplo: <em>Un script para una tienda de comercio electrónico, tiene que calcular el precio total de los productos varias veces, para añadir los impuestos y los gastos de envío.</em></p>
+      <p>Cuando una serie de instrucciones se repiten una y otra vez, se tienede a complicar demasiado el código fuente de la aplicación, ya que:</p>
+      <ul>
+        <li>Es mucho más largo porque muchas instrucciones están repetidas.</li>
+        <li>Si se quiere modificar alguna de las instrucciones repetidas, se deben hacer tantas modificaciones como veces se haya escrito esa instrucción, lo que se convierte en un trabajo muy pesado y donde es muy fácil cometer errores.</li>
+      </ul>
+      <p>Las <b>funciones</b> son la solución a estos problemas, en JavaScript así como en el resto de lenguajes de programación.</p>
+      <p>En conclusión: Una función es un conjunto de instrucciones que se agrupan para realizar una tarea concreta y que se pueden reutilizar fácilmente.</p>
+
+      <h3 id="ejemplo1">Ejemplo 1</h3>
+      <p>Veamos una función bastante simple.</p>      
+      <pre class="consola">
+        
+      <span class="funcion">var</span> nombreUsuario <span class="condicion"> = </span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese su nombre:'</span>);
+
+      <span class="funcion">function</span> <span class="verde">mostrarNombre</span>(<span class="dorado">nombre</span>) {
+        <span class="funcion">alert</span>(nombre);
+      }
+
+      <span class="funcion">mostrarNombre</span>(nombreUsuario);      
+      </pre>
+      <br>
+      <button id="ejemploFuncion1" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+      <br>
+
+      <h3 id="ejemplo2">Ejemplo 2</h3>
+      <p>Ahora una función que dice que año es bisiesto o no.</p>      
+      <pre class="consola">
+        
+        <span class="funcion">var</span> anyo;
+        anyo <span class="condicion"> = </span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese el Año:'</span>,<span class="cadena">''</span>);
+        anyo <span class="condicion"> = </span> <span class="funcion">parseInt</span>(anyo)
+
+        <span class="funcion">function</span> <span class="verde">bisiesto</span>(<span class="dorado">anyoAnalizar</span>) {
+          <span class="condicion">if</span> ((((anyoAnalizar<span class="condicion">%</span>100)<span class="condicion">!=</span>0) <span class="condicion">&&</span> ((anyoAnalizar<span class="condicion">%</span>4)<span class="condicion">==</span>0)) <span class="condicion">||</span> ((anyoAnalizar<span class="condicion">%</span>400)<span class="condicion">==</span>0)){
+            <span class="funcion">alert</span>(<span class="cadena">'El año es bisiesto: '</span>);
+          }else{  
+          <span class="funcion">alert</span>(<span class="cadena">'El año no es bisiesto: '</span>);
+          }
+        }
+        <span class="funcion">bisiesto</span>(anyo);     
+      </pre>
+      <br>
+      <button id="ejemploFuncion2" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+    </div><!-- /.contenedor -->
+  </section>

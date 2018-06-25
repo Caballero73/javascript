@@ -1,0 +1,78 @@
+  <!-- ********** Funciones nativas -->
+  <section id="func-nativas" class="">
+    <div class="contenedor">
+      <h2>Funciones nativas</h2>
+      <p>Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.</p>
+      <p>Estos son los tipos de operadores que usaremos:</p>
+      <br>
+      <div class="stacked-for-small button-group">
+        <a class="button hollow primary" href="#alert"><big>alert</big></a>
+        <a class="button hollow primary" href="#confirm"><big>confirm</big></a>
+        <a class="button hollow primary" href="#prompt"><big>prompt</big></a>
+        <a class="button hollow primary" href="#ejemplo"><big>Ejemplo</big></a>
+      </div>
+      <br>
+
+      <h3 id="alert">alert</h3>
+      <p>La instrucción <code>alert()</code> es una de las utilidades que incluye JavaScript y permite mostrar un mensaje en la pantalla del usuario.</p>
+      <pre class="lead">
+      <span class="kw1">var</span> mensaje <span class="sy0">=</span> <span class="st0">"¡Hola Mundo!"</span><span class="sy0">;</span>
+      alert(<span class="st0">mensaje</span>)
+      </pre>
+      <p>Si se visualiza en una página web de este script en cualquier navegador, automáticamente se mostrará una ventana con el mensaje <code>"Hola Mundo!"</code>.</p>
+      <p>El funcionamiento de la utilidad <code>alert()</code> en los distintos navegadores es idéntico. Sin embargo, existen grandes diferencias visuales en la forma en la que se presentan los mensajes.</p>      
+      <br>
+
+      <h3 id="confirm">confirm</h3>
+      <p>El método  <code>confirm()</code> muestra una ventana de diálogo con un mensaje opcional y dos botones "Aceptar" y "Cancelar".</p>
+      <pre class="lead">
+      <span class="kw1">var</span> pregunta <span class="sy0">=</span> <span class="st0">"¿Está seguro de que desea continuar?"</span><span class="sy0">;</span>
+      confirm(<span class="st0">pregunta</span>)
+      </pre>
+      <p>Al visualizar este script en una página web en cualquier navegador, se mostrará una ventana con el mensaje <code>"¿Está seguro de que desea continuar?"</code> acompañado de los botones "Aceptar" y "Cancelar", si se selecciona la opción <b>"Aceptar"</b> arrojará <code>true</code> en el caso contrario será <code>false</code>.</p>
+      <p>Al igual que con el método anterior, el funcionamiento de <code>confirm()</code> en los distintos navegadores es idéntico. Sin embargo, existen grandes diferencias visuales en la forma en la que se presentan los mensajes.</p>
+      <br>
+
+      <h3 id="prompt">prompt</h3>
+      <p>El método <code>prompt()</code> muestra un diálogo con mensaje opcional, que solicita al usuario que introduzca un texto.</p>
+      <pre class="lead">
+        prompt("Mensaje", "Por defecto");
+      </pre>
+      <ul>
+        <li><code>Mensaje</code>&nbsp;es una cadena de texto que se mostrará al usuario a manera de información. Este parámetro es opcional y puede ser omitido si no se necesita mostrar nada en la ventana.</li>
+        <li><code>Por defecto</code>&nbsp;es una cadena de texto que contiene el valor <b>predeterminado</b> para el texto de entrada. Es un parámetro opcional.</li>
+      </ul>
+      <img class="float-center mt-3 mb-3" src="assets/img/prompt.png" alt="Imagen prompt">
+      <p class="mb-3">Cuando el usuario hace clic en el botón <b>ACEPTAR</b>, el valor introducido en el campo de texto es devuelto por el método como una cadena de texto. Si el usuario da clic al botón <b>ACEPTAR</b> sin introducir algun texto, se devuelve una cadena vacía. Si el usuario presiona el botón <b>CANCELAR</b>, la función devuelve&nbsp;<code>null</code>.</p>
+      <pre class="lead">
+      <span class="kw1">var</span> pregunta <span class="sy0">=</span> <span class="st0">"¿Está seguro de que desea continuar?"</span><span class="sy0">;</span>
+      confirm(<span class="st0">pregunta</span>)
+      </pre>
+      <p>Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. <br>
+      <pre class="lead">var aNumber = Number(prompt("Tipear un número", ""));</pre></p>
+      <br>
+      <p class="callout warning">Las cajas de diálogo son ventanas modales - ello impide al usuario continuar accediendo al resto del interfaz del programa hasta que la ventana modal haya sido cerrada. Por esta razón no se debería usar en exceso funciones que creen cajas de diálogo (o ventanas modales). </p>
+      <br>
+      <h3 id="ejemplo">Ejemplo</h3>
+      <p>En este sencillo ejemplo se pone en práctica lo aprendido con respecto a las funciones nativas.</p>
+      <pre class="consola">
+        
+      <span class="funcion">var</span> usuario <span class="condicion">=</span> <span class="funcion">prompt</span>(<span class="cadena">'Por favor, ingresa tu nombre de usuario:'</span>);
+
+      <span class="condicion">if</span> (usuario <span class="condicion">&&</span> usuario.<span class="funcion">trim</span>()) {
+        <span class="funcion">var</span> confirmar <span class="condicion">=</span> (<span class="cadena">'¿Es '</span> <span class="condicion">+</span> usuario <span class="condicion">+</span> <span class="cadena">' correcto?'</span>);
+
+        <span class="condicion">if</span> (confirmar) {
+          <span class="funcion">alert</span>(<span class="cadena">'Usuario correcto'</span>)
+        }<span class="condicion">else</span> {
+          <span class="funcion">alert</span>(<span class="cadena">'Usuario incorrecto'</span>)
+        }
+      }<span class="condicion">else</span>{
+        <span class="funcion">alert</span>(<span class="cadena">'No has introducido un usuario válido'</span>);
+      }        
+      </pre>
+      <br>
+      <button id="ejemplo-nativas" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+    </div><!-- /.contenedor -->
+  </section>
