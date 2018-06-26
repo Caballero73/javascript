@@ -56,6 +56,14 @@ a:hover {
     background-color: #417218;
     color: var(--colorBlanco); 
 }
+.button.hollow.white {
+  border-color: color(var(--colorPpal) whiteness(60%));
+  color: color(var(--colorPpal) whiteness(60%));
+}
+.button.hollow.white:focus, .button.hollow.white:hover {
+  border-color: var(--colorBlanco2);
+  color: var(--colorBlanco2);
+}
 .btn-expansivo {
   @media (--mobile) {
     display: block;
@@ -196,6 +204,12 @@ h6 {font-size: responsive 1.6rem 1.7rem;}
 .mt-18 {margin-top: 18rem;}
 .mb-20 {margin-bottom: 20rem;}
 .mt-20 {margin-top: 20rem;}
+.paginador {
+  border-radius: 50% !important;
+  font-weight: bold;
+  height: 6rem;
+  width: 6rem;
+}
 pre {color: #333;}
 pre.consola {
   background-color: var(--colorFuente);
