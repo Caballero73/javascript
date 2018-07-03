@@ -42,8 +42,8 @@
         <div class="small-3 columns" data-sticky-container>
           <div class="sticky" data-sticky data-top-anchor="1top" id="abside-cont">
             <ul class="vertical tabs sticky" data-tabs id="cont-ppal-tabs">
-              <!-- Conceptos fundamentales -->
-              <li class="tabs-title is-active"><a href="#cont-ppal-tabs-panel1" aria-selected="true"><i class="fa fa-book fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Conceptos fundamentales</span></a></li>
+              <!-- Ámbito de las variables -->
+              <li class="tabs-title is-active"><a href="#cont-ppal-tabs-panel1" aria-selected="true"><i class="fa fa-object-group fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Ámbito de las variables</span></a></li>
               <!-- Variables -->
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel2"><i class="fa fa-cube fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Variables</span></a></li>
               <!-- JavaScrip y HTML -->
@@ -81,103 +81,63 @@
 
         <div class="columns" id="1top">
           <div class="tabs-content" data-tabs-content="cont-ppal-tabs">
-            <!-- Conceptos fundamentales -->
+            <!-- Ámbito de las variables -->
             <div class="tabs-panel is-active" id="cont-ppal-tabs-panel1">
-                <!-- ********** Conceptos fundamentales -->
-  <section id="conceptos-fundamentales" class="">
+                <!-- ********** Ámbito de las variables -->
+  <section id="ambito-variables" class="">
     <div class="contenedor">
-      <h2>Conceptos fundamentales</h2>    
-      <p class="mt-2">JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu Sitio Web, (por ejemplo juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más). </p>
-      <p class="lead">Vamos a explicar algunos de los aspectos básicos del lenguaje JavaScript, para comprender mejor cómo funciona todo.</p>
+      <h2>Ámbito de las variables</h2>
+      <p><p>El ámbito de una variable (llamado <em>"scope"</em> en inglés) es la zona del programa en la que se define la variable.<br>
+      JavaScript define dos ámbitos para las variables: <b>global</b> y <b>local</b>.</p></p>
+      <p>Veamos un ejemplo:</p>
+      <pre class="">
+      <span class="kw1">function</span> unMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> mensaje <span class="sy0">=</span> “Mostrar mensaje”<span class="sy0">;</span>
+      <span class="br0">}</span>
+      unMensaje<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      alert<span class="br0">(</span>mensaje<span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p>En primer lugar tenemos una función llamada <code>unMensaje</code> que crea una variable llamada <code>mensaje</code>.<br>
+      A continuación, se ejecuta la función mediante <code>unMensaje();</code> y luego, se muestra mediante <code>alert()</code> el valor de <code>mensaje</code>.</p>
+      <p class="callout warning">Sin embargo, al ejecutar el código anterior no se muestra ningún mensaje por pantalla. La razón es que la variable <code>mensaje</code> se ha definido dentro de la función <code>unMensaje()</code> y por tanto, es una <strong>variable local</strong> que solamente está definida dentro de la función.</p>
       <br>
-
-      <p><strong>• Script</strong> son cada uno de los programas, aplicaciones o trozos de código creados con el lenguaje de programación JavaScript. Unas pocas líneas de código forman un script y un archivo de miles de líneas de JavaScript también se considera un script. A veces se traduce al español directamente como <em>"guión"</em>, aunque script es una palabra más adecuada y comúnmente aceptada.</p>
+      <p>Cualquier instrucción que se encuentre <b>dentro de la función</b> puede hacer uso de esa variable, pero todas las instrucciones que se encuentren en otras funciones o fuera de cualquier función no tendrán definida la variable <code>mensaje</code>.</p>
+      <p>De esta forma, para mostrar el mensaje en el código en cuestión, la función <code>alert()</code> debe llamarse desde dentro de la función <code>unMensaje()</code>:</p>
+      <pre class="">
+      <span class="kw1">function</span> unMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> mensaje <span class="sy0">=</span> “Mostrar mensaje”<span class="sy0">;</span>
+        alert<span class="br0">(</span>mensaje<span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      unMensaje<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p><b>Es importante saber que...</b>Además de variables locales, también existe las <strong>variables globales</strong>, que pueden ser usadas en cualquier punto del programa (incluso dentro de cualquier función).</p>
+      <pre class="">
+      <span class="kw1">var</span> elMensaje <span class="sy0">=</span> “Mensaje de prueba”<span class="sy0">;</span>
+      &nbsp;
+      <span class="kw1">function</span> muestraMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        alert<span class="br0">(</span>elMensaje<span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      </pre>
+      <p>Este código es inverso al mostrado primero, ya que dentro de la función <code>muestraMensaje()</code> se  hace uso de una variable llamada <code>elMensaje</code> que no ha sido definida dentro de la propia función. Sin embargo, si se ejecuta el código, sí que se muestra el el contenido definido por la variable <code>elMensaje</code>.</p>
+      <p>Esto es por que, la variable <code>elMensaje</code> se ha definido fuera de cualquier función. Este tipo de variables automáticamente se transforman en <b>variables globales</b> y están disponibles en cualquier punto del programa (incluso dentro de cualquier función).</p>
+      <p>De esta forma, aunque en el interior de la función no se ha definido ninguna variable llamada <code>elMensaje</code>, la variable global creada anteriormente permite que la instrucción <code>alert()</code> dentro de la función se muestre correctamente.</p>
+      <div class="callout warning">
+        <p><b class="color-secundario">Importante:</b> Si una variable se declara fuera de cualquier función, automáticamente se transforma en variable global independientemente de si se define utilizando la palabra reservada <code>var</code> o no. Sin embargo, las variables definidas dentro de una función pueden ser globales o locales.</p>
+        <p>Si en el interior de una función, las variables se declaran mediante <code>var</code> se consideran locales y las variables que no se han declarado mediante <code>var</code>, se transforman automáticamente en variables globales.</p>
+      </div>
+      <p>Por lo tanto, se puede rehacer el código del primer ejemplo para que muestre el mensaje correctamente. Para ello, simplemente se debe definir la variable dentro de la función sin la palabra reservada <code>var</code>, para que se transforme en una variable global:</p>
+      <pre class="">
+      <span class="kw1">function</span> unMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        mensaje <span class="sy0">=</span> <span class="st0">"Mostrar mensaje"</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      unMensaje<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      alert<span class="br0">(</span>mensaje<span class="br0">)</span><span class="sy0">;</span>
+      </pre>
       <br>
-
-      <p><strong>• Sentencia</strong> son cada una de las instrucciones que forman un script.</p>
+      <p>¿Qué sucede si una función define una variable local con el mismo nombre que una variable global que ya existe? En este caso, <b>las variables locales prevalecen sobre las globales</b>, pero sólo dentro de la función.</p>
+      <p class="callout success">La recomendación general es definir como <b>variables locales</b> todas las variables que sean de uso exclusivo para realizar las <b>tareas encargadas a cada función</b>. Las variables globales se utilizan para compartir variables entre funciones de forma sencilla.</p>
       <br>
-
-      <p><strong>• Palabras reservadas</strong> son las palabras (en inglés) que se utilizan para construir las sentencias de JavaScript y que por tanto no pueden ser utilizadas libremente. Las palabras actualmente reservadas por JavaScript son: <code>break</code>, <code>case</code>, <code>catch</code>, <code>continue</code>, <code>default</code>, <code>delete</code>, <code>do</code>, <code>else</code>, <code>finally</code>, <code>for</code>, <code>function</code>, <code>if</code>, <code>in</code>, <code>instanceof</code>, <code>new</code>, <code>return</code>, <code>switch</code>, <code>this</code>, <code>throw</code>, <code>try</code>, <code>typeof</code>, <code>var</code>, <code>void</code>, <code>while</code>, <code>with</code>.</p>
-      <br>
-
-      <p><b>• Sintaxis de JavaScript</b> es muy similar a la de otros lenguajes de programación como Java y C. Las normas básicas que definen la sintaxis de JavaScript son las siguientes:</p>
-      <ul style="list-style: none">
-        <li><i><strong>No se tienen en cuenta los espacios en blanco y las nuevas líneas</strong></i>: como sucede con XHTML, el intérprete de JavaScript ignora cualquier espacio en blanco sobrante, por lo que el código se puede ordenar de forma adecuada para entenderlo mejor (tabulando las líneas, añadiendo espacios, creando nuevas líneas, etc.)</li>
-        <li><i><strong>Se distinguen las mayúsculas y minúsculas</strong></i>: al igual que sucede con la sintaxis de las etiquetas y elementos XHTML. Sin embargo, si en una página XHTML se utilizan indistintamente mayúsculas y minúsculas, la página se visualiza correctamente, siendo el único problema la no validación de la página. En cambio, si en JavaScript se intercambian mayúsculas y minúsculas el script no funciona.</li>
-        <li><i><strong>No se define el tipo de las variables</strong></i>: al crear una variable, no es necesario indicar el tipo de dato que almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución del script.</li>
-        <li><i><strong>No es necesario terminar cada sentencia con el carácter de punto y coma (<code>;</code>)</strong></i>: en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con el carácter <code>;</code>. Aunque JavaScript no obliga a hacerlo, es conveniente seguir la tradición de terminar cada sentencia con el carácter del punto y coma (<code>;</code>).</li>
-        <li><i><strong>Se pueden incluir comentarios</strong></i>: los comentarios se utilizan para añadir información en el código fuente del programa. Aunque el contenido de los comentarios no se visualiza por pantalla, si que se envía al navegador del usuario junto con el resto del script, por lo que es necesario extremar las precauciones sobre la información incluida en los comentarios. <br><br>
-          <i>Ejemplo de comentario de una sola línea:</i> <pre>// a continuación se muestra un mensaje.</pre>
-          <br>
-          <i>Ejemplo de comentario de varias líneas:</i><br>
-          <pre>/* Los comentarios de varias líneas son muy útiles<br>cuando se necesita incluir bastante información<br>en los comentarios */</pre>
-        </li>
-      </ul>
-      <br>
-
-      <p><b>• La Consola</b> para el aprendizaje de JS es muy útil utilizar la consola que trae incorporado nuestro navegador web, y la cual podemos acceder mediente el inspector de elementos (generalmente lo encontramos haciendo click con el botón derecho del muse). En el caso de Firefox tiene este aspecto:</p>
-      <center><img src="assets/img/consola-firefox.png" alt="Imagen de la consola de Firefox"></center>
-      <br>
-
-      <p><b>• Que datos podemos usar en JS</b>... Básicamente todos los datos que desemos usar debemos manejarlo a través de variables, las cuales son contenedores en los que puedes almacenar valores. Primero debes declarar la variable con la palabra clave <code>var</code>, seguida del nombre que le quieras dar:</p>
-      <table>
-       <thead>
-        <tr>
-         <th scope="row"><font><font>Variable</font></font></th>
-         <th scope="col">Explicación</th>
-         <th scope="col">Ejemplo</th>
-        </tr>
-       </thead>
-       <tbody>
-        <tr>
-         <th scope="row">String</th>
-         <td>Una cadena de texto. Para indicar que la variable es una cadena, debes&nbsp; escribirlo entre comillas.</td>
-         <td><code>var miVariable = 'Bob';</code></td>
-        </tr>
-        <tr>
-         <th scope="row">Number</th>
-         <td>
-          <p>Un número. Los números no tienen comillas.</p>
-         </td>
-         <td><code>var miVariable = 10;</code></td>
-        </tr>
-        <tr>
-         <th scope="row">Boolean</th>
-         <td>Tienen valor verdadero/falso. <code>true</code>/<code>false</code> son palabras especiales en JS, y no necesitan comillas.</td>
-         <td><code>var miVariable = true;</code></td>
-        </tr>
-        <tr>
-         <th scope="row">Array</th>
-         <td>Una estructura que te permite almacenar varios valores en una sola referencia.</td>
-         <td><code>var miVariable = [1,'Bob','Steve',10];</code><br>
-          Llama a cada miembro del array así: <code>miVariable[0]</code>, <code>miVariable[1]</code>, etc.</td>
-        </tr>
-        <tr>
-         <th scope="row">Object</th>
-         <td>
-          <p>Básicamente&nbsp;cualquier cosa. Todo en JavaScript es un objeto&nbsp;y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes.</p>
-         </td>
-         <td><code>var miVariable = document.querySelector('h1');</code><br>
-          Todos los ejemplos anteriores también.</td>
-        </tr>
-       </tbody>
-      </table>
-      <br>
-
-      <p class="mt-2"><b>• Number (Números)</b> estos se usan básicamente para operaciones matemáticas.</p>
-      <p>Si colocamos en la consola dos numeros y entre ellos un operador matemático (+,-,*,/) para luego pulsar enter, obtendremos un resultado de dicha operación.</p>
-      <center><img src="assets/img/consola-numeros1.png" alt="Imagen operación matemática"></center>
-      <p>Es importante que en las operaciones matemáticas respetemos las <a href="https://es.wikipedia.org/wiki/Orden_de_evaluaci%C3%B3n">precedencias u orden de evaluación</a>.</p>
-      <center><img src="assets/img/consola-numeros2.png" alt="Imagen operación matemática"></center>
-      <br>
-
-      <p class="mt-2"><b>• Comparadores</b> también son muy usados en JavaScript, y devuelven un valor booleano, verdadero (true) o falso (false) según sea el caso.</p>
-      <center><img src="assets/img/consola-comparadores1.png" alt="Imagen comparadores"></center>
-      <br>
-
-      <p class="mt-2"><b>• String (Cadenas de texto)</b> estas se manejan colocándolas entre comillas "", es importante que si comenzamos con comillas simples <code>'</code>, terminemos con comillas simples o si comenzamos con comillas dobles <code>"</code> terminemos con comillas dobles.</p>
-      <p>También podemos concatenar estas cadenas usando el operador "+", lo cual permite unir varias cadenas de texto.</p>
-      <center><img src="assets/img/consola-cadena1.png" alt="Imagen de cadena de texto"></center>
     </div><!-- /.contenedor -->
   </section>
             </div>

@@ -1,0 +1,57 @@
+  <!-- ********** Ámbito de las variables -->
+  <section id="ambito-variables" class="">
+    <div class="contenedor">
+      <h2>Ámbito de las variables</h2>
+      <p><p>El ámbito de una variable (llamado <em>"scope"</em> en inglés) es la zona del programa en la que se define la variable.<br>
+      JavaScript define dos ámbitos para las variables: <b>global</b> y <b>local</b>.</p></p>
+      <p>Veamos un ejemplo:</p>
+      <pre class="">
+      <span class="kw1">function</span> unMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> mensaje <span class="sy0">=</span> “Mostrar mensaje”<span class="sy0">;</span>
+      <span class="br0">}</span>
+      unMensaje<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      alert<span class="br0">(</span>mensaje<span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p>En primer lugar tenemos una función llamada <code>unMensaje</code> que crea una variable llamada <code>mensaje</code>.<br>
+      A continuación, se ejecuta la función mediante <code>unMensaje();</code> y luego, se muestra mediante <code>alert()</code> el valor de <code>mensaje</code>.</p>
+      <p class="callout warning">Sin embargo, al ejecutar el código anterior no se muestra ningún mensaje por pantalla. La razón es que la variable <code>mensaje</code> se ha definido dentro de la función <code>unMensaje()</code> y por tanto, es una <strong>variable local</strong> que solamente está definida dentro de la función.</p>
+      <br>
+      <p>Cualquier instrucción que se encuentre <b>dentro de la función</b> puede hacer uso de esa variable, pero todas las instrucciones que se encuentren en otras funciones o fuera de cualquier función no tendrán definida la variable <code>mensaje</code>.</p>
+      <p>De esta forma, para mostrar el mensaje en el código en cuestión, la función <code>alert()</code> debe llamarse desde dentro de la función <code>unMensaje()</code>:</p>
+      <pre class="">
+      <span class="kw1">function</span> unMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> mensaje <span class="sy0">=</span> “Mostrar mensaje”<span class="sy0">;</span>
+        alert<span class="br0">(</span>mensaje<span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      unMensaje<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <p><b>Es importante saber que...</b>Además de variables locales, también existe las <strong>variables globales</strong>, que pueden ser usadas en cualquier punto del programa (incluso dentro de cualquier función).</p>
+      <pre class="">
+      <span class="kw1">var</span> elMensaje <span class="sy0">=</span> “Mensaje de prueba”<span class="sy0">;</span>
+      &nbsp;
+      <span class="kw1">function</span> muestraMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        alert<span class="br0">(</span>elMensaje<span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      </pre>
+      <p>Este código es inverso al mostrado primero, ya que dentro de la función <code>muestraMensaje()</code> se  hace uso de una variable llamada <code>elMensaje</code> que no ha sido definida dentro de la propia función. Sin embargo, si se ejecuta el código, sí que se muestra el el contenido definido por la variable <code>elMensaje</code>.</p>
+      <p>Esto es por que, la variable <code>elMensaje</code> se ha definido fuera de cualquier función. Este tipo de variables automáticamente se transforman en <b>variables globales</b> y están disponibles en cualquier punto del programa (incluso dentro de cualquier función).</p>
+      <p>De esta forma, aunque en el interior de la función no se ha definido ninguna variable llamada <code>elMensaje</code>, la variable global creada anteriormente permite que la instrucción <code>alert()</code> dentro de la función se muestre correctamente.</p>
+      <div class="callout warning">
+        <p><b class="color-secundario">Importante:</b> Si una variable se declara fuera de cualquier función, automáticamente se transforma en variable global independientemente de si se define utilizando la palabra reservada <code>var</code> o no. Sin embargo, las variables definidas dentro de una función pueden ser globales o locales.</p>
+        <p>Si en el interior de una función, las variables se declaran mediante <code>var</code> se consideran locales y las variables que no se han declarado mediante <code>var</code>, se transforman automáticamente en variables globales.</p>
+      </div>
+      <p>Por lo tanto, se puede rehacer el código del primer ejemplo para que muestre el mensaje correctamente. Para ello, simplemente se debe definir la variable dentro de la función sin la palabra reservada <code>var</code>, para que se transforme en una variable global:</p>
+      <pre class="">
+      <span class="kw1">function</span> unMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        mensaje <span class="sy0">=</span> <span class="st0">"Mostrar mensaje"</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      unMensaje<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      alert<span class="br0">(</span>mensaje<span class="br0">)</span><span class="sy0">;</span>
+      </pre>
+      <br>
+      <p>¿Qué sucede si una función define una variable local con el mismo nombre que una variable global que ya existe? En este caso, <b>las variables locales prevalecen sobre las globales</b>, pero sólo dentro de la función.</p>
+      <p class="callout success">La recomendación general es definir como <b>variables locales</b> todas las variables que sean de uso exclusivo para realizar las <b>tareas encargadas a cada función</b>. Las variables globales se utilizan para compartir variables entre funciones de forma sencilla.</p>
+      <br>
+    </div><!-- /.contenedor -->
+  </section>
