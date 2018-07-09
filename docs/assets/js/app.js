@@ -145,3 +145,30 @@ $('#ejemploFuncion4').click(function(){
 	alert("El resultado es " + resultadoFinal);
 });
 
+// Ejemplo métodos en arrays
+$('#ejemploMetodoArray').click(function(){
+
+	var colores = ['amarillo' , 'azul' , 'aguamarina' , 'beige' , 'blanco' , 
+	'dorado' , 'gris' , 'negro' , 'marrón' , 'rojo' , 'verde' , 'vinotinto'];
+
+	alert("Los colores disponibles son: " + colores);
+	var colorElegido  =  prompt('Ingrese el color que desee borrar:');
+	colorElegido = colorElegido.toLowerCase();
+
+	function borrarColor(color,matriz) {
+
+		var indice = matriz.indexOf(color);
+
+		if (indice > -1) {
+			// El color SI existe
+			matriz.splice(indice,1);
+		}
+		else {
+			// El color no existe
+			alert('Este color no existe en la matriz.')
+		}
+	}
+
+	borrarColor(colorElegido, colores);
+	alert("Los colores que quedaron son: " + colores);
+});
