@@ -172,3 +172,29 @@ $('#ejemploMetodoArray').click(function(){
 	borrarColor(colorElegido, colores);
 	alert("Los colores que quedaron son: " + colores);
 });
+
+//Ejemplo recorrido de matriz con for
+
+$('#ejemploMatriz1').click(function(){
+	var paises = ["Argentina" , "Bolivia" , "Brasil" , "Chile" , "Colombia" , "Ecuador" , "Guyana" , "Paraguay" , "Perú" , "Surinam" , "Uruguay" , "Venezuela"];
+
+	var longitud = paises.length, i = 0;
+
+	for (i; i < longitud; i=i+1) {
+		$('#resultadoMatriz1').append('<li>'+'&nbsp;'+paises[i]+'&nbsp;'+'</li>');
+	}
+});
+
+//Ejemplo recorrido de matriz con forEach
+
+$('#ejemploMatriz2').click(function(){
+
+	var paises2 = ["Argentina" , "Bolivia" , "Brasil" , "Chile" , "Colombia" , "Ecuador" , "Guyana" , "Paraguay" , "Perú" , "Surinam" , "Uruguay" , "Venezuela"];
+
+	function verMatriz2(elemento){
+		$('#resultadoMatriz2').prepend('<li>'+'&nbsp;'+elemento+'&nbsp;'+'</li>')
+	}
+
+	paises2.forEach(verMatriz2);
+});
+

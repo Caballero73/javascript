@@ -1,0 +1,58 @@
+  <!-- ********** Recorrer Matrices -->
+  <section id="recorrer-matrices" class="">
+    <div class="contenedor">
+      <h2>Recorrer Matrices</h2>
+      <p>Vamos a ver cómo recorrer un array en Javascript, a través de tres métodos, muy usados.</p>
+      <br>
+      <div class="stacked-for-small button-group">
+        <a class="button hollow primary" href="#conFor"><big>Con "for"</big></a>
+        <a class="button hollow primary" href="#conForEach"><big>Con "forEach"</big></a>
+      </div>
+      <br>
+
+      <h3 id="conFor">Con "for"</h3>
+      <p>Vamos a recorrer el array utilizando un bucle iterativo de tipo <code>for</code>.</p>
+      <p>Para poder crear el bucle <code>for</code> necesitamos poner un límite de las iteracciones a ejecutar. Dicho límite nos lo dará el tamaño del array. El tamaño del array lo podemos obtener mediante la propiedad <code>.length</code>.</p>
+      <p>Hemos declarado una variable <code>i</code>, la cual incrementamos uno a uno en cada vuelta del bucle, mientras su valor es menor que el tamaño del array.</p>
+      <p>El siguiente paso será tomar el elemento del array que coincida con la posición determinada por <code>i</code>. Para obtener el elemento utilizamos los corchetes <code>[]</code> sobre el array, con la posición como parámetro de los corchetes.</p>      
+      <pre><b>      
+      <span class="kw1">var</span> paises <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Argentina" <span class="sy0">,</span> "Bolivia" <span class="sy0">,</span> "Brasil" <span class="sy0">,</span>
+      "Chile" <span class="sy0">,</span> "Colombia" <span class="sy0">,</span> "Ecuador" <span class="sy0">,</span> "Guyana" <span class="sy0">,</span> "Paraguay" <span class="sy0">,</span>
+      "Perú" <span class="sy0">,</span> "Surinam" <span class="sy0">,</span> "Uruguay" <span class="sy0">,</span> "Venezuela"</span><span class="br0">]</span><span class="sy0">;</span>
+
+      <span class="kw1">var</span> longitud <span class="kw1">=</span> paises<span class="kw1">.</span>length, i <span class="kw1">=</span> <span class="nu0">0</span>;
+
+      <span class="kw1">for</span> (i; i <span class="kw1">&lt;</span> longitud; i<span class="kw1">=</span>i<span class="kw1">+</span><span class="nu0">1</span>) {
+            <span class="st0">$</span>(<span class="es0">'#resultadoMatriz1'</span>)<span class="kw1">.</span><span class="st0">append</span>(<span class="es0">'&lt;li&gt;'</span><span class="kw1">+</span>paises[i]<span class="kw1">+</span><span class="es0">'&lt;/li&gt;'</span>);
+      }
+      </b></pre>
+      <button id="ejemploMatriz1" class="button primary mt-1">Ver resultado del ejemplo</button>
+      <div class="callout primary">
+            <p><b>Países de Suramérica.</b></p>
+            <ul class="menu" id="resultadoMatriz1"></ul>            
+      </div>
+      <br>
+
+      <h3 id="conForEach">Con "forEach"</h3>
+      <p>El método <code>forEach()</code> ejecuta la función indicada una vez por cada elemento del array.</p>
+      <p>En este caso usaremos <code>.prepend</code> en vez de <code>append</code>, para que el oreden de los elementos sea inverso.</p>
+      <pre><b>      
+      <span class="kw1">var</span> paises2 <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Argentina" <span class="sy0">,</span> "Bolivia" <span class="sy0">,</span> "Brasil" <span class="sy0">,</span>
+      "Chile" <span class="sy0">,</span> "Colombia" <span class="sy0">,</span> "Ecuador" <span class="sy0">,</span> "Guyana" <span class="sy0">,</span> "Paraguay" <span class="sy0">,</span>
+      "Perú" <span class="sy0">,</span> "Surinam" <span class="sy0">,</span> "Uruguay" <span class="sy0">,</span> "Venezuela"</span><span class="br0">]</span><span class="sy0">;</span>
+
+      function <span class="st0">verMatriz2</span>(<span class="es0">elemento</span>){
+        <span class="st0">$</span>(<span class="es0">'#resultadoMatriz2'</span>)<span class="kw1">.</span><span class="st0">prepend</span>(<span class="es0">'&lt;li&gt;'</span><span class="kw1">+</span>paises2[i]<span class="kw1">+</span><span class="es0">'&lt;/li&gt;'</span>);
+      }
+
+      paises2<span class="kw1">.</span><span class="st0">forEach</span>(verMatriz2);
+      </b></pre>
+
+      <button id="ejemploMatriz2" class="button primary mt-1">Ver resultado del ejemplo</button>
+      <div class="callout primary">
+            <p><b>Países de Suramérica (Orden inverso).</b></p>
+            <ul class="menu" id="resultadoMatriz2"></ul>            
+      </div>
+
+    </div><!-- /.contenedor -->
+  </section>

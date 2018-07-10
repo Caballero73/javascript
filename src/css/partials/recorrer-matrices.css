@@ -1,7 +1,7 @@
 /******************************
-ESTILOS CONTENIDO MATRICES: matrices.css;
+ESTILOS CONTENIDO RECORRER MATRICES: recorrer-matrices.css;
 *******************************/
-#matrices {
+#recorrer-matrices {
 	padding: 2rem;
 
 	& .button {

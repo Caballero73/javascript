@@ -138,6 +138,7 @@ h6 {font-size: responsive 1.6rem 1.7rem;}
 .st0 {color: var(--colorVerdeOscuro);}
 .sy0 {color: var(--colorPrimario);}
 
+.lead {font-size: responsive 1.6rem 2rem;}
 .label-lead {
   color:var(--colorFuente);
   font-size: responsive 1.3rem 1.8rem;

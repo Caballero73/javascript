@@ -4403,7 +4403,7 @@ ESTILOS CONTENIDO MATRICES: matrices.css;
 	}
 #matrices .button big {
 			display: inline-block;
-			font-size: calc(0.85814rem + 1.30233vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
@@ -4412,6 +4412,31 @@ ESTILOS CONTENIDO MATRICES: matrices.css;
 		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #matrices pre.lead {
+		font-weight: bold;
+	}
+/**/
+/******************************
+ESTILOS CONTENIDO RECORRER MATRICES: recorrer-matrices.css;
+*******************************/
+#recorrer-matrices {
+	padding: 20px;
+	padding: 2rem;
+
+}
+#recorrer-matrices .button {
+		font-size: calc(0.95349rem + 0.55814vw);
+	}
+#recorrer-matrices .button big {
+			display: inline-block;
+			font-size: calc(0.95581rem + 0.93023vw);
+			font-weight: bold;
+			margin-bottom: 5px;
+			margin-bottom: .5rem;
+		}
+#recorrer-matrices pre.console {
+		font-size: calc(1.40465rem + 0.74419vw);
+	}
+#recorrer-matrices pre.lead {
 		font-weight: bold;
 	}
 /**/
@@ -4549,6 +4574,7 @@ h6 {font-size: calc(1.55116rem + 0.11628vw);}
 .nu0 {color: #7C5D00;}
 .st0 {color: #305311;}
 .sy0 {color: #4e0079;}
+.lead {font-size: calc(1.40465rem + 0.46512vw);}
 .label-lead {
   color:#444;
   font-size: calc(1.05581rem + 0.5814vw);
@@ -4784,10 +4810,22 @@ MEDIA-QUERIES
     font-size: 1.4rem;
   }
   #matrices .button big {
-    font-size: 19px;
-    font-size: 1.9rem;
+    font-size: 17px;
+    font-size: 1.7rem;
   }
   #matrices pre.console {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  #recorrer-matrices .button {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  #recorrer-matrices .button big {
+    font-size: 17px;
+    font-size: 1.7rem;
+  }
+  #recorrer-matrices pre.console {
     font-size: 20px;
     font-size: 2rem;
   }
@@ -4826,6 +4864,10 @@ MEDIA-QUERIES
   h6 {
     font-size: 17px;
     font-size: 1.7rem;
+  }
+  .lead {
+    font-size: 20px;
+    font-size: 2rem;
   }
   .label-lead {
     font-size: 18px;
@@ -4921,6 +4963,18 @@ MEDIA-QUERIES
     font-size: 16px;
     font-size: 1.6rem;
   }
+  #recorrer-matrices .button {
+    font-size: 11px;
+    font-size: 1.1rem;
+  }
+  #recorrer-matrices .button big {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  #recorrer-matrices pre.console {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
   body {
     font-size: 14px;
     font-size: 1.4rem;
@@ -4954,6 +5008,10 @@ MEDIA-QUERIES
     font-size: 1.7rem;
   }
   h6 {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .lead {
     font-size: 16px;
     font-size: 1.6rem;
   }

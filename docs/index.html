@@ -1,31 +1,307 @@
-<!doctype html><html class="no-js" lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aprendiendo JavaScript</title><meta name="description" content="JavaScript es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla."><link rel="shortcut icon" href="assets/img/favicon.ico"><link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="assets/css/app.min.css"></head><body><!-- /////// Botón para ir al principio --> <a class="hide-for-small-only" href="#inicio"><i class="fa fa-chevron-circle-up fa-2x ir-arriba"></i> </a><!-- */Botón para ir al principio --><!-- ********** CONTENIDO PÁGINA --><section id="cont-ppal" class=""><header id="cont-ppal-header"><nav class="contenedor"><div class="row"><div class="columns"><h1 id="cont-ppal-header-h1"><i class="fa fa-terminal fa-lg" aria-hidden="true"></i> Aprendiendo JavaScript</h1></div><div class="shrink align-self-middle columns"><a class="button hollow white paginador" href="index.html">Pág. <big>1</big></a></div><div class="shrink align-self-middle columns"><a class="button hollow white paginador" href="page2.html">Pág. <big>2</big></a></div><div class="shrink align-self-middle columns"><a class="button hollow white paginador" href="page3.html">Pág. <big>3</big></a></div></div></nav></header><div class="contenedor"><p>JavaScript es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla.</p><cite class="pull-right">Fuente: <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Fundamentos de JavaScript</a></cite><br><blockquote>"Si el conocimiento puede crear problemas, no es con la ignorancia con lo que podremos resolverlos"</blockquote><!-- /////// Tabs para el contenido de cada tema --><div class="row collapse mt-4"><div class="small-3 columns" data-sticky-container><div class="sticky" data-sticky data-top-anchor="1top" id="abside-cont"><ul class="vertical tabs sticky" data-tabs id="cont-ppal-tabs"><!-- Conceptos fundamentales --><li class="tabs-title is-active"><a href="#cont-ppal-tabs-panel1" aria-selected="true"><i class="fa fa-book fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Conceptos fundamentales</span></a></li><!-- Variables --><li class="tabs-title"><a href="#cont-ppal-tabs-panel2"><i class="fa fa-cube fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Variables</span></a></li><!-- JavaScrip y HTML --><li class="tabs-title"><a href="#cont-ppal-tabs-panel3"><i class="fa fa-html5 fa-lg" aria-hidden="true"></i>&nbsp; <span class="">JavaScrip y HTML</span></a></li><!-- Bucle While --><li class="tabs-title"><a href="#cont-ppal-tabs-panel4"><i class="fa fa-repeat fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Bucle while</span></a></li><!-- Bucle For --><li class="tabs-title"><a href="#cont-ppal-tabs-panel5"><i class="fa fa-undo fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Bucle for</span></a></li><!-- Bucle do while --><li class="tabs-title"><a href="#cont-ppal-tabs-panel6"><i class="fa fa-hand-o-up fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Bucle do...while</span></a></li><!-- Estructura if...else --><li class="tabs-title"><a href="#cont-ppal-tabs-panel7"><i class="fa fa-dot-circle-o fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Estructura if...else</span></a></li><!-- Estructura switch --><li class="tabs-title"><a href="#cont-ppal-tabs-panel8"><i class="fa fa-toggle-on fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Estructura switch</span></a></li><!-- Operadores --><li class="tabs-title"><a href="#cont-ppal-tabs-panel9"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Operadores</span></a></li><!-- Funciones nativas --><li class="tabs-title"><a href="#cont-ppal-tabs-panel10"><i class="fa fa-window-restore fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Funciones nativas</span></a></li><!-- Operador typeof --><li class="tabs-title"><a href="#cont-ppal-tabs-panel11"><i class="fa fa-puzzle-piece fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Operador typeof</span></a></li><!-- Creación de funciones --><li class="tabs-title"><a href="#cont-ppal-tabs-panel12"><i class="fa fa-code fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Creación de funciones</span></a></li></ul><div class="mt-1" id="abside"><div class="text-center mb-3" id="iconos"><a href="https://slicegroup.xyz/" target="_blank"><i class="fa fa-rocket fa-2x"></i></a> <a href="https://www.linkedin.com/in/enrique-valerio-6b347b126/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a> <a href="https://github.com/Caballero73/XXXXXXXX" target="_blank"><i class="fa fa-github fa-2x"></i></a></div><p class="text-center">Enrique Valerio<br><small>Junio 2018</small></p></div></div></div><!-- /.columns --><div class="columns" id="1top"><div class="tabs-content" data-tabs-content="cont-ppal-tabs"><!-- Conceptos fundamentales --><div class="tabs-panel is-active" id="cont-ppal-tabs-panel1"><!-- ********** Conceptos fundamentales --><section id="conceptos-fundamentales" class=""><div class="contenedor"><h2>Conceptos fundamentales</h2><p class="mt-2">JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu Sitio Web, (por ejemplo juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más).</p><p class="lead">Vamos a explicar algunos de los aspectos básicos del lenguaje JavaScript, para comprender mejor cómo funciona todo.</p><br><p><strong>• Script</strong> son cada uno de los programas, aplicaciones o trozos de código creados con el lenguaje de programación JavaScript. Unas pocas líneas de código forman un script y un archivo de miles de líneas de JavaScript también se considera un script. A veces se traduce al español directamente como <em>"guión"</em>, aunque script es una palabra más adecuada y comúnmente aceptada.</p><br><p><strong>• Sentencia</strong> son cada una de las instrucciones que forman un script.</p><br><p><strong>• Palabras reservadas</strong> son las palabras (en inglés) que se utilizan para construir las sentencias de JavaScript y que por tanto no pueden ser utilizadas libremente. Las palabras actualmente reservadas por JavaScript son: <code>break</code>, <code>case</code>, <code>catch</code>, <code>continue</code>, <code>default</code>, <code>delete</code>, <code>do</code>, <code>else</code>, <code>finally</code>, <code>for</code>, <code>function</code>, <code>if</code>, <code>in</code>, <code>instanceof</code>, <code>new</code>, <code>return</code>, <code>switch</code>, <code>this</code>, <code>throw</code>, <code>try</code>, <code>typeof</code>, <code>var</code>, <code>void</code>, <code>while</code>, <code>with</code>.</p><br><p><b>• Sintaxis de JavaScript</b> es muy similar a la de otros lenguajes de programación como Java y C. Las normas básicas que definen la sintaxis de JavaScript son las siguientes:</p><ul style="list-style: none"><li><i><strong>No se tienen en cuenta los espacios en blanco y las nuevas líneas</strong></i>: como sucede con XHTML, el intérprete de JavaScript ignora cualquier espacio en blanco sobrante, por lo que el código se puede ordenar de forma adecuada para entenderlo mejor (tabulando las líneas, añadiendo espacios, creando nuevas líneas, etc.)</li><li><i><strong>Se distinguen las mayúsculas y minúsculas</strong></i>: al igual que sucede con la sintaxis de las etiquetas y elementos XHTML. Sin embargo, si en una página XHTML se utilizan indistintamente mayúsculas y minúsculas, la página se visualiza correctamente, siendo el único problema la no validación de la página. En cambio, si en JavaScript se intercambian mayúsculas y minúsculas el script no funciona.</li><li><i><strong>No se define el tipo de las variables</strong></i>: al crear una variable, no es necesario indicar el tipo de dato que almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución del script.</li><li><i><strong>No es necesario terminar cada sentencia con el carácter de punto y coma (<code>;</code>)</strong></i>: en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con el carácter <code>;</code>. Aunque JavaScript no obliga a hacerlo, es conveniente seguir la tradición de terminar cada sentencia con el carácter del punto y coma (<code>;</code>).</li><li><i><strong>Se pueden incluir comentarios</strong></i>: los comentarios se utilizan para añadir información en el código fuente del programa. Aunque el contenido de los comentarios no se visualiza por pantalla, si que se envía al navegador del usuario junto con el resto del script, por lo que es necesario extremar las precauciones sobre la información incluida en los comentarios.<br><br><i>Ejemplo de comentario de una sola línea:</i><pre>// a continuación se muestra un mensaje.</pre><br><i>Ejemplo de comentario de varias líneas:</i><br><pre>/* Los comentarios de varias líneas son muy útiles<br>cuando se necesita incluir bastante información<br>en los comentarios */</pre></li></ul><br><p><b>• La Consola</b> para el aprendizaje de JS es muy útil utilizar la consola que trae incorporado nuestro navegador web, y la cual podemos acceder mediente el inspector de elementos (generalmente lo encontramos haciendo click con el botón derecho del muse). En el caso de Firefox tiene este aspecto:</p><center><img src="assets/img/consola-firefox.png" alt="Imagen de la consola de Firefox"></center><br><p><b>• Que datos podemos usar en JS</b>... Básicamente todos los datos que desemos usar debemos manejarlo a través de variables, las cuales son contenedores en los que puedes almacenar valores. Primero debes declarar la variable con la palabra clave <code>var</code>, seguida del nombre que le quieras dar:</p><table><thead><tr><th scope="row"><font><font>Variable</font></font></th><th scope="col">Explicación</th><th scope="col">Ejemplo</th></tr></thead><tbody><tr><th scope="row">String</th><td>Una cadena de texto. Para indicar que la variable es una cadena, debes&nbsp; escribirlo entre comillas.</td><td><code>var miVariable = 'Bob';</code></td></tr><tr><th scope="row">Number</th><td><p>Un número. Los números no tienen comillas.</p></td><td><code>var miVariable = 10;</code></td></tr><tr><th scope="row">Boolean</th><td>Tienen valor verdadero/falso. <code>true</code>/<code>false</code> son palabras especiales en JS, y no necesitan comillas.</td><td><code>var miVariable = true;</code></td></tr><tr><th scope="row">Array</th><td>Una estructura que te permite almacenar varios valores en una sola referencia.</td><td><code>var miVariable = [1,'Bob','Steve',10];</code><br>Llama a cada miembro del array así: <code>miVariable[0]</code>, <code>miVariable[1]</code>, etc.</td></tr><tr><th scope="row">Object</th><td><p>Básicamente&nbsp;cualquier cosa. Todo en JavaScript es un objeto&nbsp;y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes.</p></td><td><code>var miVariable = document.querySelector('h1');</code><br>Todos los ejemplos anteriores también.</td></tr></tbody></table><br><p class="mt-2"><b>• Number (Números)</b> estos se usan básicamente para operaciones matemáticas.</p><p>Si colocamos en la consola dos numeros y entre ellos un operador matemático (+,-,*,/) para luego pulsar enter, obtendremos un resultado de dicha operación.</p><center><img src="assets/img/consola-numeros1.png" alt="Imagen operación matemática"></center><p>Es importante que en las operaciones matemáticas respetemos las <a href="https://es.wikipedia.org/wiki/Orden_de_evaluaci%C3%B3n">precedencias u orden de evaluación</a>.</p><center><img src="assets/img/consola-numeros2.png" alt="Imagen operación matemática"></center><br><p class="mt-2"><b>• Comparadores</b> también son muy usados en JavaScript, y devuelven un valor booleano, verdadero (true) o falso (false) según sea el caso.</p><center><img src="assets/img/consola-comparadores1.png" alt="Imagen comparadores"></center><br><p class="mt-2"><b>• String (Cadenas de texto)</b> estas se manejan colocándolas entre comillas "", es importante que si comenzamos con comillas simples <code>'</code>, terminemos con comillas simples o si comenzamos con comillas dobles <code>"</code> terminemos con comillas dobles.</p><p>También podemos concatenar estas cadenas usando el operador "+", lo cual permite unir varias cadenas de texto.</p><center><img src="assets/img/consola-cadena1.png" alt="Imagen de cadena de texto"></center></div><!-- /.contenedor --></section></div><!-- Variables --><div class="tabs-panel" id="cont-ppal-tabs-panel2"><!-- ********** Variables --><section id="variable" class=""><div class="contenedor"><h2>Variables</h2><p>Una variable es un elemento que se emplea para almacenar y hacer referencia a otro valor. Gracias a las variables es posible crear <em>"programas genéricos"</em>, es decir, programas que funcionan siempre igual independientemente de los valores concretos utilizados.</p><p>Si no existieran variables, un programa que suma dos números podría escribirse como:</p><pre>
+<!doctype html>
+<html class="no-js" lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendiendo JavaScript</title>
+  <meta name="description" content="JavaScript es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla.">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <style>
+    @charset "UTF-8";@font-face{font-family:FontAwesome;src:url(../docs/assets/fonts/fontawesome-webfont.eot?v=4.7.0);src:url(../docs/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'),url(../docs/assets/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'),url(../docs/assets/fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'),url(../docs/assets/fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),url(../docs/assets/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}blockquote,div,h1,li,p,ul{margin:0;padding:0}i{font-style:italic;line-height:inherit}h1{font-family:"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}@font-face{font-family:Raleway-Bold;src:url(../docs/assets/fonts/Raleway-Bold.eot);src:local('☺'),url(../docs/assets/fonts/Raleway-Bold.woff) format('woff'),url(../docs/assets/fonts/Raleway-Bold.ttf) format('truetype'),url(../docs/assets/fonts/Raleway-Bold.svg) format('svg');font-weight:400;font-style:normal}@font-face{font-family:Lato;src:local('☺'),url(../docs/assets/fonts/Lato-Regular.ttf) format('truetype');font-weight:400;font-style:normal}h1{color:#6b00a1;font-family:Raleway-Bold,serif}strong{font-weight:inherit}strong{font-weight:bolder}strong{font-weight:700;line-height:inherit}@media screen and (max-width:420px){#cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}}.fa{display:inline-block;font:14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.pull-right{float:right}.fa-repeat:before{content:"\f01e"}.fa-list-alt:before{content:"\f022"}.fa-book:before{content:"\f02d"}.fa-github:before{content:"\f09b"}.fa-hand-o-up:before{content:"\f0a6"}.fa-linkedin:before{content:"\f0e1"}.fa-undo:before{content:"\f0e2"}.fa-terminal:before{content:"\f120"}.fa-code:before{content:"\f121"}.fa-puzzle-piece:before{content:"\f12e"}.fa-rocket:before{content:"\f135"}.fa-chevron-circle-up:before{content:"\f139"}.fa-html5:before{content:"\f13b"}.fa-dot-circle-o:before{content:"\f192"}.fa-cube:before{content:"\f1b2"}.fa-toggle-on:before{content:"\f205"}.fa-window-restore:before{content:"\f2d2"}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}a{background-color:transparent;-webkit-text-decoration-skip:objects}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code{font-family:monospace,monospace;font-size:1em}small{font-size:80%}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:100%}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}body{margin:0;padding:0;background:#fefefe;font-family:"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;font-weight:400;line-height:1.5;color:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}blockquote,div,h1,h2,li,p,ul{margin:0;padding:0}p{margin-bottom:10px;margin-bottom:1rem;font-size:inherit;line-height:1.6;text-rendering:optimizeLegibility}em,i{font-style:italic;line-height:inherit}b,strong{font-weight:700;line-height:inherit}small{font-size:80%;line-height:inherit}h1,h2{font-family:"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit;text-rendering:optimizeLegibility}h1{font-size:15px;font-size:1.5rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}h2{font-size:12.5px;font-size:1.25rem;line-height:1.4;margin-top:0;margin-bottom:5px;margin-bottom:.5rem}a{line-height:inherit;color:#09458d;text-decoration:none}ul{margin-bottom:10px;margin-bottom:1rem;list-style-position:outside;line-height:1.6}li{font-size:inherit}ul{margin-left:12.5px;margin-left:1.25rem;list-style-type:disc}blockquote{margin:0 0 10px;margin:0 0 1rem;padding:5.625px 12.5px 0 11.875px;padding:.5625rem 1.25rem 0 1.1875rem;border-left:1px solid #cacaca}blockquote{line-height:1.6;color:#8a8a8a}cite{display:block;font-size:8.125px;font-size:.8125rem;color:#8a8a8a}cite:before{content:"— "}code{padding:1.25px 3.125px .625px;padding:.125rem .3125rem .0625rem;border:1px solid #cacaca;background-color:#e6e6e6;font-family:Consolas,"Liberation Mono",Courier,monospace;font-weight:400;color:#0a0a0a}.lead{font-size:125%;line-height:1.6}.text-center{text-align:center}.button{display:inline-block;vertical-align:middle;margin:0 0 10px;margin:0 0 1rem;font-family:inherit;padding:.85em 1em;-webkit-appearance:none;border:1px solid transparent;border-radius:3px;font-size:9px;font-size:.9rem;line-height:1;text-align:center;background-color:#09458d;color:#fefefe}.button.hollow{border:1px solid #09458d;color:#09458d}.button.hollow{background-color:transparent}.tabs{margin:0;border:1px solid #e6e6e6;background:#fefefe;list-style-type:none}.tabs:after,.tabs:before{display:table;content:' ';-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-order:1;-webkit-box-ordinal-group:2;order:1}.tabs:after{clear:both}.tabs.vertical>li{display:block;float:none;width:auto}.tabs-title{float:left}.tabs-title>a{display:block;padding:12.5px 15px;padding:1.25rem 1.5rem;font-size:7.5px;font-size:.75rem;line-height:1;color:#09458d}.tabs-title>a[aria-selected=true]{background:#e6e6e6;color:#09458d}.tabs-content{border:1px solid #e6e6e6;border-top:0;background:#fefefe;color:#0a0a0a}.tabs-panel{display:none;padding:10px;padding:1rem}.tabs-panel.is-active{display:block}.sticky{position:relative;z-index:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.row{max-width:625px;max-width:62.5rem;margin-right:auto;margin-left:auto;display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap}.row.collapse>.columns{padding-right:0;padding-left:0}.columns{-ms-flex:1 1 0px;-webkit-box-flex:1;flex:1 1 0px;padding-right:9.375px;padding-right:.9375rem;padding-left:9.375px;padding-left:.9375rem;min-width:0}.small-3{-ms-flex:0 0 25%;-webkit-box-flex:0;flex:0 0 25%;max-width:25%}.shrink{-ms-flex:0 0 auto;-webkit-box-flex:0;flex:0 0 auto;max-width:100%}.align-self-middle{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}#cont-ppal-header{background:#6b00a1}#cont-ppal #abside-cont{display:grid;grid-template-rows:auto 1fr;height:98vh}#cont-ppal #abside{background:#4e0079;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;padding:15px;padding:1.5rem;width:100%}#cont-ppal-tabs li a{font-size:calc(.85581rem + .93023vw)}#cont-ppal-header-h1{color:#fff!important;padding:10px;padding:1rem;text-shadow:0 .5px #ccc,0 1px #bfbfbf,0 1.5px #b2b2b2,0 2px #a5a5a5,0 1.5px #8c8c8c}#cont-ppal #iconos{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}#cont-ppal .tabs>li{background-color:#3b005d;border-radius:.7rem 0 0 .7rem;margin-bottom:1px}#cont-ppal .tabs>li a{color:#f8f8ff;font-size:calc(1.50233rem + .37209vw)}#cont-ppal .tabs-title>a[aria-selected=true]{background:#7400b3;border-radius:.7rem 0 0 .7rem;color:#f8f8ff;outline:0}#conceptos-fundamentales{padding:20px;padding:2rem}html{font-size:10px;font-family:Lato,sans-serif;color:#444}body{color:#444;background-color:#ededed;font-size:calc(1.20465rem + .46512vw);font-family:Lato,sans-serif}a{text-decoration:none}#abside a{color:#f8f8ff;text-decoration:none}.button{font-size:14px;font-size:1.4rem}.button.hollow.white{border-color:#9e99a1;color:#9e99a1}cite{font-size:calc(.75581rem + .5814vw)}.contenedor{margin-left:auto;margin-right:auto}.contenedor,.row{max-width:87vw!important}h1,h2{color:#6b00a1;font-family:Raleway-Bold,serif}h1{font-size:calc(1.6186rem + 1.86047vw)}h2{font-size:calc(1.51163rem + 1.16279vw)}.ir-arriba{border-radius:.4rem;display:none;padding:7px;padding:.7rem;background:#6b00a1;color:#fff;position:fixed;bottom:20px;bottom:2rem;right:10px;right:1rem;z-index:100}.lead{font-size:calc(1.40465rem + .46512vw)}.mt-1{margin-top:10px;margin-top:1rem}.mt-2{margin-top:20px;margin-top:2rem}.mb-3{margin-bottom:30px;margin-bottom:3rem}.mt-4{margin-top:40px;margin-top:4rem}.paginador{border-radius:50%!important;font-weight:700;height:60px;height:6rem;width:60px;width:6rem}.tabs-content{color:#444}@media print,screen and (min-width:40em){h1{font-size:30px;font-size:3rem}h2{font-size:25px;font-size:2.5rem}}@media screen and (max-width:39.9375em){.hide-for-small-only{display:none!important}}@media screen and (min-width:1280px){#cont-ppal-tabs li a{font-size:16px;font-size:1.6rem}#cont-ppal .tabs>li a{font-size:18px;font-size:1.8rem}body{font-size:18px;font-size:1.8rem}cite{font-size:15px;font-size:1.5rem}h1{font-size:40px;font-size:4rem}h2{font-size:30px;font-size:3rem}.lead{font-size:20px;font-size:2rem}}@media screen and (max-width:420px){#cont-ppal-tabs li a{font-size:11px;font-size:1.1rem}#cont-ppal .tabs>li a{font-size:16px;font-size:1.6rem}body{font-size:14px;font-size:1.4rem}cite{font-size:10px;font-size:1rem}h1{font-size:24px;font-size:2.4rem}h2{font-size:20px;font-size:2rem}.lead{font-size:16px;font-size:1.6rem}}@media (min-width:0px) and (max-width:544px){#cont-ppal-tabs i{display:none}}@media (min-width:545px) and (max-width:768px){#cont-ppal-tabs i{display:none}.contenedor,.row{max-width:98vw!important}}@media (min-width:1291px) and (max-width:1420px){.contenedor,.row{max-width:94vw!important}}@media (min-width:1025px) and (max-width:1290px){.contenedor,.row{max-width:95vw!important}}@media (min-width:769px) and (max-width:1024px){.contenedor,.row{max-width:97vw!important}}@media (min-width:331px) and (max-width:544px){.contenedor,.row{max-width:100vw!important}}@media (min-width:0px) and (max-width:330px){.contenedor,.row{max-width:100vw!important}}
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="preload" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css"></noscript>
+  <link rel="preload" type="text/css" href="assets/css/app.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" type="text/css" href="assets/css/app.min.css"></noscript>
+  <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
+</head>
+
+<body>
+	<!-- /////// Botón para ir al principio -->
+	<a class="hide-for-small-only" href="#inicio">
+	  <i class="fa fa-chevron-circle-up fa-2x ir-arriba"></i>
+	</a>
+	<!-- */Botón para ir al principio -->
+
+  <!-- ********** CONTENIDO PÁGINA -->
+  <section id="cont-ppal" class="">
+    <header id="cont-ppal-header">
+      <nav class="contenedor">
+        <div class="row">
+          <div class="columns"><h1 id="cont-ppal-header-h1"><i class="fa fa-terminal fa-lg" aria-hidden="true"></i> Aprendiendo JavaScript</h1></div>
+          <div class="shrink align-self-middle columns"><a class="button hollow white paginador" href="index.html">Pág. <big>1</big></a></div>
+          <div class="shrink align-self-middle columns"><a class="button hollow white paginador" href="page2.html">Pág. <big>2</big></a></div>
+          <div class="shrink align-self-middle columns"><a class="button hollow white paginador" href="page3.html">Pág. <big>3</big></a></div>          
+        </div>
+              
+      </nav>      
+    </header>
+    <div class="contenedor">
+      <p>JavaScript es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla.</p>
+      <cite class="pull-right">Fuente: <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Fundamentos de JavaScript</a></cite>
+      <br>
+      <blockquote>
+        "Si el conocimiento puede crear problemas, no es con la ignorancia con lo que podremos resolverlos"
+      </blockquote>
+      <!-- /////// Tabs para el contenido de cada tema -->
+      <div class="row collapse mt-4">
+        <div class="small-3 columns" data-sticky-container="">
+          <div class="sticky" data-sticky="" data-top-anchor="1top" id="abside-cont">
+            <ul class="vertical tabs sticky" data-tabs="" id="cont-ppal-tabs">
+              <!-- Conceptos fundamentales -->
+              <li class="tabs-title is-active"><a href="#cont-ppal-tabs-panel1" aria-selected="true"><i class="fa fa-book fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Conceptos fundamentales</span></a></li>
+              <!-- Variables -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel2"><i class="fa fa-cube fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Variables</span></a></li>
+              <!-- JavaScrip y HTML -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel3"><i class="fa fa-html5 fa-lg" aria-hidden="true"></i>&nbsp; <span class="">JavaScrip y HTML</span></a></li>
+              <!-- Bucle While -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel4"><i class="fa fa-repeat fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Bucle while</span></a></li>
+              <!-- Bucle For -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel5"><i class="fa fa-undo fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Bucle for</span></a></li>
+              <!-- Bucle do while -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel6"><i class="fa fa-hand-o-up fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Bucle do...while</span></a></li>
+              <!-- Estructura if...else -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel7"><i class="fa fa-dot-circle-o fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Estructura if...else</span></a></li>
+              <!-- Estructura switch -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel8"><i class="fa fa-toggle-on fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Estructura switch</span></a></li>
+              <!-- Operadores -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel9"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Operadores</span></a></li>
+              <!-- Funciones nativas -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel10"><i class="fa fa-window-restore fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Funciones nativas</span></a></li>
+              <!-- Operador typeof -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel11"><i class="fa fa-puzzle-piece fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Operador typeof</span></a></li>
+              <!-- Creación de funciones -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel12"><i class="fa fa-code fa-lg" aria-hidden="true"></i>&nbsp; <span class="">Creación de funciones</span></a></li>
+            </ul>
+            						<div class="mt-1" id="abside">
+						  <div class="text-center mb-3" id="iconos">
+						    <a href="https://slicegroup.xyz/" target="_blank"><i class="fa fa-rocket fa-2x"></i></a>
+						    <a href="https://www.linkedin.com/in/enrique-valerio-6b347b126/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+						    <a href="https://github.com/Caballero73/XXXXXXXX" target="_blank"><i class="fa fa-github fa-2x"></i></a>            
+						  </div>
+						  <p class="text-center">Enrique Valerio <br>
+						  <small>Junio 2018</small></p>
+						</div>            
+          </div>
+        </div><!-- /.columns -->
+
+        <div class="columns" id="1top">
+          <div class="tabs-content" data-tabs-content="cont-ppal-tabs">
+            <!-- Conceptos fundamentales -->
+            <div class="tabs-panel is-active" id="cont-ppal-tabs-panel1">
+                <!-- ********** Conceptos fundamentales -->
+  <section id="conceptos-fundamentales" class="">
+    <div class="contenedor">
+      <h2>Conceptos fundamentales</h2>    
+      <p class="mt-2">JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu Sitio Web, (por ejemplo juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más). </p>
+      <p class="lead">Vamos a explicar algunos de los aspectos básicos del lenguaje JavaScript, para comprender mejor cómo funciona todo.</p>
+      <br>
+
+      <p><strong>• Script</strong> son cada uno de los programas, aplicaciones o trozos de código creados con el lenguaje de programación JavaScript. Unas pocas líneas de código forman un script y un archivo de miles de líneas de JavaScript también se considera un script. A veces se traduce al español directamente como <em>"guión"</em>, aunque script es una palabra más adecuada y comúnmente aceptada.</p>
+      <br>
+
+      <p><strong>• Sentencia</strong> son cada una de las instrucciones que forman un script.</p>
+      <br>
+
+      <p><strong>• Palabras reservadas</strong> son las palabras (en inglés) que se utilizan para construir las sentencias de JavaScript y que por tanto no pueden ser utilizadas libremente. Las palabras actualmente reservadas por JavaScript son: <code>break</code>, <code>case</code>, <code>catch</code>, <code>continue</code>, <code>default</code>, <code>delete</code>, <code>do</code>, <code>else</code>, <code>finally</code>, <code>for</code>, <code>function</code>, <code>if</code>, <code>in</code>, <code>instanceof</code>, <code>new</code>, <code>return</code>, <code>switch</code>, <code>this</code>, <code>throw</code>, <code>try</code>, <code>typeof</code>, <code>var</code>, <code>void</code>, <code>while</code>, <code>with</code>.</p>
+      <br>
+
+      <p><b>• Sintaxis de JavaScript</b> es muy similar a la de otros lenguajes de programación como Java y C. Las normas básicas que definen la sintaxis de JavaScript son las siguientes:</p>
+      <ul style="list-style: none">
+        <li><i><strong>No se tienen en cuenta los espacios en blanco y las nuevas líneas</strong></i>: como sucede con XHTML, el intérprete de JavaScript ignora cualquier espacio en blanco sobrante, por lo que el código se puede ordenar de forma adecuada para entenderlo mejor (tabulando las líneas, añadiendo espacios, creando nuevas líneas, etc.)</li>
+        <li><i><strong>Se distinguen las mayúsculas y minúsculas</strong></i>: al igual que sucede con la sintaxis de las etiquetas y elementos XHTML. Sin embargo, si en una página XHTML se utilizan indistintamente mayúsculas y minúsculas, la página se visualiza correctamente, siendo el único problema la no validación de la página. En cambio, si en JavaScript se intercambian mayúsculas y minúsculas el script no funciona.</li>
+        <li><i><strong>No se define el tipo de las variables</strong></i>: al crear una variable, no es necesario indicar el tipo de dato que almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución del script.</li>
+        <li><i><strong>No es necesario terminar cada sentencia con el carácter de punto y coma (<code>;</code>)</strong></i>: en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con el carácter <code>;</code>. Aunque JavaScript no obliga a hacerlo, es conveniente seguir la tradición de terminar cada sentencia con el carácter del punto y coma (<code>;</code>).</li>
+        <li><i><strong>Se pueden incluir comentarios</strong></i>: los comentarios se utilizan para añadir información en el código fuente del programa. Aunque el contenido de los comentarios no se visualiza por pantalla, si que se envía al navegador del usuario junto con el resto del script, por lo que es necesario extremar las precauciones sobre la información incluida en los comentarios. <br><br>
+          <i>Ejemplo de comentario de una sola línea:</i> <pre>// a continuación se muestra un mensaje.</pre>
+          <br>
+          <i>Ejemplo de comentario de varias líneas:</i><br>
+          <pre>/* Los comentarios de varias líneas son muy útiles<br>cuando se necesita incluir bastante información<br>en los comentarios */</pre>
+        </li>
+      </ul>
+      <br>
+
+      <p><b>• La Consola</b> para el aprendizaje de JS es muy útil utilizar la consola que trae incorporado nuestro navegador web, y la cual podemos acceder mediente el inspector de elementos (generalmente lo encontramos haciendo click con el botón derecho del muse). En el caso de Firefox tiene este aspecto:</p>
+      <center><img src="assets/img/consola-firefox.png" alt="Imagen de la consola de Firefox"></center>
+      <br>
+
+      <p><b>• Que datos podemos usar en JS</b>... Básicamente todos los datos que desemos usar debemos manejarlo a través de variables, las cuales son contenedores en los que puedes almacenar valores. Primero debes declarar la variable con la palabra clave <code>var</code>, seguida del nombre que le quieras dar:</p>
+      <table>
+       <thead>
+        <tr>
+         <th scope="row"><font><font>Variable</font></font></th>
+         <th scope="col">Explicación</th>
+         <th scope="col">Ejemplo</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row">String</th>
+         <td>Una cadena de texto. Para indicar que la variable es una cadena, debes&nbsp; escribirlo entre comillas.</td>
+         <td><code>var miVariable = 'Bob';</code></td>
+        </tr>
+        <tr>
+         <th scope="row">Number</th>
+         <td>
+          <p>Un número. Los números no tienen comillas.</p>
+         </td>
+         <td><code>var miVariable = 10;</code></td>
+        </tr>
+        <tr>
+         <th scope="row">Boolean</th>
+         <td>Tienen valor verdadero/falso. <code>true</code>/<code>false</code> son palabras especiales en JS, y no necesitan comillas.</td>
+         <td><code>var miVariable = true;</code></td>
+        </tr>
+        <tr>
+         <th scope="row">Array</th>
+         <td>Una estructura que te permite almacenar varios valores en una sola referencia.</td>
+         <td><code>var miVariable = [1,'Bob','Steve',10];</code><br>
+          Llama a cada miembro del array así: <code>miVariable[0]</code>, <code>miVariable[1]</code>, etc.</td>
+        </tr>
+        <tr>
+         <th scope="row">Object</th>
+         <td>
+          <p>Básicamente&nbsp;cualquier cosa. Todo en JavaScript es un objeto&nbsp;y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes.</p>
+         </td>
+         <td><code>var miVariable = document.querySelector('h1');</code><br>
+          Todos los ejemplos anteriores también.</td>
+        </tr>
+       </tbody>
+      </table>
+      <br>
+
+      <p class="mt-2"><b>• Number (Números)</b> estos se usan básicamente para operaciones matemáticas.</p>
+      <p>Si colocamos en la consola dos numeros y entre ellos un operador matemático (+,-,*,/) para luego pulsar enter, obtendremos un resultado de dicha operación.</p>
+      <center><img src="assets/img/consola-numeros1.png" alt="Imagen operación matemática"></center>
+      <p>Es importante que en las operaciones matemáticas respetemos las <a href="https://es.wikipedia.org/wiki/Orden_de_evaluaci%C3%B3n">precedencias u orden de evaluación</a>.</p>
+      <center><img src="assets/img/consola-numeros2.png" alt="Imagen operación matemática"></center>
+      <br>
+
+      <p class="mt-2"><b>• Comparadores</b> también son muy usados en JavaScript, y devuelven un valor booleano, verdadero (true) o falso (false) según sea el caso.</p>
+      <center><img src="assets/img/consola-comparadores1.png" alt="Imagen comparadores"></center>
+      <br>
+
+      <p class="mt-2"><b>• String (Cadenas de texto)</b> estas se manejan colocándolas entre comillas "", es importante que si comenzamos con comillas simples <code>'</code>, terminemos con comillas simples o si comenzamos con comillas dobles <code>"</code> terminemos con comillas dobles.</p>
+      <p>También podemos concatenar estas cadenas usando el operador "+", lo cual permite unir varias cadenas de texto.</p>
+      <center><img src="assets/img/consola-cadena1.png" alt="Imagen de cadena de texto"></center>
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Variables -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel2">
+                <!-- ********** Variables -->
+  <section id="variable" class="">
+    <div class="contenedor">
+      <h2>Variables</h2>    
+      <p>Una variable es un elemento que se emplea para almacenar y hacer referencia a otro valor. Gracias a las variables es posible crear <em>"programas genéricos"</em>, es decir, programas que funcionan siempre igual independientemente de los valores concretos utilizados.</p>
+      <p>Si no existieran variables, un programa que suma dos números podría escribirse como:</p>
+      <pre>
       resultado = 3 + 1
-      </pre><p>El <em>programa</em> anterior es tan poco útil que sólo sirve para el caso en el que el primer número de la suma sea el 3 y el segundo número sea el 1. En cualquier otro caso, el <em>programa</em> obtiene un resultado incorrecto.</p><p>Sin embargo, el programa se puede rehacer de la siguiente manera utilizando variables para almacenar y referirse a cada número:</p><pre>
+      </pre>
+      <p>El <em>programa</em> anterior es tan poco útil que sólo sirve para el caso en el que el primer número de la suma sea el 3 y el segundo número sea el 1. En cualquier otro caso, el <em>programa</em> obtiene un resultado incorrecto.</p>
+      <p>Sin embargo, el programa se puede rehacer de la siguiente manera utilizando variables para almacenar y referirse a cada número:</p>
+      <pre>
       numero_1 = 3 
       numero_2  = 1
       resultado = numero_1 + numero_2
-      </pre><p>Los elementos <code>numero_1</code> y <code>numero_2</code> son <strong>variables</strong> que almacenan los valores que utiliza el programa. El resultado se calcula siempre en función del valor almacenado por las variables, por lo que este programa funciona correctamente para cualquier par de números indicado. Si se modifica el valor de las variables <code>numero_1</code> y <code>numero_2</code>, el programa sigue funcionando correctamente.</p><p></p><p><b>• Sintaxis</b>... las variables en JavaScript se crean mediante la palabra reservada <b>var</b>.</p><center class="mt-1 mb-2"><img src="assets/img/variable_sintaxis.png" alt="Definir variable"></center><p>La palabra reservada <code>var</code> solamente es necesaria al definir por primera vez la variable, lo que se denomina <strong>declarar</strong> una variable. Cuando se utilizan las variables en el resto de instrucciones del script, solamente es necesario indicar su nombre.</p><p>Por ejemplo sería un error escribir lo siguiente:</p><pre>
+      </pre>
+      <p>Los elementos <code>numero_1</code> y <code>numero_2</code> son <strong>variables</strong> que almacenan los valores que utiliza el programa. El resultado se calcula siempre en función del valor almacenado por las variables, por lo que este programa funciona correctamente para cualquier par de números indicado. Si se modifica el valor de las variables <code>numero_1</code> y <code>numero_2</code>, el programa sigue funcionando correctamente.</p>
+      <p></p><p><b>• Sintaxis</b>... las variables en JavaScript se crean mediante la palabra reservada <b>var</b>.</p>
+      <center class="mt-1 mb-2"><img src="assets/img/variable_sintaxis.png" alt="Definir variable"></center>
+      <p>La palabra reservada <code>var</code> solamente es necesaria al definir por primera vez la variable, lo que se denomina <strong>declarar</strong> una variable. Cuando se utilizan las variables en el resto de instrucciones del script, solamente es necesario indicar su nombre.</p>
+      <p>Por ejemplo sería un error escribir lo siguiente:</p>
+      <pre>
         <span class="kw1">var</span> numero_1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
         <span class="kw1">var</span> numero_2 <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
         <span class="kw1">var</span> resultado <span class="sy0">=</span> <span class="kw1">var</span> numero_1 <span class="sy0">+</span> <span class="kw1">var</span> numero_2<span class="sy0">;</span>
-      </pre><p><b>Esta es la forma Correcta</b>:</p><pre>
+      </pre>
+      <p><b>Esta es la forma Correcta</b>:</p>
+      <pre>
         <span class="kw1">var</span> numero_1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
         <span class="kw1">var</span> numero_2 <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
         <span class="kw1">var</span> resultado <span class="sy0">=</span> numero_1 <span class="sy0">+</span> numero_2<span class="sy0">;</span>
-      </pre><br><p>En todo caso, se recomienda declarar todas las variables que se vayan a utilizar.</p><br><p><b>• Nombre</b>... el nombre de una variable también se conoce como <strong>identificador</strong> y debe cumplir las siguientes normas:</p><ul><li>Sólo puede estar formado por letras, números y los símbolos <code>$</code> (dólar) y <code>_</code> (guión bajo).</li><li>El primer carácter no puede ser un número.</li></ul><p><b>Por tanto, las siguientes variables tienen nombres correctos:</b></p><pre>
+      </pre>
+      <br>
+      <p>En todo caso, se recomienda declarar todas las variables que se vayan a utilizar.</p>
+      <br>
+      <p><b>• Nombre</b>... el nombre de una variable también se conoce como <strong>identificador</strong> y debe cumplir las siguientes normas:</p>
+      <ul>
+        <li>Sólo puede estar formado por letras, números y los símbolos <code>$</code> (dólar) y <code>_</code> (guión bajo).</li>
+        <li>El primer carácter no puede ser un número.</li>
+      </ul>
+      <p><b>Por tanto, las siguientes variables tienen nombres correctos:</b></p>
+      <pre>
         <span class="kw1">var</span> $numero1<span class="sy0">;</span>
         <span class="kw1">var</span> _$letra<span class="sy0">;</span>
         <span class="kw1">var</span> $$$otroNumero<span class="sy0">;</span>
         <span class="kw1">var</span> otroNumero<span class="sy0">;</span>
         <span class="kw1">var</span> $_a__$4<span class="sy0">;</span>
-      </pre><p>Sin embargo, las siguientes variables tienen identificadores incorrectos:</p><pre>
+      </pre>
+
+      <p>Sin embargo, las siguientes variables tienen identificadores incorrectos:</p>
+
+      <pre>
         <span class="kw1">var</span> 1numero<span class="sy0">;</span>  <span class="co1">// Empieza por un número</span>
         <span class="kw1">var</span> numero<span class="sy0">;</span><span class="nu0">1</span>_123<span class="sy0">;</span>  <span class="co1">// Contiene un carácter ";"</span>
-      </pre><br><h3>Tipos de variables</h3><p>Aunque todas las variables de JavaScript se crean de la misma forma (mediante la palabra reservada <code>var</code>), la forma en la que se les asigna un valor depende del tipo de valor que se quiere almacenar (números, textos, etc.)</p><table><thead><tr><th scope="row">Variable</th><th scope="col">Explicación</th><th scope="col">Ejemplo</th></tr></thead><tbody><tr><th scope="row"><a href="#String">String</a></th><td>Una cadena de texto. Para indicar que la variable es una cadena, debes&nbsp; escribirlo entre comillas.</td><td><code>var miVariable = 'Bob';</code></td></tr><tr><th scope="row"><a href="#Number">Number</a></th><td><p>Un número. Los números no tienen comillas.</p></td><td><code>var miVariable = 10;</code></td></tr><tr><th scope="row"><a href="#Boolean">Boolean</a></th><td>Tienen valor verdadero/falso. <code>true</code>/<code>false</code> son palabras especiales en JS, y no necesitan comillas.</td><td><code>var miVariable = true;</code></td></tr><tr><th scope="row"><a href="#Arrays">Array</a></th><td>Una estructura que te permite almacenar varios valores en una sola referencia.</td><td><code>var miVariable = [1,'Bob','Steve',10];</code><br>Llama a cada miembro del array así: <code>miVariable[0]</code>, <code>miVariable[1]</code>, etc.</td></tr><tr><th scope="row">Object</th><td><p>Básicamente&nbsp;cualquier cosa. Todo en JavaScript es un objeto&nbsp;y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes.</p></td><td><code>var miVariable = document.querySelector('h1');</code><br>Todos los ejemplos anteriores también.</td></tr></tbody></table><br><p id="String"><b>• Cadenas de texto (String)</b> para almacenar caracteres, palabras y/o frases de texto. Para asignar el valor a la variable, se encierra entre comillas dobles o simples, para delimitar su comienzo y su final:</p><pre>
+      </pre>
+      <br>
+      <h3>Tipos de variables</h3>
+      <p>Aunque todas las variables de JavaScript se crean de la misma forma (mediante la palabra reservada <code>var</code>), la forma en la que se les asigna un valor depende del tipo de valor que se quiere almacenar (números, textos, etc.)</p>
+      <table>
+       <thead>
+        <tr>
+         <th scope="row">Variable</th>
+         <th scope="col">Explicación</th>
+         <th scope="col">Ejemplo</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <th scope="row"><a href="#String">String</a></th>
+         <td>Una cadena de texto. Para indicar que la variable es una cadena, debes&nbsp; escribirlo entre comillas.</td>
+         <td><code>var miVariable = 'Bob';</code></td>
+        </tr>
+        <tr>
+         <th scope="row"><a href="#Number">Number</a></th>
+         <td>
+          <p>Un número. Los números no tienen comillas.</p>
+         </td>
+         <td><code>var miVariable = 10;</code></td>
+        </tr>
+        <tr>
+         <th scope="row"><a href="#Boolean">Boolean</a></th>
+         <td>Tienen valor verdadero/falso. <code>true</code>/<code>false</code> son palabras especiales en JS, y no necesitan comillas.</td>
+         <td><code>var miVariable = true;</code></td>
+        </tr>
+        <tr>
+         <th scope="row"><a href="#Arrays">Array</a></th>
+         <td>Una estructura que te permite almacenar varios valores en una sola referencia.</td>
+         <td><code>var miVariable = [1,'Bob','Steve',10];</code><br>
+          Llama a cada miembro del array así: <code>miVariable[0]</code>, <code>miVariable[1]</code>, etc.</td>
+        </tr>
+        <tr>
+         <th scope="row">Object</th>
+         <td>
+          <p>Básicamente&nbsp;cualquier cosa. Todo en JavaScript es un objeto&nbsp;y puede ser almacenado en una variable. Mantén esto en mente mientras aprendes.</p>
+         </td>
+         <td><code>var miVariable = document.querySelector('h1');</code><br>
+          Todos los ejemplos anteriores también.</td>
+        </tr>
+       </tbody>
+      </table>
+      <br>
+      
+      <p id="String"><b>• Cadenas de texto (String)</b> para almacenar caracteres, palabras y/o frases de texto. Para asignar el valor a la variable, se encierra entre comillas dobles o simples, para delimitar su comienzo y su final:</p>
+
+      <pre>
         <span class="kw1">var</span> mensaje <span class="sy0">=</span> <span class="st0">"Bienvenido a nuestro sitio web"</span><span class="sy0">;</span>
         <span class="kw1">var</span> nombreProducto <span class="sy0">=</span> <span class="st0">'Producto ABC'</span><span class="sy0">;</span>
         <span class="kw1">var</span> letraSeleccionada <span class="sy0">=</span> <span class="st0">'c'</span><span class="sy0">;</span>
-      </pre><p>En ocasiones, el texto que se almacena en las variables no es tan sencillo. Si por ejemplo el propio texto contiene comillas simples o dobles, la estrategia que se sigue es la de encerrar el texto con las comillas (simples o dobles) que no utilice el texto:</p><pre>
+      </pre>
+
+      <p>En ocasiones, el texto que se almacena en las variables no es tan sencillo. Si por ejemplo el propio texto contiene comillas simples o dobles, la estrategia que se sigue es la de encerrar el texto con las comillas (simples o dobles) que no utilice el texto:</p>
+
+      <pre>
         <span class="coMULTI">/* El contenido de texto1 tiene comillas simples, por lo que
           se encierra con comillas dobles */</span>
         <span class="kw1">var</span> texto1 <span class="sy0">=</span> <span class="st0">"Una frase con 'comillas simples' dentro"</span><span class="sy0">;</span>
@@ -33,42 +309,176 @@
         <span class="coMULTI">/* El contenido de texto2 tiene comillas dobles, por lo que
           se encierra con comillas simples */</span>
         <span class="kw1">var</span> texto2 <span class="sy0">=</span> <span class="st0">'Una frase con "comillas dobles" dentro'</span><span class="sy0">;</span>
-      </pre><p>No obstante, a veces las cadenas de texto contienen tanto comillas simples como dobles. Además, existen otros caracteres que son difíciles de incluir en una variable de texto (tabulador, <code>ENTER</code>, etc.) Para resolver estos problemas, JavaScript define un mecanismo para incluir de forma sencilla caracteres especiales y problemáticos dentro de una cadena de texto.</p><p>El mecanismo consiste en sustituir el carácter problemático por una combinación simple de caracteres. A continuación se muestra la tabla de conversión que se debe utilizar:</p><table style="max-width: 40rem"><thead><tr><th>Si se quiere incluir...</th><th>Se debe escribir...</th></tr></thead><tbody><tr><td>Una nueva línea</td><td><code>\n</code></td></tr><tr><td>Un tabulador</td><td><code>\t</code></td></tr><tr><td>Una comilla simple</td><td><code>\'</code></td></tr><tr><td>Una comilla doble</td><td><code>\"</code></td></tr><tr><td>Una barra inclinada</td><td><code>\\</code></td></tr></tbody></table><p>De esta forma, el ejemplo anterior que contenía comillas simples y dobles dentro del texto se puede rehacer de la siguiente forma:</p><pre>
+      </pre>
+
+      <p>No obstante, a veces las cadenas de texto contienen tanto comillas simples como dobles. Además, existen otros caracteres que son difíciles de incluir en una variable de texto (tabulador, <code>ENTER</code>, etc.) Para resolver estos problemas, JavaScript define un mecanismo para incluir de forma sencilla caracteres especiales y problemáticos dentro de una cadena de texto.</p>
+
+      <p>El mecanismo consiste en sustituir el carácter problemático por una combinación simple de caracteres. A continuación se muestra la tabla de conversión que se debe utilizar:</p>
+
+      <table style="max-width: 40rem">
+        <thead>
+          <tr>
+            <th>Si se quiere incluir...</th>
+            <th>Se debe escribir...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Una nueva línea</td>
+            <td><code>\n</code></td>
+          </tr>
+          <tr>
+            <td>Un tabulador</td>
+            <td><code>\t</code></td>
+          </tr>
+          <tr>
+            <td>Una comilla simple</td>
+            <td><code>\'</code></td>
+          </tr>
+          <tr>
+            <td>Una comilla doble</td>
+            <td><code>\"</code></td>
+          </tr>
+          <tr>
+            <td>Una barra inclinada</td>
+            <td><code>\\</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p>De esta forma, el ejemplo anterior que contenía comillas simples y dobles dentro del texto se puede rehacer de la siguiente forma:</p>
+
+      <pre>
         <span class="kw1">var</span> texto1 <span class="sy0">=</span> <span class="st0">'Una frase con <span class="es0">\'</span>comillas simples<span class="es0">\'</span> dentro'</span><span class="sy0">;</span>
         &nbsp;
         <span class="kw1">var</span> texto2 <span class="sy0">=</span> <span class="st0">"Una frase con <span class="es0">\"</span>comillas dobles<span class="es0">\"</span> dentro"</span><span class="sy0">;</span>
-      </pre><p>Este mecanismo de JavaScript se denomina <em>"mecanismo de escape"</em> de los caracteres problemáticos, y es habitual referirse a que los caracteres han sido <em>"escapados"</em>.</p><br><p id="Number"><b>• Numéricas (Number)</b> para almacenar valores numéricos enteros (llamados <em>integer</em> en inglés) o decimales (llamados <em>float</em> en inglés). En este caso, el valor se asigna indicando directamente el número entero o decimal. Los números decimales utilizan el carácter <code>.</code> (punto) en vez de <code>,</code> (coma) para separar la parte entera y la parte decimal:</p><pre>
+      </pre>
+
+      <p>Este mecanismo de JavaScript se denomina <em>"mecanismo de escape"</em> de los caracteres problemáticos, y es habitual referirse a que los caracteres han sido <em>"escapados"</em>.</p>
+      <br>
+
+      <p id="Number"><b>• Numéricas (Number)</b> para almacenar valores numéricos enteros (llamados <em>integer</em> en inglés) o decimales (llamados <em>float</em> en inglés). En este caso, el valor se asigna indicando directamente el número entero o decimal. Los números decimales utilizan el carácter <code>.</code> (punto) en vez de <code>,</code> (coma) para separar la parte entera y la parte decimal:</p>
+
+      <pre>
         <span class="kw1">var</span> iva <span class="sy0">=</span> <span class="nu0">16</span><span class="sy0">;</span>   <span class="co1">// variable tipo entero</span>
         <span class="kw1">var</span> total <span class="sy0">=</span> <span class="nu0">234.65</span><span class="sy0">;</span>  <span class="co1">// variable tipo decimal</span>
-      </pre><br><p id="Boolean"><b>• Booleanos</b>... las variables de tipo <em>boolean</em> o <em>booleano</em> también se conocen con el nombre de variables de tipo lógico. Aunque para entender realmente su utilidad se debe estudiar la programación con JavaScript, su funcionamiento básico es muy sencillo.</p><p>Una variable de tipo <em>boolean</em> almacena un tipo especial de valor que solamente puede tomar dos valores: <code>true</code> (verdadero) o <code>false</code> (falso). No se puede utilizar para almacenar números y tampoco permite guardar cadenas de texto.</p><p>Los únicos valores que pueden almacenar estas variables son <code>true</code> y <code>false</code>, por lo que no pueden utilizarse los valores <code>verdadero</code> y <code>falso</code>. A continuación se muestra un par de variables de tipo <em>booleano</em>:</p><pre>
+      </pre>
+      <br>
+
+      <p id="Boolean"><b>• Booleanos</b>... las variables de tipo <em>boolean</em> o <em>booleano</em> también se conocen con el nombre de variables de tipo lógico. Aunque para entender realmente su utilidad se debe estudiar la programación con JavaScript, su funcionamiento básico es muy sencillo.</p>
+
+      <p>Una variable de tipo <em>boolean</em> almacena un tipo especial de valor que solamente puede tomar dos valores: <code>true</code> (verdadero)  o <code>false</code> (falso). No se puede utilizar para almacenar números y tampoco permite guardar cadenas de texto.</p>
+
+      <p>Los únicos valores que pueden almacenar estas variables son <code>true</code> y <code>false</code>, por lo que no pueden utilizarse los valores <code>verdadero</code> y <code>falso</code>. A continuación se muestra un par de variables de tipo <em>booleano</em>:</p>
+
+      <pre>
         <span class="kw1">var</span> clienteRegistrado <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
         <span class="kw1">var</span> ivaIncluido <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
-      </pre><p id="Arrays"><b>• Arrays</b> en ocasiones, a los arrays se les llama vectores, matrices e incluso <em>arreglos</em>. No obstante, el término array es el más utilizado y es una palabra comúnmente aceptada en el entorno de la programación.</p><p>Un array es una colección de variables, que pueden ser todas del mismo tipo o cada una de un tipo diferente. Su utilidad se comprende mejor con un ejemplo sencillo: si un scrip necesita manejar los días de la semana, se podrían crear siete variables de tipo texto:</p><pre>
+      </pre>
+
+
+      <p id="Arrays"><b>• Arrays</b> en ocasiones, a los arrays se les llama vectores, matrices e incluso <em>arreglos</em>. No obstante, el término array es el más utilizado y es una palabra comúnmente aceptada en el entorno de la programación.</p>
+
+      <p>Un array es una colección de variables, que pueden ser todas del mismo tipo o cada una de un tipo diferente. Su utilidad se comprende mejor con un ejemplo sencillo: si un scrip necesita manejar los días de la semana, se podrían crear siete variables de tipo texto:</p>
+
+      <pre>
         <span class="kw1">var</span> dia1 <span class="sy0">=</span> <span class="st0">"Lunes"</span><span class="sy0">;</span>
         <span class="kw1">var</span> dia2 <span class="sy0">=</span> <span class="st0">"Martes"</span><span class="sy0">;</span>
         ...
         <span class="kw1">var</span> dia7 <span class="sy0">=</span> <span class="st0">"Domingo"</span><span class="sy0">;</span>
-      </pre><p>Aunque el código anterior <b>no es incorrecto</b>, sí que es poco eficiente y complica en exceso la programación. Si en vez de los días de la semana se tuviera que guardar el nombre de los meses del año, el nombre de todos los países del mundo o las mediciones diarias de temperatura de los últimos 100 años, se tendrían que crear decenas o cientos de variables.</p><p>En este tipo de casos, se pueden agrupar todas las variables relacionadas en una colección de variables o array. El ejemplo anterior se puede rehacer de la siguiente forma:</p><pre>
+      </pre>
+
+      <p>Aunque el código anterior <b>no es incorrecto</b>, sí que es poco eficiente y complica en exceso la programación. Si en vez de los días de la semana se tuviera que guardar el nombre de los meses del año, el nombre de todos los países del mundo o las mediciones diarias de temperatura de los últimos 100 años, se tendrían que crear decenas o cientos de variables.</p>
+
+      <p>En este tipo de casos, se pueden agrupar todas las variables relacionadas en una colección de variables o array. El ejemplo anterior se puede rehacer de la siguiente forma:</p>
+
+      <pre>
         <span class="kw1">var</span> dias <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Lunes"</span><span class="sy0">,</span> <span class="st0">"Martes"</span><span class="sy0">,</span> <span class="st0">"Miércoles"</span><span class="sy0">,</span> <span class="st0">"Jueves"</span><span class="sy0">,</span> <span class="st0">"Viernes"</span><span class="sy0">,</span> <span class="st0">"Sábado"</span><span class="sy0">,</span> <span class="st0">"Domingo"</span><span class="br0">]</span><span class="sy0">;</span>
-      </pre><p>Ahora, una única variable llamada <code>dias</code> almacena todos los valores relacionados entre sí, en este caso los días de la semana. Para definir un array, se utilizan los caracteres <code>[</code> y <code>]</code> para delimitar su comienzo y su final y se utiliza el carácter <code>,</code> (coma) para separar sus elementos:</p><pre>
+      </pre>
+
+      <p>Ahora, una única variable llamada <code>dias</code> almacena todos los valores relacionados entre sí, en este caso los días de la semana. Para definir un array, se utilizan los caracteres <code>[</code> y <code>]</code> para delimitar su comienzo y su final y se utiliza el carácter <code>,</code> (coma) para separar sus elementos:</p>
+
+      <pre>
         <span class="kw1">var</span> nombre_array <span class="sy0">=</span> <span class="br0">[</span>valor1<span class="sy0">,</span> valor2<span class="sy0">,</span> ...<span class="sy0">,</span> valorN<span class="br0">]</span><span class="sy0">;</span>
-      </pre><p>Una vez definido un array, es muy sencillo acceder a cada uno de sus elementos. Cada elemento se accede indicando su posición dentro del array. La única complicación, que es responsable de muchos errores cuando se empieza a programar, es que las posiciones de los elementos empiezan a contarse en el <code>0</code> y no en el <code>1</code>:</p><pre>
+      </pre>
+
+      <p>Una vez definido un array, es muy sencillo acceder a cada uno de sus elementos. Cada elemento se accede indicando su posición dentro del array. La única complicación, que es responsable de muchos errores cuando se empieza a programar, es que las posiciones de los elementos empiezan a contarse en el <code>0</code> y no en el <code>1</code>:</p>
+
+      <pre>
         <span class="kw1">var</span> diaSeleccionado <span class="sy0">=</span> dias<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">;</span>    <span class="co1">// diaSeleccionado = "Lunes"</span>
         <span class="kw1">var</span> otroDia <span class="sy0">=</span> dias<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span><span class="sy0">;</span>            <span class="co1">// otroDia = "Sábado"</span>
-      </pre><p>En el ejemplo anterior, la primera instrucción quiere obtener el primer elemento del array. Para ello, se indica el nombre del array y entre corchetes la posición del elemento dentro del array. Como se ha comentado, las posiciones se empiezan a contar en el <code>0</code>, por lo que el primer elemento ocupa la posición <code>0</code> y se accede a el mediante <code>dias[0]</code>.</p><p>El valor <code>dias[5]</code> hace referencia al elemento que ocupa la sexta posición dentro del array <code>dias</code>. Como las posiciones empiezan a contarse en <code>0</code>, la posición <code>5</code> hace referencia al sexto elemento, en este caso, el valor <code>Sábado</code>.</p><br></div><!-- /.contenedor --></section></div><!-- JavaScrip y HTML --><div class="tabs-panel" id="cont-ppal-tabs-panel3"><!-- ********** JavaScrip y HTML --><section id="javascript-y-html" class=""><div class="contenedor"><h2>JavaScrip y HTML</h2><p>Para poder continuar en el aprendizaje de JavaScrip, es necesario que dejemos a un lado la consola de nuestro navegador y pasemos a usar un editor de código tal como Sublime Text, Atom, Braquet, etc... (el que mas nos guste).</p><p>Entonces debemos crear un <b>directorio</b> dentro del cual vamos a desarrollar nuestro proyecto, a este le podemos poner cualquier nombre, podría ser algo relacionado con el término JavaScrip, para que de una vez identifiquemos de que se trata.</p><p>Luego creamos un <b>archivo HTML</b> dentro de este <b>directorio</b>, para efectos de seguir cierto orden es prudente que este archivo se llame "index.html", ya que así al hacer doble click sobre él se abrirá de forma automática en nuestro navegador web.</p><div class="callout warning"><p><b class="color-primario">• Muy importante:</b> el código Javascript lo <em>interpreta nuestro navegador web</em>, por lo tanto necesitamos incluirlo en el HTML. Por que cuando en un navegador se escribe la URL de un <b>sitio web</b>, se hace una petición al servidor que aloja dicho <b>sitio web</b>, para que devuelva la información que debe mostrarse en el navegador web.</p><p><em>Esta información se devuelve, normalmente, en forma de un código HTML</em> que el navegador interpreta y muestra. Esto significa que si yo quiero que el navegador interprete un determinado código Javascript debo indicarle al navegador de alguna forma que existe un código Javascript que quiero que se ejecute y como el navegador lo que recibe es un código HTML… esta indicación tendrá que ir en el HTML.</p></div><p>Realmente no existe una norma de obligatorio cumplimiento a la hora de colocar nuestro código Javascript dentro del HTML; pero para efectos de este ejercio vamos a usar una de las más difundidas</p><p><b>• El JavaScript fuera del HTML</b>... El desarrollo de la programación web hizo necesario reutilizar el código javascript de forma sencilla, ya que este puede llegar a ser realmente enorme… además los programadores crean “librerías” para poder compartirlas con los compañeros, amigo o con el mundo en general.</p><p>Además, es preferible que <em>un documento HTML sólo tenga código HTML</em> y no mezclar Javascript, CSS, etc…</p><p>Así que, creamos un <b>archivo JavaScrip o .js</b> (a este también le podemos colocar el nombre que mejor nos convenga), y lo invocamos dentro del HTML usando la etiqueta <code>script</code>, incluyendo a esta etiqueta el atributo <code>src</code> (source) y dándole como valor una URL relativa al documento, para que cargue su contenido.</p><p><strong>Ejemplo:</strong></p><pre>
+      </pre>
+
+      <p>En el ejemplo anterior, la primera instrucción quiere obtener el primer elemento del array. Para ello, se indica el nombre del array y entre corchetes la posición del elemento dentro del array. Como se ha comentado, las posiciones se empiezan a contar en el <code>0</code>, por lo que el primer elemento ocupa la posición <code>0</code> y se accede a el mediante <code>dias[0]</code>.</p>
+
+      <p>El valor <code>dias[5]</code> hace referencia al elemento que ocupa la sexta posición dentro del array <code>dias</code>. Como las posiciones empiezan a contarse en <code>0</code>, la posición <code>5</code> hace referencia al sexto elemento, en este caso, el valor <code>Sábado</code>.</p>
+      <br>
+  
+    </div><!-- /.contenedor -->
+  </section>              
+            </div>
+            <!-- JavaScrip y HTML -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel3">
+                <!-- ********** JavaScrip y HTML -->
+  <section id="javascript-y-html" class="">
+    <div class="contenedor">
+      <h2>JavaScrip y HTML</h2>    
+      <p>Para poder continuar en el aprendizaje de JavaScrip, es necesario que dejemos a un lado la consola de nuestro navegador y pasemos a usar un editor de código tal como Sublime Text, Atom, Braquet, etc... (el que mas nos guste).</p>
+      <p>Entonces debemos crear un <b>directorio</b> dentro del cual vamos a desarrollar nuestro proyecto, a este le podemos poner cualquier nombre, podría ser algo relacionado con el término JavaScrip, para que de una vez identifiquemos de que se trata. </p>
+      <p>Luego creamos un <b>archivo HTML</b> dentro de este <b>directorio</b>, para efectos de seguir cierto orden es prudente que este archivo se llame "index.html", ya que así al hacer doble click sobre él se abrirá de forma automática en nuestro navegador web.</p>
+      
+      <div class="callout warning">
+        <p><b class="color-primario">• Muy importante:</b> el código Javascript lo <em>interpreta nuestro navegador web</em>, por lo tanto necesitamos incluirlo en el HTML. Por que cuando en un navegador se escribe la URL de un <b>sitio web</b>, se hace una petición al servidor que aloja dicho <b>sitio web</b>, para que devuelva la información que debe mostrarse en el navegador web.</p>
+        <p><em>Esta información se devuelve, normalmente, en forma de un código HTML</em> que el navegador interpreta y muestra. Esto significa que si yo quiero que el navegador interprete un determinado código Javascript debo indicarle al navegador de alguna forma que existe un código Javascript que quiero que se ejecute y como el navegador lo que recibe es un código HTML… esta indicación tendrá que ir en el HTML.</p>
+      </div>
+      <p>Realmente no existe una norma de obligatorio cumplimiento a la hora de colocar nuestro código Javascript dentro del HTML; pero para efectos de este ejercio vamos a usar una de las más difundidas</p>
+      <p><b>• El JavaScript fuera del HTML</b>... El desarrollo de la programación web hizo necesario reutilizar el código javascript de forma sencilla, ya que este puede llegar a ser realmente enorme… además los programadores crean “librerías” para poder compartirlas con los compañeros, amigo o con el mundo en general.</p>
+      <p>Además, es preferible que <em>un documento HTML sólo tenga código HTML</em> y no mezclar Javascript, CSS, etc…</p>
+      <p>Así que, creamos un <b>archivo JavaScrip o .js</b> (a este también le podemos colocar el nombre que mejor nos convenga), y lo invocamos dentro del HTML usando la etiqueta <code>script</code>, incluyendo a esta etiqueta el atributo <code>src</code> (source) y dándole como valor una URL relativa al documento, para que cargue su contenido.</p>
+      <p><strong>Ejemplo:</strong></p>
+      <pre>
       &lt;<span class="kw1">script</span> <span class="st0">type</span>="text/javascript" <span class="st0">src</span>="assets/js/app.js">&lt;/<span class="kw1">script</span>>
-      </pre><br><p>Luego dentro de este archivo <code>.js</code> podemos escrbir algunas líneas de código para evidenciar la interacción entre HTML y JavaScrip.</p><pre class="consola mt-2 mb-2">
+      </pre>
+      <br>
+      <p>Luego dentro de este archivo <code>.js</code> podemos escrbir algunas líneas de código para evidenciar la interacción entre HTML y JavaScrip.</p>
+      <pre class="consola mt-2 mb-2">
 
       <span class="nota">// Esto muestra un mensaje en la pantalla</span>
       <span class="funcion">alert</span>(<span class="cadena">'Bienvenidos a mi página'</span>);
 
       <span class="nota">// Esto muestra un mensaje en la consola</span>
       <span class="funcion">console.log</span>(<span class="cadena">'Este mensaje es solo para que se muestre en la "consola"'</span>)      
-      </pre><br><p class="callout primary">Existen otras formas válidas de uar JavaScrip en conjunto con nuestro HTML, un buen material donde puedes ver esto es el siguiente <a href="https://rolandocaldas.com/html5/como-incluir-javascript-en-html5" target="_blank">Cómo incluir Javascript en HTML5</a></p><br></div><!-- /.contenedor --></section></div><!-- Bucle While --><div class="tabs-panel" id="cont-ppal-tabs-panel4"><!-- ********** Bucle while --><section id="bucle-while" class=""><div class="contenedor"><h2>Bucle While</h2><p>La estructura <code>while</code> permite crear bucles que se ejecutan ninguna o más veces, dependiendo de la condición indicada. Su definición formal es:</p><pre>
+      </pre>
+      <br>
+      <p class="callout primary">Existen otras formas válidas de uar JavaScrip en conjunto con nuestro HTML, un buen material donde puedes ver esto es el siguiente <a href="https://rolandocaldas.com/html5/como-incluir-javascript-en-html5" target="_blank">Cómo incluir Javascript en HTML5</a></p> 
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Bucle While -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel4">
+                <!-- ********** Bucle while -->
+  <section id="bucle-while" class="">
+    <div class="contenedor">
+      <h2>Bucle While</h2>    
+      <p>La estructura <code>while</code> permite crear bucles que se ejecutan ninguna o más veces, dependiendo de la condición indicada. Su definición formal es:</p>
+
+      <pre>
       while(condicion) {
         ...
       }
-      </pre><p>El funcionamiento del bucle <code>while</code> se resume en: <em>"mientras se cumpla la condición indicada, repite indefinidamente las instrucciones incluidas dentro del bucle, es decir entre las llaves {}"</em>.</p><p>Si la condición no se cumple ni siquiera la primera vez, el bucle no se ejecuta. Si la condición se cumple, se ejecutan las instrucciones una vez y se vuelve a comprobar la condición. Si se sigue cumpliendo la condición, se vuelve a ejecutar el bucle y así se continúa hasta que la condición no se cumpla.</p><p>Evidentemente, las variables que controlan la condición deben modificarse dentro del propio bucle, ya que de otra forma, la condición se cumpliría siempre y el bucle <code>while</code> se repetiría indefinidamente.</p><p>El siguiente ejemplo utiliza el bucle <code>while</code> para sumar todos los números menores o iguales que otro número:</p><pre>
+      </pre>
+
+      <p>El funcionamiento del bucle <code>while</code> se resume en: <em>"mientras se cumpla la condición indicada, repite indefinidamente las instrucciones incluidas dentro del bucle, es decir entre las llaves {}"</em>.</p>
+
+      <p>Si la condición no se cumple ni siquiera la primera vez, el bucle no se ejecuta. Si la condición se cumple, se ejecutan las instrucciones una vez y se vuelve a comprobar la condición. Si se sigue cumpliendo la condición, se vuelve a ejecutar el bucle y así se continúa hasta que la condición no se cumpla.</p>
+
+      <p>Evidentemente, las variables que controlan la condición deben modificarse dentro del propio bucle, ya que de otra forma, la condición se cumpliría siempre y el bucle <code>while</code> se repetiría indefinidamente.</p>
+
+      <p>El siguiente ejemplo utiliza el bucle <code>while</code> para sumar todos los números menores o iguales que otro número:</p>
+
+      <pre>
       <span class="kw1">var</span> resultado <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>   <span class="co1">//variable acumuladora</span>
       <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">100</span><span class="sy0">;</span>    <span class="co1">//variable condicional</span>
       <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>           <span class="co1">//variable de control</span>
@@ -79,33 +489,109 @@
       <span class="br0">}</span>
       &nbsp;
       <span class="kw1">console.log</span><span class="br0">(</span><span class="st0">'Resultado del ejercicio '</span> <span class="sy0">+</span> resultado<span class="br0">)</span><span class="sy0">;</span>
-      </pre><p>El programa debe sumar todos los números menores o igual que otro dado. Por ejemplo si el número es <code>5</code>, se debe calcular: <code>1 + 2 + 3 + 4 + 5 = 15</code></p><p>Este tipo de condiciones <em>"suma números mientras sean menores o iguales que otro número dado"</em>) se resuelven muy fácilmente con los bucles tipo <code>while</code>.</p><p>En el ejemplo anterior, mientras se cumpla la condición, es decir, mientras que la variable <code>i</code> sea menor o igual que la variable <code>numero</code>, se ejecutan las instrucciones del bucle.</p><p>Dentro del bucle se suma el valor de la variable <code>i</code> al resultado total (variable <code>resultado</code>) y se actualiza el valor de la variable <code>i</code>, que es la que controla la condición del bucle. Si no se actualiza el valor de la variable <code>i</code>, la ejecución del bucle continua infinitamente o hasta que el navegador permita al usuario detener el script.</p><br></div><!-- /.contenedor --></section></div><!-- Bucle For --><div class="tabs-panel" id="cont-ppal-tabs-panel5"><!-- ********** Bucle for --><section id="bucle-for" class=""><div class="contenedor"><h2>Bucle For</h2><p>La estructura <code>for</code> permite realizar repeticiones (bucles) de una forma muy sencilla. Su definición formal es:</p><pre>
+      </pre>
+      
+      <p>El programa debe sumar todos los números menores o igual que otro dado. Por ejemplo si el número es <code>5</code>, se debe calcular: <code>1 + 2 + 3 + 4 + 5 = 15</code></p>
+
+      <p>Este tipo de condiciones  <em>"suma números mientras sean menores o iguales que otro número dado"</em>) se resuelven muy fácilmente con los bucles tipo <code>while</code>.</p>
+
+      <p>En el ejemplo anterior, mientras se cumpla la condición, es decir, mientras que la variable <code>i</code> sea menor o igual que la variable <code>numero</code>, se ejecutan las instrucciones del bucle.</p>
+
+      <p>Dentro del bucle se suma el valor de la variable <code>i</code> al resultado total (variable <code>resultado</code>) y se actualiza el valor de la variable <code>i</code>, que es la que controla la condición del bucle. Si no se actualiza el valor de la variable <code>i</code>, la ejecución del bucle continua infinitamente o hasta que el navegador permita al usuario detener el script.</p>
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Bucle For -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel5">
+                <!-- ********** Bucle for -->
+  <section id="bucle-for" class="">
+    <div class="contenedor">
+      <h2>Bucle For</h2>    
+      <p>La estructura <code>for</code> permite realizar repeticiones (bucles) de una forma muy sencilla. Su definición formal es:</p>
+      <pre>
       <span class="kw1">for</span><span class="br0">(</span>inicializacion<span class="sy0">;</span> condicion<span class="sy0">;</span> actualizacion<span class="br0">)</span> <span class="br0">{</span>
         ...
-      <span class="br0">}</span></pre><p>La idea del funcionamiento de un bucle <code>for</code> es la siguiente: <em>"mientras la condición indicada se siga cumpliendo, repite la ejecución de las instrucciones definidas dentro del for. Además, después de cada repetición, actualiza el valor de las variables que se utilizan en la condición"</em>.</p><ul><li>La <strong>inicialización</strong> es la zona en la que se establece los valores iniciales de las variables que controlan la repetición.</li><li>La <strong>condición</strong> es el único elemento que decide si continua o se detiene la repetición.</li><li>La <strong>actualización</strong> es el nuevo valor que se asigna después de cada repetición a las variables que controlan la repetición.</li></ul><pre>
+      <span class="br0">}</span></pre>
+
+      <p>La idea del funcionamiento de un bucle <code>for</code> es la siguiente: <em>"mientras la condición indicada se siga cumpliendo, repite la ejecución de las instrucciones definidas dentro del for. Además, después de cada repetición, actualiza el valor de las variables que se utilizan en la condición"</em>.</p>
+
+      <ul>
+        <li>La <strong>inicialización</strong> es la zona en la que se establece los valores iniciales de las variables que controlan la repetición.</li>
+        <li>La <strong>condición</strong> es el único elemento que decide si continua o se detiene la repetición.</li>
+        <li>La <strong>actualización</strong> es el nuevo valor que se asigna después de cada repetición a las variables que controlan la repetición.</li>
+      </ul>
+
+      <pre>
       <span class="kw1">var</span> mensaje <span class="sy0">=</span> <span class="st0">"Hola, estoy dentro de un bucle... "</span><span class="sy0">;</span>
       &nbsp;
       <span class="kw1">for</span><span class="br0">(</span><span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="nu0">5</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>       
       <span class="br0">}</span>
 
       <span class="kw1">console.log</span><span class="br0">(</span><span class="st0">'Resultado del ejercicio 1 '</span> <span class="sy0">+</span> mensaje <span class="sy0">+</span> i <span class="br0">)</span><span class="sy0">;</span>
-      </pre><p>La parte de la <strong>inicialización</strong> del bucle consiste en:</p><pre class="lead">
+      </pre>
+
+      <p>La parte de la <strong>inicialización</strong> del bucle consiste en:</p>
+
+      <pre class="lead">
       <span class="kw1">var</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
-      </pre><p>Primero se crea la variable <code>i</code> y se le asigna el valor de <code>0</code>. Esto solamente se toma antes de comenzar a ejecutar el bucle. Las siguientes repeticiones no tienen en cuenta esta parte de inicialización.</p><p>La zona de <strong>condición</strong> del bucle es:</p><pre class="lead">
+      </pre>
+
+      <p>Primero se crea la variable <code>i</code> y se le asigna el valor de <code>0</code>. Esto solamente se toma  antes de comenzar a ejecutar el bucle. Las siguientes repeticiones no tienen en cuenta esta parte de inicialización.</p>
+
+      <p>La zona de <strong>condición</strong> del bucle es:</p>
+
+      <pre class="lead">
       i <span class="sy0">&lt;</span> <span class="nu0">5</span>
-      </pre><p>Los bucles se siguen ejecutando mientras se cumplan las condiciones y se dejan de ejecutar después de comprobar que la condición no se cumple. <b>En este caso, mientras la variable <code>i</code> valga menos de <code>5</code> el bucle se ejecuta.</b></p><p>Como la variable <code>i</code> se ha inicializado a un valor de <code>0</code> y la condición para salir del bucle es que <code>i</code> sea <b>mayor</b> que <code>5</code>, si no se modifica el valor de <code>i</code> de alguna forma, el bucle se repetiría indefinidamente.</p><p>Por ese motivo, es imprescindible indicar la zona de actualización, en la que se modifica el valor de las variables que controlan el bucle:</p><pre class="lead">
+      </pre>
+
+      <p>Los bucles se siguen ejecutando mientras se cumplan las condiciones y se dejan de ejecutar después de comprobar que la condición no se cumple. <b>En este caso, mientras la variable <code>i</code> valga menos de <code>5</code> el bucle se ejecuta.</b></p>
+
+      <p>Como la variable <code>i</code> se ha inicializado a un valor de <code>0</code> y la condición para salir del bucle es que <code>i</code> sea <b>mayor</b> que <code>5</code>, si no se modifica el valor de <code>i</code> de alguna forma, el bucle se repetiría indefinidamente.</p>
+
+      <p>Por ese motivo, es imprescindible indicar la zona de actualización, en la que se modifica el valor de las variables que controlan el bucle:</p>
+
+      <pre class="lead">
       i<span class="sy0">++</span>
-      </pre><p><b>En este caso, el valor de la variable <code>i</code> se incrementa en una unidad después de cada repetición... </b>La zona de actualización se ejecuta después de la ejecución de las instrucciones que incluye el <code>for</code>.</p><p>Así, durante la ejecución de la quinta repetición el valor de <code>i</code> será <code>4</code>. Después de la quinta ejecución, se actualiza el valor de <code>i</code>, <b>que ahora valdrá <code>5</code></b>. Como la condición es que <code>i</code> sea menor que <code>5</code>, la condición ya no se cumple y las instrucciones del <code>for</code> no se ejecutan una sexta vez.</p><div class="callout"><p>Normalmente, la variable que controla los bucles <code>for</code> se llama <code>i</code>, ya que recuerda a la palabra índice y su nombre tan corto ahorra mucho tiempo y espacio.</p></div><p>En el siguiente ejemplo se muestran los días de la semana contenidos en un array de forma muy sencilla utilizando la estructura <code>for</code>:</p><pre>
+      </pre>
+
+      <p><b>En este caso, el valor de la variable <code>i</code> se incrementa en una unidad después de cada repetición... </b> La zona de actualización se ejecuta después de la ejecución de las instrucciones que incluye el <code>for</code>.</p>
+
+      <p>Así, durante la ejecución de la quinta repetición el valor de <code>i</code> será <code>4</code>. Después de la quinta ejecución, se actualiza el valor de <code>i</code>, <b>que ahora valdrá <code>5</code></b>. Como la condición es que <code>i</code> sea menor que <code>5</code>, la condición ya no se cumple y las instrucciones del <code>for</code> no se ejecutan una sexta vez.</p>
+
+      <div class="callout">
+        <p>Normalmente, la variable que controla los bucles <code>for</code> se llama <code>i</code>, ya que recuerda a la palabra índice y su nombre tan corto ahorra mucho tiempo y espacio.</p>
+      </div>
+
+      <p>En el siguiente ejemplo se muestran los días de la semana contenidos en un array de forma muy sencilla utilizando la estructura <code>for</code>:</p>
+
+      <pre>
       <span class="kw1">var</span> dias <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Lunes"</span><span class="sy0">,</span> <span class="st0">"Martes"</span><span class="sy0">,</span> <span class="st0">"Miércoles"</span><span class="sy0">,</span> <span class="st0">"Jueves"</span><span class="sy0">,</span> <span class="st0">"Viernes"</span><span class="sy0">,</span> 
       <span class="st0">"Sábado"</span><span class="sy0">,</span> <span class="st0">"Domingo"</span><span class="br0">]</span><span class="sy0">;</span>
       &nbsp;
       <span class="kw1">for</span><span class="br0">(</span><span class="kw1">var</span> i<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> i<span class="sy0">&lt;</span><span class="nu0">7</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
         <span class="kw1">console.log</span><span class="br0">(</span>dias<span class="br0">[</span>i<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
-      <span class="br0">}</span></pre><br></div><!-- /.contenedor --></section></div><!-- Bucle do while --><div class="tabs-panel" id="cont-ppal-tabs-panel6"><!-- ********** Bucle do while --><section id="bucle-do-while" class=""><div class="contenedor"><h2>Bucle do while</h2>El bucle de tipo <code>do...while</code> es muy similar al bucle <code>while</code>, salvo que en este caso <strong>siempre</strong> se ejecutan las instrucciones del bucle al menos por una vez. Su definición formal es:<p></p><pre>
+      <span class="br0">}</span></pre>
+
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Bucle do while -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel6">
+                <!-- ********** Bucle do while -->
+  <section id="bucle-do-while" class="">
+    <div class="contenedor">
+      <h2>Bucle do while</h2>    
+      El bucle de tipo <code>do...while</code> es muy similar al bucle <code>while</code>, salvo que en este caso <strong>siempre</strong> se ejecutan las instrucciones del bucle al menos por una vez.  Su definición formal es:<p></p>
+      <pre>
       <span class="kw1">do</span> <span class="br0">{</span>
         ...
       <span class="br0">}</span> while<span class="br0">(</span>condicion<span class="br0">)</span><span class="sy0">;</span>
-      </pre><p><b>¿Por qué ocurre esto?</b>... la condición se comprueba después de cada repetición, la primera vez siempre se ejecutan las instrucciones del bucle. Es importante no olvidar que después del <code>while()</code> se debe añadir el carácter <code>;</code> (al contrario de lo que sucede con el bucle <code>while</code> simple).</p><p>Utilizando este bucle se puede calcular fácilmente el factorial de un número:</p><pre>
+      </pre>
+      <p><b>¿Por qué ocurre esto?</b>... la condición se comprueba después de cada repetición, la primera vez siempre se ejecutan las instrucciones del bucle. Es importante no olvidar que después del <code>while()</code> se debe añadir el carácter <code>;</code> (al contrario de lo que sucede con el bucle <code>while</code> simple).</p>
+      <p>Utilizando este bucle se puede calcular fácilmente el factorial de un número:</p>
+      <pre>
       <span class="kw1">var</span> resultado <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
       <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       &nbsp;
@@ -115,14 +601,33 @@
       <span class="br0">}</span> while<span class="br0">(</span>numero <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
       &nbsp;
       alert<span class="br0">(</span>resultado<span class="br0">)</span><span class="sy0">;</span>
-      </pre><p>En el código anterior, el <code>resultado</code> se multiplica en cada repetición por el valor de la variable <code>numero</code>.</p><p>Además, en cada repetición se decrementa el valor de la variable <code>numero</code>. La condición del bucle <code>do...while</code> es que el valor de <code>numero</code> sea mayor que <code>0</code>, ya que el factorial de un número multiplica todos los números menores o iguales que él mismo, pero hasta el número 1 (el factorial de 5 por ejemplo es <code>5 x 4 x 3 x 2 x 1 = 120</code>).</p><p>Como en cada repetición se decrementa el valor de la variable <code>numero</code> y la condición es que <code>numero</code> sea mayor que cero, en la repetición en la que <code>numero</code> valga <code>0</code>, la condición ya no se cumple y el programa se sale del bucle <code>do...while</code>.</p><br></div><!-- /.contenedor --></section></div><!-- Estructura if...else --><div class="tabs-panel" id="cont-ppal-tabs-panel7"><!-- ********** Estructura if...else --><section id="if-else" class=""><div class="contenedor"><h2>Estructura if...else</h2><p>Hay ocasiones, en que las decisiones no son del tipo <em>"si se cumple la condición, hazlo; si no se cumple, no hagas nada"</em>, sino del tipo <em><b>"si se cumple esta condición, hazlo; si no se cumple, haz esto otro"</b></em>.</p><p>Para este 2º tipo de decisiones, existe una variante de la estructura <code>if</code> llamada <code>if...else</code>. Su definición formal es la siguiente:</p><pre>
+      </pre>
+      <p>En el código anterior, el <code>resultado</code> se multiplica en cada repetición por el valor de la variable <code>numero</code>.</p>
+      <p>Además, en cada repetición se decrementa el valor de la variable <code>numero</code>. La condición del bucle <code>do...while</code> es que el valor de <code>numero</code> sea mayor que <code>0</code>, ya que el factorial de un número multiplica todos los números menores o iguales que él mismo, pero hasta el número 1 (el factorial de 5 por ejemplo es <code>5 x 4 x 3 x 2 x 1 = 120</code>).</p>
+      <p>Como en cada repetición se decrementa el valor de la variable <code>numero</code> y la condición es que <code>numero</code> sea mayor que cero, en la repetición en la que <code>numero</code> valga <code>0</code>, la condición ya no se cumple y el programa se sale del bucle <code>do...while</code>.</p>
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Estructura if...else -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel7">
+                <!-- ********** Estructura if...else -->
+  <section id="if-else" class="">
+    <div class="contenedor">
+      <h2>Estructura if...else</h2>
+      <p>Hay ocasiones, en que las decisiones no son del tipo <em>"si se cumple la condición, hazlo; si no se cumple, no hagas nada"</em>,  sino del tipo <em><b>"si se cumple esta condición, hazlo; si no se cumple, haz esto otro"</b></em>.</p>
+      <p>Para este 2º tipo de decisiones, existe una variante de la estructura <code>if</code> llamada <code>if...else</code>. Su definición formal es la siguiente:</p>
+      <pre>
       <span class="kw1">if</span><span class="br0">(</span>condicion<span class="br0">)</span> <span class="br0">{</span>
         ...Se ejecuta esto si se cumple...
       <span class="br0">}</span>
       <span class="kw1">else</span> <span class="br0">{</span>
         ...Sino se ejecuta esto otro...
       <span class="br0">}</span>
-      </pre><p>Si la condición se cumple (es decir, si su valor es <code>true</code>) se ejecutan todas las instrucciones que se encuentran dentro del <code>if()</code>. Si la condición no se cumple (es decir, si su valor es <code>false</code>) se ejecutan todas las instrucciones contenidas en <code>else { }</code>.</p><p>Ejemplo:</p><pre>
+      </pre>
+      <p>Si la condición se cumple (es decir, si su valor es <code>true</code>) se ejecutan todas las instrucciones que se encuentran dentro del <code>if()</code>. Si la condición no se cumple (es decir, si su valor es <code>false</code>) se ejecutan todas las instrucciones contenidas en <code>else { }</code>.</p>
+      <p>Ejemplo:</p>
+      <pre>
       <span class="kw1">var</span> edad <span class="sy0">=</span> <span class="nu0">18</span><span class="sy0">;</span>
       &nbsp;
       <span class="kw1">if</span><span class="br0">(</span>edad <span class="sy0">&gt;=</span> <span class="nu0">18</span><span class="br0">)</span> <span class="br0">{</span>
@@ -131,7 +636,12 @@
       <span class="kw1">else</span> <span class="br0">{</span>
         alert<span class="br0">(</span><span class="st0">"Todavía eres menor de edad"</span><span class="br0">)</span><span class="sy0">;</span>
       <span class="br0">}</span>
-      </pre><p>Si el valor de la variable <code>edad</code> es mayor o igual que el valor numérico <code>18</code>, <code>if()</code> se cumple, se ejecutan sus instrucciones y se muestra el mensaje <code>"Eres mayor de edad"</code>.</p><p>Por el contrario, cuando el valor de la variable <code>edad</code> no es igual o mayor a <code>18</code>, la condición <code>if()</code> no se cumple, por lo que automáticamente se ejecutan todas las instrucciones del bloque <code>else { }</code>. En este caso, se mostraría el mensaje <code>"Todavía eres menor de edad"</code>.</p><br><p><b>El siguiente ejemplo compara variables de tipo cadena de texto:</b></p><pre>
+      </pre>
+      <p>Si el valor de la variable <code>edad</code> es mayor o igual que el valor numérico <code>18</code>, <code>if()</code> se cumple, se ejecutan sus instrucciones y se muestra el mensaje <code>"Eres mayor de edad"</code>.</p>
+      <p>Por el contrario, cuando el valor de la variable <code>edad</code> no es igual o mayor a <code>18</code>, la condición <code>if()</code> no se cumple, por lo que automáticamente se ejecutan todas las instrucciones del bloque <code>else { }</code>. En este caso, se mostraría el mensaje <code>"Todavía eres menor de edad"</code>.</p>
+      <br>
+      <p><b>El siguiente ejemplo compara variables de tipo cadena de texto:</b></p>
+      <pre>
       <span class="kw1">var</span> nombre <span class="sy0">=</span> <span class="st0">""</span><span class="sy0">;</span>
       &nbsp;
       <span class="kw1">if</span><span class="br0">(</span>nombre <span class="sy0">==</span> <span class="st0">""</span><span class="br0">)</span> <span class="br0">{</span>
@@ -140,7 +650,14 @@
       <span class="kw1">else</span> <span class="br0">{</span>
         alert<span class="br0">(</span><span class="st0">"Hemos guardado tu nombre"</span><span class="br0">)</span><span class="sy0">;</span>
       <span class="br0">}</span>
-      </pre><button id="ejemplo-if2" class="button primary">Ver resultado del ejemplo</button><br><p class="mt-4">La condición <code>if()</code> anterior se construye mediante el operador <code>==</code>, que es el que se emplea para comparar dos valores (no confundir con el operador <code>=</code> que se utiliza para asignar valores).</p><p>En el ejemplo anterior, si la cadena de texto almacenada en la variable <code>nombre</code> es vacía (es decir, es igual a <code>""</code>) se muestra el mensaje definido en el <code>if()</code>. En otro caso, se muestra el mensaje definido en el bloque <code>else { }</code>.</p><br><p><b>La estructura <code>if...else</code> se puede encadenar para realizar varias comprobaciones seguidas:</b></p><pre>
+      </pre>
+      <button id="ejemplo-if2" class="button primary">Ver resultado del ejemplo</button>
+      <br>
+      <p class="mt-4">La condición <code>if()</code> anterior se construye mediante el operador <code>==</code>, que es el que se emplea para comparar dos valores (no confundir con el operador <code>=</code> que se utiliza para asignar valores).</p>
+      <p>En el ejemplo anterior, si la cadena de texto almacenada en la variable <code>nombre</code> es vacía (es decir, es igual a <code>""</code>) se muestra el mensaje definido en el <code>if()</code>. En otro caso, se muestra el mensaje definido en el bloque <code>else { }</code>.</p>
+      <br>
+      <p><b>La estructura <code>if...else</code> se puede encadenar para realizar varias comprobaciones seguidas:</b></p>
+      <pre>
       <span class="kw1">if</span><span class="br0">(</span>edad <span class="sy0">&lt;</span> <span class="nu0">12</span><span class="br0">)</span> <span class="br0">{</span>
         alert<span class="br0">(</span><span class="st0">"Todavía eres muy pequeño"</span><span class="br0">)</span><span class="sy0">;</span>
       <span class="br0">}</span>
@@ -153,7 +670,22 @@
       <span class="kw1">else</span> <span class="br0">{</span>
         alert<span class="br0">(</span><span class="st0">"Piensa en cuidarte un poco más"</span><span class="br0">)</span><span class="sy0">;</span>
       <span class="br0">}</span>
-      </pre><div class="callout"><p>No es obligatorio que la combinación de estructuras <code>if...else</code> acabe con la instrucción <code>else</code>, ya que puede terminar con una instrucción de tipo <code>else if()</code>.</p></div><br></div><!-- /.contenedor --></section></div><!-- Estructura switch --><div class="tabs-panel" id="cont-ppal-tabs-panel8"><!-- ********** Estructura switch --><section id="switch" class=""><div class="contenedor"><h2>Estructura switch</h2><p>Cómo ya sabemos la estructura <code>if...else</code> se puede usar para realizar comprobaciones múltiples y tomar decisiones complejas. Sin embargo, si todas las condiciones dependen siempre de la misma variable, el código JavaScript resultante es demasiado redundante:</p><pre>
+      </pre>
+      <div class="callout">
+        <p>No es obligatorio que la combinación de estructuras <code>if...else</code> acabe con la instrucción <code>else</code>, ya que puede terminar con una instrucción de tipo <code>else if()</code>.</p>
+      </div>
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Estructura switch -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel8">
+                <!-- ********** Estructura switch -->
+  <section id="switch" class="">
+    <div class="contenedor">
+      <h2>Estructura switch</h2>
+      <p>Cómo ya sabemos la estructura <code>if...else</code> se puede usar para realizar comprobaciones múltiples y tomar decisiones complejas. Sin embargo, si todas las condiciones dependen siempre de la misma variable, el código JavaScript resultante es demasiado redundante:</p>
+      <pre>
       <span class="kw1">if</span><span class="br0">(</span>numero <span class="sy0">==</span> <span class="nu0">5</span><span class="br0">)</span> <span class="br0">{</span>
           ...
         <span class="br0">}</span>
@@ -166,7 +698,12 @@
         <span class="kw1">else</span> <span class="br0">{</span>
           ...
       <span class="br0">}</span>
-      </pre><p>Para estos casos, la estructura <code>switch</code> es más eficiente, ya que está especialmente diseñada para manejar de forma sencilla múltiples condiciones sobre la misma variable. Su definición formal puede parecer compleja, aunque su uso es muy sencillo.</p><p>La estructura <code>switch</code> se define mediante la palabra reservada <code>switch</code> seguida, entre paréntesis, del nombre de la variable que se va a utilizar en las comparaciones. Como es habitual, las instrucciones que forman parte del <code>switch</code> se encierran entre las llaves <code>{</code> y <code>}</code>.</p><p>Dentro del <code>switch</code> se definen todas las comparaciones que se quieren realizar sobre el valor de la variable. Cada comparación se indica mediante la palabra reservada <code>case</code> seguida del valor con el que se realiza la comparación. Si el valor de la variable utilizada por <code>switch</code> coincide con el valor indicado por <code>case</code>, se ejecutan las instrucciones definidas dentro de ese <code>case</code>.</p><p>Normalmente, después de las instrucciones de cada <code>case</code> se incluye la sentencia <code>break</code> para terminar la ejecución del <code>switch</code>, aunque no es obligatorio. Las comparaciones se realizan por orden, desde el primer <code>case</code> hasta el último, por lo que es muy importante el orden en el que se definen los <code>case</code>.</p><pre>
+      </pre>
+      <p>Para estos casos, la estructura <code>switch</code> es más eficiente, ya que está especialmente diseñada para manejar de forma sencilla múltiples condiciones sobre la misma variable. Su definición formal puede parecer compleja, aunque su uso es muy sencillo.</p>
+      <p>La estructura <code>switch</code> se define mediante la palabra reservada <code>switch</code> seguida, entre paréntesis, del nombre de la variable que se va a utilizar en las comparaciones. Como es habitual, las instrucciones que forman parte del <code>switch</code> se encierran entre las llaves <code>{</code> y <code>}</code>.</p>
+      <p>Dentro del <code>switch</code> se definen todas las comparaciones que se quieren realizar sobre el valor de la variable. Cada comparación se indica mediante la palabra reservada <code>case</code> seguida del valor con el que se realiza la comparación. Si el valor de la variable utilizada por <code>switch</code> coincide con el valor indicado por <code>case</code>, se ejecutan las instrucciones definidas dentro de ese <code>case</code>.</p>
+      <p>Normalmente, después de las instrucciones de cada <code>case</code> se incluye la sentencia <code>break</code> para terminar la ejecución del <code>switch</code>, aunque no es obligatorio. Las comparaciones se realizan por orden, desde el primer <code>case</code> hasta el último, por lo que es muy importante el orden en el que se definen los <code>case</code>.</p>         
+      <pre>
       <span class="kw1">switch</span><span class="br0">(</span>variable<span class="br0">)</span> <span class="br0">{</span>
         <span class="kw1">case</span> valor_1<span class="sy0">:</span>
           ...
@@ -182,7 +719,9 @@
           ...
         <span class="kw1">break</span><span class="sy0">;</span>
       <span class="br0">}</span>
-      </pre><p>El anterior ejemplo realizado con <code>if...else</code> se puede rehacer mediante <code>switch</code>:</p><pre>
+      </pre>
+      <p>El anterior ejemplo realizado con <code>if...else</code> se puede rehacer mediante <code>switch</code>:</p>
+      <pre>
       <span class="kw1">switch</span><span class="br0">(</span>numero<span class="br0">)</span> <span class="br0">{</span>
         <span class="kw1">case</span> <span class="nu0">5</span><span class="sy0">:</span>
           ...
@@ -197,12 +736,45 @@
           ...
         <span class="kw1">break</span><span class="sy0">;</span>
       <span class="br0">}</span>
-      </pre><p>¿Qué sucede si ningún valor de la variable del <code>switch</code> coincide con los valores definidos en los <code>case</code>? En este caso, se utiliza el valor <code>default</code> para indicar las instrucciones que se ejecutan en el caso en el que ningún <code>case</code> se cumpla para la variable indicada.</p><p>Aunque <code>default</code> es opcional, las estructuras <code>switch</code> suelen incluirlo para definir al menos un valor por defecto para alguna variable o para mostrar algún mensaje por pantalla.</p><br></div><!-- /.contenedor --></section></div><!-- Operadores --><div class="tabs-panel" id="cont-ppal-tabs-panel9"><!-- ********** Operadores --><section id="operadores" class=""><div class="contenedor"><h2>Operadores</h2><p>Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.</p><p>Estos son los tipos de operadores que usaremos:</p><br><div class="stacked-for-small button-group"><a class="button hollow primary" href="#asignacion"><big>=</big><br>Asignación</a> <a class="button hollow primary" href="#incremento_y_decremento"><big>++ --</big><br>Incremento y decremento</a> <a class="button hollow primary" href="#negacion"><big>!</big><br>Negación</a> <a class="button hollow primary" href="#and"><big>&amp;&amp;</big><br>AND</a> <a class="button hollow primary" href="#or"><big>||</big><br>OR</a> <a class="button hollow primary" href="#matematicos"><big>+ - / *</big><br>Matemáticos</a> <a class="button hollow primary" href="#relacionales"><big>&lt;/&gt;</big><br>Relacionales</a></div><br><h3 id="asignacion">Asignación</h3><p>El operador de asignación es el más utilizado y el más sencillo. Se utiliza para guardar un valor específico en una variable. El símbolo es <code>=</code> (no confundir con el operador <code>==</code> que se verá más adelante):</p><pre class="lead">
+      </pre>
+      <p>¿Qué sucede si ningún valor de la variable del <code>switch</code> coincide con los valores definidos en los <code>case</code>? En este caso, se utiliza el valor <code>default</code> para indicar las instrucciones que se ejecutan en el caso en el que ningún <code>case</code> se cumpla para la variable indicada.</p>
+      <p>Aunque <code>default</code> es opcional, las estructuras <code>switch</code> suelen incluirlo para definir al menos un valor por defecto para alguna variable o para mostrar algún mensaje por pantalla.</p>      
+      <br>      
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Operadores -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel9">
+                <!-- ********** Operadores -->
+  <section id="operadores" class="">
+    <div class="contenedor">
+      <h2>Operadores</h2>
+      <p>Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.</p>
+      <p>Estos son los tipos de operadores que usaremos:</p>
+      <br>
+      <div class="stacked-for-small button-group">
+        <a class="button hollow primary" href="#asignacion"><big>=</big><br>Asignación</a>
+        <a class="button hollow primary" href="#incremento_y_decremento"><big>++  --</big><br>Incremento y decremento</a>
+        <a class="button hollow primary" href="#negacion"><big>!</big><br>Negación</a>
+        <a class="button hollow primary" href="#and"><big>&amp;&amp;</big><br>AND</a>
+        <a class="button hollow primary" href="#or"><big>||</big><br>OR</a>
+        <a class="button hollow primary" href="#matematicos"><big>+ - / *</big><br>Matemáticos</a>
+        <a class="button hollow primary" href="#relacionales"><big>&lt;/&gt;</big><br>Relacionales</a>
+      </div>
+      <br>
+
+      <h3 id="asignacion">Asignación</h3>
+      <p>El operador de asignación es el más utilizado y el más sencillo. Se utiliza para guardar un valor específico en una variable. El símbolo es <code>=</code> (no confundir con el operador <code>==</code> que se verá más adelante):</p>
+      <pre class="lead">
       <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
-      </pre><p>A la izquierda del operador, siempre debe indicarse el nombre de una variable. A la derecha del operador, se indican variables, valores, condiciones lógicas, etc:</p><pre class="lead">
+      </pre>
+      <p>A la izquierda del operador, siempre debe indicarse el nombre de una variable. A la derecha del operador, se indican variables, valores, condiciones lógicas, etc:</p>
+      <pre class="lead">
       <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
       <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">4</span><span class="sy0">;</span>
-      </pre><p>A continuación vemos un <b>Error</b>, la asignación siempre se realiza a una variable, por lo que en la izquierda no se puede indicar un número.</p><pre class="lead">
+      </pre>      
+      <p>A continuación vemos un <b>Error</b>, la asignación siempre se realiza a una variable, por lo que en la izquierda no se puede indicar un número.</p>
+      <pre class="lead">
       <span class="nu0">5</span> <span class="sy0">=</span> numero1<span class="sy0">;</span>
       &nbsp;
       <span class="co1">// Ahora, la variable numero1 vale 5</span>
@@ -211,27 +783,44 @@
       <span class="co1">// Ahora, la variable numero1 vale 4</span>
       <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">4</span><span class="sy0">;</span>
       &nbsp;
-      numero1 <span class="sy0">=</span> numero2<span class="sy0">;</span></pre><br><h3 id="incremento_y_decremento">Incremento y decremento</h3><p>Estos 2 operadores son válidos únicamente para las variables numéricas y se utilizan para incrementar o decrementar en 1 unidad el valor de la misma.</p><p><b>Ejemplo:</b></p><pre class="lead">
+      numero1 <span class="sy0">=</span> numero2<span class="sy0">;</span></pre>
+      <br>
+
+      <h3 id="incremento_y_decremento">Incremento y decremento</h3>
+      <p>Estos 2 operadores son válidos únicamente para las variables numéricas y se utilizan para incrementar o decrementar en 1 unidad el valor de la misma.</p>
+      <p><b>Ejemplo:</b></p>
+      <pre class="lead">
       <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       <span class="sy0">++</span>numero<span class="sy0">;</span>
       <span class="co1">// numero = 6</span>
-      </pre><p>El operador de incremento se indica mediante el prefijo <code>++</code> en el nombre de la variable. El resultado es que el valor de esa variable se incrementa en una unidad.</p><p>Por tanto, el anterior ejemplo es equivalente a:</p><pre><b>
+      </pre>
+      <p>El operador de incremento se indica mediante el prefijo <code>++</code> en el nombre de la variable. El resultado es que el valor de esa variable se incrementa en una unidad.</p>
+      <p>Por tanto, el anterior ejemplo es equivalente a:</p>
+      <pre><b>
       <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       numero <span class="sy0">=</span> numero <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span>
       <span class="co1">// numero = 6</span>
-      </b></pre><p>De forma equivalente, el operador decremento (indicado como un prefijo <code>--</code> en el nombre de la variable) se utiliza para decrementar el valor de la variable:</p><pre class="lead">
+      </b></pre>
+      <p>De forma equivalente, el operador decremento (indicado como un prefijo <code>--</code> en el nombre de la variable) se utiliza para decrementar el valor de la variable:</p>
+      <pre class="lead">
       <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       <span class="sy0">--</span>numero<span class="sy0">;</span>
       alert<span class="br0">(</span>numero<span class="br0">)</span><span class="sy0">;</span>  <span class="co1">// numero = 4</span>
-      </pre><p>El anterior ejemplo es equivalente a:</p><pre><b>
+      </pre>
+      <p>El anterior ejemplo es equivalente a:</p>
+      <pre><b>
       <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       numero <span class="sy0">=</span> numero <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span>
       alert<span class="br0">(</span>numero<span class="br0">)</span><span class="sy0">;</span>  <span class="co1">// numero = 4</span>
-      </b></pre><p>Los operadores de incremento y decremento no solamente se pueden indicar como prefijo del nombre de la variable, sino que también es posible utilizarlos como sufijo. En este caso, su comportamiento es similar en apariencia; pero muy diferente en el fondo.</p><pre class=""><b>
+      </b></pre>
+      <p>Los operadores de incremento y decremento no solamente se pueden indicar como prefijo del nombre de la variable, sino que también es posible utilizarlos como sufijo. En este caso, su comportamiento es similar en apariencia; pero muy diferente en el fondo.</p>
+      <pre class=""><b>
       <span class="kw1">var</span> numero <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       numero<span class="sy0">++;</span>
       <span class="co1">// numero = 6</span>
-      </b></pre><p>El resultado de ejecutar el script anterior es el mismo que cuando se utiliza el operador <code>++numero</code>, por lo que puede parecer que es equivalente indicar el operador <code>++</code> delante o detrás del identificador de la variable. Sin embargo, el siguiente ejemplo muestra sus diferencias:</p><pre class="lead">
+      </b></pre>
+      <p>El resultado de ejecutar el script anterior es el mismo que cuando se utiliza el operador <code>++numero</code>, por lo que puede parecer que es equivalente indicar el operador <code>++</code> delante o detrás del identificador de la variable. Sin embargo, el siguiente ejemplo muestra sus diferencias:</p>
+      <pre class="lead">
       <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>
       numero3 <span class="sy0">=</span> numero1<span class="sy0">++</span> <span class="sy0">+</span> numero2<span class="sy0">;</span>
@@ -241,11 +830,44 @@
       <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>
       numero3 <span class="sy0">=</span> <span class="sy0">++</span>numero1 <span class="sy0">+</span> numero2<span class="sy0">;</span>
       <span class="co1">// numero3 = 8, numero1 = 6</span>
-      </pre><p class="callout">Si el operador <code>++</code> se indica como prefijo de la variable, su valor se incrementa <strong>antes</strong> de realizar cualquier otra operación. Si el operador <code>++</code> se indica como sufijo del identificador de la variable, su valor se incrementa <strong>después</strong> de ejecutar la sentencia en la que aparece.</p><p>Por tanto en <code>numero3 = numero1++ + numero2;</code>, el valor de <code>numero1</code> se incrementa después de realizar la operación (primero se suma y <code>numero3</code> vale <code>7</code>, después se incrementa el valor de <code>numero1</code> y vale <code>6</code>).</p><p>Mientras, en la instrucción <code>numero3 = ++numero1 + numero2;</code>, en primer lugar se incrementa el valor de <code>numero1</code> y después se realiza la suma (primero se incrementa <code>numero1</code> y vale <code>6</code>, después se realiza la suma y <code>numero3</code> vale <code>8</code>).</p><br><h3 id="negacion">Negación</h3><p>Uno de los operadores lógicos (booleanos) más utilizados. Obtiene el valor contrario al valor de la variable:</p><pre class="lead">
+      </pre>
+      <p class="callout">Si el operador <code>++</code> se indica como prefijo de la variable, su valor se incrementa <strong>antes</strong> de realizar cualquier otra operación. Si el operador <code>++</code> se indica como sufijo del identificador de la variable, su valor se incrementa <strong>después</strong> de ejecutar la sentencia en la que aparece.</p>
+      <p>Por tanto en <code>numero3 = numero1++ + numero2;</code>, el valor de <code>numero1</code> se incrementa después de realizar la operación (primero se suma y <code>numero3</code> vale <code>7</code>, después se incrementa el valor de <code>numero1</code> y vale <code>6</code>).</p>
+      <p>Mientras, en la instrucción <code>numero3 = ++numero1 + numero2;</code>, en primer lugar se incrementa el valor de <code>numero1</code> y después se realiza la suma (primero se incrementa <code>numero1</code> y vale <code>6</code>, después se realiza la suma y <code>numero3</code> vale <code>8</code>).</p>
+      <br>
+
+      <h3 id="negacion">Negación</h3>
+      <p>Uno de los operadores lógicos (booleanos) más utilizados. Obtiene el valor contrario al valor de la variable:</p>
+      <pre class="lead">
       <span class="kw1">var</span> visible <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
       <span class="kw1">var</span> !visible <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
       <span class="co1">// Muestra "false" y no "true"</span>
-      </pre><p>La negación lógica se obtiene prefijando el símbolo <code>!</code> a la variable. El funcionamiento de este operador se resume en la siguiente tabla:</p><table><thead><tr><th>variable</th><th>!variable</th></tr></thead><tbody><tr><td><code>true</code></td><td><code>false</code></td></tr><tr><td><code>false</code></td><td><code>true</code></td></tr></tbody></table><p>Si la variable es de tipo <em>booleano</em>, es muy sencillo obtener su negación. Sin embargo, ¿qué sucede cuando la variable es un número o una cadena de texto? Para obtener la negación en este tipo de variables, se realiza en primer lugar su conversión a un valor <em>booleano</em>:</p><ul><li>Si la variable contiene un número: <em>Se transforma en <code>false</code> si vale <code>0</code> y en <code>true</code> para cualquier otro número (positivo o negativo, decimal o entero).</em></li><li>Si la variable contiene una cadena de texto: <em>Se transforma en <code>false</code> si la cadena es vacía (<code>""</code>) y en <code>true</code> en cualquier otro caso.</em></li></ul><pre class=""><b>
+      </pre>
+      <p>La negación lógica se obtiene prefijando el símbolo <code>!</code> a la variable. El funcionamiento de este operador se resume en la siguiente tabla:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>variable</th>
+            <th>!variable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>true</code></td>
+            <td><code>false</code></td>
+          </tr>
+          <tr>
+            <td><code>false</code></td>
+            <td><code>true</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Si la variable es de tipo <em>booleano</em>, es muy sencillo obtener su negación. Sin embargo, ¿qué sucede cuando la variable es un número o una cadena de texto? Para obtener la negación en este tipo de variables, se realiza en primer lugar su conversión a un valor <em>booleano</em>:</p>
+      <ul>
+      <li>Si la variable contiene un número: <em>Se transforma en <code>false</code> si vale <code>0</code> y en <code>true</code> para cualquier otro número (positivo o negativo, decimal o entero).</em></li>
+        <li>Si la variable contiene una cadena de texto: <em>Se transforma en <code>false</code> si la cadena es vacía (<code>""</code>) y en <code>true</code> en cualquier otro caso.</em></li>
+      </ul>
+      <pre class=""><b>
       <span class="kw1">var</span> cantidad <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
       vacio <span class="sy0">=</span> <span class="sy0">!</span>cantidad<span class="sy0">;</span>  <span class="co1">// vacio = true</span>
       &nbsp;
@@ -257,14 +879,89 @@
       &nbsp;
       mensaje <span class="sy0">=</span> <span class="st0">"Bienvenido"</span><span class="sy0">;</span>
       mensajeVacio <span class="sy0">=</span> <span class="sy0">!</span>mensaje<span class="sy0">;</span>  <span class="co1">// mensajeVacio = false</span>
-      </b></pre><br><h3 id="and">AND</h3><p>La operación lógica <code>AND</code> obtiene su resultado <b>combinando dos valores booleanos</b>. El operador se indica mediante el símbolo <code>&amp;&amp;</code> y su resultado solamente es <code>true</code> si los dos operandos son <code>true</code>:</p><table><thead><tr><th>variable1</th><th>variable2</th><th>variable1 &amp;&amp; variable2</th></tr></thead><tbody><tr><td><code>true</code></td><td><code>true</code></td><td><code>true</code></td></tr><tr><td><code>true</code></td><td><code>false</code></td><td><code>false</code></td></tr><tr><td><code>false</code></td><td><code>true</code></td><td><code>false</code></td></tr><tr><td><code>false</code></td><td><code>false</code></td><td><code>false</code></td></tr></tbody></table><br><pre class="lead">
+      </b></pre>
+      <br>
+
+      <h3 id="and">AND</h3>
+
+      <p>La operación lógica <code>AND</code> obtiene su resultado <b>combinando dos valores booleanos</b>. El operador se indica mediante el símbolo <code>&amp;&amp;</code> y su resultado solamente es <code>true</code> si los dos operandos son <code>true</code>:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>variable1</th>
+            <th>variable2</th>
+            <th>variable1 &amp;&amp; variable2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+          </tr>
+          <tr>
+            <td><code>true</code></td>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
+          </tr>
+          <tr>
+            <td><code>false</code></td>
+            <td><code>true</code></td>
+            <td><code>false</code></td>
+          </tr>
+          <tr>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <pre class="lead">
       <span class="kw1">var</span> valor1 <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
       <span class="kw1">var</span> valor2 <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
       resultado <span class="sy0">=</span> valor1 <span class="sy0">&amp;&amp;</span> valor2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
       &nbsp;
       valor1 <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
       valor2 <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
-      resultado <span class="sy0">=</span> valor1 <span class="sy0">&amp;&amp;</span> valor2<span class="sy0">;</span> <span class="co1">// resultado = true</span></pre><br><h3 id="or">OR</h3><p>La operación lógica <code>OR</code> también <b>combina dos valores booleanos</b>. El operador se indica mediante el símbolo <code>||</code> y su resultado es <code>true</code> si alguno de los dos operandos es <code>true</code>:</p><table><thead><tr><th>variable1</th><th>variable2</th><th><code>variable1 || variable2</code></th></tr></thead><tbody><tr><td><code>true</code></td><td><code>true</code></td><td><code>true</code></td></tr><tr><td><code>true</code></td><td><code>false</code></td><td><code>true</code></td></tr><tr><td><code>false</code></td><td><code>true</code></td><td><code>true</code></td></tr><tr><td><code>false</code></td><td><code>false</code></td><td><code>false</code></td></tr></tbody></table><br><pre class="lead">
+      resultado <span class="sy0">=</span> valor1 <span class="sy0">&amp;&amp;</span> valor2<span class="sy0">;</span> <span class="co1">// resultado = true</span></pre>
+      <br>
+
+      <h3 id="or">OR</h3>
+      <p>La operación lógica <code>OR</code> también <b>combina dos valores booleanos</b>. El operador se indica mediante el símbolo <code>||</code> y su resultado es <code>true</code> si alguno de los dos operandos es <code>true</code>:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>variable1</th>
+            <th>variable2</th>
+            <th><code>variable1 || variable2</code></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+          </tr>
+          <tr>
+            <td><code>true</code></td>
+            <td><code>false</code></td>
+            <td><code>true</code></td>
+          </tr>
+          <tr>
+            <td><code>false</code></td>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+          </tr>
+          <tr>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <pre class="lead">
       <span class="kw1">var</span> valor1 <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
       <span class="kw1">var</span> valor2 <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
       resultado <span class="sy0">=</span> valor1 <span class="sy0">||</span> valor2<span class="sy0">;</span> <span class="co1">// resultado = true</span>
@@ -272,7 +969,13 @@
       valor1 <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
       valor2 <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
       resultado <span class="sy0">=</span> valor1 <span class="sy0">||</span> valor2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
-      </pre><br><h3 id="matematicos">Matemáticos</h3><p>JavaScript permite realizar operaciones matemáticas sobre el valor de las variables numéricas. Los operadores definidos son: suma (<code>+</code>), resta (<code>-</code>), multiplicación (<code>*</code>) y división (<code>/</code>).</p><p><b>Ejemplo:</b></p><pre class=""><b>
+      </pre>
+      <br>
+
+      <h3 id="matematicos">Matemáticos</h3>
+      <p>JavaScript permite realizar operaciones matemáticas sobre el valor de las variables numéricas. Los operadores definidos son: suma (<code>+</code>), resta (<code>-</code>), multiplicación (<code>*</code>) y división (<code>/</code>).</p>
+      <p><b>Ejemplo:</b></p>
+      <pre class=""><b>
       <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
       <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       &nbsp;
@@ -281,7 +984,12 @@
       resultado <span class="sy0">=</span> numero2 – <span class="nu0">4</span><span class="sy0">;</span>        <span class="co1">// resultado = 1</span>
       resultado <span class="sy0">=</span> numero1 <span class="sy0">*</span> numero <span class="nu0">2</span><span class="sy0">;</span> <span class="co1">// resultado = 50</span>
       </b>
-      </pre><p>Además de los cuatro operadores básicos, JavaScript define otro operador matemático que no es sencillo de entender cuando se estudia por primera vez, pero que es muy útil en algunas ocasiones.</p><p>Se trata del operador <em>"módulo"</em>, que calcula el resto de la división entera de dos números. Si se divide por ejemplo <code>10</code> y <code>5</code>, la división es exacta y da un resultado de <code>2</code>. El resto de esa división es <code>0</code>, por lo que <code>módulo de 10 y 5</code> es igual a <code>0</code>.</p><p>Sin embargo, si se divide <code>9</code> y <code>5</code>, la división no es exacta, el resultado es <code>1</code> y el resto <code>4</code>, por lo que <code>módulo de 9 y 5</code> es igual a <code>4</code>.</p><p>El operador módulo en JavaScript se indica mediante el símbolo <code>%</code>, que no debe confundirse con el cálculo del porcentaje:</p><pre class=""><b>
+      </pre>
+      <p>Además de los cuatro operadores básicos, JavaScript define otro operador matemático que no es sencillo de entender cuando se estudia por primera vez, pero que es muy útil en algunas ocasiones.</p>
+      <p>Se trata del operador <em>"módulo"</em>, que calcula el resto de la división entera de dos números. Si se divide por ejemplo <code>10</code> y <code>5</code>, la división es exacta y da un resultado de <code>2</code>. El resto de esa división es <code>0</code>, por lo que <code>módulo de 10 y 5</code> es igual a <code>0</code>.</p>
+      <p>Sin embargo, si se divide <code>9</code> y <code>5</code>, la división no es exacta, el resultado es <code>1</code> y el resto <code>4</code>, por lo que <code>módulo de 9 y 5</code> es igual a <code>4</code>.</p>
+      <p>El operador módulo en JavaScript se indica mediante el símbolo <code>%</code>, que no debe confundirse con el cálculo del porcentaje:</p>
+      <pre class=""><b>
       <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
       <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       resultado <span class="sy0">=</span> numero1 <span class="sy0">%</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = 0</span>
@@ -289,7 +997,9 @@
       numero1 <span class="sy0">=</span> <span class="nu0">9</span><span class="sy0">;</span>
       numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       resultado <span class="sy0">=</span> numero1 <span class="sy0">%</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = 4</span>
-      </b></pre><p>Los operadores matemáticos también se pueden combinar con el operador de asignación para abreviar su notación:</p><pre class=""><b>
+      </b></pre>
+      <p>Los operadores matemáticos también se pueden combinar con el operador de asignación para abreviar su notación:</p>
+      <pre class=""><b>
       <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       numero1 <span class="sy0">+=</span> <span class="nu0">3</span><span class="sy0">;</span>  <span class="co1">// numero1 = numero1 + 3 = 8</span>
       numero1 <span class="sy0">-=</span> <span class="nu0">1</span><span class="sy0">;</span>  <span class="co1">// numero1 = numero1 - 1 = 4</span>
@@ -297,7 +1007,13 @@
       numero1 <span class="sy0">/=</span> <span class="nu0">5</span><span class="sy0">;</span>   <span class="co1">// numero1 = numero1 / 5 = 1</span>
       numero1 <span class="sy0">%=</span> <span class="nu0">4</span><span class="sy0">;</span>   <span class="co1">// numero1 = numero1 % 4 = 1</span>
       </b>
-      </pre><br><h3 id="relacionales">Relacionales</h3><p>Los operadores relacionales de JavaScript son iguales a los que definen las matemáticas: mayor que (<code>&gt;</code>), menor que (<code>&lt;</code>), mayor o igual (<code>&gt;=</code>), menor o igual (<code>&lt;=</code>), igual que (<code>==</code>) y distinto de (<code>!=</code>).</p><p class="callout warning">Los operadores que relacionan variables son imprescindibles para realizar cualquier aplicación compleja. El resultado de todos estos operadores siempre es un valor booleano:</p><pre class=""><strong>
+      </pre>
+      <br>
+
+      <h3 id="relacionales">Relacionales</h3>
+      <p>Los operadores relacionales de JavaScript son iguales a los que definen las matemáticas: mayor que (<code>&gt;</code>), menor que (<code>&lt;</code>), mayor o igual (<code>&gt;=</code>), menor o igual (<code>&lt;=</code>), igual que (<code>==</code>) y distinto de (<code>!=</code>).</p>
+      <p class="callout warning">Los operadores que relacionan variables son imprescindibles para realizar cualquier aplicación compleja. El resultado de todos estos operadores siempre es un valor booleano:</p>
+      <pre class=""><strong>
       <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
       <span class="kw1">var</span> numero2 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       resultado <span class="sy0">=</span> numero1 <span class="sy0">&gt;</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
@@ -309,7 +1025,10 @@
       resultado <span class="sy0">=</span> numero1 <span class="sy0">&lt;=</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = true</span>
       resultado <span class="sy0">=</span> numero1 <span class="sy0">==</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = true</span>
       resultado <span class="sy0">=</span> numero1 <span class="sy0">!=</span> numero2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
-      </strong></pre><br><p>Se debe tener especial cuidado con el operador de igualdad (<code>==</code>), ya que es el origen de la mayoría de errores de programación, incluso para los usuarios que ya tienen cierta experiencia desarrollando scripts. El operador <code>==</code> se utiliza para comparar el valor de dos variables, por lo que es muy diferente del operador <code>=</code>, que se utiliza para asignar un valor a una variable:</p><pre class=""><b>
+      </strong></pre>
+      <br>
+      <p>Se debe tener especial cuidado con el operador de igualdad (<code>==</code>), ya que es el origen de la mayoría de errores de programación, incluso para los usuarios que ya tienen cierta experiencia desarrollando scripts. El operador <code>==</code> se utiliza para comparar el valor de dos variables, por lo que es muy diferente del operador <code>=</code>, que se utiliza para asignar un valor a una variable:</p>
+      <pre class=""><b>
       <span class="co1">// El operador "=" asigna valores</span>
       <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       resultado <span class="sy0">=</span> numero1 <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>  <span class="co1">// numero1 = 3 y resultado = 3</span>
@@ -317,7 +1036,10 @@
       <span class="co1">// El operador "==" compara variables</span>
       <span class="kw1">var</span> numero1 <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
       resultado <span class="sy0">=</span> numero1 <span class="sy0">==</span> <span class="nu0">3</span><span class="sy0">;</span> <span class="co1">// numero1 = 5 y resultado = false</span>
-      </b></pre><br><p><b>Los operadores relacionales también se pueden utilizar con variables de tipo cadena de texto:</b></p><pre class=""><b>
+      </b></pre>
+      <br>
+      <p><b>Los operadores relacionales también se pueden utilizar con variables de tipo cadena de texto:</b></p>
+      <pre class=""><b>
       <span class="kw1">var</span> texto1 <span class="sy0">=</span> <span class="st0">"hola"</span><span class="sy0">;</span>
       <span class="kw1">var</span> texto2 <span class="sy0">=</span> <span class="st0">"hola"</span><span class="sy0">;</span>
       <span class="kw1">var</span> texto3 <span class="sy0">=</span> <span class="st0">"adios"</span><span class="sy0">;</span>
@@ -325,18 +1047,77 @@
       resultado <span class="sy0">=</span> texto1 <span class="sy0">==</span> texto3<span class="sy0">;</span> <span class="co1">// resultado = false</span>
       resultado <span class="sy0">=</span> texto1 <span class="sy0">!=</span> texto2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
       resultado <span class="sy0">=</span> texto3 <span class="sy0">&gt;=</span> texto2<span class="sy0">;</span> <span class="co1">// resultado = false</span>
-      </b></pre><p>Cuando se utilizan cadenas de texto, los operadores "mayor que" (<code>&gt;</code>) y "menor que" (<code>&lt;</code>) siguen un razonamiento no intuitivo: se compara letra a letra comenzando desde la izquierda hasta que se encuentre una diferencia entre las dos cadenas de texto.</p><p>Para determinar si una letra es mayor o menor que otra</p><ul><li>Las mayúsculas se consideran menores que las minúsculas (<code>A</code> es menor que <code>a</code>).</li><li>Las primeras letras del alfabeto son menores que las últimas (<code>a</code> es menor que <code>b</code>, <code>b</code> es menor que <code>c</code>, etc.).<p></p></li></ul><br></div><!-- /.contenedor --></section></div><!-- Funciones nativas --><div class="tabs-panel" id="cont-ppal-tabs-panel10"><!-- ********** Funciones nativas --><section id="func-nativas" class=""><div class="contenedor"><h2>Funciones nativas</h2><p>Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.</p><p>Estos son los tipos de operadores que usaremos:</p><br><div class="stacked-for-small button-group"><a class="button hollow primary" href="#alert"><big>alert</big></a> <a class="button hollow primary" href="#confirm"><big>confirm</big></a> <a class="button hollow primary" href="#prompt"><big>prompt</big></a> <a class="button hollow primary" href="#ejemplo"><big>Ejemplo</big></a></div><br><h3 id="alert">alert</h3><p>La instrucción <code>alert()</code> es una de las utilidades que incluye JavaScript y permite mostrar un mensaje en la pantalla del usuario.</p><pre class="lead">
+      </b></pre>
+      <p>Cuando se utilizan cadenas de texto, los operadores "mayor que" (<code>&gt;</code>) y "menor que" (<code>&lt;</code>) siguen un razonamiento no intuitivo: se compara letra a letra comenzando desde la izquierda hasta que se encuentre una diferencia entre las dos cadenas de texto.</p>
+      <p>Para determinar si una letra es mayor o menor que otra</p>
+      <ul>
+        <li>Las mayúsculas se consideran menores que las minúsculas (<code>A</code> es menor que <code>a</code>).</li>
+        <li>Las primeras letras del alfabeto son menores que las últimas (<code>a</code> es menor que <code>b</code>, <code>b</code> es menor que <code>c</code>, etc.).<p></p>        
+      </li></ul>
+      <br>
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Funciones nativas -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel10">
+                <!-- ********** Funciones nativas -->
+  <section id="func-nativas" class="">
+    <div class="contenedor">
+      <h2>Funciones nativas</h2>
+      <p>Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.</p>
+      <p>Estos son los tipos de operadores que usaremos:</p>
+      <br>
+      <div class="stacked-for-small button-group">
+        <a class="button hollow primary" href="#alert"><big>alert</big></a>
+        <a class="button hollow primary" href="#confirm"><big>confirm</big></a>
+        <a class="button hollow primary" href="#prompt"><big>prompt</big></a>
+        <a class="button hollow primary" href="#ejemplo"><big>Ejemplo</big></a>
+      </div>
+      <br>
+
+      <h3 id="alert">alert</h3>
+      <p>La instrucción <code>alert()</code> es una de las utilidades que incluye JavaScript y permite mostrar un mensaje en la pantalla del usuario.</p>
+      <pre class="lead">
       <span class="kw1">var</span> mensaje <span class="sy0">=</span> <span class="st0">"¡Hola Mundo!"</span><span class="sy0">;</span>
       alert(<span class="st0">mensaje</span>)
-      </pre><p>Si se visualiza en una página web de este script en cualquier navegador, automáticamente se mostrará una ventana con el mensaje <code>"Hola Mundo!"</code>.</p><p>El funcionamiento de la utilidad <code>alert()</code> en los distintos navegadores es idéntico. Sin embargo, existen grandes diferencias visuales en la forma en la que se presentan los mensajes.</p><br><h3 id="confirm">confirm</h3><p>El método <code>confirm()</code> muestra una ventana de diálogo con un mensaje opcional y dos botones "Aceptar" y "Cancelar".</p><pre class="lead">
+      </pre>
+      <p>Si se visualiza en una página web de este script en cualquier navegador, automáticamente se mostrará una ventana con el mensaje <code>"Hola Mundo!"</code>.</p>
+      <p>El funcionamiento de la utilidad <code>alert()</code> en los distintos navegadores es idéntico. Sin embargo, existen grandes diferencias visuales en la forma en la que se presentan los mensajes.</p>      
+      <br>
+
+      <h3 id="confirm">confirm</h3>
+      <p>El método  <code>confirm()</code> muestra una ventana de diálogo con un mensaje opcional y dos botones "Aceptar" y "Cancelar".</p>
+      <pre class="lead">
       <span class="kw1">var</span> pregunta <span class="sy0">=</span> <span class="st0">"¿Está seguro de que desea continuar?"</span><span class="sy0">;</span>
       confirm(<span class="st0">pregunta</span>)
-      </pre><p>Al visualizar este script en una página web en cualquier navegador, se mostrará una ventana con el mensaje <code>"¿Está seguro de que desea continuar?"</code> acompañado de los botones "Aceptar" y "Cancelar", si se selecciona la opción <b>"Aceptar"</b> arrojará <code>true</code> en el caso contrario será <code>false</code>.</p><p>Al igual que con el método anterior, el funcionamiento de <code>confirm()</code> en los distintos navegadores es idéntico. Sin embargo, existen grandes diferencias visuales en la forma en la que se presentan los mensajes.</p><br><h3 id="prompt">prompt</h3><p>El método <code>prompt()</code> muestra un diálogo con mensaje opcional, que solicita al usuario que introduzca un texto.</p><pre class="lead">
+      </pre>
+      <p>Al visualizar este script en una página web en cualquier navegador, se mostrará una ventana con el mensaje <code>"¿Está seguro de que desea continuar?"</code> acompañado de los botones "Aceptar" y "Cancelar", si se selecciona la opción <b>"Aceptar"</b> arrojará <code>true</code> en el caso contrario será <code>false</code>.</p>
+      <p>Al igual que con el método anterior, el funcionamiento de <code>confirm()</code> en los distintos navegadores es idéntico. Sin embargo, existen grandes diferencias visuales en la forma en la que se presentan los mensajes.</p>
+      <br>
+
+      <h3 id="prompt">prompt</h3>
+      <p>El método <code>prompt()</code> muestra un diálogo con mensaje opcional, que solicita al usuario que introduzca un texto.</p>
+      <pre class="lead">
         prompt("Mensaje", "Por defecto");
-      </pre><ul><li><code>Mensaje</code>&nbsp;es una cadena de texto que se mostrará al usuario a manera de información. Este parámetro es opcional y puede ser omitido si no se necesita mostrar nada en la ventana.</li><li><code>Por defecto</code>&nbsp;es una cadena de texto que contiene el valor <b>predeterminado</b> para el texto de entrada. Es un parámetro opcional.</li></ul><img class="float-center mt-3 mb-3" src="assets/img/prompt.png" alt="Imagen prompt"><p class="mb-3">Cuando el usuario hace clic en el botón <b>ACEPTAR</b>, el valor introducido en el campo de texto es devuelto por el método como una cadena de texto. Si el usuario da clic al botón <b>ACEPTAR</b> sin introducir algun texto, se devuelve una cadena vacía. Si el usuario presiona el botón <b>CANCELAR</b>, la función devuelve&nbsp;<code>null</code>.</p><pre class="lead">
+      </pre>
+      <ul>
+        <li><code>Mensaje</code>&nbsp;es una cadena de texto que se mostrará al usuario a manera de información. Este parámetro es opcional y puede ser omitido si no se necesita mostrar nada en la ventana.</li>
+        <li><code>Por defecto</code>&nbsp;es una cadena de texto que contiene el valor <b>predeterminado</b> para el texto de entrada. Es un parámetro opcional.</li>
+      </ul>
+      <img class="float-center mt-3 mb-3" src="assets/img/prompt.png" alt="Imagen prompt">
+      <p class="mb-3">Cuando el usuario hace clic en el botón <b>ACEPTAR</b>, el valor introducido en el campo de texto es devuelto por el método como una cadena de texto. Si el usuario da clic al botón <b>ACEPTAR</b> sin introducir algun texto, se devuelve una cadena vacía. Si el usuario presiona el botón <b>CANCELAR</b>, la función devuelve&nbsp;<code>null</code>.</p>
+      <pre class="lead">
       <span class="kw1">var</span> pregunta <span class="sy0">=</span> <span class="st0">"¿Está seguro de que desea continuar?"</span><span class="sy0">;</span>
       confirm(<span class="st0">pregunta</span>)
-      </pre><p>Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number.<br><pre class="lead">var aNumber = Number(prompt("Tipear un número", ""));</pre></p><br><p class="callout warning">Las cajas de diálogo son ventanas modales - ello impide al usuario continuar accediendo al resto del interfaz del programa hasta que la ventana modal haya sido cerrada. Por esta razón no se debería usar en exceso funciones que creen cajas de diálogo (o ventanas modales).</p><br><h3 id="ejemplo">Ejemplo</h3><p>En este sencillo ejemplo se pone en práctica lo aprendido con respecto a las funciones nativas.</p><pre class="consola">
+      </pre>
+      <p>Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. <br>
+      <pre class="lead">var aNumber = Number(prompt("Tipear un número", ""));</pre></p>
+      <br>
+      <p class="callout warning">Las cajas de diálogo son ventanas modales - ello impide al usuario continuar accediendo al resto del interfaz del programa hasta que la ventana modal haya sido cerrada. Por esta razón no se debería usar en exceso funciones que creen cajas de diálogo (o ventanas modales). </p>
+      <br>
+      <h3 id="ejemplo">Ejemplo</h3>
+      <p>En este sencillo ejemplo se pone en práctica lo aprendido con respecto a las funciones nativas.</p>
+      <pre class="consola">
         
       <span class="funcion">var</span> usuario <span class="condicion">=</span> <span class="funcion">prompt</span>(<span class="cadena">'Por favor, ingresa tu nombre de usuario:'</span>);
 
@@ -351,28 +1132,60 @@
       }<span class="condicion">else</span>{
         <span class="funcion">alert</span>(<span class="cadena">'No has introducido un usuario válido'</span>);
       }        
-      </pre><br><button id="ejemplo-nativas" class="button primary">Ver resultado del ejemplo</button><br></div><!-- /.contenedor --></section></div><!-- Operador typeof --><div class="tabs-panel" id="cont-ppal-tabs-panel11"><!-- ********** Operador typeof --><section id="func-nativas" class=""><div class="contenedor"><h2>Operador typeof</h2><p>El operador <code>typeof</code> se usa en cualquiera de los siguientes modos:</p><ol><li><code>typeof <i>operando</i></code></li><li><code>typeof (<i>operando</i>)</code></li></ol><p>El operador <code>typeof</code> devuelve una cadena que indica el tipo del operando sin evaluarlo. <code>operando</code> es la cadena, variable, palabra clave u objeto para el que se devolverá su tipo. Los paréntesis son opcionales.</p><p>Suponga que define las siguientes variables:</p><pre class="lead">
+      </pre>
+      <br>
+      <button id="ejemplo-nativas" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Operador typeof -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel11">
+                <!-- ********** Operador typeof -->
+  <section id="func-nativas" class="">
+    <div class="contenedor">
+      <h2>Operador typeof</h2>
+      <p>El operador <code>typeof</code> se usa en cualquiera de los siguientes modos:</p>
+      <ol>
+        <li><code>typeof <i>operando</i></code></li>
+        <li><code>typeof (<i>operando</i>)</code></li>
+      </ol>
+      <p>El operador <code>typeof</code> devuelve una cadena que indica el tipo del operando sin evaluarlo. <code>operando</code> es la cadena, variable, palabra clave u objeto para el que se devolverá su tipo. Los paréntesis son opcionales.</p>
+      <p>Suponga que define las siguientes variables:</p>
+      <pre class="lead">
       <span class="kw1">var</span> miFuncion <span class="sy0"> = </span> <span class="kw1">new</span> <span class="token class-name">Function</span><span>(</span><span class="st0">"5+2"</span><span>)</span>
       <span class="kw1">var</span> forma<span class="sy0"> = </span><span class="st0">"redonda"</span>
       <span class="kw1">var</span> tamano<span class="sy0"> = </span><span class="token number">1</span>
       <span class="kw1">var</span> hoy<span class="sy0"> = </span><span class="kw1">new</span> <span class="token class-name">Date</span><span>(</span><span>)</span>
-      </pre><p>El operador <code>typeof</code> devuelve los siguientes resultados para estas variables</p><pre class="lead">
+      </pre>
+      <p>El operador <code>typeof</code> devuelve los siguientes resultados para estas variables</p>
+      <pre class="lead">
       <span class="kw1">typeof</span> miFuncion <span class="sy0">==</span> <span class="st0">'function'</span>   
       <span class="kw1">typeof</span> forma <span class="sy0">==</span> <span class="st0">'string'</span>
       <span class="kw1">typeof</span> tamano <span class="sy0">==</span> <span class="st0">'number'</span>
       <span class="kw1">typeof</span> hoy <span class="sy0">==</span> <span class="st0">'object'</span>
       <span class="kw1">typeof</span> noExiste <span class="sy0">==</span> <span class="st0">'undefined'</span>
-      </pre><p>Para las palabras clave <code>true</code> y <code>null</code>, el operador <code>typeof</code> devuelve los siguientes resultados:</p><pre class="lead">
+      </pre>
+      <p>Para las palabras clave <code>true</code> y <code>null</code>, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
+      <pre class="lead">
       <span class="kw1">typeof</span> <span class="kw1">true</span> <span class="sy0">==</span> <span class="st0">'boolean'</span>
       <span class="kw1">typeof</span> <span class="kw1">null</span> <span class="sy0">==</span> <span class="st0">'object'</span>
-      </pre><p>Para un número o una cadena, el operador <code>typeof</code> devuelve los siguientes resultados:</p><pre class="lead">
+      </pre>
+      <p>Para un número o una cadena, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
+      <pre class="lead">
       <span class="kw1">typeof</span> <span class="token number">62</span> <span class="sy0">==</span> <span class="st0">'number'</span>
       <span class="kw1">typeof</span> <span class="st0">'Hola mundo'</span> <span class="sy0">==</span> <span class="st0">'string'</span>
-      </pre><p>Para valores de propiedades, el operador <code>typeof</code> devuelve el tipo del valor que contiene la propiedad:</p><pre class="lead">
+      </pre>
+      <p>Para valores de propiedades, el operador <code>typeof</code> devuelve el tipo del valor que contiene la propiedad:</p>
+      <pre class="lead">
       <span class="kw1">typeof</span> document<span>.</span>lastModified <span class="sy0">==</span> <span class="st0">'string'</span>
       <span class="kw1">typeof</span> window<span>.</span>length <span class="sy0">==</span> <span class="st0">'number'</span>
       <span class="kw1">typeof</span> Math<span>.</span>LN2 <span class="sy0">==</span> <span class="st0">'number'</span>
-      </pre><br><h3 id="ejemplo">Ejemplo</h3><p>En este sencillo ejemplo se pone de manifiesto una utilidad práctica para el operador typeof.</p><pre class="consola">
+      </pre>
+      <br>
+      <h3 id="ejemplo">Ejemplo</h3>
+      <p>En este sencillo ejemplo se pone de manifiesto una utilidad práctica para el operador typeof.</p>      
+      <pre class="consola">
         
       <span class="funcion">var</span> respuesta <span class="condicion"> = </span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese un string:'</span>);
 
@@ -381,7 +1194,37 @@
       }<span class="condicion">else</span>{
         <span class="funcion">alert</span>(<span class="cadena">'Error, el tipo de valor es '</span> <span class="condicion"> + typeof</span> respuesta);
       }
-      </pre><br><button id="ejemplo-typeof" class="button primary">Ver resultado del ejemplo</button><br></div><!-- /.contenedor --></section></div><!-- Creación de funciones --><div class="tabs-panel" id="cont-ppal-tabs-panel12"><!-- ********** Creación de funciones --><section id="funciones" class=""><div class="contenedor"><h2>Creación de funciones</h2><p>Cuando se desarrolla una aplicación, es casi inevitable utilizar una y otra vez las mismas instrucciones. Poe ejemplo: <em>Un script para una tienda de comercio electrónico, tiene que calcular el precio total de los productos varias veces, para añadir los impuestos y los gastos de envío.</em></p><p>Cuando una serie de instrucciones se repiten una y otra vez, se tienede a complicar demasiado el código fuente de la aplicación, ya que:</p><ul><li>Es mucho más largo porque muchas instrucciones están repetidas.</li><li>Si se quiere modificar alguna de las instrucciones repetidas, se deben hacer tantas modificaciones como veces se haya escrito esa instrucción, lo que se convierte en un trabajo muy pesado y donde es muy fácil cometer errores.</li></ul><p>Las <b>funciones</b> son la solución a estos problemas, en JavaScript así como en el resto de lenguajes de programación.</p><p>En conclusión: Una función es un conjunto de instrucciones que se agrupan para realizar una tarea concreta y que se pueden reutilizar fácilmente.</p><br><div class="stacked-for-small button-group"><a class="button hollow primary" href="#retorno"><big>Argumentos y valores de retorno</big></a> <a class="button hollow primary" href="#return"><big>Importancia de return</big></a></div><br><h4 id="ejemplo1">Ejemplo 1</h4><p>Veamos una función bastante simple.</p><pre class="consola">
+      </pre>
+      <br>
+      <button id="ejemplo-typeof" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+    </div><!-- /.contenedor -->
+  </section>
+            </div>
+            <!-- Creación de funciones -->
+            <div class="tabs-panel" id="cont-ppal-tabs-panel12">
+                <!-- ********** Creación de funciones -->
+  <section id="funciones" class="">
+    <div class="contenedor">
+      <h2>Creación de funciones</h2>
+      <p>Cuando se desarrolla una aplicación, es casi inevitable utilizar una y otra vez las mismas instrucciones. Poe ejemplo: <em>Un script para una tienda de comercio electrónico, tiene que calcular el precio total de los productos varias veces, para añadir los impuestos y los gastos de envío.</em></p>
+      <p>Cuando una serie de instrucciones se repiten una y otra vez, se tienede a complicar demasiado el código fuente de la aplicación, ya que:</p>
+      <ul>
+        <li>Es mucho más largo porque muchas instrucciones están repetidas.</li>
+        <li>Si se quiere modificar alguna de las instrucciones repetidas, se deben hacer tantas modificaciones como veces se haya escrito esa instrucción, lo que se convierte en un trabajo muy pesado y donde es muy fácil cometer errores.</li>
+      </ul>
+      <p>Las <b>funciones</b> son la solución a estos problemas, en JavaScript así como en el resto de lenguajes de programación.</p>
+      <p>En conclusión: Una función es un conjunto de instrucciones que se agrupan para realizar una tarea concreta y que se pueden reutilizar fácilmente.</p>
+      <br>
+      <div class="stacked-for-small button-group">
+        <a class="button hollow primary" href="#retorno"><big> Argumentos y valores de retorno</big></a>
+        <a class="button hollow primary" href="#return"><big>Importancia de return</big></a>
+      </div>
+      <br>
+
+      <h4 id="ejemplo1">Ejemplo 1</h4>
+      <p>Veamos una función bastante simple.</p>      
+      <pre class="consola">
         
       <span class="funcion">var</span> nombreUsuario <span class="condicion"> = </span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese su nombre:'</span>);
 
@@ -390,7 +1233,15 @@
       }
 
       <span class="funcion">mostrarNombre</span>(nombreUsuario);      
-      </pre><br><button id="ejemploFuncion1" class="button primary">Ver resultado del ejemplo</button><br><br><h4 id="ejemplo2">Ejemplo 2</h4><p>Ahora una función que dice que año es bisiesto o no.</p><pre class="consola">
+      </pre>
+      <br>
+      <button id="ejemploFuncion1" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+      <br>
+
+      <h4 id="ejemplo2">Ejemplo 2</h4>
+      <p>Ahora una función que dice que año es bisiesto o no.</p>      
+      <pre class="consola">
         
         <span class="funcion">var</span> anyo;
         anyo <span class="condicion"> = </span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese el Año:'</span>,<span class="cadena">''</span>);
@@ -404,14 +1255,31 @@
           }
         }
         <span class="funcion">bisiesto</span>(anyo);     
-      </pre><br><button id="ejemploFuncion2" class="button primary">Ver resultado del ejemplo</button><br><hr><h3 id="retorno">Argumentos y valores de retorno</h3><p>Las funciones sencillas por lo general no necesitan información externa para producir sus resultados. Ahora bien, por el contrario, <b>la mayoría de funciones de las aplicaciones reales</b> deben acceder al valor de algunas variables.</p><p>Las variables que necesitan las funciones se llaman <em>argumentos</em>. Antes de que pueda utilizarlos, la función debe indicar cuántos argumentos necesita y cuál es el nombre de cada argumento.</p><p class="callout warning">Además, al invocar la función, se deben incluir los valores que se le van a pasar a la misma. Los argumentos se indican dentro de los paréntesis que van detrás del nombre de la función y se separan con una coma (<code>,</code>).</p><h4 id="ejemplo3">Ejemplo 3</h4><p>La función debe indicar que necesita dos argumentos, correspondientes a los dos números que tiene que sumar:</p><pre class="">
+      </pre>
+      <br>
+      <button id="ejemploFuncion2" class="button primary">Ver resultado del ejemplo</button>      
+      <br>
+      <hr>
+      <h3 id="retorno">Argumentos y valores de retorno</h3>
+      <p>Las funciones sencillas por lo general no necesitan información externa para producir sus resultados. Ahora bien, por el contrario, <b>la mayoría de funciones de las aplicaciones reales</b> deben acceder al valor de algunas variables.</p>
+      <p>Las variables que necesitan las funciones se llaman <em>argumentos</em>. Antes de que pueda utilizarlos, la función debe indicar cuántos argumentos necesita y cuál es el nombre de cada argumento.</p>
+      <p class="callout warning">Además, al invocar la función, se deben incluir los valores que se le van a pasar a la misma. Los argumentos se indican dentro de los paréntesis que van detrás del nombre de la función y se separan con una coma (<code>,</code>).</p>
+
+      <h4 id="ejemplo3">Ejemplo 3</h4>
+      <p>La función debe indicar que necesita dos argumentos, correspondientes a los dos números que tiene que sumar:</p>
+      <pre class="">
       <span class="kw1">function</span> suma_y_muestra<span class="br0">(</span>primeraCantidad<span class="sy0">,</span> segundaCantidad<span class="br0">)</span> <span class="br0">{</span> ... <span class="br0">}</span>
-      </pre><p>A continuación, para utilizar el valor de los argumentos dentro de la función, se debe emplear <b>el mismo nombre</b> con el que se definieron los argumentos:</p><pre class="">
+      </pre>
+      <p>A continuación, para utilizar el valor de los argumentos dentro de la función, se debe emplear <b>el mismo nombre</b> con el que se definieron los argumentos:</p>
+      <pre class="">
       <span class="kw1">function</span> suma_y_muestra<span class="br0">(</span>primeraCantidad<span class="sy0">,</span> segundaCantidad<span class="br0">)</span> <span class="br0">{</span>
         <span class="kw1">var</span> resultado <span class="sy0">=</span> primeraCantidad <span class="sy0">+</span> segundaCantidad<span class="sy0">;</span>
         alert<span class="br0">(</span><span class="st0">"El resultado es "</span> <span class="sy0">+</span> resultado<span class="br0">)</span><span class="sy0">;</span>
       <span class="br0">}</span>
-      </pre><p>Dentro de la función, el valor de la variable <code>primeraCantidad</code> será igual al primer valor que se le pase a la función y el valor de la variable <code>segundaCantidad</code> será igual al segundo valor que se le pasa.</p><p><strong>Para pasar valores a la función, se incluyen dentro de los paréntesis utilizados al llamar a la función:</strong></p><pre class="">
+      </pre>
+      <p>Dentro de la función, el valor de la variable <code>primeraCantidad</code> será igual al primer valor que se le pase a la función y el valor de la variable <code>segundaCantidad</code> será igual al segundo valor que se le pasa.</p>
+      <p><strong>Para pasar valores a la función, se incluyen dentro de los paréntesis utilizados al llamar a la función:</strong></p>
+      <pre class="">
       <span class="co1">// Definición de la función</span>
       <span class="kw1">function</span> suma_y_muestra<span class="br0">(</span>primeraCantidad<span class="sy0">,</span> segundaCantidad<span class="br0">)</span> <span class="br0">{</span>
         <span class="kw1">var</span> resultado <span class="sy0">=</span> primeraCantidad <span class="sy0">+</span> segundaCantidad<span class="sy0">;</span>
@@ -424,7 +1292,20 @@
       &nbsp;
       <span class="co1">// Llamada a la función</span>
       suma_y_muestra<span class="br0">(</span>numero1<span class="sy0">,</span> numero2<span class="br0">)</span><span class="sy0">;</span>
-      </pre><p>En el código anterior, se debe tener en cuenta que:</p><ul><li>Aunque casi siempre se utilizan variables para pasar los datos a la función, se puede usar directamente el valor de esas variables: <code>suma_y_muestra(3, 5);</code></li><li>El número de argumentos que se pasa a una función debe ser el mismo que el número de argumentos que ha indicado la función. No obstante, <b>JavaScript no muestra ningún error</b> si se pasan más o menos argumentos de los necesarios.</li><li>El orden de los argumentos es fundamental, ya que el primer dato será el primer valor que espera la función; el segundo dato es el segundo valor que espera la función y así sucesivamente.</li><li>Se puede utilizar un número ilimitado de argumentos, aunque si su número es muy grande, se complica en exceso la llamada a la función.</li><li>No hace falta que coincida el nombre de los argumentos que utiliza la función y el nombre de los argumentos que se le pasan. En el ejemplo anterior, los argumentos que se pasan son <code>numero1</code> y <code>numero2</code> y los argumentos que utiliza la función son <code>primeraCantidad</code> y <code>segundaCantidad</code>.</li></ul><br><h4 id="ejemplo4">Ejemplo 4</h4><p>A continuación se muestra otro ejemplo de una función que calcula el precio total de un producto a partir de su precio básico:</p><pre class="">
+      </pre>
+      <p>En el código anterior, se debe tener en cuenta que:</p>
+      <ul>
+      <li>Aunque casi siempre se utilizan variables para pasar los datos a la función, se puede usar directamente el valor de esas variables: <code>suma_y_muestra(3, 5);</code></li>
+      <li>El número de argumentos que se pasa a una función debe ser el mismo que el número de argumentos que ha indicado la función. No obstante, <b>JavaScript no muestra ningún error</b> si se pasan más o menos argumentos de los necesarios.</li>
+      <li>El orden de los argumentos es fundamental, ya que el primer dato será el primer valor que espera la función; el segundo dato es el segundo valor que espera la función y así sucesivamente.</li>
+      <li>Se puede utilizar un número ilimitado de argumentos, aunque si su número es muy grande, se complica en exceso la llamada a la función.</li>
+      <li>No hace falta que coincida el nombre de los argumentos que utiliza la función y el nombre de los argumentos que se le pasan. En el ejemplo anterior, los argumentos que se pasan son <code>numero1</code> y <code>numero2</code> y los argumentos que utiliza la función son <code>primeraCantidad</code> y <code>segundaCantidad</code>. </li>
+      </ul>
+      <br>
+
+      <h4 id="ejemplo4">Ejemplo 4</h4>
+      <p>A continuación se muestra otro ejemplo de una función que calcula el precio total de un producto a partir de su precio básico:</p>
+      <pre class="">
       <span class="co1">// Definición de la función</span>
       <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="br0">)</span> <span class="br0">{</span>
         <span class="kw1">var</span> impuestos <span class="sy0">=</span> <span class="nu0">1.16</span><span class="sy0">;</span>
@@ -434,7 +1315,10 @@
       &nbsp;
       <span class="co1">// Llamada a la función</span>
       calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
-      </pre><p>La función anterior toma como argumento una variable llamada <code>precio</code> y le suma los impuestos y los gastos de envío para obtener el precio total. Al llamar a la función, se pasa directamente el valor del precio básico mediante el número <code>23.34</code>.</p><p>No obstante, el código anterior no es demasiado útil, ya que lo ideal sería que la función pudiera devolver el resultado obtenido para guardarlo en otra variable y poder seguir trabajando con este precio total:</p><pre class="">
+      </pre>
+      <p>La función anterior toma como argumento una variable llamada <code>precio</code> y le suma los impuestos y los gastos de envío para obtener el precio total. Al llamar a la función, se pasa directamente el valor del precio básico mediante el número <code>23.34</code>.</p>
+      <p>No obstante, el código anterior no es demasiado útil, ya que lo ideal sería que la función pudiera devolver el resultado obtenido para guardarlo en otra variable y poder seguir trabajando con este precio total:</p>
+      <pre class="">
       <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="br0">)</span> <span class="br0">{</span>
         <span class="kw1">var</span> impuestos <span class="sy0">=</span> <span class="nu0">1.16</span><span class="sy0">;</span>
         <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
@@ -445,7 +1329,12 @@
       <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
       &nbsp;
       <span class="co1">// Seguir trabajando con la variable "precioTotal"</span>
-      </pre><br><h3 id="return">Importancia de return</h3><p>Mejor aún, las funciones no sólo puede recibir variables y datos, sino que también pueden <b>devolver</b> los valores que han calculado. Para devolver valores dentro de una función, se utiliza la palabra reservada <code>return</code>.</p><p class="callout warning">Aunque las funciones pueden devolver valores de cualquier tipo, solamente pueden devolver un valor cada vez que se ejecutan.</p><pre class="">
+      </pre>
+      <br>
+      <h3 id="return">Importancia de return</h3>
+      <p>Mejor aún, las funciones no sólo puede recibir variables y datos, sino que también pueden <b>devolver</b> los valores que han calculado. Para devolver valores dentro de una función, se utiliza la palabra reservada <code>return</code>.</p>
+      <p class="callout warning">Aunque las funciones pueden devolver valores de cualquier tipo, solamente pueden devolver un valor cada vez que se ejecutan.</p>
+      <pre class="">
       <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="br0">)</span> <span class="br0">{</span>
         <span class="kw1">var</span> impuestos <span class="sy0">=</span> <span class="nu0">1.16</span><span class="sy0">;</span>
         <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
@@ -456,9 +1345,17 @@
       <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
       &nbsp;
       <span class="co1">// Seguir trabajando con la variable "precioTotal"</span>
-      </pre><p>Para que la función devuelva un valor, solamente es necesario escribir la palabra reservada <code>return</code> junto con el nombre de la variable que se quiere devolver.</p><p>En el ejemplo anterior, la ejecución de la función llega a la instrucción <code>return precioTotal;</code> y en ese momento, devuelve el valor que contenga la variable <code>precioTotal</code>.</p><p>Como la función devuelve un valor, en el punto en el que se realiza la llamada, debe indicarse el nombre de una variable en el que se guarda el valor devuelto:</p><pre class="">
+      </pre>
+      <p>Para que la función devuelva un valor, solamente es necesario escribir la palabra reservada <code>return</code> junto con el nombre de la variable que se quiere devolver.</p>
+      <p>En el ejemplo anterior, la ejecución de la función llega a la instrucción <code>return precioTotal;</code> y en ese momento, devuelve el valor que contenga la variable <code>precioTotal</code>.</p>
+      <p>Como la función devuelve un valor, en el punto en el que se realiza la llamada, debe indicarse el nombre de una variable en el que se guarda el valor devuelto:</p>
+      <pre class="">
       <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="br0">)</span><span class="sy0">;</span>
-      </pre><p class="callout warning"><b>Si no se indica el nombre de ninguna variable, JavaScript no muestra ningún error</b> y el valor devuelto por la función simplemente se pierde y por tanto, no se utilizará en el resto del programa. En este caso, tampoco es obligatorio que el nombre de la variable devuelta por la función coincida con el nombre de la variable en la que se va a almacenar ese valor.</p><p>Si la función llega a una instrucción de tipo <code>return</code>, se devuelve el valor indicado y finaliza la ejecución de la función. Por tanto, todas las instrucciones que se incluyen después de un <code>return</code> se ignoran y por ese motivo la instrucción <code>return</code> suele ser la última de la mayoría de funciones.</p><p>Para que el ejemplo anterior sea más completo, se puede añadir otro argumento a la función que indique el porcentaje de impuestos que se debe añadir al precio del producto. Evidentemente, el nuevo argumento se debe añadir tanto a la definición de la función como a su llamada:</p><pre class="">
+      </pre>
+      <p class="callout warning"><b>Si no se indica el nombre de ninguna variable, JavaScript no muestra ningún error</b> y el valor devuelto por la función simplemente se pierde y por tanto, no se utilizará en el resto del programa. En este caso, tampoco es obligatorio que el nombre de la variable devuelta por la función coincida con el nombre de la variable en la que se va a almacenar ese valor.</p>
+      <p>Si la función llega a una instrucción de tipo <code>return</code>, se devuelve el valor indicado y finaliza la ejecución de la función. Por tanto, todas las instrucciones que se incluyen después de un <code>return</code> se ignoran y por ese motivo la instrucción <code>return</code> suele ser la última de la mayoría de funciones.</p>
+      <p>Para que el ejemplo anterior sea más completo, se puede añadir otro argumento a la función que indique el porcentaje de impuestos que se debe añadir al precio del producto. Evidentemente, el nuevo argumento se debe añadir tanto a la definición de la función como a su llamada:</p>
+      <pre class="">
       <span class="kw1">function</span> calculaPrecioTotal<span class="br0">(</span>precio<span class="sy0">,</span> porcentajeImpuestos<span class="br0">)</span> <span class="br0">{</span>
         <span class="kw1">var</span> flete <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span>
         <span class="kw1">var</span> precioConImpuestos <span class="sy0">=</span> <span class="br0">(</span><span class="nu0">1</span> <span class="sy0">+</span> porcentajeImpuestos<span class="sy0">/</span><span class="nu0">100</span><span class="br0">)</span> <span class="sy0">*</span> precio<span class="sy0">;</span>
@@ -468,7 +1365,10 @@
       &nbsp;
       <span class="kw1">var</span> precioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">23.34</span><span class="sy0">,</span> <span class="nu0">16</span><span class="br0">)</span><span class="sy0">;</span>
       <span class="kw1">var</span> otroPrecioTotal <span class="sy0">=</span> calculaPrecioTotal<span class="br0">(</span><span class="nu0">15.20</span><span class="sy0">,</span> <span class="nu0">4</span><span class="br0">)</span><span class="sy0">;</span>
-      </pre><p>Para terminar de completar el ejercicio anterior, se puede recibir los datos del usuario y rendondear a dos decimales el precio total devuelto por la función:</p><pre class="consola">
+      </pre>
+
+      <p>Para terminar de completar el ejercicio anterior, se puede recibir los datos del usuario y rendondear a dos decimales el precio total devuelto por la función:</p>
+      <pre class="consola">
 
       <span class="funcion">var</span> precioNeto <span class="condicion">=</span> <span class="funcion">prompt</span>(<span class="cadena">'Ingrese el monto sin impuestos: '</span>);
       precioNeto <span class="condicion">=</span> <span class="funcion">parseFloat</span>(precioNeto);
@@ -485,4 +1385,31 @@
       }    
         <span class="funcion">var</span> resultadoFinal <span class="condicion">=</span> <span class="funcion">calculaPrecioTotal</span>(precioNeto, impuestos);
         <span class="funcion">alert</span>(<span class="cadena">"El resultado es "</span> <span class="condicion">+</span> resultadoFinal);
-      </pre><br><button id="ejemploFuncion4" class="button primary">Ver resultado del ejemplo</button><br></div><!-- /.contenedor --></section></div></div><!-- /.tabs-content --></div><!-- /.columns --></div><!-- /.row collapse --></div><!-- /.contenedor --></section><!-- /. CONTENIDO PÁGINA --><!-- ************* CORE JS --><script src="assets/js/jquery.js"></script><script src="assets/js/sweetalert2.all.js"></script><script src="assets/js/select2.min.js"></script><script src="assets/js/what-input.js"></script><script src="assets/js/foundation.min.js"></script><script type="text/javascript" src="assets/js/app.js"></script><script>$(document).foundation();</script></body></html>
+      </pre>
+      <br>
+      <button id="ejemploFuncion4" class="button primary">Ver resultado del ejemplo</button>
+      <br>
+    </div><!-- /.contenedor -->
+  </section>
+              
+            </div>
+          </div><!-- /.tabs-content -->
+        </div><!-- /.columns -->
+      </div><!-- /.row collapse -->
+    </div><!-- /.contenedor -->
+  </section>
+  <!-- /. CONTENIDO PÁGINA -->
+    <!-- ************* CORE JS -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/sweetalert2.all.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/what-input.js"></script>
+    <script src="assets/js/foundation.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>
+
+  

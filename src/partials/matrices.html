@@ -10,7 +10,6 @@
         <a class="button hollow primary" href="#metodos"><big>Métodos de matrices</big></a>
         <a class="button hollow primary" href="#ejemplo_m1"><big>Ejemplo uso de métodos</big></a>
         <a class="button hollow primary" href="#multidimencionales"><big>Arrays Multidimencionales</big></a>
-        <a class="button hollow primary" href="#ejemplo"><big>Ejemplo</big></a>
       </div>
       <br>
 
@@ -166,13 +165,42 @@
       <span class="funcion">alert</span>(<span class="cadena">"Los colores que quedaron son: "</span> <span class="condicion">+</span> colores);                  
       </pre>
       <button id="ejemploMetodoArray" class="button primary mt-1">Ver resultado del ejemplo</button>      
-      <br>
-
-      <h3 id="multidimencionales">Arrays Multidimencionales</h3>
+      
+      <h3 id="multidimencionales" class="mt-5">Arrays Multidimencionales</h3>
       <p>Veamos qué son los arrays multidimensionales (arrays de más de una dimensión) y cómo utilizarlos. Además de cómo inicializar arrays en su declaración.</p>
       <p>Los arrays son bastante importantes en Javascript y también en la mayoría de los lenguajes de programación. En concreto ya hemos aprendido a crear arrays y utilizarlos. Pero aun nos quedan algunas cosas importantes, como son los arrays de varias dimensiones.</p>
       <p> Los <b>arrays multidimensionales</b> son un estructuras de datos que almacenan los valores en más de una dimensión. Los arrays que hemos visto hasta ahora almacenan valores en <em>una dimensión</em>, por eso para acceder a las posiciones utilizamos tan <em>solo un índice</em>. Los arrays de 2 dimensiones guardan sus valores, por decirlo de alguna manera, en filas y columnas y por ello necesitaremos <b>por lo menos dos índices</b> para acceder a cada una de sus posiciones.</p>
       <p class="primary callout">Dicho de otro modo, un array multidimensional es como un contenedor que guardara más valores para cada posición, es decir, los elementos del array son a su vez otros arrays.</p>
+      <p>Javascript tiene una forma resumida de construir un <b>Array Multidimencional</b>, para ello simplemente escribimos entre corchetes los datos del array que estamos creando.</p>
+      <p>A continuación un ejemplo sobre cómo utilizar esta sintaxis para declarar arrays de más de una dimensión.</p>
+      <pre><b>
+      <span class="kw1">var</span> arrayMuchasDimensiones <span class="kw2">=</span> <span class="token punctuation">[</span>
+        <span class="nu0">1</span><span class="br0">,</span> 
+        <span class="br0">[</span>
+          <span class="st0">"hola"</span><span class="br0">,</span> 
+          <span class="st0">"que"</span><span class="br0">,</span> 
+          <span class="st0">"tal"</span><span class="br0">,</span> 
+          <span class="br0">[</span>
+            <span class="st0">"estas"</span><span class="br0">,</span> 
+            <span class="st0">"estamos"</span><span class="br0">,</span> 
+            <span class="st0">"estoy"</span>
+          <span class="br0">]</span><span class="br0">,</span> 
+          <span class="br0">[</span>
+            <span class="st0">"bien"</span><span class="br0">,</span> 
+            <span class="st0">"mal"</span>
+          <span class="br0">]</span><span class="br0">,</span> 
+          <span class="st0">"acabo"</span>
+        <span class="br0">]</span><span class="br0">,</span> 
+        <span class="nu0">2</span><span class="br0">,</span> 
+        <span class="nu0">5</span>
+      <span class="br0">]</span><span class="br0">;</span>
+      </b></pre>
+      <p>Así hemos creado un array que tiene casillas con contenido de simples enteros y otras con contenido de cadena y otras que son otros arrays. Podríamos acceder a algunas de sus casillas y mostrar sus valores de esta manera:</p>
+      <pre><b>
+      alert <span class="kw1">(</span>arrayMuchasDimensiones<span class="kw1">[</span><span class="nu0">0</span><span class="kw1">]</span><span class="kw1">)</span>        <span class="co1">// Esto es igual a 1</span>
+      alert <span class="kw1">(</span>arrayMuchasDimensiones<span class="kw1">[</span><span class="nu0">1</span><span class="kw1">]</span><span class="kw1">[</span><span class="nu0">2</span><span class="kw1">]</span><span class="kw1">)</span>     <span class="co1">// Esto es igual a "tal"</span>
+      alert <span class="kw1">(</span>arrayMuchasDimensiones<span class="kw1">[</span><span class="nu0">1</span><span class="kw1">]</span><span class="kw1">[</span><span class="nu0">3</span><span class="kw1">]</span><span class="kw1">[</span><span class="nu0">1</span><span class="kw1">]</span><span class="kw1">)</span>  <span class="co1">// Esto es igual a "estamos"</span>
+      </b></pre>
 
     </div><!-- /.contenedor -->
   </section>
