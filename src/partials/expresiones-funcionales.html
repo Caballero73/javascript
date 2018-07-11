@@ -1,0 +1,64 @@
+  <!-- ********** Expresiones Funcionales -->
+  <section id="expresiones-funcionales" class="">
+    <div class="contenedor">
+      <h2>Expresiones Funcionales</h2>
+      <p>Vamos a ver cómo recorrer un array en Javascript, a través de tres métodos, muy usados.</p>
+      <p>Una de las partes más potentes, y a menudo confusas, de JavaScript es el manejo de las funciones.</p>
+      <p>Existen dos formas de definir una función:</p>
+      <p><strong>Mediante declaración:</strong></p>
+      <pre><b>
+      <span class="kw1">function</span> <span class="st0">nombreFuncion</span>(<span class="es0">arg0</span>,<span class="es0">arg1</span>,<span class="es0">arg2</span>) {
+        <span class="co1">// cuerpo de la función</span>
+      }
+      </b></pre>
+      <p>Las funciones creadas mediante declaración o <b>Funciones Declaradas</b> pueden aparecer en el código luego de una llamada a dicha función, es decir pueden ser llamadas antes de ser declaradas.</p>
+
+      <p><strong> Mediante expresión:</strong></p>
+      <pre><b>
+      <span class="kw1">var</span> <span class="st0">nombreFuncion</span> <span class="kw1">=</span> <span class="kw1">function</span>(<span class="es0">arg0</span>,<span class="es0">arg1</span>,<span class="es0">arg2</span>) {
+        <span class="co1">// cuerpo de la función</span>
+      }      
+      </b></pre>
+      <p>Una función creada mediante expresión se considera una <b>Función Anónima</b> (o función lambda), que se asigna a una variable. Este tipo de expresión es igual a cualquier otra, y por tanto, deben asignarse antes del uso. Si la llamada ocurre antes de la asignación, el programa fallará. La función aún no existe, aunque, debido al modo en que el motor de JavaScript parsea el código, que “eleva” a la parte de arriba la declaración de variables –<em>hoisting</em>– la variable sí existirá, pero su valor será todavía <code>undefined</code>.</p>
+      <p>Este método de definición permite hacer cosas así:</p>
+      <pre><b>
+      <span class="kw1">var</span> saludar;
+       
+      <span class="kw1">if</span>(temprano) {
+            <span class="st0">saludar</span> = <span class="kw1">function</span>() { <span class="st0">alert</span>(<span class="es0">"Buenos días"</span>); };
+      } <span class="kw1">else</span> {
+            <span class="st0">saludar</span> = <span class="kw1">function</span>() { <span class="st0">alert</span>(<span class="es0">"Buenas tardes"</span>); };
+      }
+      </b></pre>
+      <p>También es posible que las funciones devuelvan otras funciones. Por ejemplo, se puede crear una función que devuelva funciones comparadoras personalizadas según cierta propiedad:</p>
+      <pre><b>
+      <span class="fu0">function</span> <span class="st0">crearFuncionComparadora</span>(<span class="es0">propiedad</span>) {
+
+          <span class="kw1">return</span> <span class="fu0">function</span>(<span class="es0">obj1</span>, <span class="es0">obj2</span>) {
+
+              <span class="fu0">var</span> valor1 <span class="kw1">=</span> obj1[propiedad];
+              <span class="fu0">var</span> valor2 <span class="kw1">=</span> obj2[propiedad];
+
+              <span class="kw1">if</span> (valor1 <span class="kw1">&lt;</span> valor2) {
+                  <span class="kw1">return</span> <span class="sy0">-1</span>;
+              } <span class="kw1">else</span> if (valor1 <span class="kw1">&gt;</span> valor2) {
+                  <span class="kw1">return</span> <span class="sy0">1</span>;
+              } <span class="kw1">else</span> {
+                  <span class="kw1">return</span> <span class="sy0">0</span>;
+              }
+          };
+      }
+      </b></pre>
+      <br>
+      <p><b>Recursividad</b></p>
+      <p>Una función recursiva es una función se se invoca a sí misma, también se les conocen como <em>Inmediately Invoked Function Expression (IIEF)</em>, y son muy útiles para crear efectos o rutinas que se inicien automáticamente, por lo menos al cargar una página, o algo similar.</p>
+      <pre><b>
+      (<span class="fu0">function</span>() {
+            <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span>(<span class="st0">'Hola desde IIEF'</span>)
+            <span class="co1">// Inmediately Invoked Function Expression</span>
+      })();      
+      </b></pre>
+      <cite>Fuente: http://lurailabs.com/javascript-expresiones-funcionales/</cite>
+
+    </div><!-- /.contenedor -->
+  </section>

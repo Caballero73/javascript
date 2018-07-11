@@ -1,7 +1,7 @@
 /*Hoja de Estilo
 * Desarrollada para el proyecto: Aprendiendo JavaScrip
 * Por: Enrique Valerio
-* Mayo 2018
+* Junio 2018
 */
 /* CSS Externos */
 @import './font-awesome.css';
@@ -28,6 +28,7 @@
 @import './partials/ambito-variables.css';
 @import './partials/matrices.css';
 @import './partials/recorrer-matrices.css';
+@import './partials/expresiones-funcionales.css';
 @import './partials/custom.css';
 
 /******************************

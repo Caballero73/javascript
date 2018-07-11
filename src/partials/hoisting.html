@@ -1,0 +1,39 @@
+  <!-- ********** Hoisting -->
+  <section id="expresiones-funcionales" class="">
+    <div class="contenedor">
+      <h2>Hoisting (Alzado)</h2>
+      <p>Hoisting es un término que&nbsp;<em>no</em>&nbsp;encontrará&nbsp;utilizado en ninguna especificación previa a&nbsp;<a href="http://www.ecma-international.org/ecma-262/6.0/index.html" class="external external-icon" rel="noopener">ECMAScript® 2015 Language Specification</a>.</p>
+      <p>El concepto de Hoisting fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript (específicamente las fases de creación y ejecución).</p>
+      <p>Hoisting puede llevar a <b>malos entendidos</b>, por ejemplo, puede dar a entender que las declaraciones de variables y funciones son físicamente movidas al comienzo del código, pero esto no es lo que ocurre en realidad. Lo que sucede es que las declaraciones de variables y funciones son <strong>asignadas en memoria</strong> durante la fase de <u>compilación,</u>&nbsp;pero quedan exactamente en dónde la ha escrito en el código.</p>
+      <p><b>Ejemplo</b></p>
+      <p>Una de las ventajas en JavaScript de colocar (ponerlas en memoria) las declaraciones de funciones antes de ejecutar cualquier otro segmento de código es que permite utilizar una función antes de declararla en el código:</p>
+      <pre><b>
+      <span class="kw1">function</span> <span class="st0">nombreDelGato</span><span class="br0">(</span><span class="nu0">nombre</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span><span class="br0">(</span><span class="st0">"El nombre de mi gato es "</span> <span class="kw1">+</span> <span class="nu0">nombre</span><span class="br0">)</span><span class="br0">;</span>
+      <span class="br0">}</span>
+
+      <span class="fu0">nombreDelGato</span><span class="br0">(</span><span class="st0">"Maurizzio"</span><span class="br0">)</span><span class="br0">;</span>
+      <span class="co1" spellcheck="true">/*
+      El resultado del código es: "El nombre de mi gato es Maurizzio"
+      */</span>
+      </b></pre>
+      <p>El código escrito arriba está escrito de la manera que sería esperada para que funcione.</p>
+      <p>Ahora, veamos qué sucede cuando llamamos a la función antes de escribirla:</p>
+      <pre><b>
+      <span class="fu0">nombreDelGato</span><span class="br0">(</span><span class="st0">"Dumas"</span><span class="br0">)</span><span class="br0">;</span>
+
+      <span class="kw1">function</span> <span class="st0">nombreDelGato</span><span class="br0">(</span><span class="nu0">nombre</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span><span class="br0">(</span><span class="st0">"El nombre de mi gato es "</span> <span class="kw1">+</span> <span class="nu0">nombre</span><span class="br0">)</span><span class="br0">;</span>
+      <span class="br0">}</span>
+      <span class="co1" spellcheck="true">/*
+      El resultado del código es: "El nombre de mi gato es Dumas"
+      */</span>
+      </b></pre>
+      <p>Como se puede observar, aunque primero llamamos a la función en el código, antes de que sea escrita, el código aún funciona. Esto sucede por la manera en la que el contexto de ejecución trabaja en JavaScript. </p>
+      <br>
+      <cite>Fuente: https://developer.mozilla.org/es/docs/Glossary/Hoisting/</cite>
+
+    </div><!-- /.contenedor -->
+  </section>
+
+  Es una función que retorna desde otra función, y la clave está en que esa función que retorna desde otra función se lleva una copia o una referencia del ámbito de esa función que la retorna, es decir encierra o envuelve todo ese ambito con las variables o las funciones que hubiera y se lo lleva con ella.

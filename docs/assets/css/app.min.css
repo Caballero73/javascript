@@ -1,7 +1,7 @@
 /*Hoja de Estilo
 * Desarrollada para el proyecto: Aprendiendo JavaScrip
 * Por: Enrique Valerio
-* Mayo 2018
+* Junio 2018
 */
 /* CSS Externos */
 /*!
@@ -4441,6 +4441,31 @@ ESTILOS CONTENIDO RECORRER MATRICES: recorrer-matrices.css;
 	}
 /**/
 /******************************
+ESTILOS CONTENIDO EXPRESIONES FUNCIONALES: expresiones-funcionales.css;
+*******************************/
+#expresiones-funcionales {
+	padding: 20px;
+	padding: 2rem;
+
+}
+#expresiones-funcionales .button {
+		font-size: calc(0.95349rem + 0.55814vw);
+	}
+#expresiones-funcionales .button big {
+			display: inline-block;
+			font-size: calc(0.95581rem + 0.93023vw);
+			font-weight: bold;
+			margin-bottom: 5px;
+			margin-bottom: .5rem;
+		}
+#expresiones-funcionales pre.console {
+		font-size: calc(1.40465rem + 0.74419vw);
+	}
+#expresiones-funcionales pre.lead {
+		font-weight: bold;
+	}
+/**/
+/******************************
 ESTILOS DEL TEMA: custom.css;
 *******************************/
 html {
@@ -4829,6 +4854,18 @@ MEDIA-QUERIES
     font-size: 20px;
     font-size: 2rem;
   }
+  #expresiones-funcionales .button {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  #expresiones-funcionales .button big {
+    font-size: 17px;
+    font-size: 1.7rem;
+  }
+  #expresiones-funcionales pre.console {
+    font-size: 20px;
+    font-size: 2rem;
+  }
   body {
     font-size: 18px;
     font-size: 1.8rem;
@@ -4972,6 +5009,18 @@ MEDIA-QUERIES
     font-size: 1.2rem;
   }
   #recorrer-matrices pre.console {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  #expresiones-funcionales .button {
+    font-size: 11px;
+    font-size: 1.1rem;
+  }
+  #expresiones-funcionales .button big {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  #expresiones-funcionales pre.console {
     font-size: 16px;
     font-size: 1.6rem;
   }

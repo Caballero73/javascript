@@ -198,3 +198,9 @@ $('#ejemploMatriz2').click(function(){
 	paises2.forEach(verMatriz2);
 });
 
+// Función recursiva
+(function() {
+	console.log('****************')
+	console.log('Hola desde IIEF')
+	// Inmediately Invoked Function Expression
+})();
