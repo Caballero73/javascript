@@ -4078,7 +4078,7 @@ ESTILOS CONTENIDO PPAL: cont-ppal.css;
 		padding: 1.5rem;
 		width: 100%;
 	}
-#cont-ppal-tabs li a{font-size: calc(0.85581rem + 0.93023vw);}
+#cont-ppal-tabs li a{font-size: calc(0.85581rem + 0.5814vw);}
 #cont-ppal-header-h1 {
 		color: white !important;
 		padding: 10px;
@@ -4104,7 +4104,7 @@ ESTILOS CONTENIDO PPAL: cont-ppal.css;
 	}
 #cont-ppal .tabs > li a {
 			color: #F8F8FF;
-			font-size: calc(1.50233rem + 0.37209vw);
+			font-size: calc(1.50233rem + 0.23256vw);
 			
 		}
 #cont-ppal .tabs-title > a:focus, #cont-ppal .tabs-title > a[aria-selected="true"] {
@@ -4271,11 +4271,11 @@ ESTILOS CONTENIDO OPERADORES: operadores.css;
 
 }
 #operadores .button {
-		font-size: calc(0.95349rem + 0.55814vw);
+		font-size: calc(0.95349rem + 0.34884vw);
 	}
 #operadores .button big {
 			display: inline-block;
-			font-size: calc(1.15814rem + 1.30233vw);
+			font-size: calc(1.15814rem + 0.81395vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
@@ -4293,11 +4293,11 @@ ESTILOS CONTENIDO FUNCIONES NATIVAS: func-nativas.css;
 
 }
 #func-nativas .button {
-		font-size: calc(0.95349rem + 0.55814vw);
+		font-size: calc(0.95349rem + 0.34884vw);
 	}
 #func-nativas .button big {
 			display: inline-block;
-			font-size: calc(1.15814rem + 1.30233vw);
+			font-size: calc(1.15814rem + 0.81395vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
@@ -4314,17 +4314,17 @@ ESTILOS CONTENIDO TYPEOF: typeof.css;
 	padding: 2rem;
 }
 #typeof .button {
-		font-size: calc(0.95349rem + 0.55814vw);
+		font-size: calc(0.95349rem + 0.34884vw);
 	}
 #typeof .button big {
 			display: inline-block;
-			font-size: calc(1.15814rem + 1.30233vw);
+			font-size: calc(1.15814rem + 0.81395vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #typeof pre.lead {
-		font-size: calc(0.95349rem + 0.55814vw);
+		font-size: calc(0.95349rem + 0.34884vw);
 		font-weight: bold;
 	}
 /**/
@@ -4337,11 +4337,11 @@ ESTILOS CONTENIDO CREACIÓN DE FUNCIONES: funciones.css;
 
 }
 #funciones .button {
-		font-size: calc(0.95349rem + 0.55814vw);
+		font-size: calc(0.95349rem + 0.34884vw);
 	}
 #funciones .button big {
 			display: inline-block;
-			font-size: calc(1.15814rem + 1.30233vw);
+			font-size: calc(1.15814rem + 0.81395vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
@@ -4351,7 +4351,7 @@ ESTILOS CONTENIDO CREACIÓN DE FUNCIONES: funciones.css;
 		
 	}
 #funciones pre {
-		font-size: calc(1.60233rem + 0.37209vw);
+		font-size: calc(1.60233rem + 0.23256vw);
 		font-weight: bold;
 	}
 #funciones pre.consola {
@@ -4368,11 +4368,11 @@ ESTILOS CONTENIDO ÁMBITO VARIABLES: ambito-variables.css;
 
 }
 #ambito-variables .button {
-		font-size: calc(0.95349rem + 0.55814vw);
+		font-size: calc(0.95349rem + 0.34884vw);
 	}
 #ambito-variables .button big {
 			display: inline-block;
-			font-size: calc(1.15814rem + 1.30233vw);
+			font-size: calc(1.15814rem + 0.81395vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
@@ -4382,7 +4382,7 @@ ESTILOS CONTENIDO ÁMBITO VARIABLES: ambito-variables.css;
 		
 	}
 #ambito-variables pre {
-		font-size: calc(1.60233rem + 0.37209vw);
+		font-size: calc(1.60233rem + 0.23256vw);
 		font-weight: bold;
 	}
 #ambito-variables pre.consola {
@@ -4399,17 +4399,17 @@ ESTILOS CONTENIDO MATRICES: matrices.css;
 
 }
 #matrices .button {
-		font-size: calc(0.95349rem + 0.55814vw);
+		font-size: calc(0.95349rem + 0.34884vw);
 	}
 #matrices .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.93023vw);
+			font-size: calc(0.95581rem + 0.5814vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #matrices pre.console {
-		font-size: calc(1.40465rem + 0.74419vw);
+		font-size: calc(1.40465rem + 0.46512vw);
 	}
 #matrices pre.lead {
 		font-weight: bold;
@@ -4424,17 +4424,17 @@ ESTILOS CONTENIDO RECORRER MATRICES: recorrer-matrices.css;
 
 }
 #recorrer-matrices .button {
-		font-size: calc(0.95349rem + 0.55814vw);
+		font-size: calc(0.95349rem + 0.34884vw);
 	}
 #recorrer-matrices .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.93023vw);
+			font-size: calc(0.95581rem + 0.5814vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #recorrer-matrices pre.console {
-		font-size: calc(1.40465rem + 0.74419vw);
+		font-size: calc(1.40465rem + 0.46512vw);
 	}
 #recorrer-matrices pre.lead {
 		font-weight: bold;
@@ -4449,19 +4449,44 @@ ESTILOS CONTENIDO EXPRESIONES FUNCIONALES: expresiones-funcionales.css;
 
 }
 #expresiones-funcionales .button {
-		font-size: calc(0.95349rem + 0.55814vw);
+		font-size: calc(0.95349rem + 0.34884vw);
 	}
 #expresiones-funcionales .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.93023vw);
+			font-size: calc(0.95581rem + 0.5814vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #expresiones-funcionales pre.console {
-		font-size: calc(1.40465rem + 0.74419vw);
+		font-size: calc(1.40465rem + 0.46512vw);
 	}
 #expresiones-funcionales pre.lead {
+		font-weight: bold;
+	}
+/**/
+/******************************
+ESTILOS CONTENIDO CLOSURE: closures.css;
+*******************************/
+#closures {
+	padding: 20px;
+	padding: 2rem;
+
+}
+#closures .button {
+		font-size: calc(0.95349rem + 0.34884vw);
+	}
+#closures .button big {
+			display: inline-block;
+			font-size: calc(0.95581rem + 0.5814vw);
+			font-weight: bold;
+			margin-bottom: 5px;
+			margin-bottom: .5rem;
+		}
+#closures pre.console {
+		font-size: calc(1.40465rem + 0.46512vw);
+	}
+#closures pre.lead {
 		font-weight: bold;
 	}
 /**/
@@ -4545,7 +4570,7 @@ cite {font-size: calc(0.75581rem + 0.5814vw);}
 }
 .color-secundario {color: #FF794C !important;}
 .color-primario {color: #4e0079 !important;}
-.color-verde {color: #518f1e !important;}
+.color-verde {color: #5A991F !important;}
 .contenedor {
   margin-left: auto;
   margin-right: auto;
@@ -4685,7 +4710,7 @@ pre.consola .condicion {color: #E33727;}
 pre.consola .dorado {color: #7C5D00;}
 pre.consola .funcion {color: cyan;}
 pre.consola .nota {color: #777;}
-pre.consola .verde {color: #518f1e;}
+pre.consola .verde {color: #5A991F;}
 pre.consola .violeta {color: #AA17FE;}
 .p-1 {padding: 10px;padding: 1rem}
 .p-2 {padding: 20px;padding: 2rem}
@@ -4866,6 +4891,18 @@ MEDIA-QUERIES
     font-size: 20px;
     font-size: 2rem;
   }
+  #closures .button {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  #closures .button big {
+    font-size: 17px;
+    font-size: 1.7rem;
+  }
+  #closures pre.console {
+    font-size: 20px;
+    font-size: 2rem;
+  }
   body {
     font-size: 18px;
     font-size: 1.8rem;
@@ -5021,6 +5058,18 @@ MEDIA-QUERIES
     font-size: 1.2rem;
   }
   #expresiones-funcionales pre.console {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  #closures .button {
+    font-size: 11px;
+    font-size: 1.1rem;
+  }
+  #closures .button big {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  #closures pre.console {
     font-size: 16px;
     font-size: 1.6rem;
   }

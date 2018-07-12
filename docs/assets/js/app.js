@@ -204,3 +204,22 @@ $('#ejemploMatriz2').click(function(){
 	console.log('Hola desde IIEF')
 	// Inmediately Invoked Function Expression
 })();
+
+//Ejemplo Enclosures
+
+$('#ejemploEnclosures').click(function(){
+	function inicia() {
+		var nombre = "Mozilla"; // 'nombre' es una variable local creada por la función 'inicia'
+		function muestraNombre() { // 'muestraNombre' es una función interna (un closure)
+			alert(nombre); // dentro de esta función usamos una variable declarada en la función padre
+		}
+		muestraNombre();
+	}
+	inicia();
+});
+
+
+
+
+
+

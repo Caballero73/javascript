@@ -1,0 +1,28 @@
+  <!-- ********** Closures -->
+  <section id="closures" class="">
+    <div class="contenedor">
+      <h2>Closures (Clausuras)</h2>
+      <p>Es una función que retorna desde otra función, y la clave está en que <b>lleva una copia o una referencia del ámbito</b> de esa función que la retorna, es decir encierra o envuelve todo el ambito con las variables o las funciones que hubiera y se lo lleva con ella.</p>
+      <p>Otro concepto válido es:<em> "Un <u>closure</u>&nbsp;o clausura es la combinación de una función y el ámbito léxico en el que se declaró dicha función. Es decir los <u>closures</u>&nbsp;o clausuras son funciones que manejan variables independientes. En otras palabras, la función definida en el <u>closure</u> "recuerda" el ámbito en el que se ha creado".</em></p>
+      <p>Veamos lo siguiente:</p>      
+      <pre><b>
+      <span class="fu0">function</span> <span class="st0">inicia</span>() {
+        <span class="fu0">var</span> nombre <span class="kw1">=</span> <span class="es0">"Mozilla"</span>; <span class="co1">// 'nombre' es una variable local creada por la función 'inicia'</span>
+        <span class="fu0">function</span> <span class="st0">muestraNombre</span>() { <span class="co1">// 'muestraNombre' es una función interna (un closure)</span>
+          <span class="st0">alert</span>(nombre); <span class="co1">// dentro de esta función usamos una variable declarada en la función padre</span>
+        }
+        <span class="st0">muestraNombre</span>();
+      }
+      <span class="st0">inicia</span>();  
+      </b></pre>
+      <p>La función&nbsp;<code>inicia()</code>&nbsp;&nbsp;crea una variable local llamada&nbsp;<code>nombre</code>.<br>
+      A continuación, define una función denominada <code>muestraNombre()</code>.<br>
+      <code>muestraNombre()</code>&nbsp;es una función interna (un <em>closure</em>) definida dentro de <code>inicia</code><code>()</code>,&nbsp;y sólo está disponible en el cuerpo de esa función.<br>
+      <code>muestraNombre</code><code>()</code>&nbsp;no tiene ninguna variable propia, lo que hace es reutilizar la variable <code>nombre</code> declarada en la función externa.</p>
+      <p>Esto funciona bien, intenta correr el código para ver qué pasa. Este es un ejemplo de ámbito funcional: en JavaScript, el ámbito de una variable se define por su ubicación dentro del código fuente y las funciones anidadas tienen acceso a las variables declaradas en su ámbito externo.</p>
+      <button id="ejemploEnclosures" class="button primary mt-1">Ver resultado del ejemplo</button>
+      <br>
+      <cite>Fuente: https://developer.mozilla.org/es/docs/Web/JavaScript/Closures/</cite>
+
+    </div><!-- /.contenedor -->
+  </section>
