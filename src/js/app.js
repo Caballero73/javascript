@@ -174,7 +174,6 @@ $('#ejemploMetodoArray').click(function(){
 });
 
 //Ejemplo recorrido de matriz con for
-
 $('#ejemploMatriz1').click(function(){
 	var paises = ["Argentina" , "Bolivia" , "Brasil" , "Chile" , "Colombia" , "Ecuador" , "Guyana" , "Paraguay" , "Perú" , "Surinam" , "Uruguay" , "Venezuela"];
 
@@ -186,7 +185,6 @@ $('#ejemploMatriz1').click(function(){
 });
 
 //Ejemplo recorrido de matriz con forEach
-
 $('#ejemploMatriz2').click(function(){
 
 	var paises2 = ["Argentina" , "Bolivia" , "Brasil" , "Chile" , "Colombia" , "Ecuador" , "Guyana" , "Paraguay" , "Perú" , "Surinam" , "Uruguay" , "Venezuela"];
@@ -206,7 +204,6 @@ $('#ejemploMatriz2').click(function(){
 })();
 
 //Ejemplo Enclosures
-
 $('#ejemploEnclosures').click(function(){
 	function inicia() {
 		var nombre = "Mozilla"; // 'nombre' es una variable local creada por la función 'inicia'
@@ -218,8 +215,63 @@ $('#ejemploEnclosures').click(function(){
 	inicia();
 });
 
+//Ejemplo closure con bucles
+$('#ejemploEnclosures2').click(function(){
 
+	for (var i=1; i<=10; i++){
+		(function(z){
+			setTimeout(function(){
+				$('#resultadoEnclosures2').html(z+' seg.')
+			},z * 1000);
+		})(i);
+	}
+});
 
+// Ejercicio objetos 1
+console.log('**********************');
+console.log('Ejercicio objetos 1:');
 
+var opino = "Es uno de mis libros preferidos.";
 
+var libro = {
+	titulo: 'Escultismo para muchachos.',
+	autor: 'Robert Baden-Powell',
+	genero: 'Educación',
+	valoracion: 9,
+	tags: ['Escultismo','Niños','Scouts','Exploración','Vida al aire libre','Aprender haciendo'],
+	opinion: opino,
+};
 
+console.log(libro.opinion);
+// Muestra "Es uno de mis libros preferidos."
+
+console.log(libro.tags[4]);
+// Muestra 'Vida al aire libre'
+
+console.log(libro.autor);
+// Muestra 'Robert Baden-Powell'
+
+// **********************************
+// Ejemplo recorrer objeto con for
+$('#ejemploObjet1').click(function(){
+	
+	for (var propiedad in libro) {
+		$('#resultadoObjet1').append('<li>'+'&nbsp;'+propiedad+'&nbsp;'+'</li>')
+	}
+});
+
+// Ejemplo recorrer objeto con Object.keys(o)
+$('#ejemploObjet2').click(function(){
+
+	var llaves = Object.keys(libro);
+
+	$('#resultadoObjet2').html(llaves+',')
+});
+
+// Ejemplo recorrer objeto con Object.getOwnPropertyNames(o)
+$('#ejemploObjet3').click(function(){
+
+	var llaves = Object.getOwnPropertyNames(libro);
+
+	$('#resultadoObjet3').html(llaves+',')
+});

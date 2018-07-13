@@ -2,7 +2,6 @@
 ESTILOS CONTENIDO PPAL: cont-ppal.css;
 *******************************/
 #cont-ppal {
-	
 	&-header {
 		background: var(--colorPpal);
 	}
@@ -19,12 +18,13 @@ ESTILOS CONTENIDO PPAL: cont-ppal.css;
 		width: 100%;
 	}
 	&-tabs {
-
-		& li a{font-size: responsive 1.1rem 1.6rem;}
-		
+		& li a{font-size: responsive 1rem 1.5rem;}
 		& i {@media (--mobile){display: none;}}
-		
 		& i {@media (--tablet-v){display: none;}}
+		& i {@media (--tablet-h){display: none;}}
+		& b {@media (--mobile){display: none;}}
+		& b {@media (--tablet-v){display: none;}}
+		& b {@media (--tablet-h){display: none;}}
 	}
 	&-header-h1 {
 		color: white !important;
@@ -41,7 +41,6 @@ ESTILOS CONTENIDO PPAL: cont-ppal.css;
 		grid-template-rows: auto;
 		justify-content: space-evenly; 
 	}
-
 	& .tabs > li {
 		background-color: var(--colorPrimarioOscuro);
 		border-radius: .7rem 0 0 .7rem;
@@ -50,10 +49,8 @@ ESTILOS CONTENIDO PPAL: cont-ppal.css;
 		& a {
 			color: var(--colorBlanco);
 			font-size: responsive 1.6rem 1.8rem;
-			
 		}
 	}
-
 	& .tabs-title > a:focus, .tabs-title > a[aria-selected="true"] {
 		background: color(var(--colorPrimario) lightness(35%));
 		border-radius: .7rem 0 0 .7rem;
@@ -65,6 +62,7 @@ ESTILOS CONTENIDO PPAL: cont-ppal.css;
 		border-radius: .7rem 0 0 .7rem;
 		color: var(--colorBlanco);
 		outline: none;
-	}	
+	}
+	& .tabs-items {font-size: responsive 1rem 1.5rem}	
 }
 /**/

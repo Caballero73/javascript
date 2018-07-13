@@ -1,0 +1,115 @@
+  <!-- ********** Objetos -->
+  <section id="objetos" class="">
+    <div class="contenedor">
+      <h2>Objetos</h2>
+      <p>Un objeto es una colección de propiedades, y una <b>propiedad</b> es una asociación entre un nombre y un valor. Un valor de propiedad puede ser una función, la cual es conocida entonces como un método del objeto.</p> 
+      <p>Además de los objetos que están predefinidos en el navegador, tu puedes definir tus propios objetos.</p>      
+      <pre><b>
+      <span class="fu0">var</span> <span class="es0">opino</span> <span class="kw1">=</span> <span class="st0">"Es uno de mis libros preferidos."</span>;
+
+      <span class="fu0">var</span> <span class="es0">libro</span> <span class="kw1">=</span> {
+            <span class="st0">titulo</span><span class="kw2">:</span> <span class="st0">'Escultismo para muchachos.'</span>,
+            <span class="st0">autor</span><span class="kw2">:</span> '<span class="st0">Robert Baden-Powell'</span>,
+            <span class="st0">genero</span><span class="kw2">:</span> <span class="st0">'Educación'</span>,
+            <span class="st0">valoracion</span><span class="kw2">:</span> <span class="nu0">9</span>,
+            <span class="st0">tags</span><span class="kw2">:</span> [<span class="st0">'Escultismo'</span>,<span class="st0">'Niños'</span>,<span class="st0">'Scouts'</span>,<span class="st0">'Exploración'</span>,
+                  <span class="st0">'Vida al aire libre'</span>,<span class="st0">'Aprender haciendo'</span>],
+            <span class="st0">opinion</span><span class="kw2">:</span> <span class="es0">opino</span>,
+      };
+
+      <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span>(libro<span class="kw1">.</span>opinion);
+      <span class="co1">// Muestra "Es uno de mis libros preferidos."</span>
+
+      <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span>(libro<span class="kw1">.</span>tags[<span class="nu0">4</span>]);
+      <span class="co1">// Muestra 'Vida al aire libre'</span>
+
+      <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span>(libro<span class="kw1">.</span>autor);
+      <span class="co1">// Muestra 'Robert Baden-Powell'</span>  
+      </b></pre>
+      <p>Los <b>objectos</b> en JavaScript, al igual que en muchos otros lenguajes de programación, pueden ser comparados con <b>objetos de la vida real</b>. El concepto de Objetos en JavaScript se puede entender como en la vida real, objetos tangibles.</p>
+      <p class="callout warning">En JavaScript, un objecto es un entidad independiente con propiedades y tipos. Comparado con un libro por ejemplo, un libro es un objeto con propiedades, tiene un autor, un título, un género, etc, de la misma manera, los objetos de JavaScript pueden tener propiedades, que definen sus características.</p>
+      <h3 class="mt-4">Listando todas las propiedades de un objeto</h3>
+      <p>A partir de <em>ECMAScript 5</em>, hay tres formas nativas de "Lista/cruzada" de propiedades de objeto:</p>
+      <ul>
+            
+            <li><b>Object.keys(o)</b> = Este método devuelve una matriz con los mismos (no en la cadena de prototipos) nombres ("keys") enumerables de las popiedades de un objeto o.</li>
+            <li><b>Object.getOwnPropertyNames(o)</b> = Este método devuelve una matriz que contiene todos los nombres (enumerables o no) de las propiedades de un objeto o.</li>
+      </ul>
+
+      <p><b>Con bucles <code>for...in</code></b></p>
+      <p>Este método atraviesa todas las propiedades enumerables de un objeto y su cadena de prototipo.</p>
+      <pre><b>
+      <span class="fu0">var</span> <span class="es0">opino</span> <span class="kw1">=</span> <span class="st0">"Es uno de mis libros preferidos."</span>;
+
+      <span class="fu0">var</span> <span class="es0">libro</span> <span class="kw1">=</span> {
+            <span class="st0">titulo</span><span class="kw2">:</span> <span class="st0">'Escultismo para muchachos.'</span>,
+            <span class="st0">autor</span><span class="kw2">:</span> '<span class="st0">Robert Baden-Powell'</span>,
+            <span class="st0">genero</span><span class="kw2">:</span> <span class="st0">'Educación'</span>,
+            <span class="st0">valoracion</span><span class="kw2">:</span> <span class="nu0">9</span>,
+            <span class="st0">tags</span><span class="kw2">:</span> [<span class="st0">'Escultismo'</span>,<span class="st0">'Niños'</span>,<span class="st0">'Scouts'</span>,<span class="st0">'Exploración'</span>,
+                  <span class="st0">'Vida al aire libre'</span>,<span class="st0">'Aprender haciendo'</span>],
+            <span class="st0">opinion</span><span class="kw2">:</span> <span class="es0">opino</span>,
+      };
+
+      <span class="kw1">for</span> (<span class="fu0">var</span> propiedad <span class="kw1">in</span> libro) {
+            <span class="st0">$</span>(<span class="nu0">'#resultadoObjet1'</span>)<span class="kw1">.</span><span class="st0">append</span>(<span class="nu0">'&lt;li>'</span><span class="kw1">+</span><span class="nu0">'&nbsp;'</span><span class="kw1">+</span>propiedad<span class="kw1">+</span><span class="nu0">'&nbsp;'</span><span class="kw1">+</span><span class="nu0">'&lt;/li>'</span>)
+      }      
+      </b></pre>
+      <button id="ejemploObjet1" class="button primary mt-1">Ver resultado del ejemplo</button>
+      <div class="callout primary">
+            <ul id="resultadoObjet1"></ul>
+      </div>
+
+      <p class="mt-4"><b>Con <code>Object.keys(o)</code></b></p>
+      <p>Este método devuelve una matriz con los mismos nombres ("keys") enumerables de las propiedades de un objeto "o" (no en la cadena de prototipos).</p>
+      <pre><b>
+      <span class="fu0">var</span> <span class="es0">opino</span> <span class="kw1">=</span> <span class="st0">"Es uno de mis libros preferidos."</span>;
+
+      <span class="fu0">var</span> <span class="es0">libro</span> <span class="kw1">=</span> {
+            <span class="st0">titulo</span><span class="kw2">:</span> <span class="st0">'Escultismo para muchachos.'</span>,
+            <span class="st0">autor</span><span class="kw2">:</span> '<span class="st0">Robert Baden-Powell'</span>,
+            <span class="st0">genero</span><span class="kw2">:</span> <span class="st0">'Educación'</span>,
+            <span class="st0">valoracion</span><span class="kw2">:</span> <span class="nu0">9</span>,
+            <span class="st0">tags</span><span class="kw2">:</span> [<span class="st0">'Escultismo'</span>,<span class="st0">'Niños'</span>,<span class="st0">'Scouts'</span>,<span class="st0">'Exploración'</span>,
+                  <span class="st0">'Vida al aire libre'</span>,<span class="st0">'Aprender haciendo'</span>],
+            <span class="st0">opinion</span><span class="kw2">:</span> <span class="es0">opino</span>,
+      };
+
+      <span class="fu0">var</span> llaves <span class="kw1">=</span> <span class="fu0">Object</span><span class="kw1">.</span><span class="st0">keys</span>(libro);
+
+      $(<span class="nu0">'#resultadoObjet2'</span>)<span class="kw1">.</span><span class="st0">html</span>(llaves <span class="kw1">+</span> <span class="nu0">','</span>)     
+      </b></pre>
+      <button id="ejemploObjet2" class="button primary mt-1">Ver resultado del ejemplo</button>
+      <div class="callout primary">
+            <ul id="resultadoObjet2"></ul>
+      </div>
+
+      <p class="mt-4"><b>Con <code>Object.getOwnPropertyNames(o)</code></b></p>
+      <p>Este método devuelve una matriz que contiene todos los nombres (enumerables o no) de las propiedades de un objeto "o".</p>
+      <pre><b>
+      <span class="fu0">var</span> <span class="es0">opino</span> <span class="kw1">=</span> <span class="st0">"Es uno de mis libros preferidos."</span>;
+
+      <span class="fu0">var</span> <span class="es0">libro</span> <span class="kw1">=</span> {
+            <span class="st0">titulo</span><span class="kw2">:</span> <span class="st0">'Escultismo para muchachos.'</span>,
+            <span class="st0">autor</span><span class="kw2">:</span> '<span class="st0">Robert Baden-Powell'</span>,
+            <span class="st0">genero</span><span class="kw2">:</span> <span class="st0">'Educación'</span>,
+            <span class="st0">valoracion</span><span class="kw2">:</span> <span class="nu0">9</span>,
+            <span class="st0">tags</span><span class="kw2">:</span> [<span class="st0">'Escultismo'</span>,<span class="st0">'Niños'</span>,<span class="st0">'Scouts'</span>,<span class="st0">'Exploración'</span>,
+                  <span class="st0">'Vida al aire libre'</span>,<span class="st0">'Aprender haciendo'</span>],
+            <span class="st0">opinion</span><span class="kw2">:</span> <span class="es0">opino</span>,
+      };
+
+      <span class="fu0">var</span> llaves <span class="kw1">=</span> <span class="fu0">Object</span><span class="kw1">.</span><span class="st0">getOwnPropertyNames</span>(libro);
+
+      $(<span class="nu0">'#resultadoObjet2'</span>)<span class="kw1">.</span><span class="st0">html</span>(llaves <span class="kw1">+</span> <span class="nu0">','</span>)     
+      </b></pre>
+      <button id="ejemploObjet3" class="button primary mt-1">Ver resultado del ejemplo</button>
+      <div class="callout primary">
+            <p id="resultadoObjet3"></p>
+      </div>
+
+      <br>
+      <cite>Fuente: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos/</cite>
+
+    </div><!-- /.contenedor -->
+  </section>
