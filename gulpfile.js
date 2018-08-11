@@ -31,8 +31,6 @@ var cssnext = require('postcss-cssnext')
 // Sincronizar navegador *
 var browserSync = require('browser-sync').create()
 
-
-
 // Servidor de desarrollo
 gulp.task('serve', function () {
   browserSync.init({
@@ -130,7 +128,7 @@ gulp.task('html', function() {
 
 
 // Tarea para vigilar los cambios
-gulp.task('watch', function () {
+  gulp.task('watch', function () {
   gulp.watch('./src/css/*.css', ['css']).on('change', browserSync.reload)
   gulp.watch('./src/css/partials/*.css', ['css']).on('change', browserSync.reload)
   gulp.watch('./src/js/**/*.js', ['js']).on('change', browserSync.reload)

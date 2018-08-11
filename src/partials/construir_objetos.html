@@ -1,0 +1,87 @@
+  <!-- ********** Construir objetos en JavaScript  -->
+  <section id="construir_objetos" class="">
+    <div class="contenedor">
+      <h2>Construir objetos en JavaScript</h2>
+      <p>Para JavaScript, como lenguaje de programación, casi <b>TODO</b> es un objeto. Números, cadenas, arrays, funciones, datos booleanos, fechas y expresiones regulares son percibidas como objetos o pueden ser tratados como tal.</p>
+      Para entender mejor el concepto de objeto imaginemos que acabamos de comprar un móvil nuevo (el móvil es el objeto). Tiene <strong>propiedades</strong> como color, peso, tamaño, tamaño de pantalla y marca; también tiene <strong>métodos</strong> como llamar, tomar una foto, encendido y apagado. Ahora, expliquémoslo a nivel de programación:</p>
+      <ul>
+      <li>Los objetos son una instancia de una clase</li>
+      <li>Las propiedades son una característica, dada en un valor; ya sea tipo String (cadena), matemática, etc</li>
+      <li>Los métodos son una capacidad; y para realizarlos utilizamos una función (function)</li>
+      </ul>
+      <p class="h2 mt-4">En JavaScript encontramos 3 maneras de crear objetos:</p>
+      <div class="stacked-for-small button-group">
+        <a class="button hollow primary" href="#literal"><big>Crear un objeto literal</big></a> 
+        <a class="button hollow primary" href="#new"><big>Crear un objeto usando la palabra <b>new</b></big></a> 
+        <a class="button hollow primary" href="#constructora"><big>Crear un objeto haciendo una función constructora</big></a> 
+      </div>
+
+      <h3 class="mt-5" id="literal">Crear un objeto literal</h3>
+      <p>Un objeto literal es la manera más simple de crear un objeto. Se enmarca dentro de corchetes y se describe en pares de (clave: valor).</p>   
+      <pre class="consola">
+      
+      <span class="funcion">var</span> movil <span class="condicion">=</span> {
+        <span class="verde">Marca</span> <span class="violeta">:</span> <span class="cadena">"Alcatel"</span>, 
+        <span class="verde">Peso</span> <span class="violeta">:</span> <span class="cadena">"5 onzas"</span>, 
+        <span class="verde">pantalla</span> <span class="violeta">:</span> <span class="cadena">"5 pulgadas"</span>, 
+        <span class="verde">Color</span> <span class="violeta">:</span> <span class="cadena">"Negro"</span>
+      };
+      </pre>
+
+      <h3 class="mt-3" id="new">Crear un objeto usando la palabra <b>new</b></h3>
+      <p>El operador <code>new</code> crea una instancia de un tipo de objeto a partir de una función constructora. Recordemos que en JavaScript un constructor es una función.</p>
+      <pre class="consola">
+
+      <span class="funcion">var</span> movil <span class="condicion">=</span> <span class="verde">newObject</span>();
+      movil<span class="condicion">.</span>Marca <span class="condicion">=</span> <span class="cadena">"Alcatel"</span>;
+      movil<span class="condicion">.</span>Peso <span class="condicion">=</span> <span class="cadena">"5 onzas"</span>;
+      movil<span class="condicion">.</span>Pantalla <span class="condicion">=</span> <span class="cadena">"5 pulgadas"</span>;
+      movil<span class="condicion">.</span>Color <span class="condicion">=</span> <span class="cadena">"Negro"</span>;
+      </pre>
+
+      <h3 class="mt-3" id="constructora">Crear un objeto haciendo una función constructora</h3>
+      <pre class="consola">
+
+      <span class="funcion">function</span> <span class="verde">movil</span>(<span class="dorado">marca</span>, <span class="dorado">peso</span>, <span class="dorado">pantalla</span>, <span class="dorado">color</span>) { 
+        this<span class="condicion">.</span>Marca <span class="condicion">=</span> marca;
+        this<span class="condicion">.</span>Peso <span class="condicion">=</span> peso;
+        this<span class="condicion">.</span>Pantalla <span class="condicion">=</span> pantalla;
+        this<span class="condicion">.</span>Color <span class="condicion">=</span> color;
+      }
+      <span class="funcion">var</span> compra <span class="condicion">=</span> <span class="condicion">new</span> movil(<span class="cadena">"Alcatel"</span>, <span class="cadena">"5 onzas"</span>, <span class="cadena">"5 pulgadas"</span>, <span class="cadena">"Negro"</span>);
+      </pre>
+      <p class="mt-3"><b>Una función constructora crea una copia de un objeto específico</b>. En otros lenguajes de programación son conocidas como <strong>clases.</strong> En JavaScript encontramos dos maneras diferentes de acceder a las propiedades de nuestro objeto:</p>
+      <ul>
+        <li>Marca;</li>
+        <li>movil[“Marca”];</li>
+      </ul>
+      <p>Su sintaxis es distinta, pero realizan la misma acción.</p>
+      <p class="h3">Ejemplo:</p>
+      <pre class="consola">
+
+      <span class="funcion">var</span> movil <span class="condicion">=</span> {  
+        <span class="verde">Marca</span> <span class="violeta">:</span> <span class="cadena">"Alcatel"</span>, 
+        <span class="verde">Peso</span> <span class="violeta">:</span> <span class="cadena">"5 onzas"</span>, 
+        <span class="verde">pantalla</span> <span class="violeta">:</span> <span class="cadena">"5 pulgadas"</span>, 
+        <span class="verde">Color</span> <span class="violeta">:</span> <span class="cadena">"Negro"</span>
+      };
+      <span class="funcion">document</span><span class="condicion">.</span><span class="verde">getElementById</span>(<span class="cadena">"elementoprueba"</span>)<span class="condicion">.</span>innerHTML <span class="condicion">=</span> movil<span class="condicion">.</span>Marca <span class="condicion">+</span> <span class="cadena">" --- "</span> <span class="condicion">+</span> movil[<span class="cadena">"Marca"</span>];      
+      </pre>
+      <button id="ejemploObjet4" class="button primary mt-2">Ver resultado del ejemplo</button>
+      <p class="callout warning" id="elementoprueba"></p>
+      <p>Ahora vamos a agregar métodos. Existen diversas maneras de realizar este proceso, pero tomaremos de ejemplo la manera más simple: utilizando la palabra <code>this</code>. Se puede utilizar en un método para referirnos al objeto actual.</p>
+      <pre class="consola">
+        
+      <span class="funcion">var</span> movil <span class="condicion">=</span> {
+        <span class="verde">Marca</span> <span class="violeta">:</span> <span class="cadena">"Alcatel"</span>,
+        <span class="verde">encendido</span> <span class="violeta">:</span> <span class="funcion">function</span>(c) {
+          <span class="condicion">return</span> <span class="cadena">"Mi movil marca"</span> <span class="condicion">+</span> <span class="cadena">" "</span> <span class="condicion">+</span> this<span class="condicion">.</span>Marca <span class="condicion">+</span> <span class="cadena">" "</span> <span class="condicion">+</span>  <span class="cadena">"esta encendido"</span>; 
+        }};
+        <span class="funcion">document</span><span class="condicion">.</span><span class="verde">getElementById</span>(<span class="cadena">"elementoprueba2"</span>)<span class="condicion">.</span>innerHTML = movil<span class="condicion">.</span><span class="verde">encendido</span>();
+      </pre>
+      <button id="ejemploObjet5" class="button primary mt-2">Ver resultado del ejemplo</button>
+      <p class="callout warning" id="elementoprueba2"></p>
+      <br>
+      <cite>Fuente: https://platzi.com/blog/objetos-en-javascript/</cite>
+    </div><!-- /.contenedor -->
+  </section>

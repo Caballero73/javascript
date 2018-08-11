@@ -1,0 +1,126 @@
+  <!-- ********** Manipular Estilos y Clases -->
+  <section id="clases_estilos" class="">
+    <div class="contenedor">
+      <h2>Manipular Estilos y Clases</h2>
+      <p>La forma en que se ven nuestros documentos HTML o XML, o mejor dicho <b>como el navegador representa los elementos</b> que los conforman, se define mediante CSS o Cascading Style Sheets (lógicamente esto ya lo sabemos desde hace tiempo).</p>
+      <p> Estos estilos son instrucciones que pueden estar directamente en el código HTML o en archivos externo a los que se hace referencia (Archivos CSS). Ahora bien, una gran limitación del CSS es su <b>rigidez</b>, ya que una vez cargada la web no se pueden cambiar. Afortunadamente <b>Javascript por ser ser un lenguaje interactivo</b> nos permite realizar cualquier tipo de modificación en el estilo original de un elemento (nodo) y esto sin que sea necesario volver a cargar la página desde el servidor.</p>
+      <p> Nos es posible modificar el tamaño, estilo, tipografía y todos los demás atributos del texto, además el color del fondo, estructura de tablas, listas, en fin el estilo de todos los elementos que componen la página.</p>
+      <p>Para que el usuario realice dichas modificaciones puede utilizarse cualquier evento, desde un clic del ratón, hacer scroll o cualquier otro método con que se pueda trasmitir una instrucción, inclusive puedeser de forma automática al cargar la web.</p>
+      <div class="stacked-for-small button-group mt-2">
+        <a class="button hollow primary" href="#estiloConJS"><big>Cambiar un atributo de estilo con JavaScript</big></a>
+        <a class="button hollow primary" href="#clasesConJS"><big>Cambiar una clase con JavaScript</big></a>
+      </div>
+
+      <!-- **************** -->
+      <h3 class="mt-5" id="estiloConJS">Cambiar un atributo de estilo con JavaScript</h3>
+      <p>En Javascript se utiliza para cambiar el estilo de los elementos o nodos el objeto <code>style</code> (Estilo), este es una declaración independiente y puede ser accedido de varias formas, desde el <code>document</code> o desde el <b>elemento individual</b> al que va dirigido.</p>
+      <p>La sintaxis es la siguiente:</p>
+      <pre class="lead mt-1">
+      <span class="fu0">document</span><span class="kw1">.</span>body<span class="kw1">.</span>style<span class="kw1">.</span>fontSize<span class="kw1">=</span><span class="es0">"24px"</span>
+      <span class="co1">// Este método permite aplicar el estilo 
+      de forma general a todo el documento.</span>   
+
+
+      <span class="fu0">document</span><span class="kw1">.</span>getElementById(<span class="es0">"idElemento"</span>)<span class="kw1">.</span>style<span class="kw1">.</span>fontSize<span class="kw1">=</span><span class="es0">"24px"</span>
+      <span class="co1">// Este método es más específico, al ser dirigido 
+      a un bloque o elemento definido por un identificador ID.</span>     
+      </pre>
+      <p class="mt-2">
+      A continuación algunos ejemplos aplicando lo visto hasta ahora:
+      </p>
+      <ul class="menu vertical" id="ejemploEstilo1">
+        <li><a href="javascript:void(document.body.style.fontSize='22px')">Aumento el tamaño de letra de toda Web.</a></li>
+        <li><a href="javascript:void(document.body.style.fontSize='18px')">Regreso a la normalidad el tamaño de letra de toda Web.</a></li>
+        <li><a href="javascript:void(document.body.style.backgroundColor='peru')">Cambio el color del fondo de toda la Web.</a></li>
+        <li><a href="javascript:void(document.body.style.backgroundColor='white')">Regreso el color de fondo normal a toda la Web.</a></li> 
+        <li><a href="javascript:void(document.getElementById('ejemploEstilo1').style.fontSize='22px')">Aumento el tamaño de la fuente solo de este menú.</a></li>
+        <li><a href="javascript:void(document.getElementById('ejemploEstilo1').style.fontSize='18px')">Regreso a la normalidad el tamaño de letra en este menú.</a></li>
+        <li><a href="javascript:void(document.getElementById('ejemploEstilo1').style.backgroundColor='peru')">Cambio el color de fondo de este menú.</a></li>
+        <li><a href="javascript:void(document.getElementById('ejemploEstilo1').style.backgroundColor='white')">Regreso a la normalidad el color de fondo de este menú.</a></li>
+        <li><a class="button large" href="#ejemploEstilo1" onmouseover="javascript:void(document.getElementById('ejemploEstilo1').style.fontFamily='Comic Sans MS')" onmouseout="javascript:void(document.getElementById('ejemploEstilo1').style.fontFamily='Lato')">Cambio el tipo de letra en este menú cuando pasan el puntero sobre mi</a></li>        
+      </ul>
+      <!-- <input class="boton" value="Refrescar Página" onclick="javascript:history.go()" type="button"> -->
+      
+      <ul class="accordion" data-accordion data-allow-all-closed="true">
+          <li class="accordion-item" data-accordion-item>
+            <!-- Título del panel del Acordeón -->
+            <a href="#" class="accordion-title"><p class="h3"><b>Mostrar código</b></p></a>
+
+            <!-- Contenido del panel del acordeón. -->
+            <div class="accordion-content" data-tab-content>
+    <pre class="consola">
+
+    &lt;<span class='condicion'>a</span> <span class='verde'>href</span>=<span class='cadena'>"javascript:void(document.body.style.fontSize='22px')"</span>>
+    Aumento el tamaño de letra de toda Web.&lt;/<span class='condicion'>a</span>>
+
+    &lt;<span class='condicion'>a</span> <span class='verde'>href</span>=<span class='cadena'>"javascript:void(document.body.style.fontSize='18px')"</span>>
+    Regreso a la normalidad el tamaño de letra de toda Web.&lt;/<span class='condicion'>a</span>> 
+
+    &lt;<span class='condicion'>a</span> <span class='verde'>href</span>=<span class='cadena'>"javascript:void(document.body.style.backgroundColor='peru')"</span>>
+    Cambio el color del fondo de toda la Web.&lt;/<span class='condicion'>a</span>> 
+
+    &lt;<span class='condicion'>a</span> <span class='verde'>href</span>=<span class='cadena'>"javascript:void(document.body.style.backgroundColor='white')"</span>>
+    Regreso el color de fondo normal a toda la Web.&lt;/<span class='condicion'>a</span>> 
+
+    &lt;<span class='condicion'>a</span> <span class='verde'>href</span>=<span class='cadena'>"javascript:void(document.getElementById('ejemploEstilo1')
+    .style.fontSize='22px')"</span>>Aumento el tamaño de la fuente solo de este 
+    menú.&lt;/<span class='condicion'>a</span>>
+
+    &lt;<span class='condicion'>a</span> <span class='verde'>href</span>=<span class='cadena'>"javascript:void(document.getElementById('ejemploEstilo1')
+    .style.fontSize='18px')"</span>>Regreso a la normalidad el tamaño de letra en este
+     menú.&lt;/<span class='condicion'>a</span>> 
+
+    &lt;<span class='condicion'>a</span> <span class='verde'>href</span>=<span class='cadena'>"javascript:void(document.getElementById('ejemploEstilo1')
+    .style.backgroundColor='peru')"</span>>Cambio el color de fondo de este
+     menú.&lt;/<span class='condicion'>a</span>>
+
+    &lt;<span class='condicion'>a</span> <span class='verde'>href</span>=<span class='cadena'>"javascript:void(document.getElementById('ejemploEstilo1')
+    .style.backgroundColor='white')"</span>>Regreso a la normalidad el color de fondo
+     de este menú.&lt;/<span class='condicion'>a</span>> 
+
+    &lt;<span class='condicion'>a</span> <span class="verde">class</span>=<span class='cadena'>"button"</span> <span class='verde'>href</span>=<span class='cadena'>"#ejemploEstilo1"</span> 
+    <span class="verde">onmouseover</span>=<span class='cadena'>"javascript</span>:<span class='verde'>void</span>(<span class='funcion'>document</span>.<span class='verde'>getElementById</span>(<span class='cadena'>'ejemploEstilo1'</span>)
+    .style.fontFamily=<span class='cadena'>'Comic Sans MS'</span>)" 
+    <span class="verde">onmouseout</span>=<span class='cadena'>"javascript</span>:<span class='verde'>void</span>(<span class='funcion'>document</span>.<span class='verde'>getElementById</span>(<span class='cadena'>'ejemploEstilo1'</span>)
+    .style.fontFamily=<span class='cadena'>'Lato'</span>)"</span>>
+    Cambio el tipo de letra en este menú cuando pasan el puntero sobre 
+    mi&lt;/<span class='condicion'>a</span>>        
+    </pre>
+            </div>
+          </li><!-- /.accordion-item -->              
+      </ul><!-- /.accordion -->
+        
+      
+
+
+      <h3 class="mt-5" id="clasesConJS">Cambiar una clase con JavaScript</h3>
+      <p>Si lo que deseamos es trabajar con una <b>clase</b> completa y no sólo con atributos de forma particular, la buena noticia es que hoy día <strong>todos los navegadores modernos</strong> ofrecen una manera muy conveniente de manipular las clases de un elemento a través de JavaScript, esto lo logramos a través de la propiedad <code>classList</code>.</p>
+      <p>Esta propiedad ofrece varios métodos que nos permiten <b>manipular las clases</b> de un elemento de manera individual:</p>
+      <ul>
+      <li><code>add</code>: añade al elemento un nombre de clase o varios nombres de clases
+       (se pasan separados por comas, como argumentos del método).</li>
+      <li><code>remove</code>: le quita el nombre o nombres de clase que indiquemos.</li>
+      <li><code>toggle</code>: este es muy útil porque le quita o le pone el nombre de clase indicado dependiendo de si ya lo tiene o no.</li>
+      <li><code>contains</code>: devuelve <code>true</code> si el elemento tiene aplicado el nombre de clase que le indiquemos, siendo <code>false</code> en caso contrario.</li>
+      </ul>
+      <p>Así, si quisiésemos localizar todos los elementos de una página con la clase CSS llamada 'azul', removerla y poner en su lugar la clase 'violeta' (si no la tenían ya), un código válido sería:</p>
+      <pre class="console mt-2">
+        
+      </pre>
+
+      
+
+
+
+
+      
+      
+
+
+      <br>
+      <cite>Fuente: http://librosweb.es/libro/javascript/capitulo_5.html/ <br>
+      https://norfipc.com/inf/javascript-como-cambiar-modificar-estilo-css-paginas-web.html <br>
+      http://www.felipesilva.com/tutoriales/javascript-tutoriales/cambiar-el-el-valor-del-atributo-class-con-javascript
+    </cite>
+    </div><!-- /.contenedor -->
+  </section>

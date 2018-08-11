@@ -1,0 +1,68 @@
+  <!-- ********** Prototipado y herencia en JavaScript  -->
+  <section id="herencia" class="">
+    <div class="contenedor">
+      <h2>Prototipado y herencia en JavaScript </h2>
+      <p>JavaScript puede resultar un poco extraño a desarrolladores con experiencia en lenguajes basados en clases (como Java o C++), ya que es más dinámico y no proporcionar una implementación de clases en sí mismo (la palabra clave class se introdujo en ES2015, pero sólo para endulzar la sintaxis, ya que JavaScript sigue estando basado en prototipos).</p>
+      <p>En lo que a <b>herencia</b> se refiere, JavaScript sólo tiene una estructura: objetos ... Y ya lo hemos visto antes, <em>en este lenguaje todos son objetos</em>, y todo quiere decir que los números son objetos, las funciones también son objetos y las "clases" que crearán objetos también son objetos.</p>
+      <p>Una vez que se ha entendido esta idea es fácil entender cosas como las funciones anónimas o el prototipado, manos a la obra.</p>
+
+      <h3 class="mt-3">Creación de clases</h3>
+      <p>Primero que nada creamos nuetra <b>Clase</b>.</p>      
+      <pre class="consola">
+
+      <span class="funcion">function</span> <span class="verde">Persona</span> (<span class="cadena">edad</span>) {
+        this<span>.</span>edad <span class="condicion">=</span> edad <span class="condicion">||</span> <span class="violeta">0</span>;
+      }
+
+      <span class="funcion">var</span> veronica <span class="condicion">=</span> <span class="condicion">new</span> Persona(<span class="violeta">6</span>),
+          carlos <span class="condicion">=</span> <span class="condicion">new</span> Persona(<span class="violeta">12</span>);
+
+      <span class="funcion">console</span><span>.</span><span class="funcion">log</span>(veronica <span class="condicion">instanceof</span> Persona); 
+      <span class="nota">// Muestra: true</span>
+      <span class="funcion">console</span><span>.</span><span class="funcion">log</span>(carlos<span>.</span>edad); 
+      <span class="nota">// Muestra: 12</span>
+      </pre>
+
+      <p class="mt-2">En vista de esto, <b>definimos nuestro constructor</b>, tarea que desempeñará una <b>función</b> que hará uso de la variable <code>this</code> como el objeto creado.</p>
+      <p>Desde el momento en el que se defina la <b>función</b> podemos crear <i>instancias</i> de la clase para obtener nuevos objetos.</p>
+      <p>El paso siguiente es añadir <b>métodos</b> que puedan ser utilizados por los objetos creados, y dado que en JavaScript todo es un objeto podemos hacer algo así:</p>
+      <pre class="consola">
+
+      <span class="funcion">function</span> <span class="verde">Persona</span> (<span class="cadena">edad</span>) {
+        this.edad <span class="condicion">=</span> edad;
+        this.<span class="verde">crecer</span> <span class="condicion">=</span> <span class="funcion">function</span> () {
+          this.edad <span class="condicion">=</span> this.edad <span class="condicion">+</span> 1;
+          <span class="condicion">return</span> this.edad;
+        }
+      }
+
+      <span class="funcion">var</span> veronica <span class="condicion">=</span> <span class="condicion">new</span> Persona(6);
+      <span class="funcion">console</span>.<span class="funcion">log</span>(veronica.crecer()); 
+      <span class="nota">// Muestra: 7</span>
+      </pre>
+      <p class="mt-2">En efecto el código anterior funciona y da una forma de implementar <em>métodos de instancia</em>, pero <strong>hay un detalle importante</strong>, nuestro constructor <strong>está creando una función <code>crecer</code> para cada una de las instancias</strong> que creamos de la clase, por lo tanto si tenemos un array con 10.000 instancias de <b>Persona</b> se crearán 10.000 funciones distintas (e independientes), algo que en términos de eficiencia es patético.</p>
+      <p>Afortunadamente, JavaScript tiene un atributo muy últil para todos los objetos: <strong><em>prototype</em></strong>. Este atributo es en si es un objeto vacío; pero que posee unas características muy interesantes. Cuando una función se utiliza como constructor (que es lo que estábamos haciendo en los ejemplos anteriores)<strong> JavaScript establece como atributo <em>prototype </em></strong>del objeto al mismo prototipo del constructor, de forma que los objetos creados pueden acceder a todos los atributos que se encuentren dentro de este objeto sin necesidad de duplicar información.</p>
+      <p>Veamos como queda el código con este concepto:</p>
+
+      <pre class="consola">
+
+      <span class="funcion">function</span>  <span class="verde">Persona</span> (<span class="cadena">edad</span>) {
+        this.edad <span class="condicion">=</span> edad;
+      }
+
+      <span class="funcion">Persona</span>.<span class="funcion">prototype</span>.<span class="verde">crecer</span> <span class="condicion">=</span> <span class="funcion">function</span> () {
+        this.edad <span class="condicion">=</span> this.edad <span class="condicion">+</span> <span class="violeta">1</span>;
+        <span class="condicion">return</span> this.edad;
+      };
+
+      <span class="funcion">var</span> veronica <span class="condicion">=</span> <span class="condicion">new</span> Persona(<span class="violeta">6</span>);
+      <span class="funcion">console</span>.<span class="funcion">log</span>(iris.crecer()); 
+      <span class="nota">// Muestra: 7</span>
+      </pre>
+
+
+      <br>
+      <cite>Fuente: https://developer.mozilla.org/es/docs/Web/JavaScript/Herencia_y_la_cadena_de_protipos <br>
+      https://geekytheory.com/prototipado-y-herencia-en-javascript</cite>
+    </div><!-- /.contenedor -->
+  </section>

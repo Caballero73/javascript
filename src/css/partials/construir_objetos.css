@@ -1,0 +1,25 @@
+/******************************
+ESTILOS CONTENIDO CREACIÓN OBJ.: construir_objetos.css;
+*******************************/
+#construir_objetos {
+	padding: 2rem;
+
+	& .button {
+		font-size: responsive 1.1rem 1.4rem;
+
+		& big {
+			display: inline-block;
+			font-size: responsive 1.2rem 1.7rem;
+			font-weight: bold;
+			margin-bottom: .5rem;
+		}
+	}
+
+	& pre.console {
+		font-size: responsive 1.6rem 2rem;
+	}
+	& pre.lead {
+		font-weight: bold;
+	}
+}
+/**/

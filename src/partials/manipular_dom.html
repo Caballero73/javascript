@@ -1,0 +1,159 @@
+  <!-- ********** Manipular el DOM  -->
+  <section id="manipular_dom" class="">
+    <div class="contenedor">
+      <h2>¿Qué es el DOM?</h2>
+      <p>El <b>modelo de objeto de documento (DOM)</b> es una interfaz de programación para los documentos HTML y XML, que facilita una representación estructurada del documento y define de qué manera los programas pueden acceder, al fin de modificar, tanto su estructura, estilo y contenido.</p>
+      <p>El DOM da una representación del documento como un grupo de nodos y objetos estructurados que tienen propiedades y métodos.</p>
+      <p class="callout warning">Esencialmente, conecta las páginas web a scripts o lenguajes de programación.</p>
+      <p>La especificación completa de DOM define 12 tipos de nodos, aunque las páginas XHTML habituales se pueden manipular manejando solamente cuatro o cinco tipos de nodos:</p>
+      <ul>
+        <li><code>Document</code>, nodo raíz del que derivan todos los demás nodos del árbol.</li>
+        <li><code>Element</code>, representa cada una de las etiquetas XHTML. Se trata del único nodo que puede contener atributos y el único del que pueden derivar otros nodos.</li>
+        <li><code>Attr</code>, se define un nodo de este tipo para representar cada uno de los atributos de las etiquetas XHTML, es decir, uno por cada par <code>atributo=valor</code>.</li>
+        <li><code>Text</code>, nodo que contiene el texto encerrado por una etiqueta XHTML.</li>
+        <li><code>Comment</code>, representa los comentarios incluidos en la página XHTML.</li>
+      </ul>
+      <p>Los otros tipos de nodos existentes que no se van a considerar son <code>DocumentType</code>, <code>CDataSection</code>, <code>DocumentFragment</code>, <code>Entity</code>, <code>EntityReference</code>, <code>ProcessingInstruction</code> y <code>Notation</code>.</p>      
+      <div class="stacked-for-small button-group mt-2">
+        <a class="button hollow primary" href="#byTagName"><big>getElementsByTagName()</big></a> 
+        <a class="button hollow primary" href="#getElementsByName"><big>getElementsByName()</b></big></a> 
+        <a class="button hollow primary" href="#getElementById"><big>getElementById()</big></a> 
+        <a class="button hollow primary" href="#querySelector"><big>querySelector()</big></a> 
+      </div>
+      <div class="stacked-for-small button-group mt-3">
+        <a class="button hollow primary" href="#addNodo"><big>Añadir Nodos</big></a> 
+        <a class="button hollow primary" href="#delNodo"><big>Eliminar Nodos</b></big></a>        
+      </div>
+      <p>Como acceder a un nodo es equivalente a acceder a <b>"un trozo"</b> de la página, ya es posible manipular de forma sencilla la página: acceder al valor de un elemento, establecer el valor de un elemento, mover un elemento de la página, crear y añadir nuevos elementos, etc...</p>
+
+      <h3 class="mt-5" id="byTagName">getElementsByTagName()</h3>
+      <p>Como sucede con todas las funciones del DOM, <code>getElementsByTagName()</code> tiene un nombre muy largo, pero que lo hace explicarse por si mismo.</p>
+      <p>La función <code>getElementsByTagName(nombreEtiqueta)</code> obtiene todos los elementos de la página HTML o XLM cuya etiqueta sea igual que el parámetro que se le pasa a la función.</p>
+      <p>El siguiente ejemplo muestra cómo obtener todos los párrafos de una página y mostrar el resltado al hacer click en un botón:</p>   
+      <pre class="consola">
+      
+      <span class="funcion">var</span> parrafos <span class="condicion">=</span> <span class="funcion">document</span>.<span class="verde">getElementsByTagName</span>(<span class="cadena">"p"</span>);
+      <span class="funcion">var</span> ejemploDom1 <span class="condicion">=</span> <span class="funcion">document</span>.<span class="verde">getElementById</span>(<span class="cadena">"ejemploDom1"</span>);
+
+      ejemploDom1.<span class="verde">addEventListener</span>(<span class="cadena">'click'</span>, <span class="funcion">function</span> (<span class="dorado">event</span>) {
+          <span class="verde">alert</span>(<span class="cadena">'Esta página tiene '</span> <span class="condicion">+</span> parrafos<span class="condicion">.</span>length <span class="condicion">+</span> <span class="cadena">' párrafos en total'</span>)
+      });
+      </pre>
+      <button id="ejemploDom1" class="button primary mt-2">Ver resultado del ejemplo</button>
+      <p class="mt-2">El valor que se indica delante del nombre de la función (en este caso, <code>document</code>) es el nodo a partir del cual se realiza la búsqueda de los elementos. En este caso, como se quieren obtener todos los párrafos de la página, se utiliza el valor <code>document</code>.</p>
+      
+      <h3 class="mt-3" id="getElementsByName">getElementsByName()</h3>
+      <p>La función <code>getElementsByName()</code> busca los elementos cuyo atributo <code>name</code> sea idéntico al parámetro proporcionado.</p>
+      <p>Obtengamos un único párrafo con el nombre indicado:</p>
+      <p name="parrafoConNombre" class="callout primary">Yo soy un párrafo con un nombre especial para mi.</p>
+
+      <pre class="consola">
+            
+      <span class="funcion">var</span> parrafoConNombre <span class="condicion">=</span> <span class="funcion">document</span>.<span class="verde">getElementsByName</span>(<span class="cadena">"parrafoConNombre"</span>);
+      <span class="funcion">var</span> ejemploDom2 <span class="condicion">=</span> <span class="funcion">document</span>.<span class="verde">getElementById</span>(<span class="cadena">"ejemploDom2"</span>);
+
+      ejemploDom2.<span class="verde">addEventListener</span>(<span class="cadena">'click'</span>, <span class="funcion">function</span> (<span class="dorado">event</span>) {
+          <span class="verde">alert</span>(<span class="cadena">'Esta página tiene '</span> <span class="condicion">+</span> parrafoConNombre.length <span class="condicion">+</span> 
+          <span class="cadena">' parrafos con un nombre asignado, y dice los siguiente: '</span> 
+          <span class="condicion">+</span> parrafoConNombre[<span class="violeta">0</span>]<span class="condicion">.</span>innerText))
+      });
+      </pre>
+      <button id="ejemploDom2" class="button primary mt-2">Ver resultado del ejemplo</button>
+      <p class="mt-2">Normalmente el atributo <code>name</code> es único para los elementos HTML que lo definen, por lo que es un método muy práctico para acceder directamente al nodo deseado.</p>
+      <p>En el caso de los elementos HTML <em>radiobutton</em>, el atributo <code>name</code> es común a todos los <em>radiobutton</em> que están relacionados, por lo que la función devuelve una colección de elementos.</p>
+
+      <h3 class="mt-3" id="getElementById">getElementById()</h3>
+      La función <code>getElementById()</code> es la más utilizada cuando se desarrollan aplicaciones web. Es la preferida para acceder directamente a un nodo y poder leer o modificar sus propiedades.</p>
+      <p><code>getElementById()</code> devuelve el elemento cuyo atributo <code>id</code> coincide con el parámetro indicado.</p>
+      <p>Como el atributo <code>id</code> debe ser único para cada elemento de una misma página, la función devuelve únicamente el nodo deseado.</p>
+      <p id="parrafoConId" class="callout primary">Yo soy un párrafo con un un Id especial para mi.</p>     
+      <pre class="consola">
+            
+      <span class="funcion">var</span> parrafoConId <span class="condicion">=</span> <span class="funcion">document</span><span class="condicion">.</span><span class="verde">getElementById</span>(<span class="cadena">"parrafoConId"</span>);
+      <span class="funcion">var</span> ejemploDom3 <span class="condicion">=</span> <span class="funcion">document</span>.<span class="verde">getElementById</span>(<span class="cadena">"ejemploDom3"</span>);
+
+      ejemploDom3.<span class="verde">addEventListener</span>(<span class="cadena">'click'</span>, <span class="funcion">function</span> (<span class="dorado">event</span>) {
+          <span class="verde">alert</span>(<span class="cadena">'Esta página tiene un parrafos con un id asignado,
+          y dice los siguiente: '</span> <span class="condicion">+</span> parrafoConId<span class="condicion">.</span>innerText))
+      });
+      </pre>      
+      <button id="ejemploDom3" class="button primary mt-2">Ver resultado del ejemplo</button>
+
+      <h3 class="mt-3" id="querySelector">querySelector()</h3>
+      <p>Esta función actúa de forma muy similar a <code>getElementById()</code>, ya que tras especificar un selector nos devuelve el primer elemento que coincida con este selector, aún cuando la página contenga mas de uno con esas características.</p>
+      <p>Al ser usado como instancia de <code>document</code> hacemos una búsqueda sobre cualquier elemento de la página, pero también puede ser usado como instancia de un elemento del DOM, por ejemplo <code>document.body</code> o cualquier elemento seleccionado en una variable con <code>getElementById()</code> o <code>getElementsByTagName()</code>.</p>
+      <pre class="consola mt-2">
+
+      <span class="funcion">document</span><span class="condicion">.</span><span class="verde">querySelector</span>(<span class="cadena">'#prueba #id3.clase'</span>)
+      </pre>
+
+      <h3 class="mt-3" id="querySelectorAll">querySelectorAll()</h3>
+      <p>Esta función es similar a <code>getElementsByTagName</code>, ya que devuelve un conjunto de elementos.</p>
+      <p>Tiene la gran ventaja que nos permite conseguir todos los elementos de una o varias consultas, simplemente separando con comas, como hacemos en <b>CSS</b>.</p>
+      <pre class="consola mt-2">
+
+       <span class="nota">// Todos los &lt;span&gt; y &lt;img>&gt; de una página</span>
+      <span class="funcion">document</span><span class="condicion">.</span><span class="verde">querySelectorAll</span>(<span class="cadena">'span, img'</span>)
+      </pre>
+
+
+      <h3 class="mt-3" id="addNodo">Añadir Nodos</h3>
+      <p>Un elemento sencillo, como por ejemplo un párrafo, genera dos nodos: el primer nodo es de tipo <code>Element</code> y representa la etiqueta <code>&lt;p&gt;</code> y el segundo nodo es de tipo <code>Text</code> y representa el contenido textual de la etiqueta <code>&lt;p&gt;</code>.</p>
+      <p>Por eso, crear y añadir a la página un nuevo elemento consta de cuatro pasos diferentes:</p>
+      <ol>
+        <li>Creación de un nodo de tipo <code>Element</code> que represente al elemento.</li>
+        <li>Creación de un nodo de tipo <code>Text</code> que represente el contenido del elemento.</li>
+        <li>Añadir el nodo <code>Text</code> como nodo hijo del nodo <code>Element</code>.</li>
+        <li>Añadir el nodo <code>Element</code> a la página, en forma de nodo hijo del nodo correspondiente al lugar en el que se quiere insertar el elemento.</li>
+      </ol>
+      <p>De este modo, si se quiere añadir un párrafo al final de una sección, es necesario incluir el siguiente código:</p>
+      <pre class="consola mt-2">
+
+      <span class="nota">// Crear variable para seleccionar sección</span>
+      <span class="funcion">var</span> seccion<span class="condicion"> = </span><span class="funcion">document</span><span class="condicion">.</span><span class="verde">getElementById</span>(<span class="cadena">"contParrafos"</span>);
+
+      <span class="nota">// Crear nodo de tipo Element</span>
+      <span class="funcion">var</span> parrafo<span class="condicion"> = </span><span class="funcion">document</span><span class="condicion">.</span><span class="verde">createElement</span>(<span class="cadena">"p"</span>);
+       
+      <span class="nota">// Crear nodo de tipo Text</span>
+      <span class="funcion">var</span> contenido<span class="condicion"> = </span><span class="funcion">document</span><span class="condicion">.</span><span class="verde">createTextNode</span>(<span class="cadena">"Yo soy un 
+      párrafo creado con JavaScrip"</span>);
+       
+      <span class="nota">// Añadir el nodo Text como hijo del nodo Element</span>
+      parrafo<span class="condicion">.</span><span class="verde">appendChild</span>(contenido);
+       
+      <span class="nota">// Añadir el nodo Element como hijo de la sección</span>
+      seccion<span class="condicion">.</span><span class="verde">appendChild</span>(parrafo);
+      </pre>
+      <button id="ejemploDom4" class="button primary mt-2">Ver resultado del ejemplo</button>
+      <section class="callout warning mt-1" id="contParrafos">
+        <p>Yo soy un párrafo que ya estaba aquí.</p>
+        <p>Yo soy un párrafo que ya estaba aquí.</p>
+        <p>Yo soy un párrafo que ya estaba aquí.</p>               
+      </section>
+
+      <h3 class="mt-3" id="delNodo">Eliminar Nodos</h3>
+      <p>Es de creer que el proceso de eliminación es complejo, que amerita varias líneas de código, como hemos hecho para crear. Pero en realidad no. Es un proceso más corto:</p>
+      <ol>
+        <li>Recoger el identificador del elemento</li>
+        <li>Usar la propiedad “removeChild”</li>
+      </ol>
+      <p>De este modo, si se quiere añadir un párrafo al final de una sección, es necesario incluir el siguiente código:</p>
+      <pre class="consola mt-2">
+
+      <span class="nota">// Recogemos el elemento por id</span>
+      <span class="funcion">var</span> paraBorrar <span class="condicion">=</span> <span class="funcion">document</span><span class="condicion">.</span><span class="verde">getElementById</span>(<span class="cadena">"paraBorrar"</span>);
+       
+      <span class="nota">// Se invoca a la función removeChild() desde el valor 
+      // parentNode del nodo que se quiere eliminar</span>
+      paraBorrar<span class="condicion">.</span>parentNode<span class="condicion">.</span><span class="verde">removeChild</span>(paraBorrar);
+      </pre>
+      <button id="ejemploDom5" class="button primary mt-2">Ver resultado del ejemplo</button>
+      <p class="callout warning mt-1" id="paraBorrar">Yo soy un elemento que ya existo; pero creo que voy a ser borrado con JavaScript</p>
+
+
+      <br>
+      <cite>Fuente: http://librosweb.es/libro/javascript/capitulo_5.html/ <br>
+      https://xitrus.es/blog/112/Seleccionar_elementos_con_querySelector_de_JavaScript</cite>
+    </div><!-- /.contenedor -->
+  </section>

@@ -1,0 +1,499 @@
+<!doctype html><html class="no-js" lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aprendiendo JavaScript</title><meta name="description" content="JavaScript es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla."><link rel="shortcut icon" href="assets/img/favicon.ico"><link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="assets/css/app.min.css"></head><body><!-- /////// Botón para ir al principio --> <a class="hide-for-small-only" href="#inicio"><i class="fa fa-chevron-circle-up fa-2x ir-arriba"></i> </a><!-- */Botón para ir al principio --><!-- ********** CONTENIDO PÁGINA --><section id="cont-ppal" class=""><header id="cont-ppal-header"><nav class="contenedor"><div class="row"><div class="columns"><h1 id="cont-ppal-header-h1"><i class="fa fa-terminal fa-lg" aria-hidden="true"></i> Aprendiendo JavaScript</h1></div><div class="shrink align-self-middle columns"><a class="button hollow white paginador" href="index.html">Pág. <big>1</big></a></div><div class="shrink align-self-middle columns"><a class="button hollow white paginador" href="page2.html">Pág. <big>2</big></a></div></div></nav></header><div class="contenedor"><p><b>JavaScript</b> es un poderoso lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla.</p><cite class="pull-right">Fuente: <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Fundamentos de JavaScript</a></cite><!-- /////// Tabs para el contenido de cada tema --><div class="row collapse mt-4"><div class="small-3 columns" data-sticky-container><div class="sticky" data-sticky data-top-anchor="1top" id="abside-cont"><ul class="vertical tabs sticky" data-tabs id="cont-ppal-tabs"><!-- Ámbito de las variables --><li class="tabs-title is-active"><a href="#cont-ppal-tabs-panel1" aria-selected="true"><i class="fa fa-object-group fa-lg" aria-hidden="true">&nbsp; </i><span class="tabs-items">Ámbito de las variables</span></a></li><!-- Arrays o Matrices --><li class="tabs-title"><a href="#cont-ppal-tabs-panel2"><b>[...]&nbsp; </b><span class="tabs-items">Arrays o Matrices</span></a></li><!-- Recorrer Matrices --><li class="tabs-title"><a href="#cont-ppal-tabs-panel3"><b>[</b><small><i class="fa fa-repeat fa-lg" aria-hidden="true"></i></small><b>]&nbsp; </b><span class="tabs-items">Recorrer Matrices</span></a></li><!-- Bucle While --><li class="tabs-title"><a href="#cont-ppal-tabs-panel4"><b>f( )&nbsp; </b><span class="tabs-items">Expresiones Funcionales</span></a></li><!-- Hoisting (Alzado) --><li class="tabs-title"><a href="#cont-ppal-tabs-panel5"><i class="fa fa-arrow-up fa-lg" aria-hidden="true">&nbsp; </i><span class="tabs-items">Hoisting (Alzado)</span></a></li><!-- Closures --><li class="tabs-title"><a href="#cont-ppal-tabs-panel6"><i class="fa fa-file-code-o fa-lg" aria-hidden="true">&nbsp; </i><span class="tabs-items">Closures (Clausuras)</span></a></li><!-- Objetos --><li class="tabs-title"><a href="#cont-ppal-tabs-panel7"><b>{...}&nbsp; </b><span class="tabs-items">Objetos</span></a></li><!-- Métodos --><li class="tabs-title"><a href="#cont-ppal-tabs-panel8"><b>m(o)&nbsp; </b><span class="tabs-items">Métodos</span></a></li><!-- Creación de Objetos --><li class="tabs-title"><a href="#cont-ppal-tabs-panel10"><i class="fa fa-magic fa-lg" aria-hidden="true">&nbsp; </i><span class="tabs-items">Creación de Objetos</span></a></li><!-- Herencia --><li class="tabs-title"><a href="#cont-ppal-tabs-panel9"><i class="fa fa-dot-circle-o fa-lg" aria-hidden="true">&nbsp; </i><span class="tabs-items">Herencia</span></a></li><!-- Manipular el DOM --><li class="tabs-title"><a href="#cont-ppal-tabs-panel11"><b>{D}&nbsp; </b><span class="tabs-items">Manipular el DOM</span></a></li><!-- Manipular Estilos y Clases --><li class="tabs-title"><a href="#cont-ppal-tabs-panel12"><b>&lt;S&gt;&nbsp; </b><span class="tabs-items">Manipular Estilos y Clases</span></a></li></ul><div class="mt-1" id="abside"><div class="text-center mb-3" id="iconos"><a href="https://slicegroup.xyz/" target="_blank"><i class="fa fa-rocket fa-2x"></i></a> <a href="https://www.linkedin.com/in/enrique-valerio-6b347b126/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a> <a href="https://github.com/Caballero73/XXXXXXXX" target="_blank"><i class="fa fa-github fa-2x"></i></a></div><p class="text-center">Enrique Valerio<br><small>Junio 2018</small></p><br><cite>"Si el conocimiento puede crear problemas, no es con la ignorancia con lo que podremos resolverlos"</cite></div></div></div><!-- /.columns --><div class="columns" id="1top"><div class="tabs-content" data-tabs-content="cont-ppal-tabs"><!-- Ámbito de las variables --><div class="tabs-panel is-active" id="cont-ppal-tabs-panel1"><!-- ********** Ámbito de las variables --><section id="ambito-variables" class=""><div class="contenedor"><h2>Ámbito de las variables</h2><p></p><p>El ámbito de una variable (llamado <em>"scope"</em> en inglés) es la zona del programa en la que se define la variable.<br>JavaScript define dos ámbitos para las variables: <b>global</b> y <b>local</b>.</p><p></p><p>Veamos un ejemplo:</p><pre class="">
+      <span class="kw1">function</span> unMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> mensaje <span class="sy0">=</span> “Mostrar mensaje”<span class="sy0">;</span>
+      <span class="br0">}</span>
+      unMensaje<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      alert<span class="br0">(</span>mensaje<span class="br0">)</span><span class="sy0">;</span>
+      </pre><p>En primer lugar tenemos una función llamada <code>unMensaje</code> que crea una variable llamada <code>mensaje</code>.<br>A continuación, se ejecuta la función mediante <code>unMensaje();</code> y luego, se muestra mediante <code>alert()</code> el valor de <code>mensaje</code>.</p><p class="callout warning">Sin embargo, al ejecutar el código anterior no se muestra ningún mensaje por pantalla. La razón es que la variable <code>mensaje</code> se ha definido dentro de la función <code>unMensaje()</code> y por tanto, es una <strong>variable local</strong> que solamente está definida dentro de la función.</p><br><p>Cualquier instrucción que se encuentre <b>dentro de la función</b> puede hacer uso de esa variable, pero todas las instrucciones que se encuentren en otras funciones o fuera de cualquier función no tendrán definida la variable <code>mensaje</code>.</p><p>De esta forma, para mostrar el mensaje en el código en cuestión, la función <code>alert()</code> debe llamarse desde dentro de la función <code>unMensaje()</code>:</p><pre class="">
+      <span class="kw1">function</span> unMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">var</span> mensaje <span class="sy0">=</span> “Mostrar mensaje”<span class="sy0">;</span>
+        alert<span class="br0">(</span>mensaje<span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      unMensaje<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      </pre><p><b>Es importante saber que...</b>Además de variables locales, también existe las <strong>variables globales</strong>, que pueden ser usadas en cualquier punto del programa (incluso dentro de cualquier función).</p><pre class="">
+      <span class="kw1">var</span> elMensaje <span class="sy0">=</span> “Mensaje de prueba”<span class="sy0">;</span>
+      &nbsp;
+      <span class="kw1">function</span> muestraMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        alert<span class="br0">(</span>elMensaje<span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      </pre><p>Este código es inverso al mostrado primero, ya que dentro de la función <code>muestraMensaje()</code> se hace uso de una variable llamada <code>elMensaje</code> que no ha sido definida dentro de la propia función. Sin embargo, si se ejecuta el código, sí que se muestra el el contenido definido por la variable <code>elMensaje</code>.</p><p>Esto es por que, la variable <code>elMensaje</code> se ha definido fuera de cualquier función. Este tipo de variables automáticamente se transforman en <b>variables globales</b> y están disponibles en cualquier punto del programa (incluso dentro de cualquier función).</p><p>De esta forma, aunque en el interior de la función no se ha definido ninguna variable llamada <code>elMensaje</code>, la variable global creada anteriormente permite que la instrucción <code>alert()</code> dentro de la función se muestre correctamente.</p><div class="callout warning"><p><b class="color-secundario">Importante:</b> Si una variable se declara fuera de cualquier función, automáticamente se transforma en variable global independientemente de si se define utilizando la palabra reservada <code>var</code> o no. Sin embargo, las variables definidas dentro de una función pueden ser globales o locales.</p><p>Si en el interior de una función, las variables se declaran mediante <code>var</code> se consideran locales y las variables que no se han declarado mediante <code>var</code>, se transforman automáticamente en variables globales.</p></div><p>Por lo tanto, se puede rehacer el código del primer ejemplo para que muestre el mensaje correctamente. Para ello, simplemente se debe definir la variable dentro de la función sin la palabra reservada <code>var</code>, para que se transforme en una variable global:</p><pre class="">
+      <span class="kw1">function</span> unMensaje<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+        mensaje <span class="sy0">=</span> <span class="st0">"Mostrar mensaje"</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      &nbsp;
+      unMensaje<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      alert<span class="br0">(</span>mensaje<span class="br0">)</span><span class="sy0">;</span>
+      </pre><br><p>¿Qué sucede si una función define una variable local con el mismo nombre que una variable global que ya existe? En este caso, <b>las variables locales prevalecen sobre las globales</b>, pero sólo dentro de la función.</p><p class="callout success">La recomendación general es definir como <b>variables locales</b> todas las variables que sean de uso exclusivo para realizar las <b>tareas encargadas a cada función</b>. Las variables globales se utilizan para compartir variables entre funciones de forma sencilla.</p><br></div><!-- /.contenedor --></section></div><!-- Arrays o Matrices --><div class="tabs-panel" id="cont-ppal-tabs-panel2"><!-- ********** Matrices --><section id="matrices" class=""><div class="contenedor"><h2>Arrays o Matrices</h2><p>En ocasiones, a los arrays se les llama vectores, matrices e incluso arreglos. No obstante, el término <b>array</b> es el más utilizado y es una palabra comúnmente aceptada en el entorno de la programación.</p><br><div class="stacked-for-small button-group"><a class="button hollow primary" href="#basico"><big>Lo básico</big></a> <a class="button hollow primary" href="#acceder"><big>Acceder elementos</big></a> <a class="button hollow primary" href="#metodos"><big>Métodos de matrices</big></a> <a class="button hollow primary" href="#ejemplo_m1"><big>Ejemplo uso de métodos</big></a> <a class="button hollow primary" href="#multidimencionales"><big>Arrays Multidimencionales</big></a></div><br><h3 id="basico">Lo básico</h3><p>Un array es una colección de variables, que pueden ser todas del mismo tipo o cada una de un tipo diferente. Su utilidad se comprende mejor con un ejemplo sencillo... Si una aplicación necesita manejar los países de Suramérica, se podrían crear doce variables de tipo texto:</p><!-- Argentina, Bolivia, Brasil, Chile, Colombia, Ecuador, Guyana, Paraguay, Perú, Surinam, Uruguay y Venezuela. --><pre class="lead">
+      <span class="kw1">var</span> pais1 <span class="sy0">=</span> <span class="st0">"Argentina"</span><span class="sy0">;</span>
+      <span class="kw1">var</span> pais2 <span class="sy0">=</span> <span class="st0">"Bolivia"</span><span class="sy0">;</span>
+      ...
+      <span class="kw1">var</span> pais12 <span class="sy0">=</span> <span class="st0">"Venezuela"</span><span class="sy0">;</span>
+      </pre><p>Este código no es incorrecto, pero si poco eficiente y complica en exceso la programación. Si en vez de los países se tuviera que guardar el nombre de de todos los países del mundo o las mediciones diarias de marea de los últimos 100 años, se tendrían que crear decenas o cientos de variables.</p><p>En este tipo de casos, se pueden agrupar todas las variables relacionadas en una colección de variables o array. El ejemplo anterior se puede rehacer de la siguiente forma:</p><pre class=""><b>
+      <span class="kw1">var</span> paises <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Argentina" <span class="sy0">,</span> "Bolivia" <span class="sy0">,</span> "Brasil" <span class="sy0">,</span>
+      "Chile" <span class="sy0">,</span> "Colombia" <span class="sy0">,</span> "Ecuador" <span class="sy0">,</span> "Guyana" <span class="sy0">,</span> "Paraguay" <span class="sy0">,</span>
+      "Perú" <span class="sy0">,</span> "Surinam" <span class="sy0">,</span> "Uruguay" <span class="sy0">,</span> "Venezuela"</span><span class="br0">]</span><span class="sy0">;</span>
+      </b></pre><p>Ahora, una única variable llamada <code>paises</code> almacena todos los valores relacionados entre sí, en este caso los <b>países de Suramérica</b>.</p><p>Para definir un array, se utilizan los caracteres <code>[</code> y <code>]</code> para delimitar su comienzo y su final y se utiliza el carácter <code>,</code> (coma) para separar sus elementos:</p><br><pre class="lead">
+      <span class="kw1">var</span> nombre_array <span class="sy0">=</span> <span class="br0">[</span>valor1<span class="sy0">,</span> valor2<span class="sy0">,</span> ...<span class="sy0">,</span> valorN<span class="br0">]</span><span class="sy0">;</span>
+      </pre><h3 id="acceder">Acceder elementos de un array</h3><p>Una vez definido un array, es muy fácil acceder a cada uno de sus elementos.</p><p>A cada uno se accede indicando su posición en el array. La único que debemos tener en consideración, que es responsable de muchos errores cuando se empieza a programar, es que las posiciones de los elementos <b>empiezan a contarse en el <code>0</code> y no en el <code>1</code>:</b></p><pre class=""><b>
+      <span class="kw1">var</span> paises <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Argentina" <span class="sy0">,</span> "Bolivia" <span class="sy0">,</span> "Brasil" <span class="sy0">,</span>
+      "Chile" <span class="sy0">,</span> "Colombia" <span class="sy0">,</span> "Ecuador" <span class="sy0">,</span> "Guyana" <span class="sy0">,</span> "Paraguay" <span class="sy0">,</span>
+      "Perú" <span class="sy0">,</span> "Surinam" <span class="sy0">,</span> "Uruguay" <span class="sy0">,</span> "Venezuela"</span><span class="br0">]</span><span class="sy0">;</span>
+
+      <span class="kw1">var</span> primerPais <span class="sy0">=</span> paises<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">;</span>         <span class="co1">// primerPais = "Argentina"</span>
+      <span class="kw1">var</span> paisSeleccionado <span class="sy0">=</span> paises<span class="br0">[</span><span class="nu0">10</span><span class="br0">]</span><span class="sy0">;</span>  <span class="co1">// paisSeleccionado = "Uruguay"</span>
+      <span class="kw1">var</span> paisCafetero <span class="sy0">=</span> paises<span class="br0">[</span><span class="nu0">4</span><span class="br0">]</span><span class="sy0">;</span>       <span class="co1">// paisCafetero = "Colombia"</span>
+      </b></pre><p>En el ejemplo, la primera instrucción quiere obtener el primer elemento del array. Para eso, se indica el nombre del array y entre corchetes la posición del elemento dentro del array. Como se ha comentado, las posiciones se empiezan a contar en el <code>0</code>, por lo que el primer elemento ocupa la posición <code>0</code> y se accede a el mediante <code>paises[0]</code>.</p><p>El valor <code>paises[10]</code> hace referencia al elemento que ocupa la onceava posición dentro del array <code>paises</code> el valor <code>Uruguay</code>. Como las posiciones empiezan a contarse en <code>0</code>, la posición <code>4</code> hace referencia al quinto elemento, en este caso, el valor <code>Colombia</code>.</p><p>Si deseamos podemos cambiar en valor de un elemento de un array, accediendo a él con el mismo procedimiento ya descrito.</p><pre class=""><b>
+      <span class="kw1">var</span> numeros <span class="sy0">=</span> <span class="br0">[</span> <span class="nu0">1</span> <span class="sy0">,</span> <span class="nu0">2</span> <span class="sy0">,</span> <span class="nu0">3</span> <span class="br0">]</span><span class="sy0">;</span>
+      <span class="kw1">console.log</span>(numeros);    <span class="co1">// Muestra esto [1, 2, 3]</span>
+      <span class="kw1">console.log</span>(numeros[<span class="nu0">1</span>]); <span class="co1">// Muestra 2</span>
+      numeros[<span class="nu0">0</span>] = <span class="st0">"primero"</span>;  <span class="co1">// Cambia el valor</span>
+      <span class="kw1">console.log</span>(numeros[<span class="nu0">0</span>]); <span class="co1">// Muestra esto "primero"</span>
+      </b></pre><p class="callout warning">Un array puede contener variables de varios tipos (string, números, booleanos, etc.) sin nigún problema.</p><br><h3 id="metodos">Métodos de arrays o matrices</h3><p>A continuación se muestran algunas de las funciones más útiles para el manejo de arrays:</p><br><h4><code>shift()</code></h4><p>Elimina el primer elemento del array y lo devuelve. El array original se modifica y su longitud disminuye una unidad.</p><pre class="lead">
+      <span class="kw1">var</span> array <span class="sy0">=</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span><span class="br0">]</span><span class="sy0">;</span>
+      <span class="kw1">var</span> primero <span class="sy0">=</span> array.<span class="me1">shift</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="co1">// ahora array = [2, 3]</span>
+      <span class="kw1">console.log</span>(primero); <span class="co1">// Muestra 1</span>
+      </pre><h4><code>pop()</code></h4><p>Elimina el último elemento del array y lo devuelve. El array original se modifica y su longitud disminuye en 1 elemento.</p><pre class="lead">
+      <span class="kw1">var</span> array <span class="sy0">=</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span><span class="br0">]</span><span class="sy0">;</span>
+      <span class="kw1">var</span> ultimo <span class="sy0">=</span> array.<span class="me1">pop</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="co1">// ahora array = [1, 2], ultimo = 3</span>
+      </pre><h4><code>unshift()</code></h4>añade un elemento al principio del array. El array original se modifica y aumenta su longitud en 1 elemento. (También es posible añadir más de un elemento a la vez)<p></p><pre class="lead">
+      <span class="kw1">var</span> array <span class="sy0">=</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span><span class="br0">]</span><span class="sy0">;</span>
+      array.<span class="me1">unshift</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="co1">// ahora array = [0, 1, 2, 3]</span>
+      </pre><h4><code>push()</code></h4>Añade un elemento al final del array. El array original se modifica y aumenta su longitud en 1 elemento. (También es posible añadir más de un elemento a la vez)<p></p><pre class="lead">
+      <span class="kw1">var</span> array <span class="sy0">=</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span><span class="br0">]</span><span class="sy0">;</span>
+      array.<span class="me1">push</span><span class="br0">(</span><span class="nu0">4</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="co1">// ahora array = [1, 2, 3, 4]</span>
+      </pre><h4><code>reverse()</code></h4><p>Modifica un array colocando sus elementos en el orden inverso a su posición original:</p><pre class="lead">
+      <span class="kw1">var</span> array <span class="sy0">=</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span><span class="br0">]</span><span class="sy0">;</span>
+      array.<span class="me1">reverse</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="co1">// ahora array = [3, 2, 1]</span>
+      </pre><h4><code>splice()</code></h4><p>Quita elementos de una matriz, inserta nuevos elementos en su lugar si procede y devuelve los elementos eliminados.</p><p><b>Sintaxis:</b></p><pre><b>array.splice(start, deleteCount, [item1[, item2[, . . . [,itemN]]]])<b></b></b></pre><p class="mt-2"><code>array</code> Array sobre el que se actua, es obligatorio.</p><p><code>start</code> Inicio (basado en cero de la matriz) desde donde va a comenzar a quitar/agregar elementos, es obligatorio.</p><p><code>deleteCount</code> Número de elementos que se va a quitar, si se deja en 0 no elimina nada, por lo que este ,étodo funciona en este caso para añadir elementos. Es obligatorio que figure una cifra, así sea 0.</p><p><code>item1, item2,. . ., itemN</code> Elementos que se van a insertar en la matriz en lugar de los elementos eliminados. Es opcional.</p><p class="mt-3"><b>Ejemplo eliminando elementos:</b></p><pre class="lead">
+      <span class="kw1">var</span> array <span class="sy0">=</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">5</span><span class="br0">]</span><span class="sy0">;</span>
+      array.<span class="me1">splice</span><span class="br0">(</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span> <span class="br0">)</span><span class="sy0">;</span>
+      <span class="co1">// ahora array = [1, 4, 5]</span>
+      </pre><p class="mt-1"><b>Ejemplo añadiendo elementos:</b></p><pre class="lead">
+      <span class="kw1">var</span> array <span class="sy0">=</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">5</span><span class="br0">]</span><span class="sy0">;</span>
+      array.<span class="me1">splice</span><span class="br0">(</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span> <span class="br0">)</span><span class="sy0">;</span>
+      <span class="co1">// ahora array = [1, 2, 3, 4, 5]</span>
+      </pre><h4><code>indexOf()</code></h4><p>Calcula la primera posición en la que se encuentra el elemento indicado dentro del array. Si no contiene el elemento, la función devuelve el valor <code>-1</code>:</p><pre class="lead">
+      <span class="kw1">var</span> array <span class="sy0">=</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">5</span><span class="br0">]</span><span class="sy0">;</span>
+      <span class="kw1">var</span> posicion <span class="sy0">=</span> array.<span class="me1">indexOf</span><span class="br0">(</span><span class="st0">3</span><span class="br0">)</span><span class="sy0">;</span> <span class="co1">// posicion = 2</span>
+      posicion <span class="sy0">=</span> array.<span class="me1">indexOf</span><span class="br0">(</span><span class="st0">7</span><span class="br0">)</span><span class="sy0">;</span> <span class="co1">// posicion = -1</span>
+      </pre><h3 id="ejemplo_m1">Ejemplo uso de métodos</h3><p>A continuación una función muy sencilla donde ponemos en práctica lo aprendido sobre métodos para los arrays</p><pre class="consola">
+
+      <span class="funcion">var</span> colores <span class="condicion">=</span> [<span class="cadena">'amarillo'</span> , <span class="cadena">'azul'</span> , <span class="cadena">'aguamarina'</span> , <span class="cadena">'beige'</span> ,
+      <span class="cadena">'blanco'</span> , <span class="cadena">'dorado'</span> , <span class="cadena">'gris'</span> , <span class="cadena">'negro'</span> , <span class="cadena">'marrón'</span> , '<span class="cadena">rojo'</span> ,
+      <span class="cadena">'verde'</span> , <span class="cadena">'vinotinto'</span>];
+
+      <span class="funcion">alert</span>(<span class="cadena">"Los colores disponibles son: "</span> <span class="condicion">+</span> colores);
+      <span class="funcion">var</span> colorElegido  <span class="condicion">=</span>  <span class="funcion">prompt</span>(<span class="cadena">'Ingrese el color que desee borrar:'</span>);
+      colorElegido <span class="condicion">=</span> colorElegido.<span class="funcion">toLowerCase</span>();
+
+      <span class="funcion">function</span> <span class="verde">borrarColor</span>(<span class="dorado">color</span>,<span class="dorado">matriz</span>) {
+
+            <span class="funcion">var</span> indice <span class="condicion">=</span> matriz.<span class="funcion">indexOf</span>(color);
+
+            <span class="condicion">if</span> (indice <span class="condicion">></span> <span class="condicion">-</span><span class="violeta">1</span>) {
+                  <span class="nota">// El color SI existe</span>
+                  matriz.<span class="funcion">splice</span>(indice,<span class="violeta">1</span>);
+            }
+            <span class="condicion">else</span> {
+                  <span class="nota">// El color no existe</span>
+                  <span class="funcion">alert</span>(<span class="cadena">'Este color no existe en la matriz.'</span>)
+            }
+      }
+
+      <span class="funcion">borrarColor</span>(colorElegido, colores);
+      <span class="funcion">alert</span>(<span class="cadena">"Los colores que quedaron son: "</span> <span class="condicion">+</span> colores);                  
+      </pre><button id="ejemploMetodoArray" class="button primary mt-1">Ver resultado del ejemplo</button><h3 id="multidimencionales" class="mt-5">Arrays Multidimencionales</h3><p>Veamos qué son los arrays multidimensionales (arrays de más de una dimensión) y cómo utilizarlos. Además de cómo inicializar arrays en su declaración.</p><p>Los arrays son bastante importantes en Javascript y también en la mayoría de los lenguajes de programación. En concreto ya hemos aprendido a crear arrays y utilizarlos. Pero aun nos quedan algunas cosas importantes, como son los arrays de varias dimensiones.</p><p>Los <b>arrays multidimensionales</b> son un estructuras de datos que almacenan los valores en más de una dimensión. Los arrays que hemos visto hasta ahora almacenan valores en <em>una dimensión</em>, por eso para acceder a las posiciones utilizamos tan <em>solo un índice</em>. Los arrays de 2 dimensiones guardan sus valores, por decirlo de alguna manera, en filas y columnas y por ello necesitaremos <b>por lo menos dos índices</b> para acceder a cada una de sus posiciones.</p><p class="primary callout">Dicho de otro modo, un array multidimensional es como un contenedor que guardara más valores para cada posición, es decir, los elementos del array son a su vez otros arrays.</p><p>Javascript tiene una forma resumida de construir un <b>Array Multidimencional</b>, para ello simplemente escribimos entre corchetes los datos del array que estamos creando.</p><p>A continuación un ejemplo sobre cómo utilizar esta sintaxis para declarar arrays de más de una dimensión.</p><pre><b>
+      <span class="kw1">var</span> arrayMuchasDimensiones <span class="kw2">=</span> <span class="token punctuation">[</span>
+        <span class="nu0">1</span><span class="br0">,</span> 
+        <span class="br0">[</span>
+          <span class="st0">"hola"</span><span class="br0">,</span> 
+          <span class="st0">"que"</span><span class="br0">,</span> 
+          <span class="st0">"tal"</span><span class="br0">,</span> 
+          <span class="br0">[</span>
+            <span class="st0">"estas"</span><span class="br0">,</span> 
+            <span class="st0">"estamos"</span><span class="br0">,</span> 
+            <span class="st0">"estoy"</span>
+          <span class="br0">]</span><span class="br0">,</span> 
+          <span class="br0">[</span>
+            <span class="st0">"bien"</span><span class="br0">,</span> 
+            <span class="st0">"mal"</span>
+          <span class="br0">]</span><span class="br0">,</span> 
+          <span class="st0">"acabo"</span>
+        <span class="br0">]</span><span class="br0">,</span> 
+        <span class="nu0">2</span><span class="br0">,</span> 
+        <span class="nu0">5</span>
+      <span class="br0">]</span><span class="br0">;</span>
+      </b></pre><p>Así hemos creado un array que tiene casillas con contenido de simples enteros y otras con contenido de cadena y otras que son otros arrays. Podríamos acceder a algunas de sus casillas y mostrar sus valores de esta manera:</p><pre><b>
+      alert <span class="kw1">(</span>arrayMuchasDimensiones<span class="kw1">[</span><span class="nu0">0</span><span class="kw1">]</span><span class="kw1">)</span>        <span class="co1">// Esto es igual a 1</span>
+      alert <span class="kw1">(</span>arrayMuchasDimensiones<span class="kw1">[</span><span class="nu0">1</span><span class="kw1">]</span><span class="kw1">[</span><span class="nu0">2</span><span class="kw1">]</span><span class="kw1">)</span>     <span class="co1">// Esto es igual a "tal"</span>
+      alert <span class="kw1">(</span>arrayMuchasDimensiones<span class="kw1">[</span><span class="nu0">1</span><span class="kw1">]</span><span class="kw1">[</span><span class="nu0">3</span><span class="kw1">]</span><span class="kw1">[</span><span class="nu0">1</span><span class="kw1">]</span><span class="kw1">)</span>  <span class="co1">// Esto es igual a "estamos"</span>
+      </b></pre></div><!-- /.contenedor --></section></div><!-- Recorrer Matrices --><div class="tabs-panel" id="cont-ppal-tabs-panel3"><!-- ********** Recorrer Matrices --><section id="recorrer-matrices" class=""><div class="contenedor"><h2>Recorrer Matrices</h2><p>Vamos a ver cómo recorrer un array en Javascript, a través de tres métodos, muy usados.</p><br><div class="stacked-for-small button-group"><a class="button hollow primary" href="#conFor"><big>Con "for"</big></a> <a class="button hollow primary" href="#conForEach"><big>Con "forEach"</big></a></div><br><h3 id="conFor">Con "for"</h3><p>Vamos a recorrer el array utilizando un bucle iterativo de tipo <code>for</code>.</p><p>Para poder crear el bucle <code>for</code> necesitamos poner un límite de las iteracciones a ejecutar. Dicho límite nos lo dará el tamaño del array. El tamaño del array lo podemos obtener mediante la propiedad <code>.length</code>.</p><p>Hemos declarado una variable <code>i</code>, la cual incrementamos uno a uno en cada vuelta del bucle, mientras su valor es menor que el tamaño del array.</p><p>El siguiente paso será tomar el elemento del array que coincida con la posición determinada por <code>i</code>. Para obtener el elemento utilizamos los corchetes <code>[]</code> sobre el array, con la posición como parámetro de los corchetes.</p><pre><b>      
+      <span class="kw1">var</span> paises <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Argentina" <span class="sy0">,</span> "Bolivia" <span class="sy0">,</span> "Brasil" <span class="sy0">,</span>
+      "Chile" <span class="sy0">,</span> "Colombia" <span class="sy0">,</span> "Ecuador" <span class="sy0">,</span> "Guyana" <span class="sy0">,</span> "Paraguay" <span class="sy0">,</span>
+      "Perú" <span class="sy0">,</span> "Surinam" <span class="sy0">,</span> "Uruguay" <span class="sy0">,</span> "Venezuela"</span><span class="br0">]</span><span class="sy0">;</span>
+
+      <span class="kw1">var</span> longitud <span class="kw1">=</span> paises<span class="kw1">.</span>length, i <span class="kw1">=</span> <span class="nu0">0</span>;
+
+      <span class="kw1">for</span> (i; i <span class="kw1">&lt;</span> longitud; i<span class="kw1">=</span>i<span class="kw1">+</span><span class="nu0">1</span>) {
+            <span class="st0">$</span>(<span class="es0">'#resultadoMatriz1'</span>)<span class="kw1">.</span><span class="st0">append</span>(<span class="es0">'&lt;li&gt;'</span><span class="kw1">+</span>paises[i]<span class="kw1">+</span><span class="es0">'&lt;/li&gt;'</span>);
+      }
+      </b></pre><button id="ejemploMatriz1" class="button primary mt-1">Ver resultado del ejemplo</button><div class="callout primary"><p><b>Países de Suramérica.</b></p><ul class="menu" id="resultadoMatriz1"></ul></div><br><h3 id="conForEach">Con "forEach"</h3><p>El método <code>forEach()</code> ejecuta la función indicada una vez por cada elemento del array.</p><p>En este caso usaremos <code>.prepend</code> en vez de <code>append</code>, para que el oreden de los elementos sea inverso.</p><pre><b>      
+      <span class="kw1">var</span> paises2 <span class="sy0">=</span> <span class="br0">[</span><span class="st0">"Argentina" <span class="sy0">,</span> "Bolivia" <span class="sy0">,</span> "Brasil" <span class="sy0">,</span>
+      "Chile" <span class="sy0">,</span> "Colombia" <span class="sy0">,</span> "Ecuador" <span class="sy0">,</span> "Guyana" <span class="sy0">,</span> "Paraguay" <span class="sy0">,</span>
+      "Perú" <span class="sy0">,</span> "Surinam" <span class="sy0">,</span> "Uruguay" <span class="sy0">,</span> "Venezuela"</span><span class="br0">]</span><span class="sy0">;</span>
+
+      function <span class="st0">verMatriz2</span>(<span class="es0">elemento</span>){
+        <span class="st0">$</span>(<span class="es0">'#resultadoMatriz2'</span>)<span class="kw1">.</span><span class="st0">prepend</span>(<span class="es0">'&lt;li&gt;'</span><span class="kw1">+</span>paises2[i]<span class="kw1">+</span><span class="es0">'&lt;/li&gt;'</span>);
+      }
+
+      paises2<span class="kw1">.</span><span class="st0">forEach</span>(verMatriz2);
+      </b></pre><button id="ejemploMatriz2" class="button primary mt-1">Ver resultado del ejemplo</button><div class="callout primary"><p><b>Países de Suramérica (Orden inverso).</b></p><ul class="menu" id="resultadoMatriz2"></ul></div></div><!-- /.contenedor --></section></div><!-- Expresiones Funcionales --><div class="tabs-panel" id="cont-ppal-tabs-panel4"><!-- ********** Expresiones Funcionales --><section id="expresiones-funcionales" class=""><div class="contenedor"><h2>Expresiones Funcionales</h2><p>Vamos a ver cómo recorrer un array en Javascript, a través de tres métodos, muy usados.</p><p>Una de las partes más potentes, y a menudo confusas, de JavaScript es el manejo de las funciones.</p><p>Existen dos formas de definir una función:</p><p><strong>Mediante declaración:</strong></p><pre><b>
+      <span class="kw1">function</span> <span class="st0">nombreFuncion</span>(<span class="es0">arg0</span>,<span class="es0">arg1</span>,<span class="es0">arg2</span>) {
+        <span class="co1">// cuerpo de la función</span>
+      }
+      </b></pre><p>Las funciones creadas mediante declaración o <b>Funciones Declaradas</b> pueden aparecer en el código luego de una llamada a dicha función, es decir pueden ser llamadas antes de ser declaradas.</p><p><strong>Mediante expresión:</strong></p><pre><b>
+      <span class="kw1">var</span> <span class="st0">nombreFuncion</span> <span class="kw1">=</span> <span class="kw1">function</span>(<span class="es0">arg0</span>,<span class="es0">arg1</span>,<span class="es0">arg2</span>) {
+        <span class="co1">// cuerpo de la función</span>
+      }      
+      </b></pre><p>Una función creada mediante expresión se considera una <b>Función Anónima</b> (o función lambda), que se asigna a una variable. Este tipo de expresión es igual a cualquier otra, y por tanto, deben asignarse antes del uso. Si la llamada ocurre antes de la asignación, el programa fallará. La función aún no existe, aunque, debido al modo en que el motor de JavaScript parsea el código, que “eleva” a la parte de arriba la declaración de variables –<em>hoisting</em>– la variable sí existirá, pero su valor será todavía <code>undefined</code>.</p><p>Este método de definición permite hacer cosas así:</p><pre><b>
+      <span class="kw1">var</span> saludar;
+       
+      <span class="kw1">if</span>(temprano) {
+            <span class="st0">saludar</span> = <span class="kw1">function</span>() { <span class="st0">alert</span>(<span class="es0">"Buenos días"</span>); };
+      } <span class="kw1">else</span> {
+            <span class="st0">saludar</span> = <span class="kw1">function</span>() { <span class="st0">alert</span>(<span class="es0">"Buenas tardes"</span>); };
+      }
+      </b></pre><p>También es posible que las funciones devuelvan otras funciones. Por ejemplo, se puede crear una función que devuelva funciones comparadoras personalizadas según cierta propiedad:</p><pre><b>
+      <span class="fu0">function</span> <span class="st0">crearFuncionComparadora</span>(<span class="es0">propiedad</span>) {
+
+          <span class="kw1">return</span> <span class="fu0">function</span>(<span class="es0">obj1</span>, <span class="es0">obj2</span>) {
+
+              <span class="fu0">var</span> valor1 <span class="kw1">=</span> obj1[propiedad];
+              <span class="fu0">var</span> valor2 <span class="kw1">=</span> obj2[propiedad];
+
+              <span class="kw1">if</span> (valor1 <span class="kw1">&lt;</span> valor2) {
+                  <span class="kw1">return</span> <span class="sy0">-1</span>;
+              } <span class="kw1">else</span> if (valor1 <span class="kw1">&gt;</span> valor2) {
+                  <span class="kw1">return</span> <span class="sy0">1</span>;
+              } <span class="kw1">else</span> {
+                  <span class="kw1">return</span> <span class="sy0">0</span>;
+              }
+          };
+      }
+      </b></pre><br><p><b>Recursividad</b></p><p>Una función recursiva es una función se se invoca a sí misma, también se les conocen como <em>Inmediately Invoked Function Expression (IIEF)</em>, y son muy útiles para crear efectos o rutinas que se inicien automáticamente, por lo menos al cargar una página, o algo similar.</p><pre><b>
+      (<span class="fu0">function</span>() {
+            <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span>(<span class="st0">'Hola desde IIEF'</span>)
+            <span class="co1">// Inmediately Invoked Function Expression</span>
+      })();      
+      </b></pre><cite>Fuente: http://lurailabs.com/javascript-expresiones-funcionales/</cite></div><!-- /.contenedor --></section></div><!-- Hoisting (Alzado) --><div class="tabs-panel" id="cont-ppal-tabs-panel5"><!-- ********** Hoisting --><section id="expresiones-funcionales" class=""><div class="contenedor"><h2>Hoisting (Alzado)</h2><p>Hoisting es un término que&nbsp;<em>no</em>&nbsp;encontrará&nbsp;utilizado en ninguna especificación previa a&nbsp;<a href="http://www.ecma-international.org/ecma-262/6.0/index.html" class="external external-icon" rel="noopener">ECMAScript® 2015 Language Specification</a>.</p><p>El concepto de Hoisting fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript (específicamente las fases de creación y ejecución).</p><p>Hoisting puede llevar a <b>malos entendidos</b>, por ejemplo, puede dar a entender que las declaraciones de variables y funciones son físicamente movidas al comienzo del código, pero esto no es lo que ocurre en realidad. Lo que sucede es que las declaraciones de variables y funciones son <strong>asignadas en memoria</strong> durante la fase de <u>compilación,</u>&nbsp;pero quedan exactamente en dónde la ha escrito en el código.</p><p><b>Ejemplo</b></p><p>Una de las ventajas en JavaScript de colocar (ponerlas en memoria) las declaraciones de funciones antes de ejecutar cualquier otro segmento de código es que permite utilizar una función antes de declararla en el código:</p><pre><b>
+      <span class="kw1">function</span> <span class="st0">nombreDelGato</span><span class="br0">(</span><span class="nu0">nombre</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span><span class="br0">(</span><span class="st0">"El nombre de mi gato es "</span> <span class="kw1">+</span> <span class="nu0">nombre</span><span class="br0">)</span><span class="br0">;</span>
+      <span class="br0">}</span>
+
+      <span class="fu0">nombreDelGato</span><span class="br0">(</span><span class="st0">"Maurizzio"</span><span class="br0">)</span><span class="br0">;</span>
+      <span class="co1" spellcheck="true">/*
+      El resultado del código es: "El nombre de mi gato es Maurizzio"
+      */</span>
+      </b></pre><p>El código escrito arriba está escrito de la manera que sería esperada para que funcione.</p><p>Ahora, veamos qué sucede cuando llamamos a la función antes de escribirla:</p><pre><b>
+      <span class="fu0">nombreDelGato</span><span class="br0">(</span><span class="st0">"Dumas"</span><span class="br0">)</span><span class="br0">;</span>
+
+      <span class="kw1">function</span> <span class="st0">nombreDelGato</span><span class="br0">(</span><span class="nu0">nombre</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span><span class="br0">(</span><span class="st0">"El nombre de mi gato es "</span> <span class="kw1">+</span> <span class="nu0">nombre</span><span class="br0">)</span><span class="br0">;</span>
+      <span class="br0">}</span>
+      <span class="co1" spellcheck="true">/*
+      El resultado del código es: "El nombre de mi gato es Dumas"
+      */</span>
+      </b></pre><p>Como se puede observar, aunque primero llamamos a la función en el código, antes de que sea escrita, el código aún funciona. Esto sucede por la manera en la que el contexto de ejecución trabaja en JavaScript.</p><br><cite>Fuente: https://developer.mozilla.org/es/docs/Glossary/Hoisting/</cite></div><!-- /.contenedor --></section></div><!-- Closures (Clausuras)--><div class="tabs-panel" id="cont-ppal-tabs-panel6"><!-- ********** Closures --><section id="closures" class=""><div class="contenedor"><h2>Closures (Clausuras)</h2><p>Es una función que retorna desde otra función, y la clave está en que <b>lleva una copia o una referencia del ámbito</b> de esa función que la retorna, es decir encierra o envuelve todo el ambito con las variables o las funciones que hubiera y se lo lleva con ella.</p><p>Otro concepto válido es:<em> "Un <u>closure</u>&nbsp;o clausura es la combinación de una función y el ámbito léxico en el que se declaró dicha función. Es decir los <u>closures</u>&nbsp;o clausuras son funciones que manejan variables independientes. En otras palabras, la función definida en el <u>closure</u> "recuerda" el ámbito en el que se ha creado".</em></p><p>Veamos lo siguiente:</p><pre><b>
+      <span class="fu0">function</span> <span class="st0">inicia</span>() {
+        <span class="fu0">var</span> nombre <span class="kw1">=</span> <span class="es0">"Mozilla"</span>; <span class="co1">// 'nombre' es una variable local creada por la función 'inicia'</span>
+        <span class="fu0">function</span> <span class="st0">muestraNombre</span>() { <span class="co1">// 'muestraNombre' es una función interna (un closure)</span>
+          <span class="st0">alert</span>(nombre); <span class="co1">// dentro de esta función usamos una variable declarada en la función padre</span>
+        }
+        <span class="st0">muestraNombre</span>();
+      }
+      <span class="st0">inicia</span>();  
+      </b></pre><p>La función&nbsp;<code>inicia()</code>&nbsp;&nbsp;crea una variable local llamada&nbsp;<code>nombre</code>.<br>A continuación, define una función denominada <code>muestraNombre()</code>.<br><code>muestraNombre()</code>&nbsp;es una función interna (un <em>closure</em>) definida dentro de <code>inicia</code><code>()</code>,&nbsp;y sólo está disponible en el cuerpo de esa función.<br><code>muestraNombre</code><code>()</code>&nbsp;no tiene ninguna variable propia, lo que hace es reutilizar la variable <code>nombre</code> declarada en la función externa.</p><p>Esto funciona bien, intenta correr el código para ver qué pasa. Este es un ejemplo de ámbito funcional: en JavaScript, el ámbito de una variable se define por su ubicación dentro del código fuente y las funciones anidadas tienen acceso a las variables declaradas en su ámbito externo.</p><button id="ejemploEnclosures" class="button primary mt-1">Ver resultado del ejemplo</button><h3 class="mt-4">Closures y bucles</h3><p>En JavaScript, no tenemos ningúna palabra reservada que permita declarar variables o funciones como privadas, es decir no existe un <em>private</em> que restringa la visibilidad de un método o propiedad fuera del objeto. Pero para eso podemos utilizar los closures.</p><p>Y una vez que sabemos algo sobre los closures, veamos cómo podemos utilizarlos en conjunto con los ciclos.</p><button id="ejemploEnclosures2" class="button primary mt-1">Ver resultado del ejemplo</button><div class="callout primary" id="resultadoEnclosures2"></div><br><cite>Fuente: https://developer.mozilla.org/es/docs/Web/JavaScript/Closures/</cite></div><!-- /.contenedor --></section></div><!-- Objetos --><div class="tabs-panel" id="cont-ppal-tabs-panel7"><!-- ********** Objetos --><section id="objetos" class=""><div class="contenedor"><h2>Objetos</h2><p>Un objeto es una colección de propiedades, y una <b>propiedad</b> es una asociación entre un nombre y un valor. Un valor de propiedad puede ser una función, la cual es conocida entonces como un método del objeto.</p><p>Además de los objetos que están predefinidos en el navegador, tu puedes definir tus propios objetos.</p><pre><b>
+      <span class="fu0">var</span> <span class="es0">opino</span> <span class="kw1">=</span> <span class="st0">"Es uno de mis libros preferidos."</span>;
+
+      <span class="fu0">var</span> <span class="es0">libro</span> <span class="kw1">=</span> {
+            <span class="st0">titulo</span><span class="kw2">:</span> <span class="st0">'Escultismo para muchachos.'</span>,
+            <span class="st0">autor</span><span class="kw2">:</span> '<span class="st0">Robert Baden-Powell'</span>,
+            <span class="st0">genero</span><span class="kw2">:</span> <span class="st0">'Educación'</span>,
+            <span class="st0">valoracion</span><span class="kw2">:</span> <span class="nu0">9</span>,
+            <span class="st0">tags</span><span class="kw2">:</span> [<span class="st0">'Escultismo'</span>,<span class="st0">'Niños'</span>,<span class="st0">'Scouts'</span>,<span class="st0">'Exploración'</span>,
+                  <span class="st0">'Vida al aire libre'</span>,<span class="st0">'Aprender haciendo'</span>],
+            <span class="st0">opinion</span><span class="kw2">:</span> <span class="es0">opino</span>,
+      };
+
+      <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span>(libro<span class="kw1">.</span>opinion);
+      <span class="co1">// Muestra "Es uno de mis libros preferidos."</span>
+
+      <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span>(libro<span class="kw1">.</span>tags[<span class="nu0">4</span>]);
+      <span class="co1">// Muestra 'Vida al aire libre'</span>
+
+      <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span>(libro<span class="kw1">.</span>autor);
+      <span class="co1">// Muestra 'Robert Baden-Powell'</span>  
+      </b></pre><p>Los <b>objectos</b> en JavaScript, al igual que en muchos otros lenguajes de programación, pueden ser comparados con <b>objetos de la vida real</b>. El concepto de Objetos en JavaScript se puede entender como en la vida real, objetos tangibles.</p><p class="callout warning">En JavaScript, un objecto es un entidad independiente con propiedades y tipos. Comparado con un libro por ejemplo, un libro es un objeto con propiedades, tiene un autor, un título, un género, etc, de la misma manera, los objetos de JavaScript pueden tener propiedades, que definen sus características.</p><h3 class="mt-4">Listando todas las propiedades de un objeto</h3><p>A partir de <em>ECMAScript 5</em>, hay tres formas nativas de "Lista/cruzada" de propiedades de objeto:</p><ul><li><b>Object.keys(o)</b> = Este método devuelve una matriz con los mismos (no en la cadena de prototipos) nombres ("keys") enumerables de las popiedades de un objeto o.</li><li><b>Object.getOwnPropertyNames(o)</b> = Este método devuelve una matriz que contiene todos los nombres (enumerables o no) de las propiedades de un objeto o.</li></ul><p><b>Con bucles <code>for...in</code></b></p><p>Este método atraviesa todas las propiedades enumerables de un objeto y su cadena de prototipo.</p><pre><b>
+      <span class="fu0">var</span> <span class="es0">opino</span> <span class="kw1">=</span> <span class="st0">"Es uno de mis libros preferidos."</span>;
+
+      <span class="fu0">var</span> <span class="es0">libro</span> <span class="kw1">=</span> {
+            <span class="st0">titulo</span><span class="kw2">:</span> <span class="st0">'Escultismo para muchachos.'</span>,
+            <span class="st0">autor</span><span class="kw2">:</span> '<span class="st0">Robert Baden-Powell'</span>,
+            <span class="st0">genero</span><span class="kw2">:</span> <span class="st0">'Educación'</span>,
+            <span class="st0">valoracion</span><span class="kw2">:</span> <span class="nu0">9</span>,
+            <span class="st0">tags</span><span class="kw2">:</span> [<span class="st0">'Escultismo'</span>,<span class="st0">'Niños'</span>,<span class="st0">'Scouts'</span>,<span class="st0">'Exploración'</span>,
+                  <span class="st0">'Vida al aire libre'</span>,<span class="st0">'Aprender haciendo'</span>],
+            <span class="st0">opinion</span><span class="kw2">:</span> <span class="es0">opino</span>,
+      };
+
+      <span class="kw1">for</span> (<span class="fu0">var</span> propiedad <span class="kw1">in</span> libro) {
+            <span class="st0">$</span>(<span class="nu0">'#resultadoObjet1'</span>)<span class="kw1">.</span><span class="st0">append</span>(<span class="nu0">'&lt;li>'</span><span class="kw1">+</span><span class="nu0">'&nbsp;'</span><span class="kw1">+</span>propiedad<span class="kw1">+</span><span class="nu0">'&nbsp;'</span><span class="kw1">+</span><span class="nu0">'&lt;/li>'</span>)
+      }      
+      </b></pre><button id="ejemploObjet1" class="button primary mt-1">Ver resultado del ejemplo</button><div class="callout primary"><ul id="resultadoObjet1"></ul></div><p class="mt-4"><b>Con <code>Object.keys(o)</code></b></p><p>Este método devuelve una matriz con los mismos nombres ("keys") enumerables de las propiedades de un objeto "o" (no en la cadena de prototipos).</p><pre><b>
+      <span class="fu0">var</span> <span class="es0">opino</span> <span class="kw1">=</span> <span class="st0">"Es uno de mis libros preferidos."</span>;
+
+      <span class="fu0">var</span> <span class="es0">libro</span> <span class="kw1">=</span> {
+            <span class="st0">titulo</span><span class="kw2">:</span> <span class="st0">'Escultismo para muchachos.'</span>,
+            <span class="st0">autor</span><span class="kw2">:</span> '<span class="st0">Robert Baden-Powell'</span>,
+            <span class="st0">genero</span><span class="kw2">:</span> <span class="st0">'Educación'</span>,
+            <span class="st0">valoracion</span><span class="kw2">:</span> <span class="nu0">9</span>,
+            <span class="st0">tags</span><span class="kw2">:</span> [<span class="st0">'Escultismo'</span>,<span class="st0">'Niños'</span>,<span class="st0">'Scouts'</span>,<span class="st0">'Exploración'</span>,
+                  <span class="st0">'Vida al aire libre'</span>,<span class="st0">'Aprender haciendo'</span>],
+            <span class="st0">opinion</span><span class="kw2">:</span> <span class="es0">opino</span>,
+      };
+
+      <span class="fu0">var</span> llaves <span class="kw1">=</span> <span class="fu0">Object</span><span class="kw1">.</span><span class="st0">keys</span>(libro);
+
+      $(<span class="nu0">'#resultadoObjet2'</span>)<span class="kw1">.</span><span class="st0">html</span>(llaves <span class="kw1">+</span> <span class="nu0">','</span>)     
+      </b></pre><button id="ejemploObjet2" class="button primary mt-1">Ver resultado del ejemplo</button><div class="callout primary"><ul id="resultadoObjet2"></ul></div><p class="mt-4"><b>Con <code>Object.getOwnPropertyNames(o)</code></b></p><p>Este método devuelve una matriz que contiene todos los nombres (enumerables o no) de las propiedades de un objeto "o".</p><pre><b>
+      <span class="fu0">var</span> <span class="es0">opino</span> <span class="kw1">=</span> <span class="st0">"Es uno de mis libros preferidos."</span>;
+
+      <span class="fu0">var</span> <span class="es0">libro</span> <span class="kw1">=</span> {
+            <span class="st0">titulo</span><span class="kw2">:</span> <span class="st0">'Escultismo para muchachos.'</span>,
+            <span class="st0">autor</span><span class="kw2">:</span> '<span class="st0">Robert Baden-Powell'</span>,
+            <span class="st0">genero</span><span class="kw2">:</span> <span class="st0">'Educación'</span>,
+            <span class="st0">valoracion</span><span class="kw2">:</span> <span class="nu0">9</span>,
+            <span class="st0">tags</span><span class="kw2">:</span> [<span class="st0">'Escultismo'</span>,<span class="st0">'Niños'</span>,<span class="st0">'Scouts'</span>,<span class="st0">'Exploración'</span>,
+                  <span class="st0">'Vida al aire libre'</span>,<span class="st0">'Aprender haciendo'</span>],
+            <span class="st0">opinion</span><span class="kw2">:</span> <span class="es0">opino</span>,
+      };
+
+      <span class="fu0">var</span> llaves <span class="kw1">=</span> <span class="fu0">Object</span><span class="kw1">.</span><span class="st0">getOwnPropertyNames</span>(libro);
+
+      $(<span class="nu0">'#resultadoObjet2'</span>)<span class="kw1">.</span><span class="st0">html</span>(llaves <span class="kw1">+</span> <span class="nu0">','</span>)     
+      </b></pre><button id="ejemploObjet3" class="button primary mt-1">Ver resultado del ejemplo</button><div class="callout primary"><p id="resultadoObjet3"></p></div><br><cite>Fuente: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos/</cite></div><!-- /.contenedor --></section></div><!-- Métodos --><div class="tabs-panel" id="cont-ppal-tabs-panel8"><!-- ********** Métodos --><section id="metodos" class=""><div class="contenedor"><h2>Métodos</h2><p>Las cosas que pueden hacer los objetos se llaman métodos. Las personas hablan, las computadoras se rompen y las bicicletas ruedan.</p><p>Los objetos de JavaScript también tienen métodos: click() para los botones, open() para las ventanas y el texto puede seleccionarse gracias al método selected(). Los paréntesis indican que estamos refiriéndonos a un método, y no a una propiedad.</p><p>Consejo, puede ser útil pensar en los objetos y en las propiedades como nombres, y en los métodos como verbos. Los primeros son cosas, y los segundos, acciones que esas cosas pueden hacer, o que se les pueden hacer a ellas.</p><p>Puede poner juntos los objetos, las propiedades y los métodos para obtener una descripción mejor de un objeto, o para describir un proceso.</p><p>En JavaScript, todas estas piezas se separan mediante puntos. Esto se denomina sintaxis de punto.</p><p>He aquí algunos ejemplos de objetos y sus propiedades escritos de este modo:</p><ul><li>bicicleta.rueda</li><li>lobo.garras.delantera.izquierda</li><li>computadora.disco.cdrom</li><li>documento.imagen.nombre</li><li>ventana.estado</li></ul><p>Y aquí tiene algunos ejemplos de objetos y métodos escritos con sintaxis de punto:</p><ul><li>lobo.aullido()</li><li>document.write()</li><li>forms.elements.radio.click()</li></ul><p class="mt-3"><b>Ejemplo</b></p><p class="callout warning">Un resumen bastante sencillo de este concepto sería que un <b>método</b> es una <b>función</b> dentro de un objeto.</p><pre><b>
+      <span class="fu0">var</span> <span class="es0">persona</span> <span class="kw1">=</span> {
+            <span class="st0">nombre</span><span class="kw2">:</span> <span class="st0">'Enrique'</span>,
+            <span class="st0">apellido</span><span class="kw2">:</span> '<span class="st0">Valerio'</span>,
+            <span class="st0">sexo</span><span class="kw2">:</span> <span class="st0">'Masculino'</span>,
+            <span class="st0">edad</span><span class="kw2">:</span> <span class="nu0">45</span>,
+            <span class="st0">habilidades</span><span class="kw2">:</span> [<span class="st0">'Diseño'</span>,<span class="st0">'Dibujo'</span>,<span class="st0">'Desarrollo Web'</span>,<span class="st0">'Exploración'</span>,
+                  <span class="st0">'Vida al aire libre'</span>,<span class="st0">'Aprender haciendo'</span>],
+            <span class="st0">saludar:</span> <span class="fu0">function</span>() {
+                        <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span>(<span class="st0">'Hola Mundo'</span>);
+                  }
+      };      
+      </b></pre><p>Para invocar este método se usa <code>persona.saludar()</code> ya que se trata de una función.</p><br><h3>this como un método de un objeto</h3><p>Cuando una función es llamada como un método de un objeto, el <code>this</code> cambia por el metodo del objeto llamado.</p><p>En el siguiente ejemplo, cuando <code>objeto.funcion()</code> es invocado, dentro de la función <strong><code>this</code></strong> es ligado al objeto <code>objeto</code>.</p><pre class="consola">
+
+      <span class="funcion">var</span> objeto <span class="condicion">=</span> <span class="texto">{</span>
+        edad<span class="texto">:</span> <span class="dorado">45</span><span class="texto">,</span>
+        funcion<span class="texto">:</span> <span class="funcion">function</span><span class="texto">(</span><span class="texto">)</span> <span class="texto">{</span>
+          <span class="condicion">return</span> <span class="funcion">this</span><span class="texto">.</span>edad<span class="texto">;</span>
+        <span class="texto">}</span>
+      <span class="texto">}</span><span class="texto">;</span>
+
+      <span class="funcion">console</span><span class="texto">.</span><span class="funcion">log</span><span class="texto">(</span>objeto<span class="texto">.</span><span class="token function">funcion</span><span class="texto">(</span><span class="texto">)</span><span class="texto">)</span><span class="texto">;</span> <span class="nota">// Muestra 45</span>
+      </pre><br><p>En pocas palabras <code>this</code> permite usar una <b>propiedad</b> de un <b>objeto</b>, declarada dentro de este objeto (ambito local), por un método (función) dentro de este mismo objeto.</p><cite>Fuente: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos/</cite></div><!-- /.contenedor --></section></div><!-- Herencia --><div class="tabs-panel" id="cont-ppal-tabs-panel9"><!-- ********** Prototipado y herencia en JavaScript  --><section id="herencia" class=""><div class="contenedor"><h2>Prototipado y herencia en JavaScript</h2><p>JavaScript puede resultar un poco extraño a desarrolladores con experiencia en lenguajes basados en clases (como Java o C++), ya que es más dinámico y no proporcionar una implementación de clases en sí mismo (la palabra clave class se introdujo en ES2015, pero sólo para endulzar la sintaxis, ya que JavaScript sigue estando basado en prototipos).</p><p>En lo que a <b>herencia</b> se refiere, JavaScript sólo tiene una estructura: objetos ... Y ya lo hemos visto antes, <em>en este lenguaje todos son objetos</em>, y todo quiere decir que los números son objetos, las funciones también son objetos y las "clases" que crearán objetos también son objetos.</p><p>Una vez que se ha entendido esta idea es fácil entender cosas como las funciones anónimas o el prototipado, manos a la obra.</p><h3 class="mt-3">Creación de clases</h3><p>Primero que nada creamos nuetra <b>Clase</b>.</p><pre class="consola">
+
+      <span class="funcion">function</span> <span class="verde">Persona</span> (<span class="cadena">edad</span>) {
+        this<span>.</span>edad <span class="condicion">=</span> edad <span class="condicion">||</span> <span class="violeta">0</span>;
+      }
+
+      <span class="funcion">var</span> veronica <span class="condicion">=</span> <span class="condicion">new</span> Persona(<span class="violeta">6</span>),
+          carlos <span class="condicion">=</span> <span class="condicion">new</span> Persona(<span class="violeta">12</span>);
+
+      <span class="funcion">console</span><span>.</span><span class="funcion">log</span>(veronica <span class="condicion">instanceof</span> Persona); 
+      <span class="nota">// Muestra: true</span>
+      <span class="funcion">console</span><span>.</span><span class="funcion">log</span>(carlos<span>.</span>edad); 
+      <span class="nota">// Muestra: 12</span>
+      </pre><p class="mt-2">En vista de esto, <b>definimos nuestro constructor</b>, tarea que desempeñará una <b>función</b> que hará uso de la variable <code>this</code> como el objeto creado.</p><p>Desde el momento en el que se defina la <b>función</b> podemos crear <i>instancias</i> de la clase para obtener nuevos objetos.</p><p>El paso siguiente es añadir <b>métodos</b> que puedan ser utilizados por los objetos creados, y dado que en JavaScript todo es un objeto podemos hacer algo así:</p><pre class="consola">
+
+      <span class="funcion">function</span> <span class="verde">Persona</span> (<span class="cadena">edad</span>) {
+        this.edad <span class="condicion">=</span> edad;
+        this.<span class="verde">crecer</span> <span class="condicion">=</span> <span class="funcion">function</span> () {
+          this.edad <span class="condicion">=</span> this.edad <span class="condicion">+</span> 1;
+          <span class="condicion">return</span> this.edad;
+        }
+      }
+
+      <span class="funcion">var</span> veronica <span class="condicion">=</span> <span class="condicion">new</span> Persona(6);
+      <span class="funcion">console</span>.<span class="funcion">log</span>(veronica.crecer()); 
+      <span class="nota">// Muestra: 7</span>
+      </pre><p class="mt-2">En efecto el código anterior funciona y da una forma de implementar <em>métodos de instancia</em>, pero <strong>hay un detalle importante</strong>, nuestro constructor <strong>está creando una función <code>crecer</code> para cada una de las instancias</strong> que creamos de la clase, por lo tanto si tenemos un array con 10.000 instancias de <b>Persona</b> se crearán 10.000 funciones distintas (e independientes), algo que en términos de eficiencia es patético.</p><p>Afortunadamente, JavaScript tiene un atributo muy últil para todos los objetos: <strong><em>prototype</em></strong>. Este atributo es en si es un objeto vacío; pero que posee unas características muy interesantes. Cuando una función se utiliza como constructor (que es lo que estábamos haciendo en los ejemplos anteriores)<strong> JavaScript establece como atributo <em>prototype </em></strong>del objeto al mismo prototipo del constructor, de forma que los objetos creados pueden acceder a todos los atributos que se encuentren dentro de este objeto sin necesidad de duplicar información.</p><p>Veamos como queda el código con este concepto:</p><pre class="consola">
+
+      <span class="funcion">function</span>  <span class="verde">Persona</span> (<span class="cadena">edad</span>) {
+        this.edad <span class="condicion">=</span> edad;
+      }
+
+      <span class="funcion">Persona</span>.<span class="funcion">prototype</span>.<span class="verde">crecer</span> <span class="condicion">=</span> <span class="funcion">function</span> () {
+        this.edad <span class="condicion">=</span> this.edad <span class="condicion">+</span> <span class="violeta">1</span>;
+        <span class="condicion">return</span> this.edad;
+      };
+
+      <span class="funcion">var</span> veronica <span class="condicion">=</span> <span class="condicion">new</span> Persona(<span class="violeta">6</span>);
+      <span class="funcion">console</span>.<span class="funcion">log</span>(iris.crecer()); 
+      <span class="nota">// Muestra: 7</span>
+      </pre><br><cite>Fuente: https://developer.mozilla.org/es/docs/Web/JavaScript/Herencia_y_la_cadena_de_protipos<br>https://geekytheory.com/prototipado-y-herencia-en-javascript</cite></div><!-- /.contenedor --></section></div><!-- Creación de Objetos --><div class="tabs-panel" id="cont-ppal-tabs-panel10"><!-- ********** Construir objetos en JavaScript  --><section id="construir_objetos" class=""><div class="contenedor"><h2>Construir objetos en JavaScript</h2><p>Para JavaScript, como lenguaje de programación, casi <b>TODO</b> es un objeto. Números, cadenas, arrays, funciones, datos booleanos, fechas y expresiones regulares son percibidas como objetos o pueden ser tratados como tal.</p>Para entender mejor el concepto de objeto imaginemos que acabamos de comprar un móvil nuevo (el móvil es el objeto). Tiene <strong>propiedades</strong> como color, peso, tamaño, tamaño de pantalla y marca; también tiene <strong>métodos</strong> como llamar, tomar una foto, encendido y apagado. Ahora, expliquémoslo a nivel de programación:<p></p><ul><li>Los objetos son una instancia de una clase</li><li>Las propiedades son una característica, dada en un valor; ya sea tipo String (cadena), matemática, etc</li><li>Los métodos son una capacidad; y para realizarlos utilizamos una función (function)</li></ul><p class="h2 mt-4">En JavaScript encontramos 3 maneras de crear objetos:</p><div class="stacked-for-small button-group"><a class="button hollow primary" href="#literal"><big>Crear un objeto literal</big></a> <a class="button hollow primary" href="#new"><big>Crear un objeto usando la palabra <b>new</b></big></a> <a class="button hollow primary" href="#constructora"><big>Crear un objeto haciendo una función constructora</big></a></div><h3 class="mt-5" id="literal">Crear un objeto literal</h3><p>Un objeto literal es la manera más simple de crear un objeto. Se enmarca dentro de corchetes y se describe en pares de (clave: valor).</p><pre class="consola">
+      
+      <span class="funcion">var</span> movil <span class="condicion">=</span> {
+        <span class="verde">Marca</span> <span class="violeta">:</span> <span class="cadena">"Alcatel"</span>, 
+        <span class="verde">Peso</span> <span class="violeta">:</span> <span class="cadena">"5 onzas"</span>, 
+        <span class="verde">pantalla</span> <span class="violeta">:</span> <span class="cadena">"5 pulgadas"</span>, 
+        <span class="verde">Color</span> <span class="violeta">:</span> <span class="cadena">"Negro"</span>
+      };
+      </pre><h3 class="mt-3" id="new">Crear un objeto usando la palabra <b>new</b></h3><p>El operador <code>new</code> crea una instancia de un tipo de objeto a partir de una función constructora. Recordemos que en JavaScript un constructor es una función.</p><pre class="consola">
+
+      <span class="funcion">var</span> movil <span class="condicion">=</span> <span class="verde">newObject</span>();
+      movil<span class="condicion">.</span>Marca <span class="condicion">=</span> <span class="cadena">"Alcatel"</span>;
+      movil<span class="condicion">.</span>Peso <span class="condicion">=</span> <span class="cadena">"5 onzas"</span>;
+      movil<span class="condicion">.</span>Pantalla <span class="condicion">=</span> <span class="cadena">"5 pulgadas"</span>;
+      movil<span class="condicion">.</span>Color <span class="condicion">=</span> <span class="cadena">"Negro"</span>;
+      </pre><h3 class="mt-3" id="constructora">Crear un objeto haciendo una función constructora</h3><pre class="consola">
+
+      <span class="funcion">function</span> <span class="verde">movil</span>(<span class="dorado">marca</span>, <span class="dorado">peso</span>, <span class="dorado">pantalla</span>, <span class="dorado">color</span>) { 
+        this<span class="condicion">.</span>Marca <span class="condicion">=</span> marca;
+        this<span class="condicion">.</span>Peso <span class="condicion">=</span> peso;
+        this<span class="condicion">.</span>Pantalla <span class="condicion">=</span> pantalla;
+        this<span class="condicion">.</span>Color <span class="condicion">=</span> color;
+      }
+      <span class="funcion">var</span> compra <span class="condicion">=</span> <span class="condicion">new</span> movil(<span class="cadena">"Alcatel"</span>, <span class="cadena">"5 onzas"</span>, <span class="cadena">"5 pulgadas"</span>, <span class="cadena">"Negro"</span>);
+      </pre><p class="mt-3"><b>Una función constructora crea una copia de un objeto específico</b>. En otros lenguajes de programación son conocidas como <strong>clases.</strong> En JavaScript encontramos dos maneras diferentes de acceder a las propiedades de nuestro objeto:</p><ul><li>Marca;</li><li>movil[“Marca”];</li></ul><p>Su sintaxis es distinta, pero realizan la misma acción.</p><p class="h3">Ejemplo:</p><pre class="consola">
+
+      <span class="funcion">var</span> movil <span class="condicion">=</span> {  
+        <span class="verde">Marca</span> <span class="violeta">:</span> <span class="cadena">"Alcatel"</span>, 
+        <span class="verde">Peso</span> <span class="violeta">:</span> <span class="cadena">"5 onzas"</span>, 
+        <span class="verde">pantalla</span> <span class="violeta">:</span> <span class="cadena">"5 pulgadas"</span>, 
+        <span class="verde">Color</span> <span class="violeta">:</span> <span class="cadena">"Negro"</span>
+      };
+      <span class="funcion">document</span><span class="condicion">.</span><span class="verde">getElementById</span>(<span class="cadena">"elementoprueba"</span>)<span class="condicion">.</span>innerHTML <span class="condicion">=</span> movil<span class="condicion">.</span>Marca <span class="condicion">+</span> <span class="cadena">" --- "</span> <span class="condicion">+</span> movil[<span class="cadena">"Marca"</span>];      
+      </pre><button id="ejemploObjet4" class="button primary mt-2">Ver resultado del ejemplo</button><p class="callout warning" id="elementoprueba"></p><p>Ahora vamos a agregar métodos. Existen diversas maneras de realizar este proceso, pero tomaremos de ejemplo la manera más simple: utilizando la palabra <code>this</code>. Se puede utilizar en un método para referirnos al objeto actual.</p><pre class="consola">
+        
+      <span class="funcion">var</span> movil <span class="condicion">=</span> {
+        <span class="verde">Marca</span> <span class="violeta">:</span> <span class="cadena">"Alcatel"</span>,
+        <span class="verde">encendido</span> <span class="violeta">:</span> <span class="funcion">function</span>(c) {
+          <span class="condicion">return</span> <span class="cadena">"Mi movil marca"</span> <span class="condicion">+</span> <span class="cadena">" "</span> <span class="condicion">+</span> this<span class="condicion">.</span>Marca <span class="condicion">+</span> <span class="cadena">" "</span> <span class="condicion">+</span>  <span class="cadena">"esta encendido"</span>; 
+        }};
+        <span class="funcion">document</span><span class="condicion">.</span><span class="verde">getElementById</span>(<span class="cadena">"elementoprueba2"</span>)<span class="condicion">.</span>innerHTML = movil<span class="condicion">.</span><span class="verde">encendido</span>();
+      </pre><button id="ejemploObjet5" class="button primary mt-2">Ver resultado del ejemplo</button><p class="callout warning" id="elementoprueba2"></p><br><cite>Fuente: https://platzi.com/blog/objetos-en-javascript/</cite></div><!-- /.contenedor --></section></div><!-- Manipular el DOM --><div class="tabs-panel" id="cont-ppal-tabs-panel11"><!-- ********** Manipular el DOM  --><section id="manipular_dom" class=""><div class="contenedor"><h2>¿Qué es el DOM?</h2><p>El <b>modelo de objeto de documento (DOM)</b> es una interfaz de programación para los documentos HTML y XML, que facilita una representación estructurada del documento y define de qué manera los programas pueden acceder, al fin de modificar, tanto su estructura, estilo y contenido.</p><p>El DOM da una representación del documento como un grupo de nodos y objetos estructurados que tienen propiedades y métodos.</p><p class="callout warning">Esencialmente, conecta las páginas web a scripts o lenguajes de programación.</p><p>La especificación completa de DOM define 12 tipos de nodos, aunque las páginas XHTML habituales se pueden manipular manejando solamente cuatro o cinco tipos de nodos:</p><ul><li><code>Document</code>, nodo raíz del que derivan todos los demás nodos del árbol.</li><li><code>Element</code>, representa cada una de las etiquetas XHTML. Se trata del único nodo que puede contener atributos y el único del que pueden derivar otros nodos.</li><li><code>Attr</code>, se define un nodo de este tipo para representar cada uno de los atributos de las etiquetas XHTML, es decir, uno por cada par <code>atributo=valor</code>.</li><li><code>Text</code>, nodo que contiene el texto encerrado por una etiqueta XHTML.</li><li><code>Comment</code>, representa los comentarios incluidos en la página XHTML.</li></ul><p>Los otros tipos de nodos existentes que no se van a considerar son <code>DocumentType</code>, <code>CDataSection</code>, <code>DocumentFragment</code>, <code>Entity</code>, <code>EntityReference</code>, <code>ProcessingInstruction</code> y <code>Notation</code>.</p><div class="stacked-for-small button-group mt-2"><a class="button hollow primary" href="#byTagName"><big>getElementsByTagName()</big></a> <a class="button hollow primary" href="#getElementsByName"><big>getElementsByName()</big></a> <a class="button hollow primary" href="#getElementById"><big>getElementById()</big></a> <a class="button hollow primary" href="#querySelector"><big>querySelector()</big></a></div><div class="stacked-for-small button-group mt-3"><a class="button hollow primary" href="#addNodo"><big>Añadir Nodos</big></a> <a class="button hollow primary" href="#delNodo"><big>Eliminar Nodos</big></a></div><p>Como acceder a un nodo es equivalente a acceder a <b>"un trozo"</b> de la página, ya es posible manipular de forma sencilla la página: acceder al valor de un elemento, establecer el valor de un elemento, mover un elemento de la página, crear y añadir nuevos elementos, etc...</p><h3 class="mt-5" id="byTagName">getElementsByTagName()</h3><p>Como sucede con todas las funciones del DOM, <code>getElementsByTagName()</code> tiene un nombre muy largo, pero que lo hace explicarse por si mismo.</p><p>La función <code>getElementsByTagName(nombreEtiqueta)</code> obtiene todos los elementos de la página HTML o XLM cuya etiqueta sea igual que el parámetro que se le pasa a la función.</p><p>El siguiente ejemplo muestra cómo obtener todos los párrafos de una página y mostrar el resltado al hacer click en un botón:</p><pre class="consola">
+      
+      <span class="funcion">var</span> parrafos <span class="condicion">=</span> <span class="funcion">document</span>.<span class="verde">getElementsByTagName</span>(<span class="cadena">"p"</span>);
+      <span class="funcion">var</span> ejemploDom1 <span class="condicion">=</span> <span class="funcion">document</span>.<span class="verde">getElementById</span>(<span class="cadena">"ejemploDom1"</span>);
+
+      ejemploDom1.<span class="verde">addEventListener</span>(<span class="cadena">'click'</span>, <span class="funcion">function</span> (<span class="dorado">event</span>) {
+          <span class="verde">alert</span>(<span class="cadena">'Esta página tiene '</span> <span class="condicion">+</span> parrafos<span class="condicion">.</span>length <span class="condicion">+</span> <span class="cadena">' párrafos en total'</span>)
+      });
+      </pre><button id="ejemploDom1" class="button primary mt-2">Ver resultado del ejemplo</button><p class="mt-2">El valor que se indica delante del nombre de la función (en este caso, <code>document</code>) es el nodo a partir del cual se realiza la búsqueda de los elementos. En este caso, como se quieren obtener todos los párrafos de la página, se utiliza el valor <code>document</code>.</p><h3 class="mt-3" id="getElementsByName">getElementsByName()</h3><p>La función <code>getElementsByName()</code> busca los elementos cuyo atributo <code>name</code> sea idéntico al parámetro proporcionado.</p><p>Obtengamos un único párrafo con el nombre indicado:</p><p name="parrafoConNombre" class="callout primary">Yo soy un párrafo con un nombre especial para mi.</p><pre class="consola">
+            
+      <span class="funcion">var</span> parrafoConNombre <span class="condicion">=</span> <span class="funcion">document</span>.<span class="verde">getElementsByName</span>(<span class="cadena">"parrafoConNombre"</span>);
+      <span class="funcion">var</span> ejemploDom2 <span class="condicion">=</span> <span class="funcion">document</span>.<span class="verde">getElementById</span>(<span class="cadena">"ejemploDom2"</span>);
+
+      ejemploDom2.<span class="verde">addEventListener</span>(<span class="cadena">'click'</span>, <span class="funcion">function</span> (<span class="dorado">event</span>) {
+          <span class="verde">alert</span>(<span class="cadena">'Esta página tiene '</span> <span class="condicion">+</span> parrafoConNombre.length <span class="condicion">+</span> 
+          <span class="cadena">' parrafos con un nombre asignado, y dice los siguiente: '</span> 
+          <span class="condicion">+</span> parrafoConNombre[<span class="violeta">0</span>]<span class="condicion">.</span>innerText))
+      });
+      </pre><button id="ejemploDom2" class="button primary mt-2">Ver resultado del ejemplo</button><p class="mt-2">Normalmente el atributo <code>name</code> es único para los elementos HTML que lo definen, por lo que es un método muy práctico para acceder directamente al nodo deseado.</p><p>En el caso de los elementos HTML <em>radiobutton</em>, el atributo <code>name</code> es común a todos los <em>radiobutton</em> que están relacionados, por lo que la función devuelve una colección de elementos.</p><h3 class="mt-3" id="getElementById">getElementById()</h3>La función <code>getElementById()</code> es la más utilizada cuando se desarrollan aplicaciones web. Es la preferida para acceder directamente a un nodo y poder leer o modificar sus propiedades.<p></p><p><code>getElementById()</code> devuelve el elemento cuyo atributo <code>id</code> coincide con el parámetro indicado.</p><p>Como el atributo <code>id</code> debe ser único para cada elemento de una misma página, la función devuelve únicamente el nodo deseado.</p><p id="parrafoConId" class="callout primary">Yo soy un párrafo con un un Id especial para mi.</p><pre class="consola">
+            
+      <span class="funcion">var</span> parrafoConId <span class="condicion">=</span> <span class="funcion">document</span><span class="condicion">.</span><span class="verde">getElementById</span>(<span class="cadena">"parrafoConId"</span>);
+      <span class="funcion">var</span> ejemploDom3 <span class="condicion">=</span> <span class="funcion">document</span>.<span class="verde">getElementById</span>(<span class="cadena">"ejemploDom3"</span>);
+
+      ejemploDom3.<span class="verde">addEventListener</span>(<span class="cadena">'click'</span>, <span class="funcion">function</span> (<span class="dorado">event</span>) {
+          <span class="verde">alert</span>(<span class="cadena">'Esta página tiene un parrafos con un id asignado,
+          y dice los siguiente: '</span> <span class="condicion">+</span> parrafoConId<span class="condicion">.</span>innerText))
+      });
+      </pre><button id="ejemploDom3" class="button primary mt-2">Ver resultado del ejemplo</button><h3 class="mt-3" id="querySelector">querySelector()</h3><p>Esta función actúa de forma muy similar a <code>getElementById()</code>, ya que tras especificar un selector nos devuelve el primer elemento que coincida con este selector, aún cuando la página contenga mas de uno con esas características.</p><p>Al ser usado como instancia de <code>document</code> hacemos una búsqueda sobre cualquier elemento de la página, pero también puede ser usado como instancia de un elemento del DOM, por ejemplo <code>document.body</code> o cualquier elemento seleccionado en una variable con <code>getElementById()</code> o <code>getElementsByTagName()</code>.</p><pre class="consola mt-2">
+
+      <span class="funcion">document</span><span class="condicion">.</span><span class="verde">querySelector</span>(<span class="cadena">'#prueba #id3.clase'</span>)
+      </pre><h3 class="mt-3" id="querySelectorAll">querySelectorAll()</h3><p>Esta función es similar a <code>getElementsByTagName</code>, ya que devuelve un conjunto de elementos.</p><p>Tiene la gran ventaja que nos permite conseguir todos los elementos de una o varias consultas, simplemente separando con comas, como hacemos en <b>CSS</b>.</p><pre class="consola mt-2">
+
+       <span class="nota">// Todos los &lt;span&gt; y &lt;img>&gt; de una página</span>
+      <span class="funcion">document</span><span class="condicion">.</span><span class="verde">querySelectorAll</span>(<span class="cadena">'span, img'</span>)
+      </pre><h3 class="mt-3" id="addNodo">Añadir Nodos</h3><p>Un elemento sencillo, como por ejemplo un párrafo, genera dos nodos: el primer nodo es de tipo <code>Element</code> y representa la etiqueta <code>&lt;p&gt;</code> y el segundo nodo es de tipo <code>Text</code> y representa el contenido textual de la etiqueta <code>&lt;p&gt;</code>.</p><p>Por eso, crear y añadir a la página un nuevo elemento consta de cuatro pasos diferentes:</p><ol><li>Creación de un nodo de tipo <code>Element</code> que represente al elemento.</li><li>Creación de un nodo de tipo <code>Text</code> que represente el contenido del elemento.</li><li>Añadir el nodo <code>Text</code> como nodo hijo del nodo <code>Element</code>.</li><li>Añadir el nodo <code>Element</code> a la página, en forma de nodo hijo del nodo correspondiente al lugar en el que se quiere insertar el elemento.</li></ol><p>De este modo, si se quiere añadir un párrafo al final de una sección, es necesario incluir el siguiente código:</p><pre class="consola mt-2">
+
+      <span class="nota">// Crear variable para seleccionar sección</span>
+      <span class="funcion">var</span> seccion<span class="condicion"> = </span><span class="funcion">document</span><span class="condicion">.</span><span class="verde">getElementById</span>(<span class="cadena">"contParrafos"</span>);
+
+      <span class="nota">// Crear nodo de tipo Element</span>
+      <span class="funcion">var</span> parrafo<span class="condicion"> = </span><span class="funcion">document</span><span class="condicion">.</span><span class="verde">createElement</span>(<span class="cadena">"p"</span>);
+       
+      <span class="nota">// Crear nodo de tipo Text</span>
+      <span class="funcion">var</span> contenido<span class="condicion"> = </span><span class="funcion">document</span><span class="condicion">.</span><span class="verde">createTextNode</span>(<span class="cadena">"Yo soy un 
+      párrafo creado con JavaScrip"</span>);
+       
+      <span class="nota">// Añadir el nodo Text como hijo del nodo Element</span>
+      parrafo<span class="condicion">.</span><span class="verde">appendChild</span>(contenido);
+       
+      <span class="nota">// Añadir el nodo Element como hijo de la sección</span>
+      seccion<span class="condicion">.</span><span class="verde">appendChild</span>(parrafo);
+      </pre><button id="ejemploDom4" class="button primary mt-2">Ver resultado del ejemplo</button><section class="callout warning mt-1" id="contParrafos"><p>Yo soy un párrafo que ya estaba aquí.</p><p>Yo soy un párrafo que ya estaba aquí.</p><p>Yo soy un párrafo que ya estaba aquí.</p></section><h3 class="mt-3" id="delNodo">Eliminar Nodos</h3><p>Es de creer que el proceso de eliminación es complejo, que amerita varias líneas de código, como hemos hecho para crear. Pero en realidad no. Es un proceso más corto:</p><ol><li>Recoger el identificador del elemento</li><li>Usar la propiedad “removeChild”</li></ol><p>De este modo, si se quiere añadir un párrafo al final de una sección, es necesario incluir el siguiente código:</p><pre class="consola mt-2">
+
+      <span class="nota">// Recogemos el elemento por id</span>
+      <span class="funcion">var</span> paraBorrar <span class="condicion">=</span> <span class="funcion">document</span><span class="condicion">.</span><span class="verde">getElementById</span>(<span class="cadena">"paraBorrar"</span>);
+       
+      <span class="nota">// Se invoca a la función removeChild() desde el valor 
+      // parentNode del nodo que se quiere eliminar</span>
+      paraBorrar<span class="condicion">.</span>parentNode<span class="condicion">.</span><span class="verde">removeChild</span>(paraBorrar);
+      </pre><button id="ejemploDom5" class="button primary mt-2">Ver resultado del ejemplo</button><p class="callout warning mt-1" id="paraBorrar">Yo soy un elemento que ya existo; pero creo que voy a ser borrado con JavaScript</p><br><cite>Fuente: http://librosweb.es/libro/javascript/capitulo_5.html/<br>https://xitrus.es/blog/112/Seleccionar_elementos_con_querySelector_de_JavaScript</cite></div><!-- /.contenedor --></section></div><!-- Clases y Estilos --><div class="tabs-panel" id="cont-ppal-tabs-panel12"><!-- ********** Manipular Estilos y Clases --><section id="clases_estilos" class=""><div class="contenedor"><h2>Manipular Estilos y Clases</h2><p>La forma en que se ven nuestros documentos HTML o XML, o mejor dicho <b>como el navegador representa los elementos</b> que los conforman, se define mediante CSS o Cascading Style Sheets (lógicamente esto ya lo sabemos desde hace tiempo).</p><p>Estos estilos son instrucciones que pueden estar directamente en el código HTML o en archivos externo a los que se hace referencia (Archivos CSS). Ahora bien, una gran limitación del CSS es su <b>rigidez</b>, ya que una vez cargada la web no se pueden cambiar. Afortunadamente <b>Javascript por ser ser un lenguaje interactivo</b> nos permite realizar cualquier tipo de modificación en el estilo original de un elemento (nodo) y esto sin que sea necesario volver a cargar la página desde el servidor.</p><p>Nos es posible modificar el tamaño, estilo, tipografía y todos los demás atributos del texto, además el color del fondo, estructura de tablas, listas, en fin el estilo de todos los elementos que componen la página.</p><p>Para que el usuario realice dichas modificaciones puede utilizarse cualquier evento, desde un clic del ratón, hacer scroll o cualquier otro método con que se pueda trasmitir una instrucción, inclusive puedeser de forma automática al cargar la web.</p><div class="stacked-for-small button-group mt-2"><a class="button hollow primary" href="#estiloConJS"><big>Cambiar un atributo de estilo con JavaScript</big></a> <a class="button hollow primary" href="#clasesConJS"><big>Cambiar una clase con JavaScript</big></a></div><!-- **************** --><h3 class="mt-5" id="estiloConJS">Cambiar un atributo de estilo con JavaScript</h3><p>En Javascript se utiliza para cambiar el estilo de los elementos o nodos el objeto <code>style</code> (Estilo), este es una declaración independiente y puede ser accedido de varias formas, desde el <code>document</code> o desde el <b>elemento individual</b> al que va dirigido.</p><p>La sintaxis es la siguiente:</p><pre class="lead mt-1">
+      <span class="fu0">document</span><span class="kw1">.</span>body<span class="kw1">.</span>style<span class="kw1">.</span>fontSize<span class="kw1">=</span><span class="es0">"24px"</span>
+      <span class="co1">// Este método permite aplicar el estilo 
+      de forma general a todo el documento.</span>   
+
+
+      <span class="fu0">document</span><span class="kw1">.</span>getElementById(<span class="es0">"idElemento"</span>)<span class="kw1">.</span>style<span class="kw1">.</span>fontSize<span class="kw1">=</span><span class="es0">"24px"</span>
+      <span class="co1">// Este método es más específico, al ser dirigido 
+      a un bloque o elemento definido por un identificador ID.</span>     
+      </pre><p class="mt-2">A continuación algunos ejemplos aplicando lo visto hasta ahora:</p><ul class="menu vertical" id="ejemploEstilo1"><li><a href="javascript:void(document.body.style.fontSize='22px')">Aumento el tamaño de letra de toda Web.</a></li><li><a href="javascript:void(document.body.style.fontSize='18px')">Regreso a la normalidad el tamaño de letra de toda Web.</a></li><li><a href="javascript:void(document.body.style.backgroundColor='peru')">Cambio el color del fondo de toda la Web.</a></li><li><a href="javascript:void(document.body.style.backgroundColor='white')">Regreso el color de fondo normal a toda la Web.</a></li><li><a href="javascript:void(document.getElementById('ejemploEstilo1').style.fontSize='22px')">Aumento el tamaño de la fuente solo de este menú.</a></li><li><a href="javascript:void(document.getElementById('ejemploEstilo1').style.fontSize='18px')">Regreso a la normalidad el tamaño de letra en este menú.</a></li><li><a href="javascript:void(document.getElementById('ejemploEstilo1').style.backgroundColor='peru')">Cambio el color de fondo de este menú.</a></li><li><a href="javascript:void(document.getElementById('ejemploEstilo1').style.backgroundColor='white')">Regreso a la normalidad el color de fondo de este menú.</a></li><li><a class="button large" href="#ejemploEstilo1" onmouseover="void(document.getElementById('ejemploEstilo1').style.fontFamily='Comic Sans MS')" onmouseout="void(document.getElementById('ejemploEstilo1').style.fontFamily='Lato')">Cambio el tipo de letra en este menú cuando pasan el puntero sobre mi</a></li></ul><!-- <input class="boton" value="Refrescar Página" onclick="javascript:history.go()" type="button"> --><ul class="accordion" data-accordion data-allow-all-closed="true"><li class="accordion-item" data-accordion-item><!-- Título del panel del Acordeón --> <a href="#" class="accordion-title"><p class="h3"><b>Mostrar código</b></p></a><!-- Contenido del panel del acordeón. --><div class="accordion-content" data-tab-content><pre class="consola">
+
+    &lt;<span class="condicion">a</span> <span class="verde">href</span>=<span class="cadena">"javascript:void(document.body.style.fontSize='22px')"</span>>
+    Aumento el tamaño de letra de toda Web.&lt;/<span class="condicion">a</span>>
+
+    &lt;<span class="condicion">a</span> <span class="verde">href</span>=<span class="cadena">"javascript:void(document.body.style.fontSize='18px')"</span>>
+    Regreso a la normalidad el tamaño de letra de toda Web.&lt;/<span class="condicion">a</span>> 
+
+    &lt;<span class="condicion">a</span> <span class="verde">href</span>=<span class="cadena">"javascript:void(document.body.style.backgroundColor='peru')"</span>>
+    Cambio el color del fondo de toda la Web.&lt;/<span class="condicion">a</span>> 
+
+    &lt;<span class="condicion">a</span> <span class="verde">href</span>=<span class="cadena">"javascript:void(document.body.style.backgroundColor='white')"</span>>
+    Regreso el color de fondo normal a toda la Web.&lt;/<span class="condicion">a</span>> 
+
+    &lt;<span class="condicion">a</span> <span class="verde">href</span>=<span class="cadena">"javascript:void(document.getElementById('ejemploEstilo1')
+    .style.fontSize='22px')"</span>>Aumento el tamaño de la fuente solo de este 
+    menú.&lt;/<span class="condicion">a</span>>
+
+    &lt;<span class="condicion">a</span> <span class="verde">href</span>=<span class="cadena">"javascript:void(document.getElementById('ejemploEstilo1')
+    .style.fontSize='18px')"</span>>Regreso a la normalidad el tamaño de letra en este
+     menú.&lt;/<span class="condicion">a</span>> 
+
+    &lt;<span class="condicion">a</span> <span class="verde">href</span>=<span class="cadena">"javascript:void(document.getElementById('ejemploEstilo1')
+    .style.backgroundColor='peru')"</span>>Cambio el color de fondo de este
+     menú.&lt;/<span class="condicion">a</span>>
+
+    &lt;<span class="condicion">a</span> <span class="verde">href</span>=<span class="cadena">"javascript:void(document.getElementById('ejemploEstilo1')
+    .style.backgroundColor='white')"</span>>Regreso a la normalidad el color de fondo
+     de este menú.&lt;/<span class="condicion">a</span>> 
+
+    &lt;<span class="condicion">a</span> <span class="verde">class</span>=<span class="cadena">"button"</span> <span class="verde">href</span>=<span class="cadena">"#ejemploEstilo1"</span> 
+    <span class="verde">onmouseover</span>=<span class="cadena">"javascript</span>:<span class="verde">void</span>(<span class="funcion">document</span>.<span class="verde">getElementById</span>(<span class="cadena">'ejemploEstilo1'</span>)
+    .style.fontFamily=<span class="cadena">'Comic Sans MS'</span>)" 
+    <span class="verde">onmouseout</span>=<span class="cadena">"javascript</span>:<span class="verde">void</span>(<span class="funcion">document</span>.<span class="verde">getElementById</span>(<span class="cadena">'ejemploEstilo1'</span>)
+    .style.fontFamily=<span class="cadena">'Lato'</span>)">
+    Cambio el tipo de letra en este menú cuando pasan el puntero sobre 
+    mi&lt;/<span class="condicion">a</span>>        
+    </pre></div></li><!-- /.accordion-item --></ul><!-- /.accordion --><h3 class="mt-5" id="clasesConJS">Cambiar una clase con JavaScript</h3><p>Si lo que deseamos es trabajar con una <b>clase</b> completa y no sólo con atributos de forma particular, la buena noticia es que hoy día <strong>todos los navegadores modernos</strong> ofrecen una manera muy conveniente de manipular las clases de un elemento a través de JavaScript, esto lo logramos a través de la propiedad <code>classList</code>.</p><p>Esta propiedad ofrece varios métodos que nos permiten <b>manipular las clases</b> de un elemento de manera individual:</p><ul><li><code>add</code>: añade al elemento un nombre de clase o varios nombres de clases (se pasan separados por comas, como argumentos del método).</li><li><code>remove</code>: le quita el nombre o nombres de clase que indiquemos.</li><li><code>toggle</code>: este es muy útil porque le quita o le pone el nombre de clase indicado dependiendo de si ya lo tiene o no.</li><li><code>contains</code>: devuelve <code>true</code> si el elemento tiene aplicado el nombre de clase que le indiquemos, siendo <code>false</code> en caso contrario.</li></ul><p>Así, si quisiésemos localizar todos los elementos de una página con la clase CSS llamada 'azul', removerla y poner en su lugar la clase 'violeta' (si no la tenían ya), un código válido sería:</p><pre class="console mt-2">
+        
+      </pre><br><cite>Fuente: http://librosweb.es/libro/javascript/capitulo_5.html/<br>https://norfipc.com/inf/javascript-como-cambiar-modificar-estilo-css-paginas-web.html<br>http://www.felipesilva.com/tutoriales/javascript-tutoriales/cambiar-el-el-valor-del-atributo-class-con-javascript</cite></div><!-- /.contenedor --></section></div></div><!-- /.tabs-content --></div><!-- /.columns --></div><!-- /.row collapse --></div><!-- /.contenedor --></section><!-- /. CONTENIDO PÁGINA --><!-- ************* CORE JS --><script src="assets/js/jquery.js"></script><script src="assets/js/sweetalert2.all.js"></script><script src="assets/js/select2.min.js"></script><script src="assets/js/what-input.js"></script><script src="assets/js/foundation.min.js"></script><script type="text/javascript" src="assets/js/app.js"></script><script>$(document).foundation();</script></body></html>

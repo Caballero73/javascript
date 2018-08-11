@@ -17,17 +17,19 @@
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel6"><i class="fa fa-file-code-o fa-lg" aria-hidden="true">&nbsp; </i><span class="tabs-items">Closures (Clausuras)</span></a></li>
               <!-- Objetos -->
               <li class="tabs-title"><a href="#cont-ppal-tabs-panel7"><b>{...}&nbsp; </b><span class="tabs-items">Objetos</span></a></li>
-              <!-- Estructura switch -->
-              <li class="tabs-title"><a href="#cont-ppal-tabs-panel8"><i class="fa fa-toggle-on fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="tabs-items">Estructura switch</span></a></li>
-              <!-- Operadores -->
-              <li class="tabs-title"><a href="#cont-ppal-tabs-panel9"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="tabs-items">Operadores</span></a></li>
-              <!-- Funciones nativas -->
-              <li class="tabs-title"><a href="#cont-ppal-tabs-panel10"><i class="fa fa-window-restore fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="tabs-items">Funciones nativas</span></a></li>
-              <!-- Operador typeof -->
-              <li class="tabs-title"><a href="#cont-ppal-tabs-panel11"><i class="fa fa-puzzle-piece fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="tabs-items">Operador typeof</span></a></li>
-              <!-- Creación de funciones -->
-              <li class="tabs-title"><a href="#cont-ppal-tabs-panel12"><i class="fa fa-code fa-lg" aria-hidden="true"></i></i>&nbsp; <span class="tabs-items">Creación de funciones</span></a></li>
+              <!-- Métodos -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel8"><b>m(o)&nbsp; </b><span class="tabs-items">Métodos</span></a></li>
+              <!-- Creación de Objetos -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel10"><i class="fa fa-magic fa-lg" aria-hidden="true">&nbsp; </i><span class="tabs-items">Creación de Objetos</span></a></li>
+              <!-- Herencia -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel9"><i class="fa fa-dot-circle-o fa-lg" aria-hidden="true">&nbsp;  </i><span class="tabs-items">Herencia</span></a></li>
+              <!-- Manipular el DOM -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel11"><b>{D}&nbsp; </b><span class="tabs-items">Manipular el DOM</span></a></li>
+              <!-- Manipular Estilos y Clases -->
+              <li class="tabs-title"><a href="#cont-ppal-tabs-panel12"><b>&lt;S&gt;&nbsp; </b><span class="tabs-items">Manipular Estilos y Clases</span></a></li>
             </ul>
+
+            
             @include('./partials/abside.html')            
           </div>
         </div><!-- /.columns -->
@@ -62,26 +64,25 @@
             <div class="tabs-panel" id="cont-ppal-tabs-panel7">
               @include('./partials/objetos.html')
             </div>
-            <!-- Estructura switch -->
+            <!-- Métodos -->
             <div class="tabs-panel" id="cont-ppal-tabs-panel8">
-              @include('./partials/switch.html')
+              @include('./partials/metodos.html')
             </div>
-            <!-- Operadores -->
+            <!-- Herencia -->
             <div class="tabs-panel" id="cont-ppal-tabs-panel9">
-              @include('./partials/operadores.html')
+              @include('./partials/herencia.html')
             </div>
-            <!-- Funciones nativas -->
+            <!-- Creación de Objetos -->
             <div class="tabs-panel" id="cont-ppal-tabs-panel10">
-              @include('./partials/func-nativas.html')
+              @include('./partials/construir_objetos.html')
             </div>
-            <!-- Operador typeof -->
+            <!-- Manipular el DOM -->
             <div class="tabs-panel" id="cont-ppal-tabs-panel11">
-              @include('./partials/typeof.html')
+              @include('./partials/manipular_dom.html')
             </div>
-            <!-- Creación de funciones -->
+            <!-- Clases y Estilos -->
             <div class="tabs-panel" id="cont-ppal-tabs-panel12">
-              @include('./partials/funciones.html')
-              
+              @include('./partials/clases_estilos.html')
             </div>
           </div><!-- /.tabs-content -->
         </div><!-- /.columns -->

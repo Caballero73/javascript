@@ -1,0 +1,29 @@
+/******************************
+ESTILOS CONTENIDO MANIPULAR CLASES Y ESTILOS: clases_estilos.css;
+*******************************/
+#clases_estilos {
+	padding: 2rem;
+
+	& .button {
+		font-size: responsive 1.1rem 1.4rem;
+
+		& big {
+			display: inline-block;
+			font-size: responsive 1.2rem 1.7rem;
+			font-weight: bold;
+			margin-bottom: .5rem;
+		}
+	}
+
+	& pre.console {
+		font-size: responsive 1.6rem 2rem;
+	}
+	& pre.lead {
+		font-weight: bold;
+	}
+
+	& #ejemploEstilo1 {
+		padding: 3rem
+	}
+}
+/**/

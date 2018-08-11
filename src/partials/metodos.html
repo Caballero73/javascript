@@ -1,0 +1,61 @@
+  <!-- ********** Métodos -->
+  <section id="metodos" class="">
+    <div class="contenedor">
+      <h2>Métodos</h2>
+      <p>Las cosas que pueden hacer los objetos se llaman métodos. Las personas hablan, las computadoras se rompen y las bicicletas ruedan.</p>
+      <p>Los objetos de JavaScript también tienen métodos: click() para los botones, open() para las ventanas y el texto puede seleccionarse gracias al método selected(). Los paréntesis indican que estamos refiriéndonos a un método, y no a una propiedad.</p>      
+      <p>Consejo, puede ser útil pensar en los objetos y en las propiedades como nombres, y en los métodos como verbos. Los primeros son cosas, y los segundos, acciones que esas cosas pueden hacer, o que se les pueden hacer a ellas.</p>
+      <p>Puede poner juntos los objetos, las propiedades y los métodos para obtener una descripción mejor de un objeto, o para describir un proceso.</p>
+      <p>En JavaScript, todas estas piezas se separan mediante puntos. Esto se denomina sintaxis de punto.</p>    
+      <p>He aquí algunos ejemplos de objetos y sus propiedades escritos de este modo:</p>
+      <ul>
+            <li>bicicleta.rueda</li>
+            <li>lobo.garras.delantera.izquierda</li>
+            <li>computadora.disco.cdrom</li>
+            <li>documento.imagen.nombre</li>
+            <li>ventana.estado</li>
+      </ul>
+      <p>Y aquí tiene algunos ejemplos de objetos y métodos escritos con sintaxis de punto:</p> 
+      <ul>
+            <li>lobo.aullido()</li>
+            <li>document.write()</li>
+            <li>forms.elements.radio.click()</li>
+      </ul>
+      <p class="mt-3"><b>Ejemplo</b></p>
+      <p class="callout warning">Un resumen bastante sencillo de este concepto sería que un <b>método</b> es una <b>función</b> dentro de un objeto.</p>     
+      <pre><b>
+      <span class="fu0">var</span> <span class="es0">persona</span> <span class="kw1">=</span> {
+            <span class="st0">nombre</span><span class="kw2">:</span> <span class="st0">'Enrique'</span>,
+            <span class="st0">apellido</span><span class="kw2">:</span> '<span class="st0">Valerio'</span>,
+            <span class="st0">sexo</span><span class="kw2">:</span> <span class="st0">'Masculino'</span>,
+            <span class="st0">edad</span><span class="kw2">:</span> <span class="nu0">45</span>,
+            <span class="st0">habilidades</span><span class="kw2">:</span> [<span class="st0">'Diseño'</span>,<span class="st0">'Dibujo'</span>,<span class="st0">'Desarrollo Web'</span>,<span class="st0">'Exploración'</span>,
+                  <span class="st0">'Vida al aire libre'</span>,<span class="st0">'Aprender haciendo'</span>],
+            <span class="st0">saludar:</span> <span class="fu0">function</span>() {
+                        <span class="fu0">console</span><span class="kw1">.</span><span class="fu0">log</span>(<span class="st0">'Hola Mundo'</span>);
+                  }
+      };      
+      </b></pre>
+      <p>Para invocar este método se usa <code>persona.saludar()</code> ya que se trata de una función.</p>
+      <br>
+      <h3>this como un método de un objeto</h3>
+      <p>Cuando una función es llamada como un método de un objeto, el <code>this</code> cambia por el metodo del objeto llamado.</p>
+      <p>En el siguiente ejemplo, cuando <code>objeto.funcion()</code> es invocado, dentro de la función <strong><code>this</code></strong> es ligado al objeto <code>objeto</code>.</p>
+      
+      <pre class="consola">
+
+      <span class="funcion">var</span> objeto <span class="condicion">=</span> <span class="texto">{</span>
+        edad<span class="texto">:</span> <span class="dorado">45</span><span class="texto">,</span>
+        funcion<span class="texto">:</span> <span class="funcion">function</span><span class="texto">(</span><span class="texto">)</span> <span class="texto">{</span>
+          <span class="condicion">return</span> <span class="funcion">this</span><span class="texto">.</span>edad<span class="texto">;</span>
+        <span class="texto">}</span>
+      <span class="texto">}</span><span class="texto">;</span>
+
+      <span class="funcion">console</span><span class="texto">.</span><span class="funcion">log</span><span class="texto">(</span>objeto<span class="texto">.</span><span class="token function">funcion</span><span class="texto">(</span><span class="texto">)</span><span class="texto">)</span><span class="texto">;</span> <span class="nota">// Muestra 45</span>
+      </pre>
+      <br>
+      <p>En pocas palabras <code>this</code> permite usar una <b>propiedad</b> de un <b>objeto</b>, declarada dentro de este objeto (ambito local), por un método (función) dentro de este mismo objeto.</p>
+
+      <cite>Fuente: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Trabajando_con_objectos/</cite>
+    </div><!-- /.contenedor -->
+  </section>
