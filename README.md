@@ -1,5 +1,5 @@
-# CSS Grid Layout
-## Ejercicio para curso de JavaScrip
+# JavaScript
+## Tutorial a manera de ejercicio para curso de JavaScript
 
 JavaScript es un robusto lenguaje de programación que puede ser aplicado a un documento HTML y usado para crear interactividad dinámica en los sitios web. Fue inventado por Brendan Eich, co-fundador del proyecto Mozilla, Mozilla Foundation y la Corporación Mozilla .
 
