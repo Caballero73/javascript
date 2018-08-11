@@ -4078,7 +4078,7 @@ ESTILOS CONTENIDO PPAL: cont-ppal.css;
 		padding: 1.5rem;
 		width: 100%;
 	}
-#cont-ppal-tabs li a{font-size: calc(0.75581rem + 0.5814vw);}
+#cont-ppal-tabs li a{font-size: calc(0.75581rem + 0.93023vw);}
 #cont-ppal-header-h1 {
 		color: white !important;
 		padding: 10px;
@@ -4104,7 +4104,7 @@ ESTILOS CONTENIDO PPAL: cont-ppal.css;
 	}
 #cont-ppal .tabs > li a {
 			color: #F8F8FF;
-			font-size: calc(1.50233rem + 0.23256vw);
+			font-size: calc(1.50233rem + 0.37209vw);
 		}
 #cont-ppal .tabs-title > a:focus, #cont-ppal .tabs-title > a[aria-selected="true"] {
 		background: rgb(116, 0, 179);
@@ -4118,7 +4118,7 @@ ESTILOS CONTENIDO PPAL: cont-ppal.css;
 		color: #F8F8FF;
 		outline: none;
 	}
-#cont-ppal .tabs-items {font-size: calc(0.75581rem + 0.5814vw)}
+#cont-ppal .tabs-items {font-size: calc(0.75581rem + 0.93023vw)}
 /**/
 /******************************
 ESTILOS CONTENIDO CONCEPTOS FUNDAMENTALES: conceptos-fundamentales.css;
@@ -4271,11 +4271,11 @@ ESTILOS CONTENIDO OPERADORES: operadores.css;
 
 }
 #operadores .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #operadores .button big {
 			display: inline-block;
-			font-size: calc(1.15814rem + 0.81395vw);
+			font-size: calc(1.15814rem + 1.30233vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
@@ -4293,11 +4293,11 @@ ESTILOS CONTENIDO FUNCIONES NATIVAS: func-nativas.css;
 
 }
 #func-nativas .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #func-nativas .button big {
 			display: inline-block;
-			font-size: calc(1.15814rem + 0.81395vw);
+			font-size: calc(1.15814rem + 1.30233vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
@@ -4314,17 +4314,17 @@ ESTILOS CONTENIDO TYPEOF: typeof.css;
 	padding: 2rem;
 }
 #typeof .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #typeof .button big {
 			display: inline-block;
-			font-size: calc(1.15814rem + 0.81395vw);
+			font-size: calc(1.15814rem + 1.30233vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #typeof pre.lead {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 		font-weight: bold;
 	}
 /**/
@@ -4337,11 +4337,11 @@ ESTILOS CONTENIDO CREACIÓN DE FUNCIONES: funciones.css;
 
 }
 #funciones .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #funciones .button big {
 			display: inline-block;
-			font-size: calc(1.15814rem + 0.81395vw);
+			font-size: calc(1.15814rem + 1.30233vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
@@ -4351,7 +4351,7 @@ ESTILOS CONTENIDO CREACIÓN DE FUNCIONES: funciones.css;
 		
 	}
 #funciones pre {
-		font-size: calc(1.60233rem + 0.23256vw);
+		font-size: calc(1.60233rem + 0.37209vw);
 		font-weight: bold;
 	}
 #funciones pre.consola {
@@ -4368,11 +4368,11 @@ ESTILOS CONTENIDO ÁMBITO VARIABLES: ambito-variables.css;
 
 }
 #ambito-variables .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #ambito-variables .button big {
 			display: inline-block;
-			font-size: calc(1.15814rem + 0.81395vw);
+			font-size: calc(1.15814rem + 1.30233vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
@@ -4382,7 +4382,7 @@ ESTILOS CONTENIDO ÁMBITO VARIABLES: ambito-variables.css;
 		
 	}
 #ambito-variables pre {
-		font-size: calc(1.60233rem + 0.23256vw);
+		font-size: calc(1.60233rem + 0.37209vw);
 		font-weight: bold;
 	}
 #ambito-variables pre.consola {
@@ -4399,17 +4399,17 @@ ESTILOS CONTENIDO MATRICES: matrices.css;
 
 }
 #matrices .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #matrices .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.5814vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #matrices pre.console {
-		font-size: calc(1.40465rem + 0.46512vw);
+		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #matrices pre.lead {
 		font-weight: bold;
@@ -4424,17 +4424,17 @@ ESTILOS CONTENIDO RECORRER MATRICES: recorrer-matrices.css;
 
 }
 #recorrer-matrices .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #recorrer-matrices .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.5814vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #recorrer-matrices pre.console {
-		font-size: calc(1.40465rem + 0.46512vw);
+		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #recorrer-matrices pre.lead {
 		font-weight: bold;
@@ -4449,17 +4449,17 @@ ESTILOS CONTENIDO EXPRESIONES FUNCIONALES: expresiones-funcionales.css;
 
 }
 #expresiones-funcionales .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #expresiones-funcionales .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.5814vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #expresiones-funcionales pre.console {
-		font-size: calc(1.40465rem + 0.46512vw);
+		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #expresiones-funcionales pre.lead {
 		font-weight: bold;
@@ -4474,17 +4474,17 @@ ESTILOS CONTENIDO CLOSURE: closures.css;
 
 }
 #closures .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #closures .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.5814vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #closures pre.console {
-		font-size: calc(1.40465rem + 0.46512vw);
+		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #closures pre.lead {
 		font-weight: bold;
@@ -4506,17 +4506,17 @@ ESTILOS CONTENIDO OBJETOS: objetos.css;
 
 }
 #objetos .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #objetos .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.5814vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #objetos pre.console {
-		font-size: calc(1.40465rem + 0.46512vw);
+		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #objetos pre.lead {
 		font-weight: bold;
@@ -4538,17 +4538,17 @@ ESTILOS CONTENIDO METODOS: metodos.css;
 
 }
 #metodos .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #metodos .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.5814vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #metodos pre.console {
-		font-size: calc(1.40465rem + 0.46512vw);
+		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #metodos pre.lead {
 		font-weight: bold;
@@ -4570,17 +4570,17 @@ ESTILOS CONTENIDO HERENCIA: herencia.css;
 
 }
 #herencia .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #herencia .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.5814vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #herencia pre.console {
-		font-size: calc(1.40465rem + 0.46512vw);
+		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #herencia pre.lead {
 		font-weight: bold;
@@ -4601,17 +4601,17 @@ ESTILOS CONTENIDO CREACIÓN OBJ.: construir_objetos.css;
 	padding: 2rem;
 }
 #construir_objetos .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #construir_objetos .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.5814vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #construir_objetos pre.console {
-		font-size: calc(1.40465rem + 0.46512vw);
+		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #construir_objetos pre.lead {
 		font-weight: bold;
@@ -4625,17 +4625,17 @@ ESTILOS CONTENIDO MANIPULAR EL DOM: manipular_dom.css;
 	padding: 2rem;
 }
 #manipular_dom .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #manipular_dom .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.5814vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #manipular_dom pre.console {
-		font-size: calc(1.40465rem + 0.46512vw);
+		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #manipular_dom pre.lead {
 		font-weight: bold;
@@ -4649,17 +4649,17 @@ ESTILOS CONTENIDO MANIPULAR CLASES Y ESTILOS: clases_estilos.css;
 	padding: 2rem;
 }
 #clases_estilos .button {
-		font-size: calc(0.95349rem + 0.34884vw);
+		font-size: calc(0.95349rem + 0.55814vw);
 	}
 #clases_estilos .button big {
 			display: inline-block;
-			font-size: calc(0.95581rem + 0.5814vw);
+			font-size: calc(0.95581rem + 0.93023vw);
 			font-weight: bold;
 			margin-bottom: 5px;
 			margin-bottom: .5rem;
 		}
 #clases_estilos pre.console {
-		font-size: calc(1.40465rem + 0.46512vw);
+		font-size: calc(1.40465rem + 0.74419vw);
 	}
 #clases_estilos pre.lead {
 		font-weight: bold;
